@@ -8,7 +8,6 @@ import ShinyButton from "@/components/ShinyButton";
 export default function Home() {
   return (
     <>
-    
       <main
         id="home"
         className="w-full min-h-screen z-10 inset-shadow-sm flex justify-center items-center"
