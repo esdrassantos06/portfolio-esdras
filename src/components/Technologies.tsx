@@ -69,7 +69,7 @@ export default function Technologies() {
   ];
 
   return (
-    <div className="grid gap-4 self-start md:grid-cols-3 sm:grid-cols-2 grid-cols-1 lg:grid-cols-4">
+    <div className="grid gap-6 self-start md:grid-cols-3 sm:grid-cols-2 grid-cols-1 lg:grid-cols-4">
       {technologies.map((tech, index) => {
         return (
           <div

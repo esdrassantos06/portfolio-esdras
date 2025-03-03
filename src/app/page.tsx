@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Icons from "@/components/Icons";
 import Technologies from "@/components/Technologies";
 import ShinyButton from "@/components/ShinyButton";
+import ProjectsHome from "@/components/ProjectsHome";
 
 export default function Home() {
   return (
@@ -46,9 +47,9 @@ export default function Home() {
         id="about"
         className="w-full min-h-screen bg-fundo flex justify-center items-center"
       >
-        <div className="flex w-[80%] px-40 flex-col items-center justify-center">
-          <div className="title mb-20 flex flex-col self-start items-start justify-center space-y-2">
-            <h1 className="font-bold text-center text-6xl">
+        <div className="flex w-[90%] px-40 flex-col items-center justify-center">
+          <div className="title mb-18 flex flex-col self-start items-start justify-center space-y-2">
+            <h1 className="font-bold mb-6 text-center text-6xl">
               Current technologies
             </h1>
             <span className="text-[15px] text-principal/70 w-180 font-satoshi">
@@ -65,14 +66,14 @@ export default function Home() {
         id="work"
         className="w-full min-h-screen bg-fundo flex justify-center items-center"
       >
-        <div className="flex w-[80%] px-40 flex-col items-center justify-center">
+        <div className="flex w-[90%] px-40 flex-col items-center justify-center">
           <div className="title mb-20 w-full flex self-start items-center justify-between space-y-2">
             <h1 className="font-bold text-center text-6xl">
               My portfolio
             </h1>
             <ShinyButton text="All projects" link="https://github.com/esdrassantos06" target="_blank" />
           </div>
-
+    <ProjectsHome />
           
         </div>
       </main>
