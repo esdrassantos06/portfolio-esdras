@@ -1,12 +1,11 @@
 import GridBackground from "@/components/GridBackground";
-import ArrowIcon from "@/components/ArrowIcon";
 import CvDownload from "@/components/CvDownload";
 import Navbar from "@/components/Navbar";
-
-
+import Icons from "@/components/Icons";
+import Technologies from "@/components/Technologies";
+import ShinyButton from "@/components/ShinyButton";
 
 export default function Home() {
-
   return (
     <>
       <main
@@ -28,30 +27,53 @@ export default function Home() {
             </div>
           </div>
 
-            <span className="text-center text-lg w-full">Hi, I&apos;m Esdras, I create intuitive, visually stunning and highly functional web applications.</span>
+          <span className="text-center text-lg w-full">
+            Hi, I&apos;m Esdras, I create intuitive, visually stunning and
+            highly functional web applications.
+          </span>
 
-            <div className="buttons flex mt-2 gap-2 items-center">
-
-              <a href="#work" aria-label="See My Work" className="w-50 border-gray-200/50 border-1 h-12 gap-3 relative overflow-hidden text-lg flex items-center before:absolute before:top-0 before:left-[-100%] before:h-[150%] before:w-5 before:rotate-45 before:bg-gradient-to-r before:from-white/10 before:to-transparent before:animate-shine justify-center rounded-lg bg-fundo2 hover:bg-fundo2/80 transition-all duration-300">See My Work <ArrowIcon /></a>
-              <CvDownload />
-            </div>
+          <div className="buttons flex mt-2 gap-2 items-center">
+            <ShinyButton text="See My Work" link="#work" />
+            <CvDownload />
+          </div>
+          <div className="icons">
+            <Icons />
+          </div>
         </div>
       </main>
 
       <main
         id="about"
-        className="w-full min-h-screen flex justify-center items-center"
+        className="w-full min-h-screen bg-fundo flex justify-center items-center"
       >
-        <div className="flex container flex-col items-center justify-center">
-          <div className="title space-y-2">
-            <h2 className="font-bold text-center text-sm">BASED IN PORTUGAL</h2>
-            <h1 className="font-bold text-center text-7xl">
-              Quality <span className="text-secundaria">Design & Web</span>
+        <div className="flex w-[80%] px-40 flex-col items-center justify-center">
+          <div className="title mb-20 flex flex-col self-start items-start justify-center space-y-2">
+            <h1 className="font-bold text-center text-6xl">
+              Current technologies
             </h1>
-            <h1 className="font-bold text-center text-7xl">
-              <span className="text-secundaria">Development</span> Synergy
-            </h1>
+            <span className="text-[15px] text-principal/70 w-180 font-satoshi">
+              I&apos;m proficient in a range of modern technologies that empower
+              me to build highly functional solutions. These are some of my main
+              technologies.
+            </span>
           </div>
+          <Technologies />
+        </div>
+      </main>
+
+      <main
+        id="work"
+        className="w-full min-h-screen bg-fundo flex justify-center items-center"
+      >
+        <div className="flex w-[80%] px-40 flex-col items-center justify-center">
+          <div className="title mb-20 w-full flex self-start items-center justify-between space-y-2">
+            <h1 className="font-bold text-center text-6xl">
+              My portfolio
+            </h1>
+            <ShinyButton text="All projects" link="https://github.com/esdrassantos06" target="_blank" />
+          </div>
+
+          
         </div>
       </main>
     </>

@@ -136,21 +136,32 @@
   --font-satoshi-black-italic: 'Satoshi-BlackItalic', sans-serif;
   --font-satoshi-variable-italic: 'Satoshi-VariableItalic', sans-serif;
 
-  --color-fundo: #121212;
+  --color-fundo: #0A0A0A;
   --color-fundo2: #1A1A1A;
   --color-principal: #E0E0E0;
   /* Texto principal */
   --color-secundaria: #a927bf;
   /* Texto secundario */
 
-  --animate-shine: shine 3s ease infinite;
+  --animate-shine: shine 1.5s linear infinite;
 
   @keyframes shine {
     0% {
-      left: -150%;
+      left: -10%;
+      background-color: rgba(255, 255, 255, 0);
+    }
+    25% {
+      left: 25%;
+    }
+    50% {
+      left: 50%;
+    }
+    75%{
+      left: 75%;
     }
     100% {
-      left: 150%;
+      left: 100%;
+      background: linar-gradient
     }
   }
 }
