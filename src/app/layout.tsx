@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-
+import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
 import "./globals.css";
 
 
@@ -20,11 +21,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth ">
+    <html lang="en" className="scroll-smooth">
       <body suppressHydrationWarning 
-        className={`font-satoshi bg-fundo w-full h-screen text-principal`}
+        className={`font-satoshi min-h-screen relative bg-fundo w-full text-principal`}
       >
-        {children}
+        <Navbar />
+        <main className="flex-grow"> {/*Added flex-grow to main*/}
+          {children}
+        </main>
+        <Footer />
       </body>
     </html>
   );

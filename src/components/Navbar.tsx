@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion } from "motion/react"
+import Link from 'next/link';
 
 type ScrollDirection = 'up' | 'down' | null;
 
@@ -37,16 +38,16 @@ export default function Navbar() {
       <nav className="flex bg-fundo2 w-80 h-14 items-center text-principal justify-around border border-gray-200/50 rounded-lg">
         <ul className="flex gap-4 items-center">
           <li className="text-lg transition-all duration-300 hover:text-principal/60">
-            <a href="#home">Home</a>
+            <Link href="/#home">Home</Link>
           </li>
           <li className="text-lg transition-all duration-300 hover:text-principal/60">
-            <a href="#about">About</a>
+            <Link href="/#about">About</Link>
           </li>
           <li className="text-lg transition-all duration-300 hover:text-principal/60">
-            <a href="#work">Work</a>
+            <Link href="/#work">Work</Link>
           </li>
           <li className="text-lg transition-all duration-300 hover:text-principal/60">
-            <a href="#contact">Contact</a>
+            <Link href="/#contact">Contact</Link>
           </li>
         </ul>
       </nav>

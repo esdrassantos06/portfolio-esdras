@@ -1,6 +1,5 @@
 import GridBackground from "@/components/GridBackground";
 import CvDownload from "@/components/CvDownload";
-import Navbar from "@/components/Navbar";
 import Icons from "@/components/Icons";
 import Technologies from "@/components/Technologies";
 import ShinyButton from "@/components/ShinyButton";
@@ -13,7 +12,6 @@ export default function Home() {
         id="home"
         className="w-full min-h-screen z-10 inset-shadow-sm flex justify-center items-center"
       >
-        <Navbar />
         <GridBackground />
         <div className="flex w-200 gap-4 flex-col items-center justify-center">
           <div className="title space-y-2">
@@ -71,7 +69,7 @@ export default function Home() {
             <h1 className="font-bold text-center text-6xl">
               My portfolio
             </h1>
-            <ShinyButton text="All projects" link="https://github.com/esdrassantos06" target="_blank" />
+            <ShinyButton text="All projects" link="https://github.com/esdrassantos06" rel="noopener noreferrer" target="_blank" />
           </div>
     <ProjectsHome />
           
