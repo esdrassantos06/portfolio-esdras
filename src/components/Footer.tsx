@@ -7,8 +7,9 @@ export default function Footer() {
   return (
     <footer
       id="contact"
-      className="w-[65%] bg-fundo mb-8 mx-auto bottom-4 rounded-2xl flex flex-col items-center justify-between border-gray-200/20 border-1 h-120"
+      className="w-[65%] bg-fundo relative mb-8 mx-auto bottom-4 rounded-2xl flex flex-col items-center justify-between border-gray-200/20 border-1 h-120"
     >
+
       <div className="first-part-footer p-8 pt-10 flex flex-col w-full items-start justify-start gap-8">
         <h1 className="text-5xl w-160 font-bold">
           Like what you see? Reach out{" "}
