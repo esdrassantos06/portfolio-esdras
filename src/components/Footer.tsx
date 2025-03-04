@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <footer
       id="contact"
-      className="w-[65%] bg-fundo relative mb-8 mx-auto bottom-4 rounded-2xl flex flex-col items-center justify-between border-gray-200/20 border-1 h-120"
+      className="w-[65%] relative mb-8 mx-auto bottom-4 rounded-2xl flex flex-col items-center justify-between border-gray-200/20 border-1 h-120"
     >
 
       <div className="first-part-footer p-8 pt-10 flex flex-col w-full items-start justify-start gap-8">
@@ -42,16 +42,16 @@ export default function Footer() {
             <h1 className="text-principal text-xl font-semibold">Navigate</h1>
             <ul className="flex flex-col mt-1 gap-2">
               <li className="hover:text-principal font-light text-principal/70">
-                <Link href={"/#home"}>Home</Link>
+                <Link aria-label="Home" href={"/#home"}>Home</Link>
               </li>
               <li className="hover:text-principal font-light text-principal/70">
-                <Link href={"/#about"}>About</Link>
+                <Link aria-label="About Me" href={"/#about"}>About</Link>
               </li>
               <li className="hover:text-principal font-light text-principal/70">
-                <Link href={"/#work"}>Work</Link>
+                <Link aria-label="My Work" href={"/#work"}>Work</Link>
               </li>
               <li className="hover:text-principal font-light text-principal/70">
-                <Link href={"/#contact"}>Contact</Link>
+                <Link aria-label="Contact" href={"/#contact"}>Contact</Link>
               </li>
             </ul>
           </div>
@@ -60,16 +60,16 @@ export default function Footer() {
             <h1 className="text-principal text-xl font-semibold">Projects</h1>
             <ul className="flex flex-col mt-1 gap-2">
               <li className="hover:text-principal font-light text-principal/70">
-                <Link href={"/projects/novahorizonte"}>Nova Horizonte</Link>
+                <Link aria-label="Project Nova Horizonte" href={"/projects/novahorizonte"}>Nova Horizonte</Link>
               </li>
               <li className="hover:text-principal font-light text-principal/70">
-                <Link href={"/"}>Coming Soon...</Link>
+                <Link aria-label="Coming Soon" href={"/"}>Coming Soon...</Link>
               </li>
               <li className="hover:text-principal font-light text-principal/70">
-                <Link href={"/"}>Coming Soon...</Link>
+                <Link aria-label="Coming Soon" href={"/"}>Coming Soon...</Link>
               </li>
               <li className="hover:text-principal font-light text-principal/70">
-                <Link href={"/"}>Coming Soon...</Link>
+                <Link aria-label="Coming Soon" href={"/"}>Coming Soon...</Link>
               </li>
             </ul>
           </div>
@@ -78,10 +78,10 @@ export default function Footer() {
             <h1 className="text-principal text-xl font-semibold">Socials</h1>
             <ul className="flex flex-col mt-1 gap-2">
               <li className="hover:text-principal font-light text-principal/70">
-                <a rel="noopener noreferrer" target="_blank"href="https://www.linkedin.com/in/esdrassantos06/">Linkedin</a>
+                <a rel="noopener noreferrer" aria-label="Linkedin" target="_blank"href="https://www.linkedin.com/in/esdrassantos06/">Linkedin</a>
               </li>
               <li className="hover:text-principal font-light text-principal/70">
-                <a href="https://github.com/esdrassantos06" rel="noopener noreferrer" target="_blank">Github</a>
+                <a href="https://github.com/esdrassantos06" aria-label="Github" rel="noopener noreferrer" target="_blank">Github</a>
               </li>
             </ul>
           </div>

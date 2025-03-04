@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Technologies from "./Technologies";
+import Technologies from "../Technologies";
+import './aboutgradient.css';
 
 export default function About() {
   const [mounted, setMounted] = useState(false);
@@ -17,7 +18,8 @@ export default function About() {
       let tgX = 0;
       let tgY = 0;
 
-      const interBubble = document.querySelector<HTMLDivElement>(".interactive");
+      const interBubble =
+        document.querySelector<HTMLDivElement>(".interactive");
       if (interBubble) {
         function move() {
           if (interBubble) {
@@ -52,11 +54,6 @@ export default function About() {
       className="w-full min-h-screen gradient-bg flex justify-center items-center"
     >
       <div className="gradient-container">
-        <div className="g1"></div>
-        <div className="g2"></div>
-        <div className="g3"></div>
-        <div className="g4"></div>
-        <div className="g5"></div>
         <div className="interactive"></div>
       </div>
 

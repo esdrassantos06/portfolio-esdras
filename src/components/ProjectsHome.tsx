@@ -53,7 +53,7 @@ export default function ProjectsHome() {
               </div>
               <div className="redirect-btn w-1/2 flex items-center justify-end">
                 <Link
-                  href={"/projects/novahorizonte"}
+                  href={"/projects/novahorizonte"} aria-label="Nova Horizonte"
                   className="flex group items-center rounded-md justify-center w-18 h-18 hover:bg-secundaria/70 transition-all duration-300 bg-secundaria"
                 >
                   <ArrowUpRight

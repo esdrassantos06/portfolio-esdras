@@ -36,18 +36,18 @@ export default function Navbar() {
       transition={{ type: 'spring', stiffness: 500, damping: 40, mass: 1, ease: "easeOut" }}
     >
       <nav className="flex bg-fundo2 w-80 h-14 items-center text-principal justify-around border border-gray-200/50 rounded-lg">
-        <ul className="flex gap-4 items-center">
+        <ul className="flex gap-4 font-semibold items-center">
           <li className="text-lg transition-all duration-300 hover:text-principal/60">
-            <Link href="/#home">Home</Link>
+            <Link aria-label='Home' href="/#home">Home</Link>
           </li>
           <li className="text-lg transition-all duration-300 hover:text-principal/60">
-            <Link href="/#about">About</Link>
+            <Link aria-label='About Me' href="/#about">About</Link>
           </li>
           <li className="text-lg transition-all duration-300 hover:text-principal/60">
-            <Link href="/#work">Work</Link>
+            <Link aria-label='My Work' href="/#work">Work</Link>
           </li>
           <li className="text-lg transition-all duration-300 hover:text-principal/60">
-            <Link href="/#contact">Contact</Link>
+            <Link aria-label='Contact Me' href="/#contact">Contact</Link>
           </li>
         </ul>
       </nav>
