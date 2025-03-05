@@ -34,13 +34,13 @@ export default function HomeComponent() {
               <div>
                 <ScrollAnimation delayIndex={1}>
                   <h1 className="font-bold max-w-screen text-center text-5xl sm:text-6xl md:text-7xl">
-                    Quality{" "}
+                    Full{" "}
                     <span
                       className={`${
                         isHovered ? "text-principal" : "text-secundaria"
                       } transition-all duration-300`}
                     >
-                      Design & Web
+                      Stack
                     </span>
                   </h1>
                 </ScrollAnimation>
@@ -51,9 +51,8 @@ export default function HomeComponent() {
                         isHovered ? "text-principal" : "text-secundaria"
                       } transition-all duration-300`}
                     >
-                      Development
-                    </span>{" "}
-                    Synergy
+                      Developer
+                    </span>
                   </h1>
                 </ScrollAnimation>
               </div>
@@ -61,8 +60,7 @@ export default function HomeComponent() {
 
             <ScrollAnimation delayIndex={3} className="flex items-center justify-center">
               <span className="text-center flex lg:w-full md:w-[80%] sm:w-[60%] w-1/2 items-center justify-center text-lg">
-                Hi, I&apos;m Esdras, I create intuitive, visually stunning and
-                highly functional web applications.
+              Hi, I&apos;m Esdras — a Full Stack Developer crafting end-to-end solutions that bridge design, performance, and user experience. From backend api&apos;s to pixel-perfect frontend interfaces, I transform complex challenges into seamless digital experiences.
               </span>
             </ScrollAnimation>
             <ScrollAnimation delayIndex={4} className="flex flex-col items-center justify-center gap-4">
