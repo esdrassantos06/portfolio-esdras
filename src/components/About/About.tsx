@@ -1,8 +1,9 @@
 "use client";
 
+import ScrollAnimation from "../ScrollAnimation";
 import { useEffect, useState } from "react";
 import Technologies from "../Technologies";
-import './aboutgradient.css';
+import "./aboutgradient.css";
 
 export default function About() {
   const [mounted, setMounted] = useState(false);
@@ -59,14 +60,18 @@ export default function About() {
 
       <div className="flex w-[90%] relative z-50 px-40 flex-col items-center justify-center">
         <div className="title mb-18 flex flex-col self-start items-start justify-center space-y-2">
-          <h1 className="font-bold mb-6 text-center text-6xl">
-            Current technologies
-          </h1>
-          <span className="text-[15px] text-principal/70 w-180 font-satoshi">
-            I&apos;m proficient in a range of modern technologies that empower
-            me to build highly functional solutions. These are some of my main
-            technologies.
-          </span>
+          <ScrollAnimation delayIndex={0}>
+            <h1 className="font-bold mb-6 text-center text-6xl">
+              Current technologies
+            </h1>
+          </ScrollAnimation>
+          <ScrollAnimation delayIndex={1}>
+            <span className="text-[15px] text-principal/70 w-180 font-satoshi">
+              I&apos;m proficient in a range of modern technologies that empower
+              me to build highly functional solutions. These are some of my main
+              technologies.
+            </span>
+          </ScrollAnimation>
         </div>
         <Technologies />
       </div>

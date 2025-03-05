@@ -31,7 +31,7 @@ export default function Navbar() {
 
   return (
     <motion.header
-      className="fixed top-12 left-1/2 transform -translate-x-1/2 flex justify-center z-50 transition-all duration-300"
+      className="fixed top-12 left-1/2 transform -translate-x-1/2 flex justify-center z-999 transition-all duration-300"
       animate={{ y: scrollDirection === 'down' ? -110 : 0 }}
       transition={{ type: 'spring', stiffness: 500, damping: 40, mass: 1, ease: "easeOut" }}
     >
