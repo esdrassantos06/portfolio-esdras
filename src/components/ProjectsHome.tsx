@@ -30,7 +30,7 @@ export default function ProjectsHome() {
       {projects.map((project, i) => {
         return (
           <ScrollAnimation key={i} delayIndex={i + 2}>
-            <div className="card flex gap-4 flex-col items-center justify-center bg-fundo2 rounded-2xl p-8 w-155 h-155">
+            <div className="card flex gap-4 flex-col items-center justify-center bg-fundo2 rounded-2xl p-8 lg:w-155 lg:h-155 md:w-145 md:h-145 w-fit h-fit">
               <Link
                 href={project.link}
                 className="flex group rounded-lg overflow-hidden"
@@ -48,7 +48,7 @@ export default function ProjectsHome() {
               </div>
 
               <div className="w-full flex">
-                <div className="technologies flex w-1/2 items-start gap-2">
+                <div className="technologies flex max-sm:flex-wrap w-1/2 items-start gap-2">
                   {project.technologies.map((tech, i) => {
                     return (
                       <div
@@ -64,10 +64,10 @@ export default function ProjectsHome() {
                   <Link
                     href={"/projects/novahorizonte"}
                     aria-label="Nova Horizonte"
-                    className="flex group items-center rounded-md justify-center w-18 h-18 hover:bg-secundaria/70 transition-all duration-300 bg-secundaria"
+                    className="flex group items-center rounded-md justify-center w-18 h-18 active:bg-secundaria/70 hover:bg-secundaria/70 transition-all duration-300 bg-secundaria"
                   >
                     <ArrowUpRight
-                      className="group-hover:rotate-45 rotate-0 transition-all duration-300"
+                      className="group-hover:rotate-45 group-active:rotate-45 rotate-0 transition-all duration-300"
                       size={30}
                     />
                   </Link>

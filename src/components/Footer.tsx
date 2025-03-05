@@ -6,18 +6,18 @@ import ScrollAnimation from "./ScrollAnimation";
 
 export default function Footer() {
   return (
-    <ScrollAnimation delayIndex={0} initialY={20} className="w-[65%] relative mb-8 mx-auto bottom-4 rounded-2xl flex flex-col items-center justify-between border-gray-200/20 border-1 h-120 max-h-125">
+    <ScrollAnimation delayIndex={0} initialY={20} className="lg:w-[65%] w-[80%] relative mb-8 mx-auto bottom-4 rounded-2xl flex flex-col items-center justify-between border-gray-200/20 border-1 h-fit lg:h-120">
       <footer
         id="contact"
-        className="w-full"
+        className="w-full h-fit"
       >
         <div className="first-part-footer p-8 pt-10 flex flex-col w-full items-start justify-start gap-8">
           <ScrollAnimation delayIndex={1}>
-            <h1 className="text-5xl w-160 font-bold">
+            <h1 className="text-4xl md:text-5xl max-w-full w-fit lg:w-160 font-bold">
               Like what you see? Reach out{" "}
               <a
                 href="mailto:esdrasirion1@gmail.com"
-                className="underline decoration-2 hover:text-blue-800 underline-offset-8 text-blue-600 transition-all duration-300"
+                className="underline decoration-2 max-md:text-center hover:text-blue-800 underline-offset-8 text-blue-600 transition-all duration-300"
               >
                 via email
               </a>{" "}
@@ -35,7 +35,7 @@ export default function Footer() {
 
         <div className="border-t w-full border-gray-200/20"></div>
 
-        <div className="second-part-footer p-8 flex justify-between w-full">
+        <div className="second-part-footer p-8 flex md:flex-row flex-col gap-10 justify-between w-full">
           <div className="name-and-copy flex flex-col gap-2">
             <ScrollAnimation delayIndex={3} initialY={20}>
               <h1 className="text-xl font-bold">Esdras Santos</h1>
@@ -45,7 +45,7 @@ export default function Footer() {
             </ScrollAnimation>
           </div>
 
-          <nav className="footer-navbar flex justify-between w-1/3">
+          <nav className="footer-navbar flex md:flex-nowrap flex-wrap justify-between gap-6 md:gap-2 md:w-1/3">
             <div className="navigate">
               <ScrollAnimation delayIndex={4} initialY={20}>
                 <h1 className="text-principal text-xl font-semibold">

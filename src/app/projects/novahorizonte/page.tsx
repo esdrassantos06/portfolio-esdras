@@ -24,10 +24,10 @@ export default function Novahorizonte() {
       <div className="flex flex-col items-center justify-center w-full h-screen">
         <div className="flex flex-col w-full gap-2 items-center justify-center">
           <ScrollAnimation delayIndex={0}>
-            <h1 className="font-extrabold text-7xl/tight">NOVA HORIZONTE</h1>
+            <h1 className="font-extrabold text-6xl max-md:text-center md:text-7xl/tight">NOVA HORIZONTE</h1>
           </ScrollAnimation>
           <ScrollAnimation delayIndex={1}>
-            <p className="text-7xl text-center font-normal w-300">
+            <p className="text-5xl sm:text-6xl md:text-7xl text-center font-normal w-fit md:w-300">
               A MODERN CIVIL CONSTRUCTION WEBSITE
             </p>
           </ScrollAnimation>
@@ -39,31 +39,31 @@ export default function Novahorizonte() {
         </div>
       </div>
       <div className="flex flex-col items-center justify-center w-full bg-fundo">
-        <ScrollAnimation delayIndex={3}>
+        <ScrollAnimation delayIndex={3} className="rounded-lg">
           <Image
             id="image"
             src={"/projects-mockup/novahorizonte.png"}
             alt="Nova Horizonte"
             width={1400}
             height={1400}
-            className="rounded-lg select-none max-w-full pointer-events-none -mt-50 object-cover"
+            className="rounded-lg select-none max-w-full box-border mx-auto bg-clip-border w-[90%] sm:w-[60%] lg:w-[70%] pointer-events-none -mt-20 sm:-mt-50 object-cover"
           />
         </ScrollAnimation>
-        <div className="project-overview w-full px-70 mt-12 flex items-center justify-between">
+        <div className="project-overview w-full gap-10 px-10 lg:px-70 mt-12 flex sm:flex-row flex-col items-center justify-between">
           <div className="flex flex-col gap-8">
             <div className="flex flex-col gap-4">
               <ScrollAnimation delayIndex={4}>
-                <h1 className="font-light text-5xl">Project Overview</h1>
+                <h1 className="font-light max-sm:text-center text-5xl">Project Overview</h1>
               </ScrollAnimation>
               <ScrollAnimation delayIndex={5}>
                 <TechnologiesProject />
               </ScrollAnimation>
             </div>
-            <ScrollAnimation delayIndex={6}>
+            <ScrollAnimation delayIndex={6} className="max-sm:mb-10">
               <ShinyButtonProject />
             </ScrollAnimation>
           </div>
-          <div className="w-140">
+          <div className="md:w-1/2">
             <ScrollAnimation delayIndex={6}>
               <p>
                 Nova Horizonte is a project focused on civil construction and
