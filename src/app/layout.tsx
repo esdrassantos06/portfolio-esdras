@@ -21,9 +21,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth overflow-x-hidden">
       <body suppressHydrationWarning 
-        className={`font-satoshi min-h-screen relative bg-fundo w-full text-principal`}
+        className={`font-satoshi min-h-screen overflow-x-hidden relative bg-fundo w-full text-principal`}
       >
         <Navbar />
         <main className="flex-grow"> {/*Added flex-grow to main*/}

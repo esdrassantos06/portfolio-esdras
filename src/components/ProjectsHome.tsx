@@ -40,7 +40,7 @@ export default function ProjectsHome() {
                   alt="Nova Horizonte"
                   width={600}
                   height={600}
-                  className="object-cover group-hover:scale-110 transition-all duration-800 select-none pointer-events-none rounded-lg"
+                  className="object-cover max-w-full group-hover:scale-110 transition-all duration-800 select-none pointer-events-none rounded-lg"
                 />
               </Link>
               <div className="project-name flex w-full">

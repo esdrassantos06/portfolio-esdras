@@ -46,7 +46,7 @@ export default function Novahorizonte() {
             alt="Nova Horizonte"
             width={1400}
             height={1400}
-            className="rounded-lg select-none pointer-events-none -mt-50 object-cover"
+            className="rounded-lg select-none max-w-full pointer-events-none -mt-50 object-cover"
           />
         </ScrollAnimation>
         <div className="project-overview w-full px-70 mt-12 flex items-center justify-between">

@@ -11,7 +11,7 @@ export default function HomeComponent() {
   return (
     <main
       id="home"
-      className="w-full min-h-screen z-10 inset-shadow-sm flex flex-col gap-4 justify-center items-center"
+      className="w-full min-h-screen max-w-full z-10 inset-shadow-sm flex flex-col gap-4 justify-center items-center"
     >
       <MaskedCursor
         width="full"
@@ -33,7 +33,7 @@ export default function HomeComponent() {
               </ScrollAnimation>
               <div>
                 <ScrollAnimation delayIndex={1}>
-                  <h1 className="font-bold text-center text-7xl">
+                  <h1 className="font-bold max-w-screen text-center text-5xl sm:text-6xl md:text-7xl">
                     Quality{" "}
                     <span
                       className={`${
@@ -45,7 +45,7 @@ export default function HomeComponent() {
                   </h1>
                 </ScrollAnimation>
                 <ScrollAnimation delayIndex={2}>
-                  <h1 className="font-bold text-center text-7xl">
+                  <h1 className="font-bold max-w-screen text-center text-5xl sm:text-6xl md:text-7xl">
                     <span
                       className={`${
                         isHovered ? "text-principal" : "text-secundaria"
@@ -59,18 +59,18 @@ export default function HomeComponent() {
               </div>
             </div>
 
-            <ScrollAnimation delayIndex={3}>
-              <span className="text-center text-lg w-full">
+            <ScrollAnimation delayIndex={3} className="flex items-center justify-center">
+              <span className="text-center flex lg:w-full md:w-[80%] sm:w-[60%] w-1/2 items-center justify-center text-lg">
                 Hi, I&apos;m Esdras, I create intuitive, visually stunning and
                 highly functional web applications.
               </span>
             </ScrollAnimation>
             <ScrollAnimation delayIndex={4} className="flex flex-col items-center justify-center gap-4">
-              <div className="buttons z-30 relative flex mt-2 gap-2 items-center">
+              <div className="buttons z-30 relative sm:flex-row flex-col flex mt-2 gap-4 sm:gap-2 items-center">
                 <ShinyButton text="See My Work" link="#work" />
                 <CvDownload />
               </div>
-              <div className="icons">
+              <div className="icons mt-4">
                 <Icons />
               </div>
             </ScrollAnimation>

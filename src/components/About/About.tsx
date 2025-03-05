@@ -52,20 +52,20 @@ export default function About() {
   return (
     <main
       id="about"
-      className="w-full min-h-screen gradient-bg flex justify-center items-center"
+      className="w-full min-h-screen h-fit gradient-bg flex justify-center items-center"
     >
       <div className="gradient-container">
         <div className="interactive"></div>
       </div>
 
-      <div className="flex w-[90%] relative z-50 px-40 flex-col items-center justify-center">
-        <div className="title mb-18 flex flex-col self-start items-start justify-center space-y-2">
+      <div className="flex w-full relative z-50 px-40 flex-col items-center justify-center">
+        <div className="title mb-18 w-full flex flex-col self-start md:items-start items-center justify-center space-y-2">
           <ScrollAnimation delayIndex={0}>
             <h1 className="font-bold mb-6 text-center text-6xl">
               Current technologies
             </h1>
           </ScrollAnimation>
-          <ScrollAnimation delayIndex={1}>
+          <ScrollAnimation delayIndex={1} className="w-full flex items-center max-md:justify-center max-md:text-center">
             <span className="text-[15px] text-principal/70 w-180 font-satoshi">
               I&apos;m proficient in a range of modern technologies that empower
               me to build highly functional solutions. These are some of my main
