@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# My Professional Portfolio
 
-## Getting Started
+## 👋 About Me
 
-First, run the development server:
+Hello! I'm a full stack developer specializing in TypeScript, Python, React, Next.js, and Node.js solutions that solve real-world problems. With experience in full stack development, I constantly seek new challenges and opportunities to expand my technical skill set.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+This portfolio itself was built using React and Tailwind CSS, showcasing my frontend development skills.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Projects
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Portfolio Website
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Description**: Personal portfolio website showcasing my projects and skills.
+- **Technologies**: React, Tailwind CSS
+- **Link**: [Live Demo](https://www.portfolio-esdrassantos06.site/) | [Source Code](https://github.com/esdrassantos06/portfolio-esdras/)
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+### Nova Horizonte
+- **Description:** Nova Horizonte is a project focused on civil construction and engineering services, allowing clients to request quotes directly through the website.
+- **Technologies:** React, Tailwind CSS, shadcn/ui
+- **Link:** [Live Demo](https://novahorizonte.vercel.app/) | [Source Code](https://github.com/esdrassantos06/novahorizonte)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🛠️ Technical Skills
 
-## Deploy on Vercel
+### Programming Languages
+- TypeScript
+- Python
+- JavaScript
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Frontend
+- React
+- Next.js
+- HTML/CSS
+- Tailwind CSS
+- shadcn/ui
+- Bootstrap
+- Responsive Design
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Backend
+- Node.js
+- Express.js
+- Python (FastAPI/Django/Flask)
+- RESTful APIs
+
+### Database
+- MongoDB
+- PostgreSQL
+- MySQL
+
+### DevOps & Tools
+- Git
+- Docker
+- CI/CD
+- AWS
+
+## 📚 Education
+
+- **[FrontEnd Developer Certification]** - Tokio School - (2024-2025)
+- **[Python Developer Certification]** - Tokio School - (2024-2025)
+
+## 📫 Contact
+
+- **Email:** esdrasirion1@gmail.com
+- **LinkedIn:** [esdrassantos06](https://www.linkedin.com/in/esdrassantos06/)
+- **GitHub:** [esdrassantos06](https://github.com/esdrassantos06)
+
+---
+
+Feel free to contact me to discuss collaborations, professional opportunities, or simply to exchange ideas about technology!
+
+This project has been created by Esdras and is licensed under the [MIT License](LICENSE).
