@@ -103,8 +103,8 @@ export default function Footer() {
                 </ScrollAnimation>
                 <ScrollAnimation delayIndex={6} initialY={20}>
                   <li className="hover:text-principal font-light text-principal/70">
-                    <Link aria-label="Coming Soon" href={"/"}>
-                      Coming Soon...
+                    <Link aria-label="Tarevity" href={"/projects/tarevity"}>
+                      Tarevity
                     </Link>
                   </li>
                 </ScrollAnimation>

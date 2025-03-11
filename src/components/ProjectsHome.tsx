@@ -8,7 +8,6 @@ export default function ProjectsHome() {
   class Project {
     constructor(
       public name: string,
-      public description: string,
       public image: string,
       public link: string,
       public technologies: string[]
@@ -18,10 +17,15 @@ export default function ProjectsHome() {
   const projects: Project[] = [
     new Project(
       "Nova Horizonte",
-      "A website for a real estate company.",
       "/projects-mockup/novahorizonte.png",
       "/projects/novahorizonte",
       ["React", "TailwindCSS", "shadcn/ui", "Vite"]
+    ),
+    new Project(
+      "Tarevity",
+      "/projects-mockup/tarevity.png",
+      "/projects/tarevity",
+      ["NextJS", "TailwindCSS", "Typescript", "Supabase", "Redis", "NextAuth"]
     ),
   ];
 
@@ -37,7 +41,7 @@ export default function ProjectsHome() {
               >
                 <Image
                   src={project.image}
-                  alt="Nova Horizonte"
+                  alt={project.name}
                   width={600}
                   height={600}
                   className="object-cover max-w-full group-hover:scale-110 transition-all duration-800 select-none pointer-events-none rounded-lg"
@@ -48,7 +52,7 @@ export default function ProjectsHome() {
               </div>
 
               <div className="w-full flex">
-                <div className="technologies flex max-sm:flex-wrap w-1/2 items-start gap-2">
+                <div className="technologies grid grid-cols-3 items-start gap-2">
                   {project.technologies.map((tech, i) => {
                     return (
                       <div
@@ -60,18 +64,19 @@ export default function ProjectsHome() {
                     );
                   })}
                 </div>
-                <div className="redirect-btn w-1/2 flex items-center justify-end">
-                  <Link
-                    href={"/projects/novahorizonte"}
-                    aria-label="Nova Horizonte"
-                    className="flex group items-center rounded-md justify-center w-18 h-18 active:bg-secundaria/70 hover:bg-secundaria/70 transition-all duration-300 bg-secundaria"
-                  >
-                    <ArrowUpRight
-                      className="group-hover:rotate-45 group-active:rotate-45 rotate-0 transition-all duration-300"
-                      size={30}
-                    />
-                  </Link>
-                </div>
+                  <div className="redirect-btn w-1/2 flex items-center justify-end">
+                    <Link
+                      key={i}
+                      href={project.link}
+                      aria-label={project.name}
+                      className="flex group items-center rounded-md justify-center w-18 h-18 active:bg-secundaria/70 hover:bg-secundaria/70 transition-all duration-300 bg-secundaria"
+                    >
+                      <ArrowUpRight
+                        className="group-hover:rotate-45 group-active:rotate-45 rotate-0 transition-all duration-300"
+                        size={30}
+                      />
+                    </Link>
+                  </div>
               </div>
             </div>
           </ScrollAnimation>

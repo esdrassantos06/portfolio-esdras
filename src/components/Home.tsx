@@ -58,8 +58,8 @@ export default function HomeComponent() {
               </div>
             </div>
 
-            <ScrollAnimation delayIndex={3} className="flex items-center justify-center">
-              <span className="text-center flex lg:w-full md:w-[80%] sm:w-[60%] w-1/2 items-center justify-center text-lg">
+            <ScrollAnimation delayIndex={3} className="flex lg:w-full md:w-[80%] sm:w-[60%] w-[40%] items-center justify-center">
+              <span className="text-center flex  items-center justify-center text-lg">
               Hi, I&apos;m Esdras — a Full Stack Developer crafting end-to-end solutions that bridge design, performance, and user experience. From backend api&apos;s to pixel-perfect frontend interfaces, I transform complex challenges into seamless digital experiences.
               </span>
             </ScrollAnimation>

@@ -24,7 +24,9 @@ export default function Novahorizonte() {
       <div className="flex flex-col items-center justify-center w-full h-screen">
         <div className="flex flex-col w-full gap-2 items-center justify-center">
           <ScrollAnimation delayIndex={0}>
-            <h1 className="font-extrabold text-6xl max-md:text-center md:text-7xl/tight">NOVA HORIZONTE</h1>
+            <h1 className="font-extrabold text-6xl max-md:text-center md:text-7xl/tight">
+              NOVA HORIZONTE
+            </h1>
           </ScrollAnimation>
           <ScrollAnimation delayIndex={1}>
             <p className="text-5xl sm:text-6xl md:text-7xl text-center font-normal w-fit md:w-300">
@@ -53,14 +55,23 @@ export default function Novahorizonte() {
           <div className="flex flex-col gap-8">
             <div className="flex flex-col gap-4">
               <ScrollAnimation delayIndex={4}>
-                <h1 className="font-light max-sm:text-center text-5xl">Project Overview</h1>
+                <h1 className="font-light max-sm:text-center text-5xl">
+                  Project Overview
+                </h1>
               </ScrollAnimation>
               <ScrollAnimation delayIndex={5}>
-                <TechnologiesProject />
+                <TechnologiesProject
+                  technologies={[
+                    { name: "React" },
+                    { name: "TailwindCSS" },
+                    { name: "shadcn/ui" },
+                    { name: "Vite" },
+                  ]}
+                />
               </ScrollAnimation>
             </div>
             <ScrollAnimation delayIndex={6} className="max-sm:mb-10">
-              <ShinyButtonProject />
+              <ShinyButtonProject demo="https://novahorizonte.vercel.app/" code="https://github.com/esdrassantos06/novahorizonte"/>
             </ScrollAnimation>
           </div>
           <div className="md:w-1/2">
