@@ -34,7 +34,7 @@ export default function ProjectsHome() {
       {projects.map((project, i) => {
         return (
           <ScrollAnimation key={i} delayIndex={i + 2}>
-            <div className="card flex gap-4 flex-col items-center justify-center bg-fundo2 rounded-2xl p-8 lg:w-155 lg:h-155 md:w-145 md:h-145 w-fit h-fit">
+            <div className="card flex gap-4 flex-col items-center justify-center bg-fundo2 rounded-2xl p-8 lg:w-155 lg:h-155 md:w-125 md:h-125 w-fit h-fit">
               <Link
                 href={project.link}
                 className="flex group rounded-lg overflow-hidden"
@@ -44,7 +44,7 @@ export default function ProjectsHome() {
                   alt={project.name}
                   width={600}
                   height={600}
-                  className="object-cover max-w-full group-hover:scale-110 transition-all duration-800 select-none pointer-events-none rounded-lg"
+                  className="object-cover max-w-full lg:w-150 group-hover:scale-110 transition-all duration-800 select-none pointer-events-none rounded-lg"
                 />
               </Link>
               <div className="project-name flex w-full">
