@@ -44,6 +44,7 @@ export default function ProjectsHome() {
                   alt={project.name}
                   width={600}
                   height={600}
+                  priority
                   className="object-cover max-w-full lg:w-150 group-hover:scale-110 transition-all duration-800 select-none pointer-events-none rounded-lg"
                 />
               </Link>
@@ -57,7 +58,7 @@ export default function ProjectsHome() {
                     return (
                       <div
                         key={i}
-                        className="${tech.toLowerCase()} flex font-light rounded-md border-gray-200/20 transition-all duration-300 select-none border-1 hover:bg-gray-200/20 items-center justify-center bg-[#262626] px-3 py-1.5"
+                        className={`${tech.toLowerCase()} flex font-light rounded-md border-gray-200/20 transition-all duration-300 select-none border border-opacity-20 hover:bg-gray-200/20 items-center justify-center bg-[#262626] px-2 py-1 text-sm sm:px-3 sm:py-1.5 sm:text-base`}
                       >
                         {tech}
                       </div>
