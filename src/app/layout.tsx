@@ -26,7 +26,7 @@ export default function RootLayout({
         className={`font-satoshi min-h-screen overflow-x-hidden relative bg-fundo w-full text-principal`}
       >
         <Navbar />
-        <main className="flex-grow"> {/*Added flex-grow to main*/}
+        <main className="flex-grow">
           {children}
         </main>
         <Footer />

@@ -58,8 +58,8 @@ export default function About() {
         <div className="interactive max-md:hidden"></div>
       </div>
 
-      <div className="flex w-full relative z-50 px-10 md:px-20 lg:px-40 flex-col items-center justify-center">
-        <div className="title mb-18 w-full flex flex-col self-start md:items-start items-center justify-center space-y-2">
+      <div className="flex mx-auto relative z-50 px-10 md:px-20 lg:px-40 flex-col items-center justify-center">
+        <div className="title mb-18 flex flex-col self-start md:items-start items-center justify-center space-y-2">
           <ScrollAnimation delayIndex={0}>
             <h1 className="font-bold mb-6 text-center text-5xl sm:text-6xl">
               Current technologies
