@@ -1,72 +1,98 @@
-# My Professional Portfolio
+# 🚀 Esdras Santos Portfolio
 
-## 👋 About Me
+## Overview
 
-Hello! I'm a full stack developer specializing in TypeScript, Python, React, Next.js, and Node.js solutions that solve real-world problems. With experience in full stack development, I constantly seek new challenges and opportunities to expand my technical skill set.
+This is a personal portfolio website showcasing my skills, projects, and professional journey as a Full Stack Developer. Built with modern web technologies, the portfolio provides an interactive and visually appealing representation of my work.
 
-This portfolio itself was built using React and Tailwind CSS, showcasing my frontend development skills.
+## 🌟 Features
 
-## 🚀 Projects
+- Responsive and modern design
+- Smooth scroll animations
+- Interactive components
+- Project showcases
+- Downloadable CV
+- Masked cursor effect
+- Grid background
+- Technology stack highlights
 
-### Portfolio Website
-
-- **Description**: Personal portfolio website showcasing my projects and skills.
-- **Technologies**: React, Tailwind CSS
-- **Link**: [Live Demo](https://www.portfolio-esdrassantos06.site/) | [Source Code](https://github.com/esdrassantos06/portfolio-esdras/)
-
-
-### Nova Horizonte
-- **Description:** Nova Horizonte is a project focused on civil construction and engineering services, allowing clients to request quotes directly through the website.
-- **Technologies:** React, Tailwind CSS, shadcn/ui
-- **Link:** [Live Demo](https://novahorizonte.vercel.app/) | [Source Code](https://github.com/esdrassantos06/novahorizonte)
-
-
-## 🛠️ Technical Skills
-
-### Programming Languages
-- TypeScript
-- Python
-- JavaScript
+## 🛠 Technologies Used
 
 ### Frontend
-- React
-- Next.js
-- HTML/CSS
+- Next.js 15
+- React 19
+- TypeScript
 - Tailwind CSS
-- shadcn/ui
-- Bootstrap
-- Responsive Design
+- Framer Motion
 
-### Backend
-- Node.js
-- Express.js
-- Python (FastAPI/Django/Flask)
-- RESTful APIs
+### Design & Interactions
+- Phosphor Icons
+- Custom scroll animations
+- Masked cursor effect
+- Shiny button animations
 
-### Database
-- MongoDB
-- PostgreSQL
-- MySQL
+## 🖥 Projects Highlighted
 
-### DevOps & Tools
-- Git
-- Docker
-- CI/CD
-- AWS
+### 1. Nova Horizonte
+- Civil construction website
+- Technologies: React, TailwindCSS, shadcn/ui, Vite
 
-## 📚 Education
+### 2. Tarevity
+- Task management application
+- Technologies: NextJS, TailwindCSS, TypeScript, Supabase, Redis, NextAuth
 
-- **[FrontEnd Developer Certification]** - Tokio School - (2024-2025)
-- **[Python Developer Certification]** - Tokio School - (2024-2025)
+## 📦 Getting Started
 
-## 📫 Contact
+### Prerequisites
+- Node.js (18.x or later)
+- npm or yarn
 
-- **Email:** esdrasirion1@gmail.com
-- **LinkedIn:** [esdrassantos06](https://www.linkedin.com/in/esdrassantos06/)
-- **GitHub:** [esdrassantos06](https://github.com/esdrassantos06)
+### Installation
+
+1. Clone the repository
+```bash
+git clone https://github.com/esdrassantos06/portfolio-esdras.git
+```
+
+2. Install dependencies
+```bash
+npm install
+# or
+yarn install
+```
+
+3. Run the development server
+```bash
+npm run dev
+# or
+yarn dev
+```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
+
+## 🚀 Build for Production
+
+```bash
+npm run build
+npm start
+# or
+yarn build
+yarn start
+```
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🤝 Connect With Me
+
+- 📧 Email: esdrasirion1@gmail.com
+- 🔗 LinkedIn: [Esdras Santos](https://www.linkedin.com/in/esdrassantos06/)
+- 🐱 GitHub: [esdrassantos06](https://github.com/esdrassantos06)
+
+## 🎨 Design Philosophy
+
+This portfolio is more than just a showcase of projects. It's a reflection of my commitment to creating clean, intuitive, and performant web experiences.
 
 ---
 
-Feel free to contact me to discuss collaborations, professional opportunities, or simply to exchange ideas about technology!
-
-This project has been created by Esdras and is licensed under the [MIT License](LICENSE).
+*Crafted with ❤️ by Esdras Santos*
