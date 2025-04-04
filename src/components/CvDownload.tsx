@@ -1,4 +1,4 @@
-import DownloadButton from "./DownloadButton"
+import DownloadButton from "./ui/DownloadButton"
 
 export default function CvDownload() {
   return (

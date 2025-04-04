@@ -1,11 +1,11 @@
 "use client";
 
-import CvDownload from "./CvDownload";
-import GridBackground from "./GridBackground";
-import ShinyButton from "./ShinyButton";
-import Icons from "./Icons";
-import MaskedCursor from "./MaskedCursor/MaskedCursor";
-import ScrollAnimation from "./ScrollAnimation";
+import CvDownload from "../CvDownload";
+import GridBackground from "../ui/GridBackground";
+import ShinyButton from "../ui/ShinyButton";
+import Icons from "../icons/Icons";
+import MaskedCursor from "../MaskedCursor/MaskedCursor";
+import ScrollAnimation from "../ui/ScrollAnimation";
 
 export default function HomeComponent() {
   return (

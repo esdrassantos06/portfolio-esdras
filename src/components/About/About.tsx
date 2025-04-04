@@ -1,8 +1,8 @@
 "use client";
 
-import ScrollAnimation from "../ScrollAnimation";
+import ScrollAnimation from "../ui/ScrollAnimation";
 import { useEffect, useState } from "react";
-import Technologies from "../Technologies";
+import Technologies from "../sections/Technologies";
 import "./aboutgradient.css";
 
 export default function About() {

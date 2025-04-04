@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import GridBackground from "@/components/GridBackground";
-import ArrowDownIcon from "@/components/ArrowDownIcon";
+import GridBackground from "@/components/ui/GridBackground";
+import ArrowDownIcon from "@/components/icons/ArrowDownIcon";
 import Image from "next/image";
-import ShinyButtonProject from "@/components/ShinyButtonProject";
+import ShinyButtonProject from "@/components/ui/ShinyButtonProject";
 import TechnologiesProject from "@/components/TechnologiesProject";
-import ScrollAnimation from "@/components/ScrollAnimation";
+import ScrollAnimation from "@/components/ui/ScrollAnimation";
 
 export const metadata: Metadata = {
   title: "Tarevity | Esdras Portfolio",

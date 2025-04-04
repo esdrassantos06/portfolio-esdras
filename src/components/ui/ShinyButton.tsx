@@ -1,5 +1,5 @@
 "use client";
-import ArrowIcon from "./ArrowIcon";
+import ArrowIcon from "../icons/ArrowIcon";
 import React from "react";
 
 interface ShinyButtonProps {

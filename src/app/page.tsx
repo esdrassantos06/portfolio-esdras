@@ -1,6 +1,6 @@
-import HomeComponent from "@/components/Home";
+import HomeComponent from "@/components/sections/Home";
 import About from "@/components/About/About";
-import Work from "@/components/Work";
+import Work from "@/components/sections/Work";
 
 export default function Home() {
   return (

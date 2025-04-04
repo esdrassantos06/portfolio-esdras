@@ -14,9 +14,9 @@ export default function Navbar() {
 
     const handleScroll = () => {
       if (window.scrollY > lastScrollY) {
-        setScrollDirection('down'); // rolando para baixo
+        setScrollDirection('down');
       } else {
-        setScrollDirection('up'); // rolando para cima
+        setScrollDirection('up');
       }
 
       lastScrollY = window.scrollY;

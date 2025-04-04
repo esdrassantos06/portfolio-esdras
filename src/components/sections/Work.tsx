@@ -1,8 +1,8 @@
 "use client";
 
-import ShinyButton from "./ShinyButton";
+import ShinyButton from "../ui/ShinyButton";
 import ProjectsHome from "./ProjectsHome";
-import ScrollAnimation from "./ScrollAnimation";
+import ScrollAnimation from "../ui/ScrollAnimation";
 
 export default function Work() {
   return (

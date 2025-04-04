@@ -2,7 +2,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowUpRight } from "@phosphor-icons/react";
-import ScrollAnimation from "./ScrollAnimation";
+import ScrollAnimation from "../ui/ScrollAnimation";
 
 export default function ProjectsHome() {
   class Project {
