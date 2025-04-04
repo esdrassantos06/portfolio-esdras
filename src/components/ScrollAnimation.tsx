@@ -1,7 +1,7 @@
 "use client";
 
-import { motion } from "motion/react";
-import { useEffect } from "react";
+import { motion, useInView } from "motion/react";
+import { useEffect, useRef } from "react";
 
 interface ScrollAnimationProps {
   children: React.ReactNode;
@@ -17,19 +17,23 @@ export default function ScrollAnimation({
   delayIndex = 0,
   initialY = 100,
 }: ScrollAnimationProps) {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { amount: 0.3, once: true });
 
   useEffect(() => {
-    requestAnimationFrame(() => {
+    const timer = setTimeout(() => {
       window.dispatchEvent(new Event("resize"));
-    });
-  });
+    }, 50);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <motion.div
+      ref={ref}
       initial={{ opacity: 0, y: initialY }}
-      whileInView={{ opacity: 1, y: 0 }}
+      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: initialY }}
       transition={{ duration: 0.5, delay: delayIndex * 0.3 }}
-      viewport={{ once: true }}
       className={className}
     >
       {children}

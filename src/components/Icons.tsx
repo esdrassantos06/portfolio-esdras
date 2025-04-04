@@ -1,5 +1,3 @@
-"use client";
-
 import { GithubLogo, LinkedinLogo } from "@phosphor-icons/react";
 
 export default function Icons() {

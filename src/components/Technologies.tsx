@@ -2,90 +2,129 @@
 import Image from "next/image";
 import ScrollAnimation from "./ScrollAnimation";
 
+class Technology {
+  constructor(
+    public name: string,
+    public src: string,
+    public alt: string,
+    public background: string,
+    public description: string
+  ) {}
+
+  getSlugName(): string {
+    return this.name.split(" ").join("_").toLowerCase();
+  }
+}
+
 export default function Technologies() {
   const technologies = [
-    {
-      name: "AWS",
-      src: "/technologies/aws.svg",
-      alt: "aws",
-      background: "bg-white",
-      description: "Cloud services",
-    },
-    {
-      name: "Next.js",
-      src: "/technologies/next.svg",
-      alt: "Next.js",
-      background: "bg-[#313131]",
-      description: "React framework",
-    },
-    {
-      name: "NodeJS",
-      src: "/technologies/node.svg",
-      alt: "NodeJS",
-      background: "bg-[#20625C]",
-      description: "Server-side JavaScript",
-    },
-    {
-      name: "Postgres",
-      src: "/technologies/postgres.svg",
-      alt: "Postgres",
-      background: "bg-[#024795]",
-      description: "Relational database",
-    },
-    {
-      name: "Python",
-      src: "/technologies/python.svg",
-      alt: "Python",
-      background: "bg-[#AE9B07]",
-      description: "Backend language",
-    },
-    {
-      name: "React",
-      src: "/technologies/react.svg",
-      alt: "React",
-      background: "bg-[#284147]",
-      description: "JavaScript Library",
-    },
-    {
-      name: "Git",
-      src: "/technologies/git.svg",
-      alt: "Git",
-      background: "bg-[#284147]",
-      description: "Version control",
-    },
-    {
-      name: "Tailwind CSS",
-      src: "/technologies/tailwind.svg",
-      alt: "Tailwind CSS",
-      background: "bg-[#183644]",
-      description: "CSS framework",
-    },
-    {
-      name: "Typescript",
-      src: "/technologies/ts.svg",
-      alt: "Typescript",
-      background: "bg-[#1F2D3D]",
-      description: "JavaScript but better",
-    },
+    new Technology(
+      "AWS",
+      "/technologies/aws.svg",
+      "aws",
+      "bg-white",
+      "Cloud services"
+    ),
+    new Technology(
+      "Next.js",
+      "/technologies/next.svg",
+      "Next.js",
+      "bg-[#313131]",
+      "React SSR framework"
+    ),
+    new Technology(
+      "NodeJS",
+      "/technologies/node.svg",
+      "NodeJS",
+      "bg-[#20625C]",
+      "JavaScript runtime"
+    ),
+    new Technology(
+      "Postgres",
+      "/technologies/postgres.svg",
+      "Postgres",
+      "bg-[#024795]",
+      "SQL database"
+    ),
+    new Technology(
+      "MongoDB",
+      "/technologies/mongodb.svg",
+      "MongoDB",
+      "bg-[#54714c]",
+      "NoSQL database"
+    ),
+    new Technology(
+      "SQLite",
+      "/technologies/sqlite.svg",
+      "SQLite",
+      "bg-[#172446]",
+      "Embedded database"
+    ),
+    new Technology(
+      "Python",
+      "/technologies/python.svg",
+      "Python",
+      "bg-[#AE9B07]",
+      "Backend language"
+    ),
+    new Technology(
+      "React",
+      "/technologies/react.svg",
+      "React",
+      "bg-[#284147]",
+      "JavaScript Library"
+    ),
+    new Technology(
+      "Git",
+      "/technologies/git.svg",
+      "Git",
+      "bg-[#284147]",
+      "Version control"
+    ),
+    new Technology(
+      "Tailwind CSS",
+      "/technologies/tailwind.svg",
+      "Tailwind CSS",
+      "bg-[#183644]",
+      "CSS framework"
+    ),
+    new Technology(
+      "Typescript",
+      "/technologies/ts.svg",
+      "Typescript",
+      "bg-[#1F2D3D]",
+      "JavaScript but better"
+    ),
   ];
 
   return (
     <div className="grid gap-4 h-fit mb-8 max-md:place-items-center lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 2xl:grid-cols-4">
       {technologies.map((tech, index) => {
         return (
-          <ScrollAnimation delayIndex={index - 1} className={`tech-${tech.name.split(" ").join("_").toLowerCase()}
-          bg-fundo2 md:w-75 md:h-20 w-72 h-18 hover:border-gray-200/50 hover:bg-fundo2hover border-transparent transition-all duration-300 border-1 rounded-2xl flex items-center py-2 pl-4`} key={index}>
-            <ScrollAnimation delayIndex={index} className="flex gap-5">
+          <ScrollAnimation
+            delayIndex={index - 1}
+            className={`tech-${tech.getSlugName()}
+          bg-fundo2 w-full max-w-[320px] h-[100px] hover:border-gray-200/50 hover:bg-fundo2hover border-transparent transition-all duration-300 border-1 rounded-2xl flex items-center py-4 px-6`}
+            key={index}
+          >
+            <ScrollAnimation
+              delayIndex={index}
+              className="flex gap-4 w-full items-center"
+            >
               <span
-                className={`icon flex items-center justify-center rounded-lg p-2 h-16 w-16 ${tech.background}`}
+                className={`icon flex items-center justify-center rounded-lg p-2 h-14 w-14 flex-shrink-0 ${tech.background}`}
               >
-                <Image src={tech.src} className="max-w-full" width={50} height={50} alt={tech.alt} />
+                <Image
+                  src={tech.src}
+                  className="w-9 h-9"
+                  width={36}
+                  height={36}
+                  alt={tech.alt}
+                />
               </span>
-              <div className="text h-full flex flex-col">
-                <h1 className="font-semibold text-lg">{tech.name}</h1>
-                <p className="text-principal/80 text-base">
-                  {tech.description}
-                </p>
+              <div className="text flex flex-col justify-center">
+                <h1 className="font-semibold text-base">{tech.name}</h1>
+                <p className="text-principal/80 text-sm">{tech.description}</p>
               </div>
             </ScrollAnimation>
           </ScrollAnimation>

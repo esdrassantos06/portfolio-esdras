@@ -1,5 +1,3 @@
-'use client'
-
 import { DownloadSimple } from "@phosphor-icons/react"
 
 export default function DownloadButton(){
