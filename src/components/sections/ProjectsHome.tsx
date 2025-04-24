@@ -27,6 +27,12 @@ export default function ProjectsHome() {
       "/projects/tarevity",
       ["NextJS", "TailwindCSS", "Typescript", "Supabase", "Redis", "NextAuth"]
     ),
+    new Project(
+      "Phantom Code",
+      "/projects-mockup/phantomcode.png",
+      "/projects/phantomcode",
+      ["Electron", "TailwindCSS", "OpenAI API"]
+    ),
   ];
 
   return (
@@ -53,31 +59,32 @@ export default function ProjectsHome() {
               </div>
 
               <div className="w-full flex">
-                <div className="technologies grid grid-cols-3 items-start gap-2">
+                <div className="technologies grid grid-cols-3 gap-2">
                   {project.technologies.map((tech, i) => {
                     return (
                       <div
                         key={i}
-                        className={`${tech.toLowerCase()} flex font-light rounded-md border-gray-200/20 transition-all duration-300 select-none border border-opacity-20 hover:bg-gray-200/20 items-center justify-center bg-[#262626] px-2 py-1 text-sm sm:px-3 sm:py-1.5 sm:text-base`}
+                        className={`${tech.toLowerCase()} flex font-light rounded-md border-gray-200/20 transition-all duration-300 select-none border border-opacity-20 hover:bg-gray-200/20 items-center justify-center bg-[#262626] p-1 text-sm text-center`}
                       >
                         {tech}
                       </div>
                     );
                   })}
                 </div>
-                  <div className="redirect-btn w-1/2 flex items-center justify-end">
-                    <Link
-                      key={i}
-                      href={project.link}
-                      aria-label={project.name}
-                      className="flex group items-center rounded-md justify-center w-18 h-18 active:bg-secundaria/70 hover:bg-secundaria/70 transition-all duration-300 bg-secundaria"
-                    >
-                      <ArrowUpRight
-                        className="group-hover:rotate-45 group-active:rotate-45 rotate-0 transition-all duration-300"
-                        size={30}
-                      />
-                    </Link>
-                  </div>
+
+                <div className="redirect-btn w-1/2 flex items-center justify-end">
+                  <Link
+                    key={i}
+                    href={project.link}
+                    aria-label={project.name}
+                    className="flex group items-center rounded-md justify-center w-18 h-18 active:bg-secundaria/70 hover:bg-secundaria/70 transition-all duration-300 bg-secundaria"
+                  >
+                    <ArrowUpRight
+                      className="group-hover:rotate-45 group-active:rotate-45 rotate-0 transition-all duration-300"
+                      size={30}
+                    />
+                  </Link>
+                </div>
               </div>
             </div>
           </ScrollAnimation>
