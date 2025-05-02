@@ -93,7 +93,7 @@ export default function Footer() {
                     </Link>
                   </li>
                   <li className="hover:text-principal font-light text-principal/70">
-                    <Link aria-label="Phantom Code" href={"/phantomcode"}>
+                    <Link aria-label="Phantom Code" href={"/projects/phantomcode"}>
                       Phantom Code
                     </Link>
                   </li>

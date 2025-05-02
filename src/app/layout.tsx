@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Footer from "@/components/layout/Footer";
 import Navbar from "@/components/layout/Navbar";
 import "./globals.css";
+import Head from "next/head";
 
 export const metadata: Metadata = {
   title: "Home Page | Esdras Portfolio",
@@ -20,6 +21,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth overflow-x-hidden">
+      <Head>
+        <link rel="manifest" href="/site.webmanifest" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000" />
+        <meta name="msapplication-TileColor" content="#000000" />
+        <meta name="theme-color" content="#000000" />
+      </Head>
       <body
         suppressHydrationWarning
         className={`font-satoshi min-h-screen overflow-x-hidden relative bg-fundo w-full text-principal`}

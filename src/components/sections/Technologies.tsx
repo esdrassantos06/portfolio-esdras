@@ -107,8 +107,7 @@ export default function Technologies() {
           bg-fundo2 w-full max-w-[320px] h-[100px] hover:border-gray-200/50 hover:bg-fundo2hover border-transparent transition-all duration-300 border-1 rounded-2xl flex items-center py-4 px-6`}
             key={index}
           >
-            <ScrollAnimation
-              delayIndex={index}
+            <div
               className="flex gap-4 w-full items-center"
             >
               <span
@@ -126,7 +125,7 @@ export default function Technologies() {
                 <h1 className="font-semibold text-base">{tech.name}</h1>
                 <p className="text-principal/80 text-sm">{tech.description}</p>
               </div>
-            </ScrollAnimation>
+            </div>
           </ScrollAnimation>
         );
       })}
