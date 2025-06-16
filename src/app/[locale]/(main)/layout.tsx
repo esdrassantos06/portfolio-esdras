@@ -5,7 +5,6 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { getTranslations } from "next-intl/server";
 import { ReactNode } from "react";
-import ClientLayout from "@/components/ClientLayout";
 
 type Props = {
   children: ReactNode;
@@ -57,9 +56,7 @@ export default async function LocaleLayout({ children, params }: Props) {
         suppressHydrationWarning
         className="font-satoshi min-h-screen overflow-x-hidden relative bg-fundo w-full text-principal"
       >
-        <NextIntlClientProvider>
-          <ClientLayout>{children}</ClientLayout>
-        </NextIntlClientProvider>
+        <NextIntlClientProvider>{children}</NextIntlClientProvider>
       </body>
     </html>
   );
