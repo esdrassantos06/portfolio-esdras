@@ -16,7 +16,6 @@ interface MaskedCursorProps {
   height?: string;
 }
 
-// Use Tailwind values for width and height
 
 export default function MaskedCursor({
   maskedContent,
@@ -33,7 +32,6 @@ export default function MaskedCursor({
 
   useEffect(() => {
     const setFromEvent = (e: MouseEvent) => {
-      // Obter as coordenadas relativas ao container
       if (containerRef.current) {
         const rect = containerRef.current.getBoundingClientRect();
         setMousePosition({ 
@@ -58,7 +56,7 @@ export default function MaskedCursor({
       className={`cursor-container w-${width} h-${height} select-none flex flex-col items-center justify-center relative`}
     >
       <motion.div
-        animate={{
+        style={{
           WebkitMaskPosition: `${mousePosition.x - size / 2}px ${
             mousePosition.y - size / 2
           }px`,
