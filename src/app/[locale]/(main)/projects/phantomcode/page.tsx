@@ -3,21 +3,33 @@ import TechnologiesProject from "@/components/TechnologiesProject";
 import GridBackground from "@/components/ui/GridBackground";
 import ScrollAnimation from "@/components/ui/ScrollAnimation";
 import ShinyButtonProject from "@/components/ui/ShinyButtonProject";
-import type { Metadata } from "next";
+import { Locale, useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 
-export const metadata: Metadata = {
-  title: "Phantom Code | Esdras Portfolio",
-  description:
-    "A cross-platform desktop app that turns screenshots into solved code problems — instantly. Built for developers, students, and anyone who wants to speed through coding interview questions with the power of AI.",
-  keywords: "ai coding, screenshot to solution, electron, invisible coding app",
-  robots: "index, follow",
-  authors: [{ name: "Esdras" }],
-  creator: "Esdras",
-  publisher: "Esdras",
+type Props = {
+  params: Promise<{ locale: Locale }>;
 };
 
+export async function generateMetadata(props: Omit<Props, "children">) {
+  const { locale } = await props.params;
+
+  const t = await getTranslations({
+    locale,
+    namespace: "PhantomCode.Metadata",
+  });
+
+  return {
+    title: t("title"),
+    description: t("description"),
+    keywords: t("keywords"),
+    robots: t("robots"),
+    creator: t("creator"),
+  };
+}
+
 export default function PhantomCode() {
+  const t = useTranslations("PhantomCode");
   return (
     <main className="phantomcode mb-20 w-full min-h-screen">
       <GridBackground />
@@ -30,8 +42,7 @@ export default function PhantomCode() {
           </ScrollAnimation>
           <ScrollAnimation delayIndex={1}>
             <p className="text-5xl sm:text-6xl uppercase md:text-7xl text-center font-normal w-fit md:w-300">
-              A cross-platform desktop app that turns screenshots into solved
-              code problems
+              {t("title")}
             </p>
           </ScrollAnimation>
         </div>
@@ -41,7 +52,7 @@ export default function PhantomCode() {
           </ScrollAnimation>
         </div>
       </div>
-      <div className="flex flex-col mt-20 items-center justify-center w-full bg-fundo">
+      <div className="flex flex-col mt-20 items-center justify-center w-4/5 mx-auto bg-fundo">
         <ScrollAnimation delayIndex={3} className="rounded-lg">
           <Image
             id="image"
@@ -49,15 +60,15 @@ export default function PhantomCode() {
             alt="Phantom Code"
             width={1400}
             height={1400}
-            className="rounded-lg select-none max-w-full box-border mx-auto bg-clip-border w-[90%] sm:w-[60%] lg:w-[70%] pointer-events-none -mt-20 sm:-mt-50 object-cover"
+            className="rounded-lg select-none max-w-full box-border mx-auto bg-clip-border w-[80%] pointer-events-none -mt-20 sm:-mt-50 object-cover"
           />
         </ScrollAnimation>
-        <div className="project-overview w-full gap-10 px-10 lg:px-70 mt-12 flex sm:flex-row flex-col items-center justify-between">
+        <div className="project-overview w-4/5 gap-10 mt-12 flex sm:flex-row flex-col items-center justify-between">
           <div className="flex flex-col gap-8">
             <div className="flex flex-col gap-4">
               <ScrollAnimation delayIndex={4}>
                 <h1 className="font-light max-sm:text-center text-5xl">
-                  Project Overview
+                {t("overview")}
                 </h1>
               </ScrollAnimation>
               <ScrollAnimation delayIndex={5}>
@@ -77,10 +88,7 @@ export default function PhantomCode() {
           <div className="md:w-1/2">
             <ScrollAnimation delayIndex={6}>
               <p>
-                Phantom Code is a desktop application developed with Electron
-                and React that facilitates capturing code through screenshots
-                and uses AI to extract and process this code, as well as
-                generate solutions for programming problems.
+              {t("description")}
               </p>
             </ScrollAnimation>
           </div>

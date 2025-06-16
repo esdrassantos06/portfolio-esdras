@@ -1,0 +1,103 @@
+{
+  "LocaleLayout": {
+    "title": "Home Page | Esdras Portfolio",
+    "description": "Welcome to my portfolio! Check out my projects and skills.",
+    "keywords": "portfolio, projects, skills, developer",
+    "robots": "index, follow",
+    "creator": "Esdras"
+  },
+  "Header": {
+    "home": "Home",
+    "about": "About",
+    "work": "Work",
+    "contact": "Contact"
+  },
+  "NotFound": {
+    "title": "Page Not Found",
+    "description": "The page you are looking for does not exist or has moved.",
+    "return": "Return to main page"
+  },
+  "HomeComponent": {
+    "based": "Based in Portugal",
+    "description": "Hi, I'm Esdras — a Full Stack Developer crafting end-to-end solutions that bridge design, performance, and user experience. From backend API's to pixel-perfect frontend interfaces, I transform complex challenges into seamless digital experiences.",
+    "shinyWork": "See My Work"
+  },
+  "About": {
+    "currentTech": "Current technologies",
+    "description": "I'm proficient in a range of modern technologies that empower me to build highly functional solutions. These are some of my main technologies."
+  },
+  "TechnologiesComponent": {
+    "aws": "Cloud services",
+    "next": "React SSR framework",
+    "node": "JavaScript runtime",
+    "postgres": "SQL database",
+    "mongo": "NoSQL database",
+    "sqlite": "Embedded database",
+    "python": "Backend language",
+    "react": "JavaScript Library",
+    "git": "Version control",
+    "tailwind": "CSS framework",
+    "typescript": "Javascript but better"
+  },
+  "Work": {
+    "title": "My portfolio",
+    "shinyText": "All projects",
+    "ariaLabel": "See All Projects"
+  },
+  "Footer": {
+    "like": "Like what you see? Reach out",
+    "viaEmail": "via email",
+    "toColabor": "to collaborate!",
+    "schedule": "Schedule call",
+    "rights": "All rights reserved.",
+    "footerNav": {
+      "title1": "Navigate",
+      "title2": "Projects",
+      "title3": "Socials",
+      "home": "Home",
+      "about": "About",
+      "work": "Work",
+      "contact": "Contact"
+    }
+  },
+  "NovaHorizonte": {
+    "Metadata": {
+      "title": "Nova Horizonte | Esdras Portfolio",
+      "description": "Nova Horizonte is a project focused on civil construction and engineering services, allowing clients to request quotes directly through the website. The project prioritizes an intuitive, responsive, and modern interface, ensuring the best user experience.",
+      "keywords": "civil construction, projects, skills, construction, engineering",
+      "robots": "index, follow",
+      "creator": "Esdras"
+    },
+    "title": "A MODERN CIVIL CONSTRUCTION WEBSITE",
+    "overview": "Project Overview",
+    "description": "Nova Horizonte is a project focused on civil construction and engineering services, allowing clients to request quotes directly through the website. The project prioritizes an intuitive, responsive, and modern interface, ensuring the best user experience."
+  },
+  "PhantomCode": {
+    "Metadata": {
+      "title": "Phantom Code | Esdras Portfolio",
+      "description": "A cross-platform desktop app that turns screenshots into solved code problems — instantly. Built for developers, students, and anyone who wants to speed through coding interview questions with the power of AI.",
+      "keywords": "ai coding, screenshot to solution, electron, invisible coding app",
+      "robots": "index, follow",
+      "creator": "Esdras"
+    },
+    "title": "A cross-platform desktop app that turns screenshots into solved code problems",
+    "overview": "Project Overview",
+    "description": "Phantom Code is a desktop application developed with Electron and React that facilitates capturing code through screenshots and uses AI to extract and process this code, as well as generate solutions for programming problems."
+  },
+  "Tarevity": {
+    "Metadata": {
+      "title": "Tarevity | Esdras Portfolio",
+      "description": "Tarevity is a modern task management application built with Next.js 15, React 19, TypeScript, and Supabase. The application provides an intuitive and secure interface to help users organize their daily tasks with efficiency and style.",
+      "robots": "index, follow",
+      "creator": "Esdras"
+    },
+    "title": "a modern task management application",
+    "overview": "Project Overview",
+    "description": "Tarevity is a modern task management application built with Next.js 15, React 19, TypeScript, and Supabase. The application provides an intuitive and secure interface to help users organize their daily tasks with efficiency and style."
+  },
+  "DownloadCV": "Download CV",
+  "LocaleSwitcher": {
+    "label": "Change language",
+    "locale": "{locale, select, de {🇩🇪 Deutsch} en {🇺🇸 English} es {🇪🇸 Español} fr {🇫🇷 Français} pt {🇵🇹 Português} other {Unknown}}"
+  }
+}

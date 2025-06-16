@@ -1,6 +1,6 @@
-import { DownloadSimple } from "@phosphor-icons/react"
+import { DownloadSimpleIcon } from "@phosphor-icons/react"
 
 export default function DownloadButton(){
-    return (<DownloadSimple className="text-secundaria" size={20}/>
+    return (<DownloadSimpleIcon className="text-secundaria" size={20}/>
     )
 }

@@ -1,0 +1,103 @@
+{
+  "LocaleLayout": {
+    "title": "Página de Inicio | Portafolio de Esdras",
+    "description": "¡Bienvenido a mi portafolio! Echa un vistazo a mis proyectos y habilidades.",
+    "keywords": "portafolio, proyectos, habilidades, desarrollador",
+    "robots": "index, follow",
+    "creator": "Esdras"
+  },
+  "Header": {
+    "home": "Inicio",
+    "about": "Acerca de",
+    "work": "Trabajo",
+    "contact": "Contacto"
+  },
+  "NotFound": {
+    "title": "Página No Encontrada",
+    "description": "La página que estás buscando no existe o ha sido movida.",
+    "return": "Volver a la página principal"
+  },
+  "HomeComponent": {
+    "based": "Basado en Portugal",
+    "description": "Hola, soy Esdras — un Desarrollador Full Stack que crea soluciones de extremo a extremo que conectan diseño, rendimiento y experiencia de usuario. Desde APIs de backend hasta interfaces frontend pixel-perfect, transformo desafíos complejos en experiencias digitales fluidas.",
+    "shinyWork": "Ver Mi Trabajo"
+  },
+  "About": {
+    "currentTech": "Tecnologías actuales",
+    "description": "Soy competente en una variedad de tecnologías modernas que me permiten construir soluciones altamente funcionales. Estas son algunas de mis principales tecnologías."
+  },
+  "TechnologiesComponent": {
+    "aws": "Servicios en la nube",
+    "next": "Framework React SSR",
+    "node": "Entorno de ejecución JavaScript",
+    "postgres": "Base de datos SQL",
+    "mongo": "Base de datos NoSQL",
+    "sqlite": "Base de datos embebida",
+    "python": "Lenguaje de backend",
+    "react": "Librería JavaScript",
+    "git": "Control de versiones",
+    "tailwind": "Framework CSS",
+    "typescript": "JavaScript pero mejor"
+  },
+  "Work": {
+    "title": "Mi portafolio",
+    "shinyText": "Todos los proyectos",
+    "ariaLabel": "Ver Todos los Proyectos"
+  },
+  "Footer": {
+    "like": "¿Te gusta lo que ves? Ponte en contacto",
+    "viaEmail": "por email",
+    "toColabor": "¡para colaborar!",
+    "schedule": "Programar llamada",
+    "rights": "Todos los derechos reservados.",
+    "footerNav": {
+      "title1": "Navegar",
+      "title2": "Proyectos",
+      "title3": "Sociales",
+      "home": "Inicio",
+      "about": "Acerca de",
+      "work": "Trabajo",
+      "contact": "Contacto"
+    }
+  },
+  "NovaHorizonte": {
+    "Metadata": {
+      "title": "Nova Horizonte | Portafolio de Esdras",
+      "description": "Nova Horizonte es un proyecto enfocado en construcción civil y servicios de ingeniería, permitiendo a los clientes solicitar cotizaciones directamente a través del sitio web. El proyecto prioriza una interfaz intuitiva, responsive y moderna, asegurando la mejor experiencia de usuario.",
+      "keywords": "construcción civil, proyectos, habilidades, construcción, ingeniería",
+      "robots": "index, follow",
+      "creator": "Esdras"
+    },
+    "title": "UN SITIO WEB MODERNO DE CONSTRUCCIÓN CIVIL",
+    "overview": "Resumen del Proyecto",
+    "description": "Nova Horizonte es un proyecto enfocado en construcción civil y servicios de ingeniería, permitiendo a los clientes solicitar cotizaciones directamente a través del sitio web. El proyecto prioriza una interfaz intuitiva, responsive y moderna, asegurando la mejor experiencia de usuario."
+  },
+  "PhantomCode": {
+    "Metadata": {
+      "title": "Phantom Code | Portafolio de Esdras",
+      "description": "Una aplicación de escritorio multiplataforma que convierte capturas de pantalla en problemas de código resueltos — al instante. Construida para desarrolladores, estudiantes y cualquiera que quiera acelerar a través de preguntas de entrevistas de codificación con el poder de la IA.",
+      "keywords": "codificación con IA, captura de pantalla a solución, electron, aplicación de codificación invisible",
+      "robots": "index, follow",
+      "creator": "Esdras"
+    },
+    "title": "Una aplicación de escritorio multiplataforma que convierte capturas de pantalla en problemas de código resueltos",
+    "overview": "Resumen del Proyecto",
+    "description": "Phantom Code es una aplicación de escritorio desarrollada con Electron y React que facilita la captura de código a través de capturas de pantalla y usa IA para extraer y procesar este código, así como generar soluciones para problemas de programación."
+  },
+  "Tarevity": {
+    "Metadata": {
+      "title": "Tarevity | Portafolio de Esdras",
+      "description": "Tarevity es una aplicación moderna de gestión de tareas construida con Next.js 15, React 19, TypeScript y Supabase. La aplicación proporciona una interfaz intuitiva y segura para ayudar a los usuarios a organizar sus tareas diarias con eficiencia y estilo.",
+      "robots": "index, follow",
+      "creator": "Esdras"
+    },
+    "title": "una aplicación moderna de gestión de tareas",
+    "overview": "Resumen del Proyecto",
+    "description": "Tarevity es una aplicación moderna de gestión de tareas construida con Next.js 15, React 19, TypeScript y Supabase. La aplicación proporciona una interfaz intuitiva y segura para ayudar a los usuarios a organizar sus tareas diarias con eficiencia y estilo."
+  },
+  "DownloadCV": "Descargar CV",
+  "LocaleSwitcher": {
+    "label": "Change language",
+    "locale": "{locale, select, de {🇩🇪 Deutsch} en {🇺🇸 English} es {🇪🇸 Español} fr {🇫🇷 Français} pt {🇵🇹 Português} other {Unknown}}"
+  }
+}

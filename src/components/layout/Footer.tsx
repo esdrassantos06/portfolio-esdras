@@ -1,43 +1,46 @@
 "use client";
 
 import ShinyButton from "../ui/ShinyButton";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import ScrollAnimation from "../ui/ScrollAnimation";
+import { useTranslations } from "next-intl";
 
 export default function Footer() {
+  const t = useTranslations("Footer");
+
   return (
-    <div className="lg:w-[65%] w-[80%] relative mb-8 mx-auto bottom-4 rounded-2xl flex flex-col items-center justify-between border-gray-200/20 border-1 h-fit lg:h-120 overflow-hidden">
+    <div className="w-[70%] relative mb-8 mx-auto bottom-4 rounded-2xl flex flex-col items-center justify-between border-gray-200/20 border-1 h-fit overflow-hidden">
       <footer id="contact" className="w-full h-fit">
         <div className="first-part-footer p-8 pt-10 flex flex-col w-full items-start justify-start gap-8">
           <ScrollAnimation delayIndex={1} initialY={10}>
             <h1 className="text-4xl md:text-5xl max-w-full w-fit lg:w-160 font-bold">
-              Like what you see? Reach out{" "}
+              {t("like")}{" "}
               <a
                 href="mailto:esdrasirion1@gmail.com"
                 className="underline decoration-2 max-md:text-center hover:text-blue-800 underline-offset-8 text-blue-600 transition-all duration-300"
               >
-                via email
+                {t("viaEmail")}
               </a>{" "}
-              to collaborate!
+              {t("toColabor")}
             </h1>
           </ScrollAnimation>
           <ScrollAnimation delayIndex={2} initialY={10}>
             <ShinyButton
               showArrow={false}
-              text="Schedule call"
+              text={t("schedule")}
               link="mailto:esdrasirion1@gmail.com"
             />
           </ScrollAnimation>
         </div>
 
-        <div className="border-t w-full border-gray-200/20"></div>
+        <div className="border-t w-full border-gray-200/20" />
 
         <div className="second-part-footer p-8 flex md:flex-row flex-col gap-10 justify-between w-full">
           <ScrollAnimation delayIndex={3} initialY={10}>
             <div className="name-and-copy flex flex-col gap-2">
               <h1 className="text-xl font-bold">Esdras Santos</h1>
               <span className="text-principal/70 text-base">
-                © {new Date().getFullYear()} | All rights reserved.
+                © {new Date().getFullYear()} | {t("rights")}
               </span>
             </div>
           </ScrollAnimation>
@@ -46,27 +49,27 @@ export default function Footer() {
             <ScrollAnimation delayIndex={4} initialY={10}>
               <div className="navigate">
                 <h1 className="text-principal text-xl font-semibold">
-                  Navigate
+                  {t("footerNav.title1")}
                 </h1>
                 <ul className="flex flex-col mt-1 gap-2">
                   <li className="hover:text-principal font-light text-principal/70">
                     <Link aria-label="Home" href={"/#home"}>
-                      Home
+                      {t("footerNav.home")}
                     </Link>
                   </li>
                   <li className="hover:text-principal font-light text-principal/70">
                     <Link aria-label="About Me" href={"/#about"}>
-                      About
+                      {t("footerNav.about")}
                     </Link>
                   </li>
                   <li className="hover:text-principal font-light text-principal/70">
                     <Link aria-label="My Work" href={"/#work"}>
-                      Work
+                      {t("footerNav.work")}
                     </Link>
                   </li>
                   <li className="hover:text-principal font-light text-principal/70">
                     <Link aria-label="Contact" href={"/#contact"}>
-                      Contact
+                      {t("footerNav.contact")}
                     </Link>
                   </li>
                 </ul>
@@ -76,7 +79,7 @@ export default function Footer() {
             <ScrollAnimation delayIndex={5} initialY={10}>
               <div className="projects">
                 <h1 className="text-principal text-xl font-semibold">
-                  Projects
+                  {t("footerNav.title2")}
                 </h1>
                 <ul className="flex flex-col mt-1 gap-2">
                   <li className="hover:text-principal font-light text-principal/70">
@@ -93,7 +96,10 @@ export default function Footer() {
                     </Link>
                   </li>
                   <li className="hover:text-principal font-light text-principal/70">
-                    <Link aria-label="Phantom Code" href={"/projects/phantomcode"}>
+                    <Link
+                      aria-label="Phantom Code"
+                      href={"/projects/phantomcode"}
+                    >
                       Phantom Code
                     </Link>
                   </li>
@@ -104,7 +110,7 @@ export default function Footer() {
             <ScrollAnimation delayIndex={6} initialY={10}>
               <div className="socials">
                 <h1 className="text-principal text-xl font-semibold">
-                  Socials
+                  {t("footerNav.title3")}
                 </h1>
                 <ul className="flex flex-col mt-1 gap-2">
                   <li className="hover:text-principal font-light text-principal/70">

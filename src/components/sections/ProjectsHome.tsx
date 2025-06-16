@@ -1,7 +1,7 @@
 "use client";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import Image from "next/image";
-import { ArrowUpRight } from "@phosphor-icons/react";
+import { ArrowUpRightIcon } from "@phosphor-icons/react";
 import ScrollAnimation from "../ui/ScrollAnimation";
 
 export default function ProjectsHome() {
@@ -40,7 +40,7 @@ export default function ProjectsHome() {
       {projects.map((project, i) => {
         return (
           <ScrollAnimation key={i} delayIndex={i + 2}>
-            <div className="card flex gap-4 flex-col items-center justify-center bg-fundo2 rounded-2xl p-8 lg:w-155 lg:h-155 md:w-125 md:h-125 w-fit h-fit">
+            <div className="card flex gap-4 flex-col items-center justify-center bg-fundo2 rounded-2xl p-8 md:size-125 size-fit">
               <Link
                 href={project.link}
                 className="flex group rounded-lg overflow-hidden"
@@ -79,7 +79,7 @@ export default function ProjectsHome() {
                     aria-label={project.name}
                     className="flex group items-center rounded-md justify-center w-18 h-18 active:bg-secundaria/70 hover:bg-secundaria/70 transition-all duration-300 bg-secundaria"
                   >
-                    <ArrowUpRight
+                    <ArrowUpRightIcon
                       className="group-hover:rotate-45 group-active:rotate-45 rotate-0 transition-all duration-300"
                       size={30}
                     />

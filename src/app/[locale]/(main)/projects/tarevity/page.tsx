@@ -1,22 +1,34 @@
-import type { Metadata } from "next";
 import GridBackground from "@/components/ui/GridBackground";
 import ArrowDownIcon from "@/components/icons/ArrowDownIcon";
 import Image from "next/image";
 import ShinyButtonProject from "@/components/ui/ShinyButtonProject";
 import TechnologiesProject from "@/components/TechnologiesProject";
 import ScrollAnimation from "@/components/ui/ScrollAnimation";
+import { Locale, useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 
-export const metadata: Metadata = {
-  title: "Tarevity | Esdras Portfolio",
-  description:
-    "Tarevity is a modern task management application built with Next.js 15, React 19, TypeScript, and Supabase. The application provides an intuitive and secure interface to help users organize their daily tasks with efficiency and style.",
-  robots: "index, follow",
-  authors: [{ name: "Esdras" }],
-  creator: "Esdras",
-  publisher: "Esdras",
+type Props = {
+  params: Promise<{ locale: Locale }>;
 };
 
+export async function generateMetadata(props: Omit<Props, "children">) {
+  const { locale } = await props.params;
+
+  const t = await getTranslations({
+    locale,
+    namespace: "NovaHorizonte.Metadata",
+  });
+
+  return {
+    title: t("title"),
+    description: t("description"),
+    robots: t("robots"),
+    creator: t("creator"),
+  };
+}
+
 export default function Tarevity() {
+  const t = useTranslations("Tarevity");
   return (
     <main className="novahorizonte mb-20 w-full min-h-screen">
       <GridBackground />
@@ -29,7 +41,7 @@ export default function Tarevity() {
           </ScrollAnimation>
           <ScrollAnimation delayIndex={1}>
             <p className="text-5xl sm:text-6xl uppercase md:text-7xl text-center font-normal w-fit md:w-300">
-              a modern task management application
+              {t("title")}
             </p>
           </ScrollAnimation>
         </div>
@@ -39,7 +51,7 @@ export default function Tarevity() {
           </ScrollAnimation>
         </div>
       </div>
-      <div className="flex flex-col mt-20 items-center justify-center w-full bg-fundo">
+      <div className="flex flex-col mt-20 items-center justify-center w-4/5 mx-auto bg-fundo">
         <ScrollAnimation delayIndex={3} className="rounded-lg">
           <Image
             id="image"
@@ -47,15 +59,15 @@ export default function Tarevity() {
             alt="Tarevity"
             width={1400}
             height={1400}
-            className="rounded-lg select-none max-w-full box-border mx-auto bg-clip-border w-[90%] sm:w-[60%] lg:w-[70%] pointer-events-none -mt-20 sm:-mt-50 object-cover"
+            className="rounded-lg select-none max-w-full box-border mx-auto bg-clip-border w-[80%] pointer-events-none -mt-20 sm:-mt-50 object-cover"
           />
         </ScrollAnimation>
-        <div className="project-overview w-full gap-10 px-10 lg:px-70 mt-12 flex sm:flex-row flex-col items-center justify-between">
+        <div className="project-overview pt-10 gap-10 w-3/4 flex sm:flex-row flex-col items-center justify-between">
           <div className="flex flex-col gap-8">
             <div className="flex flex-col gap-4">
               <ScrollAnimation delayIndex={4}>
                 <h1 className="font-light max-sm:text-center text-5xl">
-                  Project Overview
+                  {t("overview")}
                 </h1>
               </ScrollAnimation>
               <ScrollAnimation delayIndex={5}>
@@ -80,12 +92,7 @@ export default function Tarevity() {
           </div>
           <div className="md:w-1/2">
             <ScrollAnimation delayIndex={6}>
-              <p>
-                Tarevity is a modern task management application built with
-                Next.js 15, React 19, TypeScript, and Supabase. The application
-                provides an intuitive and secure interface to help users
-                organize their daily tasks with efficiency and style.
-              </p>
+              <p>{t("description")}</p>
             </ScrollAnimation>
           </div>
         </div>

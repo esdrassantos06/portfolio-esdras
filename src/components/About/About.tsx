@@ -4,6 +4,7 @@ import ScrollAnimation from "../ui/ScrollAnimation";
 import { useEffect, useState } from "react";
 import Technologies from "../sections/Technologies";
 import "./aboutgradient.css";
+import { useTranslations } from "next-intl";
 
 export default function About() {
   const [mounted, setMounted] = useState(false);
@@ -49,20 +50,22 @@ export default function About() {
     }
   }, [mounted]);
 
+  const t = useTranslations("About");
+
   return (
     <main
       id="about"
       className="w-full min-h-screen h-fit gradient-bg flex justify-center items-center py-10 sm:py-20"
     >
       <div className="gradient-container">
-        <div className="interactive max-md:hidden"></div>
+        <div className="interactive max-md:hidden" />
       </div>
 
-      <section className="flex mx-auto relative z-50 px-4 sm:px-10 md:px-20 lg:px-40 flex-col items-center justify-center w-full max-w-[1440px]">
+      <section className="flex mx-auto relative z-50 px-4 sm:px-10 flex-col items-center justify-center w-full max-w-[1440px]">
         <div className="title mb-10 sm:mb-18 flex flex-col self-start items-center justify-center space-y-2 w-full">
           <ScrollAnimation delayIndex={0}>
             <h1 className="font-bold mb-4 sm:mb-6 text-center text-4xl sm:text-5xl lg:text-6xl">
-              Current technologies
+              {t("currentTech")}
             </h1>
           </ScrollAnimation>
           <ScrollAnimation
@@ -70,9 +73,7 @@ export default function About() {
             className="w-full flex justify-center"
           >
             <p className="text-sm sm:text-base text-principal/70 max-w-[600px] font-satoshi text-center">
-              I&apos;m proficient in a range of modern technologies that empower
-              me to build highly functional solutions. These are some of my main
-              technologies.
+              {t("description")}
             </p>
           </ScrollAnimation>
         </div>

@@ -6,8 +6,10 @@ import ShinyButton from "../ui/ShinyButton";
 import Icons from "../icons/Icons";
 import MaskedCursor from "../MaskedCursor/MaskedCursor";
 import ScrollAnimation from "../ui/ScrollAnimation";
+import { useTranslations } from "next-intl";
 
 export default function HomeComponent() {
+  const t = useTranslations("HomeComponent");
   return (
     <main
       id="home"
@@ -17,7 +19,7 @@ export default function HomeComponent() {
         width="full"
         height="screen"
         maskedContent={
-          <div className="flex gap-4 flex-col items-center justify-center"></div>
+          <div className="flex gap-4 flex-col items-center justify-center" />
         }
         normalContent={(isHovered, setIsHovered) => (
           <div className="flex w-200 gap-4 relative flex-col items-center justify-center">
@@ -27,8 +29,8 @@ export default function HomeComponent() {
               onMouseLeave={() => setIsHovered(false)}
             >
               <ScrollAnimation delayIndex={0}>
-                <h2 className="font-bold text-principal text-center text-sm">
-                  BASED IN PORTUGAL
+                <h2 className="font-bold uppercase text-principal text-center text-sm">
+                  {t("based")}
                 </h2>
               </ScrollAnimation>
               <div>
@@ -58,14 +60,20 @@ export default function HomeComponent() {
               </div>
             </div>
 
-            <ScrollAnimation delayIndex={3} className="flex lg:w-full md:w-[80%] sm:w-[60%] w-[40%] items-center justify-center">
+            <ScrollAnimation
+              delayIndex={3}
+              className="flex lg:w-full md:w-[80%] sm:w-[60%] w-[40%] items-center justify-center"
+            >
               <span className="text-center flex  items-center justify-center text-lg">
-              Hi, I&apos;m Esdras — a Full Stack Developer crafting end-to-end solutions that bridge design, performance, and user experience. From backend api&apos;s to pixel-perfect frontend interfaces, I transform complex challenges into seamless digital experiences.
+                {t("description")}
               </span>
             </ScrollAnimation>
-            <ScrollAnimation delayIndex={4} className="flex flex-col items-center justify-center gap-4">
+            <ScrollAnimation
+              delayIndex={4}
+              className="flex flex-col items-center justify-center gap-4"
+            >
               <div className="buttons z-30 relative sm:flex-row flex-col flex mt-2 gap-4 sm:gap-2 items-center">
-                <ShinyButton text="See My Work" link="#work" />
+                <ShinyButton text={t("shinyWork")} link="#work" />
                 <CvDownload />
               </div>
               <div className="icons mt-4">

@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import ScrollAnimation from "../ui/ScrollAnimation";
+import { useTranslations } from "next-intl";
 
 class Technology {
   constructor(
@@ -17,88 +18,90 @@ class Technology {
 }
 
 export default function Technologies() {
+const t = useTranslations("TechnologiesComponent")
+
   const technologies = [
     new Technology(
       "AWS",
       "/technologies/aws.svg",
       "aws",
       "bg-white",
-      "Cloud services"
+      t("aws")
     ),
     new Technology(
       "Next.js",
       "/technologies/next.svg",
       "Next.js",
       "bg-[#313131]",
-      "React SSR framework"
+      t("next")
     ),
     new Technology(
       "NodeJS",
       "/technologies/node.svg",
       "NodeJS",
       "bg-[#20625C]",
-      "JavaScript runtime"
+      t("node")
     ),
     new Technology(
       "Postgres",
       "/technologies/postgres.svg",
       "Postgres",
       "bg-[#024795]",
-      "SQL database"
+      t("postgres")
     ),
     new Technology(
       "MongoDB",
       "/technologies/mongodb.svg",
       "MongoDB",
       "bg-[#54714c]",
-      "NoSQL database"
+      t("mongo")
     ),
     new Technology(
       "SQLite",
       "/technologies/sqlite.svg",
       "SQLite",
       "bg-[#172446]",
-      "Embedded database"
+      t("sqlite")
     ),
     new Technology(
       "Python",
       "/technologies/python.svg",
       "Python",
       "bg-[#AE9B07]",
-      "Backend language"
+      t("python")
     ),
     new Technology(
       "React",
       "/technologies/react.svg",
       "React",
       "bg-[#284147]",
-      "JavaScript Library"
+      t("react")
     ),
     new Technology(
       "Git",
       "/technologies/git.svg",
       "Git",
       "bg-[#284147]",
-      "Version control"
+      t("git")
     ),
     new Technology(
       "Tailwind CSS",
       "/technologies/tailwind.svg",
       "Tailwind CSS",
       "bg-[#183644]",
-      "CSS framework"
+      t("tailwind")
     ),
     new Technology(
       "Typescript",
       "/technologies/ts.svg",
       "Typescript",
       "bg-[#1F2D3D]",
-      "JavaScript but better"
+      t("typescript")
     ),
   ];
 
   return (
-    <div className="grid gap-4 h-fit mb-8 max-md:place-items-center lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 2xl:grid-cols-4">
+    <div className="grid gap-4 h-fit mb-8 w-3/4 max-md:place-items-center lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 2xl:grid-cols-4">
       {technologies.map((tech, index) => {
         return (
           <ScrollAnimation

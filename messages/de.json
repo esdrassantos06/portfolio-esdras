@@ -1,0 +1,103 @@
+{
+  "LocaleLayout": {
+    "title": "Startseite | Esdras Portfolio",
+    "description": "Willkommen in meinem Portfolio! Schauen Sie sich meine Projekte und Fähigkeiten an.",
+    "keywords": "Portfolio, Projekte, Fähigkeiten, Entwickler",
+    "robots": "index, follow",
+    "creator": "Esdras"
+  },
+  "Header": {
+    "home": "Startseite",
+    "about": "Über mich",
+    "work": "Arbeit",
+    "contact": "Kontakt"
+  },
+  "NotFound": {
+    "title": "Seite nicht gefunden",
+    "description": "Die Seite, die Sie suchen, existiert nicht oder wurde verschoben.",
+    "return": "Zur Hauptseite zurückkehren"
+  },
+  "HomeComponent": {
+    "based": "Ansässig in Portugal",
+    "description": "Hallo, ich bin Esdras — ein Full Stack-Entwickler, der End-to-End-Lösungen erstellt, die Design, Performance und Benutzererfahrung verbinden. Von Backend-APIs bis hin zu pixelgenauen Frontend-Schnittstellen verwandle ich komplexe Herausforderungen in nahtlose digitale Erlebnisse.",
+    "shinyWork": "Meine Arbeit"
+  },
+  "About": {
+    "currentTech": "Aktuelle Technologien",
+    "description": "Ich beherrsche eine Reihe moderner Technologien, die es mir ermöglichen, hochfunktionale Lösungen zu entwickeln. Dies sind einige meiner Haupttechnologien."
+  },
+  "TechnologiesComponent": {
+    "aws": "Cloud-Dienste",
+    "next": "React SSR-Framework",
+    "node": "JavaScript-Laufzeitumgebung",
+    "postgres": "SQL-Datenbank",
+    "mongo": "NoSQL-Datenbank",
+    "sqlite": "Eingebettete Datenbank",
+    "python": "Backend-Sprache",
+    "react": "JavaScript-Bibliothek",
+    "git": "Versionsverwaltung",
+    "tailwind": "CSS-Framework",
+    "typescript": "JavaScript aber besser"
+  },
+  "Work": {
+    "title": "Mein Portfolio",
+    "shinyText": "Alle Projekte",
+    "ariaLabel": "Alle Projekte ansehen"
+  },
+  "Footer": {
+    "like": "Gefällt Ihnen, was Sie sehen? Kontaktieren Sie mich",
+    "viaEmail": "per E-Mail",
+    "toColabor": "zur Zusammenarbeit!",
+    "schedule": "Anruf planen",
+    "rights": "Alle Rechte vorbehalten.",
+    "footerNav": {
+      "title1": "Navigation",
+      "title2": "Projekte",
+      "title3": "Soziales",
+      "home": "Startseite",
+      "about": "Über mich",
+      "work": "Arbeit",
+      "contact": "Kontakt"
+    }
+  },
+  "NovaHorizonte": {
+    "Metadata": {
+      "title": "Nova Horizonte | Esdras Portfolio",
+      "description": "Nova Horizonte ist ein Projekt, das sich auf Tiefbau und Ingenieurdienstleistungen konzentriert und es Kunden ermöglicht, Angebote direkt über die Website anzufordern. Das Projekt priorisiert eine intuitive, responsive und moderne Benutzeroberfläche, um die beste Benutzererfahrung zu gewährleisten.",
+      "keywords": "Tiefbau, Projekte, Fähigkeiten, Bau, Ingenieurwesen",
+      "robots": "index, follow",
+      "creator": "Esdras"
+    },
+    "title": "EINE MODERNE TIEFBAU-WEBSITE",
+    "overview": "Projekt-Übersicht",
+    "description": "Nova Horizonte ist ein Projekt, das sich auf Tiefbau und Ingenieurdienstleistungen konzentriert und es Kunden ermöglicht, Angebote direkt über die Website anzufordern. Das Projekt priorisiert eine intuitive, responsive und moderne Benutzeroberfläche, um die beste Benutzererfahrung zu gewährleisten."
+  },
+  "PhantomCode": {
+    "Metadata": {
+      "title": "Phantom Code | Esdras Portfolio",
+      "description": "Eine plattformübergreifende Desktop-App, die Screenshots in gelöste Code-Probleme verwandelt — sofort. Entwickelt für Entwickler, Studenten und alle, die durch Coding-Interview-Fragen mit der Kraft der KI beschleunigen wollen.",
+      "keywords": "KI-Codierung, Screenshot zu Lösung, Electron, unsichtbare Coding-App",
+      "robots": "index, follow",
+      "creator": "Esdras"
+    },
+    "title": "Eine plattformübergreifende Desktop-App, die Screenshots in gelöste Code-Probleme verwandelt",
+    "overview": "Projekt-Übersicht",
+    "description": "Phantom Code ist eine Desktop-Anwendung, die mit Electron und React entwickelt wurde und das Erfassen von Code durch Screenshots erleichtert und KI verwendet, um diesen Code zu extrahieren und zu verarbeiten sowie Lösungen für Programmierproblem zu generieren."
+  },
+  "Tarevity": {
+    "Metadata": {
+      "title": "Tarevity | Esdras Portfolio",
+      "description": "Tarevity ist eine moderne Aufgabenverwaltungsanwendung, die mit Next.js 15, React 19, TypeScript und Supabase entwickelt wurde. Die Anwendung bietet eine intuitive und sichere Benutzeroberfläche, um Benutzern zu helfen, ihre täglichen Aufgaben mit Effizienz und Stil zu organisieren.",
+      "robots": "index, follow",
+      "creator": "Esdras"
+    },
+    "title": "eine moderne Aufgabenverwaltungsanwendung",
+    "overview": "Projekt-Übersicht",
+    "description": "Tarevity ist eine moderne Aufgabenverwaltungsanwendung, die mit Next.js 15, React 19, TypeScript und Supabase entwickelt wurde. Die Anwendung bietet eine intuitive und sichere Benutzeroberfläche, um Benutzern zu helfen, ihre täglichen Aufgaben mit Effizienz und Stil zu organisieren."
+  },
+  "DownloadCV": "Lebenslauf herunterladen",
+  "LocaleSwitcher": {
+    "label": "Change language",
+    "locale": "{locale, select, de {🇩🇪 Deutsch} en {🇺🇸 English} es {🇪🇸 Español} fr {🇫🇷 Français} pt {🇵🇹 Português} other {Unknown}}"
+  }
+}

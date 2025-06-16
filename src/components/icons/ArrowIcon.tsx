@@ -1,5 +1,5 @@
-import { CaretRight } from "@phosphor-icons/react"
+import { CaretRightIcon } from "@phosphor-icons/react"
 
 export default function ArrowIcon(){
-    return (<CaretRight size={20} weight="bold"/>)
+    return (<CaretRightIcon size={20} weight="bold"/>)
 }
