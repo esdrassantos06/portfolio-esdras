@@ -33,13 +33,13 @@ export default function Tarevity() {
             </p>
           </ScrollAnimation>
         </div>
-        <div className="arrow-down w-full mt-40 flex items-center justify-center">
+        <div className="arrow-down w-full mt-20  flex items-center justify-center">
           <ScrollAnimation delayIndex={2}>
             <ArrowDownIcon />
           </ScrollAnimation>
         </div>
       </div>
-      <div className="flex flex-col items-center justify-center w-full bg-fundo">
+      <div className="flex flex-col mt-20 items-center justify-center w-full bg-fundo">
         <ScrollAnimation delayIndex={3} className="rounded-lg">
           <Image
             id="image"
@@ -72,7 +72,10 @@ export default function Tarevity() {
               </ScrollAnimation>
             </div>
             <ScrollAnimation delayIndex={6} className="max-sm:mb-10">
-              <ShinyButtonProject demo="https://www.tarevity.pt/" code="https://github.com/esdrassantos06/tarevity"/>
+              <ShinyButtonProject
+                demo="https://www.tarevity.pt/"
+                code="https://github.com/esdrassantos06/tarevity"
+              />
             </ScrollAnimation>
           </div>
           <div className="md:w-1/2">

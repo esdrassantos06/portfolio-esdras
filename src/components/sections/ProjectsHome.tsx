@@ -64,7 +64,7 @@ export default function ProjectsHome() {
                     return (
                       <div
                         key={i}
-                        className={`${tech.toLowerCase()} flex font-light rounded-md border-gray-200/20 transition-all duration-300 select-none border border-opacity-20 hover:bg-gray-200/20 items-center justify-center bg-[#262626] p-1 text-sm text-center`}
+                        className={`${tech.toLowerCase()} max-w-40 h-10 flex font-light rounded-md border-gray-200/20 transition-all duration-300 select-none border border-opacity-20 hover:bg-gray-200/20 items-center justify-center bg-[#262626] p-1 text-sm text-center`}
                       >
                         {tech}
                       </div>
