@@ -34,8 +34,8 @@ export default async function LocaleLayout({ children, params }: Props) {
   return (
     <html lang={locale} className="scroll-smooth overflow-x-hidden">
       <Head>
-        <link rel="manifest" href="/site.webmanifest" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/manifest.json" />
+        <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" />
         <link
           rel="icon"
           type="image/png"
@@ -48,7 +48,6 @@ export default async function LocaleLayout({ children, params }: Props) {
           sizes="16x16"
           href="/favicon/favicon-16x16.png"
         />
-        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000" />
         <meta name="msapplication-TileColor" content="#000000" />
         <meta name="theme-color" content="#000000" />
       </Head>
