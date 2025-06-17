@@ -91,11 +91,11 @@
       "robots": "index, follow",
       "creator": "Esdras"
     },
-    "title": "eine moderne Aufgabenverwaltungsanwendung",
+    "title": "Task-Manager",
     "overview": "Projekt-Übersicht",
     "description": "Tarevity ist eine moderne Aufgabenverwaltungsanwendung, die mit Next.js 15, React 19, TypeScript und Supabase entwickelt wurde. Die Anwendung bietet eine intuitive und sichere Benutzeroberfläche, um Benutzern zu helfen, ihre täglichen Aufgaben mit Effizienz und Stil zu organisieren."
   },
-  "DownloadCV": "Lebenslauf herunterladen",
+  "DownloadCV": "Lehrplan",
   "LocaleSwitcher": {
     "label": "Change language",
     "locale": "{locale, select, de {🇩🇪 Deutsch} en {🇺🇸 English} es {🇪🇸 Español} fr {🇫🇷 Français} pt {🇵🇹 Português} other {Unknown}}"
