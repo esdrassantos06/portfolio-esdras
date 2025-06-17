@@ -18,13 +18,16 @@ This is a personal portfolio website showcasing my skills, projects, and profess
 ## 🛠 Technologies Used
 
 ### Frontend
+
 - Next.js 15
 - React 19
 - TypeScript
 - Tailwind CSS
 - Framer Motion
+- Next INTL
 
 ### Design & Interactions
+
 - Phosphor Icons
 - Custom scroll animations
 - Masked cursor effect
@@ -33,38 +36,53 @@ This is a personal portfolio website showcasing my skills, projects, and profess
 ## 🖥 Projects Highlighted
 
 ### 1. Nova Horizonte
+
 - Civil construction website
 - Technologies: React, TailwindCSS, shadcn/ui, Vite
 
 ### 2. Tarevity
+
 - Task management application
 - Technologies: NextJS, TailwindCSS, TypeScript, Supabase, Redis, NextAuth
+
+### 3. Phantom Code
+
+- A cross-platform desktop app that turns screenshots into solved code problems
+- Technologies: Electron, TailwindCSS, OpenAI API
 
 ## 📦 Getting Started
 
 ### Prerequisites
+
 - Node.js (18.x or later)
-- npm or yarn
+- npm or yarn or bun
 
 ### Installation
 
 1. Clone the repository
+
 ```bash
 git clone https://github.com/esdrassantos06/portfolio-esdras.git
 ```
 
 2. Install dependencies
+
 ```bash
 npm install
 # or
 yarn install
+# or 
+bun install
 ```
 
 3. Run the development server
+
 ```bash
 npm run dev
 # or
 yarn dev
+# or 
+bun run dev
 ```
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser
@@ -77,6 +95,9 @@ npm start
 # or
 yarn build
 yarn start
+# or
+bun run build
+bun start
 ```
 
 ## 📄 License
@@ -95,4 +116,4 @@ This portfolio is more than just a showcase of projects. It's a reflection of my
 
 ---
 
-*Crafted with ❤️ by Esdras Santos*
+_Crafted with ❤️ by Esdras Santos_
