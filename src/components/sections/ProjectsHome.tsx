@@ -10,7 +10,7 @@ export default function ProjectsHome() {
       public name: string,
       public image: string,
       public link: string,
-      public technologies: string[]
+      public technologies: string[],
     ) {}
   }
 
@@ -19,31 +19,31 @@ export default function ProjectsHome() {
       "Nova Horizonte",
       "/projects-mockup/novahorizonte.png",
       "/projects/novahorizonte",
-      ["React", "TailwindCSS", "shadcn/ui", "Vite"]
+      ["React", "TailwindCSS", "shadcn/ui", "Vite"],
     ),
     new Project(
       "Tarevity",
       "/projects-mockup/tarevity.png",
       "/projects/tarevity",
-      ["NextJS", "TailwindCSS", "Typescript", "Supabase", "Redis", "NextAuth"]
+      ["NextJS", "TailwindCSS", "Typescript", "Supabase", "Redis", "NextAuth"],
     ),
     new Project(
       "Phantom Code",
       "/projects-mockup/phantomcode.png",
       "/projects/phantomcode",
-      ["Electron", "TailwindCSS", "OpenAI API"]
+      ["Electron", "TailwindCSS", "OpenAI API"],
     ),
   ];
 
   return (
-    <div className="grid lg:grid-cols-2 gap-4 grid-cols-1">
+    <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
       {projects.map((project, i) => {
         return (
           <ScrollAnimation key={i} delayIndex={i + 2}>
-            <div className="card flex gap-4 flex-col items-center justify-center bg-fundo2 rounded-2xl p-8 md:size-125 size-fit">
+            <div className="card bg-fundo2 flex size-fit flex-col items-center justify-center gap-4 rounded-2xl p-8 md:size-125">
               <Link
                 href={project.link}
-                className="flex group rounded-lg overflow-hidden"
+                className="group flex overflow-hidden rounded-lg"
               >
                 <Image
                   src={project.image}
@@ -51,20 +51,20 @@ export default function ProjectsHome() {
                   width={600}
                   height={600}
                   priority
-                  className="object-cover max-w-full lg:w-150 group-hover:scale-110 transition-all duration-800 select-none pointer-events-none rounded-lg"
+                  className="pointer-events-none max-w-full rounded-lg object-cover transition-all duration-800 select-none group-hover:scale-110 lg:w-150"
                 />
               </Link>
               <div className="project-name flex w-full">
-                <h1 className="font-semibold text-2xl">{project.name}</h1>
+                <h1 className="text-2xl font-semibold">{project.name}</h1>
               </div>
 
-              <div className="w-full flex">
+              <div className="flex w-full">
                 <div className="technologies grid grid-cols-3 gap-2">
                   {project.technologies.map((tech, i) => {
                     return (
                       <div
                         key={i}
-                        className={`${tech.toLowerCase()} max-w-40 h-10 flex font-light rounded-md border-gray-200/20 transition-all duration-300 select-none border border-opacity-20 hover:bg-gray-200/20 items-center justify-center bg-[#262626] p-1 text-sm text-center`}
+                        className={`${tech.toLowerCase()} border-opacity-20 flex h-10 max-w-40 items-center justify-center rounded-md border border-gray-200/20 bg-[#262626] p-1 text-center text-sm font-light transition-all duration-300 select-none hover:bg-gray-200/20`}
                       >
                         {tech}
                       </div>
@@ -72,15 +72,15 @@ export default function ProjectsHome() {
                   })}
                 </div>
 
-                <div className="redirect-btn w-1/2 flex items-center justify-end">
+                <div className="redirect-btn flex w-1/2 items-center justify-end">
                   <Link
                     key={i}
                     href={project.link}
                     aria-label={project.name}
-                    className="flex group items-center rounded-md justify-center w-18 h-18 active:bg-secundaria/70 hover:bg-secundaria/70 transition-all duration-300 bg-secundaria"
+                    className="group active:bg-secundaria/70 hover:bg-secundaria/70 bg-secundaria flex h-18 w-18 items-center justify-center rounded-md transition-all duration-300"
                   >
                     <ArrowUpRightIcon
-                      className="group-hover:rotate-45 group-active:rotate-45 rotate-0 transition-all duration-300"
+                      className="rotate-0 transition-all duration-300 group-hover:rotate-45 group-active:rotate-45"
                       size={30}
                     />
                   </Link>

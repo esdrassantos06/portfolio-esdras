@@ -8,7 +8,7 @@ export default function GridBackground() {
   return (
     <div
       style={gridStyle}
-      className="w-full gridbg bg-cover h-screen absolute top-0 left-0 -z-10 pointer-events-none"
+      className="gridbg pointer-events-none absolute top-0 left-0 -z-10 h-screen w-full bg-cover"
     />
   );
 }

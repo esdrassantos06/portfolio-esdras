@@ -10,12 +10,12 @@ export default function Work() {
   return (
     <main
       id="work"
-      className="w-full min-h-screen mb-20 flex justify-center items-center"
+      className="mb-20 flex min-h-screen w-full items-center justify-center"
     >
-      <div className="flex w-full lg:mx-auto px-5 flex-col items-center justify-center">
-        <div className="title-and-button mb-20 w-full flex flex-col gap-10 md:flex-row self-start items-center justify-around">
+      <div className="flex w-full flex-col items-center justify-center px-5 lg:mx-auto">
+        <div className="title-and-button mb-20 flex w-full flex-col items-center justify-around gap-10 self-start md:flex-row">
           <ScrollAnimation delayIndex={0}>
-            <h1 className="font-bold text-center text-5xl sm:text-6xl">
+            <h1 className="text-center text-5xl font-bold sm:text-6xl">
               {t("title")}
             </h1>
           </ScrollAnimation>

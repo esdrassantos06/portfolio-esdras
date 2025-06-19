@@ -32,7 +32,7 @@ export default async function LocaleLayout({ children, params }: Props) {
   }
 
   return (
-    <html lang={locale} className="scroll-smooth overflow-x-hidden">
+    <html lang={locale} className="overflow-x-hidden scroll-smooth">
       <Head>
         <link rel="manifest" href="/manifest.json" />
         <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" />
@@ -53,7 +53,7 @@ export default async function LocaleLayout({ children, params }: Props) {
       </Head>
       <body
         suppressHydrationWarning
-        className="font-satoshi overflow-x-hidden bg-fundo w-full text-principal"
+        className="font-satoshi bg-fundo text-principal w-full overflow-x-hidden"
       >
         <NextIntlClientProvider>{children}</NextIntlClientProvider>
       </body>

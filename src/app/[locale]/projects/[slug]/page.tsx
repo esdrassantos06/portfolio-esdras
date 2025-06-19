@@ -63,24 +63,24 @@ export default async function ProjetoPage({ params }: Props) {
       <Navbar />
       <main className="w-full pt-20">
         <GridBackground />
-        <div className="flex flex-col items-center justify-center w-full h-screen">
+        <div className="flex h-screen w-full flex-col items-center justify-center">
           <ScrollAnimation delayIndex={1}>
-            <div className="flex flex-col w-full gap-2 items-center justify-center">
-              <h1 className="font-extrabold text-6xl max-md:text-center md:text-7xl/tight">
+            <div className="flex w-full flex-col items-center justify-center gap-2">
+              <h1 className="text-6xl font-extrabold max-md:text-center md:text-7xl/tight">
                 {projeto.slug.toUpperCase()}
               </h1>
-              <p className="text-5xl sm:text-6xl md:text-7xl text-center uppercase font-normal w-fit md:w-300">
+              <p className="w-fit text-center text-5xl font-normal uppercase sm:text-6xl md:w-300 md:text-7xl">
                 {t("title")}
               </p>
             </div>
           </ScrollAnimation>
-          <div className="arrow-down w-full mt-20 flex items-center justify-center">
+          <div className="arrow-down mt-20 flex w-full items-center justify-center">
             <ScrollAnimation delayIndex={2}>
               <ArrowDownIcon />
             </ScrollAnimation>
           </div>
         </div>
-        <div className="flex flex-col mt-20 items-center justify-center w-4/5 mx-auto bg-fundo">
+        <div className="bg-fundo mx-auto mt-20 flex w-4/5 flex-col items-center justify-center">
           <ScrollAnimation delayIndex={3}>
             <Image
               id="image"
@@ -88,13 +88,13 @@ export default async function ProjetoPage({ params }: Props) {
               alt={t("title")}
               width={1400}
               height={1400}
-              className="rounded-lg mx-auto select-none max-w-full w-4/5 object-cover"
+              className="mx-auto w-4/5 max-w-full rounded-lg object-cover select-none"
             />
           </ScrollAnimation>
-          <div className="pt-10 pb-20 mx-auto gap-10 mt-12 flex sm:flex-row flex-col items-center justify-between">
+          <div className="mx-auto mt-12 flex flex-col items-center justify-between gap-10 pt-10 pb-20 sm:flex-row">
             <div className="flex flex-col gap-8">
               <ScrollAnimation delayIndex={4}>
-                <h1 className="font-light text-5xl">{t("overview")}</h1>
+                <h1 className="text-5xl font-light">{t("overview")}</h1>
               </ScrollAnimation>
               <ScrollAnimation delayIndex={5}>
                 <TechnologiesProject

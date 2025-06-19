@@ -5,16 +5,20 @@ import {
   UserIcon,
   DesktopIcon,
 } from "@phosphor-icons/react";
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "motion/react";
 import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
-import LocaleSwitcher from "../LocaleSwitcher";
+import LocaleSwitcher from "@/components/LocaleSwitcher";
+import { Inter } from "next/font/google";
+
+const inter = Inter({ subsets: ["latin"] });
 
 type ScrollDirection = "up" | "down" | null;
 
 export default function Navbar() {
   const [scrollDirection, setScrollDirection] = useState<ScrollDirection>(null);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const t = useTranslations("Header");
 
@@ -22,87 +26,106 @@ export default function Navbar() {
     let lastScrollY = window.scrollY;
 
     const handleScroll = () => {
-      if (window.scrollY > lastScrollY) {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
         setScrollDirection("down");
       } else {
         setScrollDirection("up");
       }
 
-      lastScrollY = window.scrollY;
+      setIsScrolled(currentScrollY > 20);
+      lastScrollY = currentScrollY;
     };
 
     window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Check initial scroll position
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
+  const navItems = [
+    { href: "/#home", label: t("home"), icon: HouseIcon, id: "home" },
+    { href: "/#about", label: t("about"), icon: InfoIcon, id: "about" },
+    { href: "/#work", label: t("work"), icon: DesktopIcon, id: "work" },
+    { href: "/#contact", label: t("contact"), icon: UserIcon, id: "contact" },
+  ];
+
   return (
     <motion.header
-      className="fixed top-12 left-1/2 transform -translate-x-1/2 flex justify-center z-999 transition-all duration-300"
-      animate={{ y: scrollDirection === "down" ? -110 : 0 }}
+      className="fixed top-6 left-1/2 z-50 -translate-x-1/2 transform transition-all duration-300"
+      animate={{
+        y: scrollDirection === "down" ? -120 : 0,
+        scale: scrollDirection === "down" ? 0.95 : 1,
+      }}
       transition={{
         type: "spring",
-        stiffness: 500,
-        damping: 40,
-        mass: 1,
-        ease: "easeOut",
+        stiffness: 400,
+        damping: 30,
+        mass: 0.8,
       }}
     >
-      <nav className="flex bg-fundo2 w-fit px-4 h-14 items-center text-principal justify-around border border-gray-200/50 rounded-lg">
-        <ul className="flex gap-4 font-semibold items-center">
-          <li className="text-lg transition-all duration-300 hover:text-principal/60">
-            <Link aria-label="Home" className="hidden sm:flex" href="/#home">
-              {t("home")}
-            </Link>
-            <Link aria-label="Home" className="flex sm:hidden" href="/#home">
-              <HouseIcon size={35} />
-            </Link>
-          </li>
-          <li className="text-lg transition-all duration-300 hover:text-principal/60">
-            <Link
-              aria-label="About Me"
-              className="hidden sm:flex"
-              href="/#about"
+      <motion.nav
+        className={`${inter.className} relative overflow-hidden rounded-2xl border border-gray-200/50`}
+        animate={{
+          backdropFilter: isScrolled ? "blur(20px)" : "blur(10px)",
+        }}
+        transition={{ duration: 0.3 }}
+      >
+        {/* Content */}
+        <div className="relative flex min-w-fit items-center px-6 py-2">
+          <ul className="flex items-center gap-1 font-medium">
+            {navItems.map((item, index) => (
+              <motion.li
+                key={item.id}
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+              >
+                <Link
+                  href={item.href}
+                  aria-label={item.label}
+                  className="group relative flex items-center justify-center rounded-xl px-4 py-2.5 transition-all duration-300 hover:bg-white/10 active:scale-95"
+                >
+                  {/* Hover background effect */}
+                  <div className="from-principal/0 via-principal/5 to-principal/0 absolute inset-0 rounded-xl bg-gradient-to-r opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+
+                  {/* Desktop text */}
+                  <span className="text-principal/90 group-hover:text-principal relative z-10 hidden transition-colors duration-300 sm:block">
+                    {item.label}
+                  </span>
+
+                  {/* Mobile icon */}
+                  <item.icon
+                    size={24}
+                    className="text-principal/90 group-hover:text-principal relative z-10 transition-all duration-300 group-hover:scale-110 sm:hidden"
+                  />
+
+                  {/* Active indicator dot */}
+                  <div className="bg-principal absolute -bottom-1 left-1/2 h-1 w-1 -translate-x-1/2 transform rounded-full opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                </Link>
+              </motion.li>
+            ))}
+
+            {/* Separator */}
+            <div className="mx-2 h-6 w-px bg-gradient-to-b from-transparent via-gray-300/30 to-transparent" />
+
+            {/* Locale Switcher */}
+            <motion.li
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.4 }}
             >
-              {t("about")}
-            </Link>
-            <Link
-              aria-label="About Me"
-              className="flex sm:hidden"
-              href="/#about"
-            >
-              <InfoIcon size={35} />
-            </Link>
-          </li>
-          <li className="text-lg transition-all duration-300 hover:text-principal/60">
-            <Link aria-label="My Work" className="hidden sm:flex" href="/#work">
-              {t("work")}
-            </Link>
-            <Link aria-label="My Work" className="flex sm:hidden" href="/#work">
-              <DesktopIcon size={35} />
-            </Link>
-          </li>
-          <li className="text-lg transition-all duration-300 hover:text-principal/60">
-            <Link
-              aria-label="Contact Me"
-              className="hidden sm:flex"
-              href="/#contact"
-            >
-              {t("contact")}
-            </Link>
-            <Link
-              aria-label="Contact Me"
-              className="flex sm:hidden"
-              href="/#contact"
-            >
-              <UserIcon size={35} />
-            </Link>
-          </li>
-          <LocaleSwitcher />
-        </ul>
-      </nav>
+              <LocaleSwitcher />
+            </motion.li>
+          </ul>
+        </div>
+
+        {/* Bottom glow effect */}
+        <div className="via-principal/20 absolute -bottom-2 left-1/2 h-1 w-3/4 -translate-x-1/2 transform bg-gradient-to-r from-transparent to-transparent blur-sm" />
+      </motion.nav>
     </motion.header>
   );
 }

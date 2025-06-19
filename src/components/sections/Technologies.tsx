@@ -9,7 +9,7 @@ class Technology {
     public src: string,
     public alt: string,
     public background: string,
-    public description: string
+    public description: string,
   ) {}
 
   getSlugName(): string {
@@ -18,114 +18,105 @@ class Technology {
 }
 
 export default function Technologies() {
-const t = useTranslations("TechnologiesComponent")
+  const t = useTranslations("TechnologiesComponent");
 
   const technologies = [
-    new Technology(
-      "AWS",
-      "/technologies/aws.svg",
-      "aws",
-      "bg-white",
-      t("aws")
-    ),
+    new Technology("AWS", "/technologies/aws.svg", "aws", "bg-white", t("aws")),
     new Technology(
       "Next.js",
       "/technologies/next.svg",
       "Next.js",
       "bg-[#313131]",
-      t("next")
+      t("next"),
     ),
     new Technology(
       "NodeJS",
       "/technologies/node.svg",
       "NodeJS",
       "bg-[#20625C]",
-      t("node")
+      t("node"),
     ),
     new Technology(
       "Postgres",
       "/technologies/postgres.svg",
       "Postgres",
       "bg-[#024795]",
-      t("postgres")
+      t("postgres"),
     ),
     new Technology(
       "MongoDB",
       "/technologies/mongodb.svg",
       "MongoDB",
       "bg-[#54714c]",
-      t("mongo")
+      t("mongo"),
     ),
     new Technology(
       "SQLite",
       "/technologies/sqlite.svg",
       "SQLite",
       "bg-[#172446]",
-      t("sqlite")
+      t("sqlite"),
     ),
     new Technology(
       "Python",
       "/technologies/python.svg",
       "Python",
       "bg-[#AE9B07]",
-      t("python")
+      t("python"),
     ),
     new Technology(
       "React",
       "/technologies/react.svg",
       "React",
       "bg-[#284147]",
-      t("react")
+      t("react"),
     ),
     new Technology(
       "Git",
       "/technologies/git.svg",
       "Git",
       "bg-[#284147]",
-      t("git")
+      t("git"),
     ),
     new Technology(
       "Tailwind CSS",
       "/technologies/tailwind.svg",
       "Tailwind CSS",
       "bg-[#183644]",
-      t("tailwind")
+      t("tailwind"),
     ),
     new Technology(
       "Typescript",
       "/technologies/ts.svg",
       "Typescript",
       "bg-[#1F2D3D]",
-      t("typescript")
+      t("typescript"),
     ),
   ];
 
   return (
-    <div className="grid gap-4 h-fit mb-8 w-3/4 max-md:place-items-center lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 2xl:grid-cols-4">
+    <div className="mb-8 grid h-fit w-3/4 grid-cols-1 gap-4 max-md:place-items-center sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
       {technologies.map((tech, index) => {
         return (
           <ScrollAnimation
             delayIndex={index - 1}
-            className={`tech-${tech.getSlugName()}
-          bg-fundo2 w-full max-w-[320px] h-[100px] hover:border-gray-200/50 hover:bg-fundo2hover border-transparent transition-all duration-300 border-1 rounded-2xl flex items-center py-4 px-6`}
+            className={`tech-${tech.getSlugName()} bg-fundo2 hover:bg-fundo2hover flex h-[100px] w-full max-w-[320px] items-center rounded-2xl border-1 border-transparent px-6 py-4 transition-all duration-300 hover:border-gray-200/50`}
             key={index}
           >
-            <div
-              className="flex gap-4 w-full items-center"
-            >
+            <div className="flex w-full items-center gap-4">
               <span
-                className={`icon flex items-center justify-center rounded-lg p-2 h-14 w-14 flex-shrink-0 ${tech.background}`}
+                className={`icon flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-lg p-2 ${tech.background}`}
               >
                 <Image
                   src={tech.src}
-                  className="w-9 h-9"
+                  className="h-9 w-9"
                   width={36}
                   height={36}
                   alt={tech.alt}
                 />
               </span>
               <div className="text flex flex-col justify-center">
-                <h1 className="font-semibold text-base">{tech.name}</h1>
+                <h1 className="text-base font-semibold">{tech.name}</h1>
                 <p className="text-principal/80 text-sm">{tech.description}</p>
               </div>
             </div>

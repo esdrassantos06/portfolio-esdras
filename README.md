@@ -71,7 +71,7 @@ git clone https://github.com/esdrassantos06/portfolio-esdras.git
 npm install
 # or
 yarn install
-# or 
+# or
 bun install
 ```
 
@@ -81,7 +81,7 @@ bun install
 npm run dev
 # or
 yarn dev
-# or 
+# or
 bun run dev
 ```
 

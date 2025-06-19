@@ -98,6 +98,6 @@
   "DownloadCV": "Download CV",
   "LocaleSwitcher": {
     "label": "Change language",
-    "locale": "{locale, select, de {🇩🇪 Deutsch} en {🇺🇸 English} es {🇪🇸 Español} fr {🇫🇷 Français} pt {🇵🇹 Português} other {Unknown}}"
+    "locale": "{locale, select, de {Deutsch} en {English} es {Español} fr {Français} pt {Portuguese} other {Unknown}}"
   }
 }

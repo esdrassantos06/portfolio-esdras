@@ -9,15 +9,15 @@ export default function Footer() {
   const t = useTranslations("Footer");
 
   return (
-    <div className="w-[70%] relative mb-8 mx-auto bottom-4 rounded-2xl flex flex-col items-center justify-between border-gray-200/20 border-1 h-fit overflow-hidden">
-      <footer id="contact" className="w-full h-fit">
-        <div className="first-part-footer p-8 pt-10 flex flex-col w-full items-start justify-start gap-8">
+    <div className="relative bottom-4 mx-auto mb-8 flex h-fit w-[70%] flex-col items-center justify-between overflow-hidden rounded-2xl border-1 border-gray-200/20">
+      <footer id="contact" className="h-fit w-full">
+        <div className="first-part-footer flex w-full flex-col items-start justify-start gap-8 p-8 pt-10">
           <ScrollAnimation delayIndex={1} initialY={10}>
-            <h1 className="text-4xl md:text-5xl max-w-full w-fit lg:w-160 font-bold">
+            <h1 className="w-fit max-w-full text-4xl font-bold md:text-5xl lg:w-160">
               {t("like")}{" "}
               <a
                 href="mailto:esdrasirion1@gmail.com"
-                className="underline decoration-2 max-md:text-center hover:text-blue-800 underline-offset-8 text-blue-600 transition-all duration-300"
+                className="text-blue-600 underline decoration-2 underline-offset-8 transition-all duration-300 hover:text-blue-800 max-md:text-center"
               >
                 {t("viaEmail")}
               </a>{" "}
@@ -33,9 +33,9 @@ export default function Footer() {
           </ScrollAnimation>
         </div>
 
-        <div className="border-t w-full border-gray-200/20" />
+        <div className="w-full border-t border-gray-200/20" />
 
-        <div className="second-part-footer p-8 flex md:flex-row flex-col gap-10 justify-between w-full">
+        <div className="second-part-footer flex w-full flex-col justify-between gap-10 p-8 md:flex-row">
           <ScrollAnimation delayIndex={3} initialY={10}>
             <div className="name-and-copy flex flex-col gap-2">
               <h1 className="text-xl font-bold">Esdras Santos</h1>
@@ -45,29 +45,29 @@ export default function Footer() {
             </div>
           </ScrollAnimation>
 
-          <nav className="footer-navbar flex md:flex-nowrap flex-wrap justify-between gap-6 md:gap-2 md:w-1/3">
+          <nav className="footer-navbar flex flex-wrap justify-between gap-6 md:w-1/3 md:flex-nowrap md:gap-2">
             <ScrollAnimation delayIndex={4} initialY={10}>
               <div className="navigate">
                 <h1 className="text-principal text-xl font-semibold">
                   {t("footerNav.title1")}
                 </h1>
-                <ul className="flex flex-col mt-1 gap-2">
-                  <li className="hover:text-principal font-light text-principal/70">
+                <ul className="mt-1 flex flex-col gap-2">
+                  <li className="hover:text-principal text-principal/70 font-light">
                     <Link aria-label="Home" href={"/#home"}>
                       {t("footerNav.home")}
                     </Link>
                   </li>
-                  <li className="hover:text-principal font-light text-principal/70">
+                  <li className="hover:text-principal text-principal/70 font-light">
                     <Link aria-label="About Me" href={"/#about"}>
                       {t("footerNav.about")}
                     </Link>
                   </li>
-                  <li className="hover:text-principal font-light text-principal/70">
+                  <li className="hover:text-principal text-principal/70 font-light">
                     <Link aria-label="My Work" href={"/#work"}>
                       {t("footerNav.work")}
                     </Link>
                   </li>
-                  <li className="hover:text-principal font-light text-principal/70">
+                  <li className="hover:text-principal text-principal/70 font-light">
                     <Link aria-label="Contact" href={"/#contact"}>
                       {t("footerNav.contact")}
                     </Link>
@@ -81,8 +81,8 @@ export default function Footer() {
                 <h1 className="text-principal text-xl font-semibold">
                   {t("footerNav.title2")}
                 </h1>
-                <ul className="flex flex-col mt-1 gap-2">
-                  <li className="hover:text-principal font-light text-principal/70">
+                <ul className="mt-1 flex flex-col gap-2">
+                  <li className="hover:text-principal text-principal/70 font-light">
                     <Link
                       aria-label="Project Nova Horizonte"
                       href={"/projects/novahorizonte"}
@@ -90,12 +90,12 @@ export default function Footer() {
                       Nova Horizonte
                     </Link>
                   </li>
-                  <li className="hover:text-principal font-light text-principal/70">
+                  <li className="hover:text-principal text-principal/70 font-light">
                     <Link aria-label="Tarevity" href={"/projects/tarevity"}>
                       Tarevity
                     </Link>
                   </li>
-                  <li className="hover:text-principal font-light text-principal/70">
+                  <li className="hover:text-principal text-principal/70 font-light">
                     <Link
                       aria-label="Phantom Code"
                       href={"/projects/phantomcode"}
@@ -112,8 +112,8 @@ export default function Footer() {
                 <h1 className="text-principal text-xl font-semibold">
                   {t("footerNav.title3")}
                 </h1>
-                <ul className="flex flex-col mt-1 gap-2">
-                  <li className="hover:text-principal font-light text-principal/70">
+                <ul className="mt-1 flex flex-col gap-2">
+                  <li className="hover:text-principal text-principal/70 font-light">
                     <a
                       rel="noopener noreferrer"
                       aria-label="Linkedin"
@@ -123,7 +123,7 @@ export default function Footer() {
                       Linkedin
                     </a>
                   </li>
-                  <li className="hover:text-principal font-light text-principal/70">
+                  <li className="hover:text-principal text-principal/70 font-light">
                     <a
                       href="https://github.com/esdrassantos06"
                       aria-label="Github"

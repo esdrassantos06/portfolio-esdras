@@ -11,11 +11,15 @@ interface MousePosition {
 
 interface MaskedCursorProps {
   maskedContent: ReactNode;
-  normalContent: ReactNode | ((isHovered: boolean, setIsHovered: (value: boolean) => void) => ReactNode);
+  normalContent:
+    | ReactNode
+    | ((
+        isHovered: boolean,
+        setIsHovered: (value: boolean) => void,
+      ) => ReactNode);
   width?: string;
   height?: string;
 }
-
 
 export default function MaskedCursor({
   maskedContent,
@@ -34,13 +38,13 @@ export default function MaskedCursor({
     const setFromEvent = (e: MouseEvent) => {
       if (containerRef.current) {
         const rect = containerRef.current.getBoundingClientRect();
-        setMousePosition({ 
-          x: e.clientX - rect.left, 
-          y: e.clientY - rect.top 
+        setMousePosition({
+          x: e.clientX - rect.left,
+          y: e.clientY - rect.top,
         });
       }
     };
-    
+
     const container = containerRef.current;
     container?.addEventListener("mousemove", setFromEvent);
     return () => {
@@ -51,9 +55,9 @@ export default function MaskedCursor({
   const size: number = isHovered ? 400 : 50;
 
   return (
-    <div 
+    <div
       ref={containerRef}
-      className={`cursor-container w-${width} h-${height} select-none flex flex-col items-center justify-center relative`}
+      className={`cursor-container w-${width} h-${height} relative flex flex-col items-center justify-center select-none`}
     >
       <motion.div
         style={{
@@ -62,15 +66,15 @@ export default function MaskedCursor({
           }px`,
           WebkitMaskSize: `${size}px`,
         }}
-        transition={{ ease: "backOut"}}
-        className="cursor pointer-events-none z-11 bg-secundaria absolute inset-0"
+        transition={{ ease: "backOut" }}
+        className="cursor bg-secundaria pointer-events-none absolute inset-0 z-11"
       >
         <div>{maskedContent}</div>
       </motion.div>
 
       <div className="normal relative z-20">
-        {typeof normalContent === "function" 
-          ? normalContent(isHovered, setIsHovered) 
+        {typeof normalContent === "function"
+          ? normalContent(isHovered, setIsHovered)
           : normalContent}
       </div>
     </div>

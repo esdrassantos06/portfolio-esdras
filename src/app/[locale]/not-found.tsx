@@ -5,16 +5,16 @@ import { useTranslations } from "next-intl";
 export default function NotFound() {
   const t = useTranslations("NotFound");
   return (
-    <main className="w-full min-h-screen flex items-center justify-center bg-[--color-fundo] relative">
+    <main className="relative flex min-h-screen w-full items-center justify-center bg-[--color-fundo]">
       <GridBackground />
 
-      <div className="z-10 flex flex-col items-center gap-4 text-center px-4">
-        <h1 className="text-6xl font-bold text-principal">404</h1>
-        <p className="text-xl text-secundaria">{t("title")}</p>
-        <p className="text-principal opacity-80 max-w-md">{t("description")}</p>
+      <div className="z-10 flex flex-col items-center gap-4 px-4 text-center">
+        <h1 className="text-principal text-6xl font-bold">404</h1>
+        <p className="text-secundaria text-xl">{t("title")}</p>
+        <p className="text-principal max-w-md opacity-80">{t("description")}</p>
         <Link
           href="/"
-          className="mt-4 px-6 py-2 rounded-xl text-principal border border-secundaria hover:bg-fundo2hover transition-all"
+          className="text-principal border-secundaria hover:bg-fundo2hover mt-4 rounded-xl border px-6 py-2 transition-all"
         >
           {t("return")}
         </Link>

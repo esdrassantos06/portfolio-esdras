@@ -97,7 +97,7 @@
   },
   "DownloadCV": "Descargar CV",
   "LocaleSwitcher": {
-    "label": "Change language",
-    "locale": "{locale, select, de {🇩🇪 Deutsch} en {🇺🇸 English} es {🇪🇸 Español} fr {🇫🇷 Français} pt {🇵🇹 Português} other {Unknown}}"
+    "label": "Cambiar idioma",
+    "locale": "{locale, select, de {Deutsch} en {English} es {Español} fr {Français} pt {Português} other {Unknown}}"
   }
 }

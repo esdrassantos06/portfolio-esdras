@@ -97,7 +97,7 @@
   },
   "DownloadCV": "Lehrplan",
   "LocaleSwitcher": {
-    "label": "Change language",
-    "locale": "{locale, select, de {🇩🇪 Deutsch} en {🇺🇸 English} es {🇪🇸 Español} fr {🇫🇷 Français} pt {🇵🇹 Português} other {Unknown}}"
+    "label": "Sprache ändern",
+    "locale": "{locale, select, de {Deutsch} en {Englisch} es {Spanisch} fr {Französisch} pt {Portugiesisch} other {Unbekannt}}"
   }
 }

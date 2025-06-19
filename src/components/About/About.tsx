@@ -29,7 +29,7 @@ export default function About() {
             curY += (tgY - curY) / 20;
 
             interBubble.style.transform = `translate(${Math.round(
-              curX
+              curX,
             )}px, ${Math.round(curY)}px)`;
             requestAnimationFrame(move);
           }
@@ -55,24 +55,24 @@ export default function About() {
   return (
     <main
       id="about"
-      className="w-full min-h-screen h-fit gradient-bg flex justify-center items-center py-10 sm:py-20"
+      className="gradient-bg flex h-fit min-h-screen w-full items-center justify-center py-10 sm:py-20"
     >
       <div className="gradient-container">
         <div className="interactive max-md:hidden" />
       </div>
 
-      <section className="flex mx-auto relative z-50 px-4 sm:px-10 flex-col items-center justify-center w-full max-w-[1440px]">
-        <div className="title mb-10 sm:mb-18 flex flex-col self-start items-center justify-center space-y-2 w-full">
+      <section className="relative z-50 mx-auto flex w-full max-w-[1440px] flex-col items-center justify-center px-4 sm:px-10">
+        <div className="title mb-10 flex w-full flex-col items-center justify-center space-y-2 self-start sm:mb-18">
           <ScrollAnimation delayIndex={0}>
-            <h1 className="font-bold mb-4 sm:mb-6 text-center text-4xl sm:text-5xl lg:text-6xl">
+            <h1 className="mb-4 text-center text-4xl font-bold sm:mb-6 sm:text-5xl lg:text-6xl">
               {t("currentTech")}
             </h1>
           </ScrollAnimation>
           <ScrollAnimation
             delayIndex={1}
-            className="w-full flex justify-center"
+            className="flex w-full justify-center"
           >
-            <p className="text-sm sm:text-base text-principal/70 max-w-[600px] font-satoshi text-center">
+            <p className="text-principal/70 font-satoshi max-w-[600px] text-center text-sm sm:text-base">
               {t("description")}
             </p>
           </ScrollAnimation>
