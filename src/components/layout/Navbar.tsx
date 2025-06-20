@@ -87,7 +87,7 @@ export default function Navbar() {
                 <Link
                   href={item.href}
                   aria-label={item.label}
-                  className="group relative flex items-center justify-center rounded-xl px-2 sm:px-4 py-2.5 transition-all duration-300 hover:bg-white/10 active:scale-95"
+                  className="group relative flex items-center justify-center rounded-xl px-2 py-2.5 transition-all duration-300 hover:bg-white/10 active:scale-95 sm:px-4"
                 >
                   {/* Hover background effect */}
                   <div className="from-principal/0 via-principal/5 to-principal/0 absolute inset-0 rounded-xl bg-gradient-to-r opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
@@ -110,7 +110,7 @@ export default function Navbar() {
             ))}
 
             {/* Separator */}
-            <div className="sm:mx-2 h-6 w-px bg-gradient-to-b from-transparent via-gray-300/30 to-transparent" />
+            <div className="h-6 w-px bg-gradient-to-b from-transparent via-gray-300/30 to-transparent sm:mx-2" />
 
             {/* Locale Switcher */}
             <motion.li
