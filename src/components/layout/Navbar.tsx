@@ -55,7 +55,7 @@ export default function Navbar() {
 
   return (
     <motion.header
-      className="fixed top-6 left-1/2 z-50 -translate-x-1/2 transform transition-all duration-300"
+      className="fixed top-6 left-1/2 z-[9999] -translate-x-1/2 transform transition-all duration-300"
       animate={{
         y: scrollDirection === "down" ? -120 : 0,
         scale: scrollDirection === "down" ? 0.95 : 1,
