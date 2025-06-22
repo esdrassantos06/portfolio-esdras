@@ -41,7 +41,7 @@ export default function ProjectsHome() {
       "Redis",
       "Better Auth",
       "Jest",
-      "Docker"
+      "Docker",
     ]),
   ];
 

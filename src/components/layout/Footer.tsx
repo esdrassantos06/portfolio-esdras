@@ -104,10 +104,7 @@ export default function Footer() {
                     </Link>
                   </li>
                   <li className="hover:text-principal text-principal/70 font-light">
-                    <Link
-                      aria-label="Zipway"
-                      href={"/projects/zipway"}
-                    >
+                    <Link aria-label="Zipway" href={"/projects/zipway"}>
                       Zipway
                     </Link>
                   </li>
