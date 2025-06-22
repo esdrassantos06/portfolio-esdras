@@ -95,6 +95,17 @@
     "overview": "Project Overview",
     "description": "Tarevity is a modern task management application built with Next.js 15, React 19, TypeScript, and Supabase. The application provides an intuitive and secure interface to help users organize their daily tasks with efficiency and style."
   },
+  "Zipway": {
+    "Metadata": {
+      "title": "Zipway | Esdras Portfolio",
+      "description": "Zipway is a fully-featured, responsive URL shortener that provides a seamless experience for authenticated users to create, manage, and share short links. Built on cutting-edge technologies like Next.js (App Router), Prisma ORM, Supabase, Tailwind CSS, and shadcn/ui library components. It features secure authentication, short link redirection middleware, and automated testing with Jest and React Testing Library.",
+      "robots": "index, follow",
+      "creator": "Esdras"
+    },
+    "title": "Modern URL shortener with control panel",
+    "overview": "Project Overview",
+    "description": "Zipway is a fully-featured, responsive URL shortener that provides a seamless experience for authenticated users to create, manage, and share short links. Built on cutting-edge technologies like Next.js (App Router), Prisma ORM, Supabase, Tailwind CSS, and shadcn/ui library components. It features secure authentication, short link redirection middleware, and automated testing with Jest and React Testing Library."
+  },
   "DownloadCV": "Download CV",
   "LocaleSwitcher": {
     "label": "Change language",

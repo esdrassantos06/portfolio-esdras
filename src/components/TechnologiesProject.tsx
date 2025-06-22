@@ -16,7 +16,7 @@ const TechnologiesProject: React.FC<TechnologiesProjectProps> = ({
       {technologies.map((tech, i) => (
         <div
           key={i}
-          className="flex items-center justify-center rounded-md border-1 border-gray-200/20 bg-[#262626] px-2 py-2 text-sm font-light transition-all duration-300 select-none hover:bg-gray-200/20"
+          className="flex items-center justify-center text-center rounded-md border-1 border-gray-200/20 bg-[#262626] p-2 text-sm font-light transition-all duration-300 select-none hover:bg-gray-200/20"
         >
           {tech.name}
         </div>

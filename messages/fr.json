@@ -95,6 +95,17 @@
     "overview": "Aperçu du Projet",
     "description": "Tarevity est une application moderne de gestion de tâches construite avec Next.js 15, React 19, TypeScript et Supabase. L'application fournit une interface intuitive et sécurisée pour aider les utilisateurs à organiser leurs tâches quotidiennes avec efficacité et style."
   },
+  "Zipway": {
+    "Metadata": {
+      "title": "Zipway | Esdras Portfolio",
+      "description": "Zipway est un raccourcisseur d'URL entièrement fonctionnel et réactif qui offre une expérience fluide aux utilisateurs authentifiés pour créer, gérer et partager des liens courts. Construit avec des technologies de pointe comme Next.js (App Router), Prisma ORM, Supabase, Tailwind CSS et les composants de la bibliothèque shadcn/ui. Il comprend une authentification sécurisée, un middleware de redirection de liens courts et des tests automatisés avec Jest et React Testing Library.",
+      "robots": "index, follow",
+      "creator": "Esdras"
+    },
+    "title": "Raccourcisseur d'URL moderne avec panneau de contrôle",
+    "overview": "Aperçu du Projet",
+    "description": "Zipway est un raccourcisseur d'URL entièrement fonctionnel et réactif qui offre une expérience fluide aux utilisateurs authentifiés pour créer, gérer et partager des liens courts. Construit avec des technologies de pointe comme Next.js (App Router), Prisma ORM, Supabase, Tailwind CSS et les composants de la bibliothèque shadcn/ui. Il comprend une authentification sécurisée, un middleware de redirection de liens courts et des tests automatisés avec Jest et React Testing Library."
+  },
   "DownloadCV": "Télécharger CV",
   "LocaleSwitcher": {
     "label": "Changer de langue",

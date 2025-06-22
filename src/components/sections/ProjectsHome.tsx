@@ -33,6 +33,16 @@ export default function ProjectsHome() {
       "/projects/phantomcode",
       ["Electron", "TailwindCSS", "OpenAI API"],
     ),
+    new Project("Zipway", "/projects-mockup/zipway.png", "/projects/zipway", [
+      "NextJS",
+      "TailwindCSS",
+      "Typescript",
+      "Postgres",
+      "Redis",
+      "Better Auth",
+      "Jest",
+      "Docker"
+    ]),
   ];
 
   return (
@@ -51,20 +61,22 @@ export default function ProjectsHome() {
                   width={600}
                   height={600}
                   priority
-                  className="pointer-events-none max-w-full rounded-lg object-cover transition-all duration-800 select-none group-hover:scale-110 lg:w-150"
+                  className="pointer-events-none max-w-full rounded-lg object-fill transition-all duration-800 select-none group-hover:scale-110 lg:w-150"
                 />
               </Link>
               <div className="project-name flex w-full">
-                <h1 className="text-2xl font-semibold">{project.name}</h1>
+                <h1 className="text-xl font-semibold md:text-2xl">
+                  {project.name}
+                </h1>
               </div>
 
               <div className="flex w-full">
-                <div className="technologies grid grid-cols-3 gap-2">
+                <div className="technologies grid grid-cols-2 gap-4 md:grid-cols-3">
                   {project.technologies.map((tech, i) => {
                     return (
                       <div
                         key={i}
-                        className={`${tech.toLowerCase()} border-opacity-20 flex h-10 max-w-40 items-center justify-center rounded-md border border-gray-200/20 bg-[#262626] p-1 text-center text-sm font-light transition-all duration-300 select-none hover:bg-gray-200/20`}
+                        className={`${tech.toLowerCase()} border-opacity-20 flex h-10 items-center justify-center rounded-md border border-gray-200/20 bg-[#262626] p-1 text-center text-xs font-light transition-all duration-300 select-none hover:bg-gray-200/20 sm:text-sm md:w-20`}
                       >
                         {tech}
                       </div>

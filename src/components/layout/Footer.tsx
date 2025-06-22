@@ -103,6 +103,14 @@ export default function Footer() {
                       Phantom Code
                     </Link>
                   </li>
+                  <li className="hover:text-principal text-principal/70 font-light">
+                    <Link
+                      aria-label="Zipway"
+                      href={"/projects/zipway"}
+                    >
+                      Zipway
+                    </Link>
+                  </li>
                 </ul>
               </div>
             </ScrollAnimation>
