@@ -15,7 +15,7 @@ export default function Work() {
       <div className="flex w-full flex-col items-center justify-center px-5 lg:mx-auto">
         <div className="title-and-button mb-20 flex w-full flex-col items-center justify-around gap-10 self-start md:flex-row">
           <ScrollAnimation delayIndex={0}>
-            <h1 className="text-center text-5xl font-bold sm:text-6xl">
+            <h1 className="mt-2 text-center text-5xl font-bold sm:text-6xl">
               {t("title")}
             </h1>
           </ScrollAnimation>
