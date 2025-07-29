@@ -41,7 +41,7 @@ export const projetos: Record<string, Projeto> = {
   zipway: {
     slug: "zipway",
     image: "/projects-mockup/zipway.png",
-    demo: "https://shly.spt",
+    demo: "https://shly.pt",
     code: "https://github.com/esdrassantos06/zipway",
     technologies: [
       "NextJS",
