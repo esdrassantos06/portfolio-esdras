@@ -1,40 +1,61 @@
-type Projeto = {
+const tech = {
+  react: "React",
+  tailwind: "TailwindCSS",
+  shadcn: "shadcn/ui",
+  vite: "Vite",
+  electron: "Electron",
+  openai: "OpenAI API",
+  next: "NextJS",
+  ts: "Typescript",
+  pg: "Postgres",
+  redis: "Redis",
+  nextauth: "NextAuth",
+  betterAuth: "Better Auth",
+  jest: "Jest",
+  rtl: "React Testing Library",
+  docker: "Docker",
+};
+
+type TechName = (typeof tech)[keyof typeof tech];
+
+interface Project {
   slug: string;
   image: string;
   demo: string;
   code?: string;
-  technologies: string[];
+  technologies: TechName[];
   namespace: string;
-};
+}
 
-export const projetos: Record<string, Projeto> = {
+export const projetos: Record<string, Project> = {
   novahorizonte: {
     slug: "novahorizonte",
     image: "/projects-mockup/novahorizonte.png",
     demo: "https://novahorizonte.vercel.app/",
     code: "https://github.com/esdrassantos06/novahorizonte",
-    technologies: ["React", "TailwindCSS", "shadcn/ui", "Vite"],
+    technologies: [tech.react, tech.tailwind, tech.shadcn, tech.vite],
     namespace: "NovaHorizonte",
   },
   phantomcode: {
     slug: "phantomcode",
     image: "/projects-mockup/phantomcode.png",
     demo: "https://phantomcode.site",
-    technologies: ["Electron", "TailwindCSS", "OpenAI API"],
+
+    technologies: [tech.electron, tech.tailwind, tech.openai],
     namespace: "PhantomCode",
   },
   tarevity: {
     slug: "tarevity",
     image: "/projects-mockup/tarevity.png",
-    demo: "https://phantomcode.site",
+    demo: "https://www.tarevity.pt/",
     code: "https://github.com/esdrassantos06/tarevity",
     technologies: [
-      "NextJS",
-      "TailwindCSS",
-      "Typescript",
-      "Postgres",
-      "Redis",
-      "NextAuth",
+      tech.next,
+      tech.tailwind,
+      tech.ts,
+      tech.pg,
+      tech.redis,
+      tech.nextauth,
     ],
     namespace: "Tarevity",
   },
@@ -44,15 +65,15 @@ export const projetos: Record<string, Projeto> = {
     demo: "https://shly.pt",
     code: "https://github.com/esdrassantos06/zipway",
     technologies: [
-      "NextJS",
-      "TailwindCSS",
-      "Typescript",
-      "Postgres",
-      "Redis",
-      "Better Auth",
-      "Jest",
-      "React Testing Library",
-      "Docker",
+      tech.next,
+      tech.tailwind,
+      tech.ts,
+      tech.pg,
+      tech.redis,
+      tech.betterAuth,
+      tech.jest,
+      tech.rtl,
+      tech.docker,
     ],
     namespace: "Zipway",
   },

@@ -14,37 +14,62 @@ export default function About() {
   }, []);
 
   useEffect(() => {
+    if (!mounted) return;
+    const interBubble = document.querySelector(".interactive");
+    const aboutSection = document.getElementById("about");
+    if (!interBubble || !aboutSection) return;
+
     if (mounted && typeof window !== "undefined") {
       let curX = 0;
       let curY = 0;
       let tgX = 0;
       let tgY = 0;
+      let animationFrameId: number;
 
       const interBubble =
         document.querySelector<HTMLDivElement>(".interactive");
-      if (interBubble) {
-        function move() {
-          if (interBubble) {
-            curX += (tgX - curX) / 20;
-            curY += (tgY - curY) / 20;
+      const aboutSection = document.getElementById("about");
 
-            interBubble.style.transform = `translate(${Math.round(
-              curX,
-            )}px, ${Math.round(curY)}px)`;
-            requestAnimationFrame(move);
-          }
-        }
+      let isActive = false;
 
-        const handleMouseMove = (event: MouseEvent) => {
-          tgX = event.clientX;
-          tgY = event.clientY;
+      if (interBubble && aboutSection) {
+        const move = () => {
+          if (!isActive) return;
+
+          curX += (tgX - curX) / 20;
+          curY += (tgY - curY) / 20;
+
+          interBubble.style.transform = `translate(${Math.round(curX)}px, ${Math.round(curY)}px)`;
+          animationFrameId = requestAnimationFrame(move);
         };
 
-        window.addEventListener("mousemove", handleMouseMove);
-        move();
+        const handleMouseMove = (event: MouseEvent) => {
+          if (!isActive) return;
+
+          const rect = aboutSection.getBoundingClientRect();
+          tgX = event.clientX - rect.left;
+          tgY = event.clientY - rect.top;
+        };
+
+        const handleMouseEnter = () => {
+          isActive = true;
+          move();
+        };
+
+        const handleMouseLeave = () => {
+          isActive = false;
+          cancelAnimationFrame(animationFrameId);
+        };
+
+        aboutSection.addEventListener("mousemove", handleMouseMove);
+        aboutSection.addEventListener("mouseenter", handleMouseEnter);
+        aboutSection.addEventListener("mouseleave", handleMouseLeave);
 
         return () => {
-          window.removeEventListener("mousemove", handleMouseMove);
+          aboutSection.removeEventListener("mousemove", handleMouseMove);
+          aboutSection.removeEventListener("mouseenter", handleMouseEnter);
+          aboutSection.removeEventListener("mouseleave", handleMouseLeave);
+          cancelAnimationFrame(animationFrameId);
         };
       }
     }

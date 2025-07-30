@@ -1,12 +1,10 @@
-"use client";
-
 import ShinyButton from "../ui/ShinyButton";
 import ProjectsHome from "./ProjectsHome";
 import ScrollAnimation from "../ui/ScrollAnimation";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 
-export default function Work() {
-  const t = useTranslations("Work");
+export default async function Work() {
+  const t = await getTranslations("Work");
   return (
     <main
       id="work"
