@@ -19,7 +19,7 @@
   },
   "HomeComponent": {
     "based": "Sediado em Portugal",
-    "description": "Olá, sou o Esdras — um Programador Full Stack que cria soluções end-to-end que conectam design, performance e experiência do utilizador. Desde APIs de backend até interfaces frontend pixel-perfect, transformo desafios complexos em experiências digitais fluidas.",
+    "description": "Olá, sou Esdras — um Programador Full Stack que cria soluções end-to-end que conectam design, performance e experiência do utilizador. Desde APIs de backend até interfaces frontend pixel-perfect, transformo desafios complexos em experiências digitais fluidas.",
     "shinyWork": "Ver o Meu Trabalho"
   },
   "About": {
@@ -37,7 +37,9 @@
     "react": "Biblioteca JavaScript",
     "git": "Controlo de versões",
     "tailwind": "Framework CSS",
-    "typescript": "JavaScript mas melhor"
+    "typescript": "JavaScript mas melhor",
+    "vue": "Framework JavaScript progressivo",
+    "nest": "Framework Node.js escalável"
   },
   "Work": {
     "title": "O meu portfólio",
@@ -76,13 +78,13 @@
     "Metadata": {
       "title": "Phantom Code | Portfólio do Esdras",
       "description": "Uma aplicação desktop multiplataforma que transforma capturas de ecrã em problemas de código resolvidos — instantaneamente. Construída para programadores, estudantes e qualquer pessoa que queira acelerar através de questões de entrevistas de programação com o poder da IA.",
-      "keywords": "programação com IA, captura de ecrã para solução, electron, aplicação de programação invisível",
+      "keywords": "programação com IA, captura de ecrã para solução, electron, nestjs, aplicação de programação invisível",
       "robots": "index, follow",
       "creator": "Esdras"
     },
     "title": "Uma aplicação desktop multiplataforma que transforma capturas de ecrã em problemas de código resolvidos",
     "overview": "Visão Geral do Projeto",
-    "description": "Phantom Code é uma aplicação desktop desenvolvida com Electron e React que facilita a captura de código através de capturas de ecrã e usa IA para extrair e processar este código, bem como gerar soluções para problemas de programação."
+    "description": "Phantom Code é uma aplicação desktop desenvolvida com Electron e React, agora com uma API robusta construída em NestJS. A aplicação facilita a captura de código através de capturas de ecrã e usa IA para extrair e processar este código, bem como gerar soluções para problemas de programação de forma mais eficiente e escalável."
   },
   "Tarevity": {
     "Metadata": {

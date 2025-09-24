@@ -25,6 +25,7 @@ This is a personal portfolio website showcasing my skills, projects, and profess
 - Tailwind CSS
 - Framer Motion
 - Next INTL
+- Bun
 
 ### Design & Interactions
 
@@ -82,7 +83,7 @@ npm run dev
 # or
 yarn dev
 # or
-bun run dev
+bun dev
 ```
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser

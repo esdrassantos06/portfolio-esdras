@@ -14,6 +14,7 @@ const tech = {
   jest: "Jest",
   rtl: "React Testing Library",
   docker: "Docker",
+  nestjs: "NestJS",
 };
 
 type TechName = (typeof tech)[keyof typeof tech];
@@ -40,8 +41,14 @@ export const projetos: Record<string, Project> = {
     slug: "phantomcode",
     image: "/projects-mockup/phantomcode.png",
     demo: "https://phantomcode.site",
-
-    technologies: [tech.electron, tech.tailwind, tech.openai],
+    code: "https://github.com/esdrassantos06/phantomcode",
+    technologies: [
+      tech.electron,
+      tech.react,
+      tech.nestjs,
+      tech.tailwind,
+      tech.openai,
+    ],
     namespace: "PhantomCode",
   },
   tarevity: {

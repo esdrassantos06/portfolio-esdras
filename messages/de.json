@@ -37,7 +37,9 @@
     "react": "JavaScript-Bibliothek",
     "git": "Versionsverwaltung",
     "tailwind": "CSS-Framework",
-    "typescript": "JavaScript aber besser"
+    "typescript": "JavaScript aber besser",
+    "vue": "Progressives JavaScript-Framework",
+    "nest": "Skalierbares Node.js-Framework"
   },
   "Work": {
     "title": "Mein Portfolio",
@@ -76,13 +78,13 @@
     "Metadata": {
       "title": "Phantom Code | Esdras Portfolio",
       "description": "Eine plattformübergreifende Desktop-App, die Screenshots in gelöste Code-Probleme verwandelt — sofort. Entwickelt für Entwickler, Studenten und alle, die durch Coding-Interview-Fragen mit der Kraft der KI beschleunigen wollen.",
-      "keywords": "KI-Codierung, Screenshot zu Lösung, Electron, unsichtbare Coding-App",
+      "keywords": "KI-Codierung, Screenshot zu Lösung, Electron, NestJS, unsichtbare Coding-App",
       "robots": "index, follow",
       "creator": "Esdras"
     },
     "title": "Eine plattformübergreifende Desktop-App, die Screenshots in gelöste Code-Probleme verwandelt",
     "overview": "Projekt-Übersicht",
-    "description": "Phantom Code ist eine Desktop-Anwendung, die mit Electron und React entwickelt wurde und das Erfassen von Code durch Screenshots erleichtert und KI verwendet, um diesen Code zu extrahieren und zu verarbeiten sowie Lösungen für Programmierproblem zu generieren."
+    "description": "Phantom Code ist eine Desktop-Anwendung, die mit Electron und React entwickelt wurde, jetzt mit einer robusten API, die mit NestJS erstellt wurde. Die Anwendung erleichtert das Erfassen von Code durch Screenshots und verwendet KI, um diesen Code zu extrahieren und zu verarbeiten sowie Lösungen für Programmierprobleme auf eine effizientere und skalierbarere Weise zu generieren."
   },
   "Tarevity": {
     "Metadata": {

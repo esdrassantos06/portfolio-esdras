@@ -37,7 +37,9 @@
     "react": "JavaScript Library",
     "git": "Version control",
     "tailwind": "CSS framework",
-    "typescript": "Javascript but better"
+    "typescript": "Javascript but better",
+    "vue": "Progressive JavaScript framework",
+    "nest": "Scalable Node.js framework"
   },
   "Work": {
     "title": "My portfolio",
@@ -76,13 +78,13 @@
     "Metadata": {
       "title": "Phantom Code | Esdras Portfolio",
       "description": "A cross-platform desktop app that turns screenshots into solved code problems — instantly. Built for developers, students, and anyone who wants to speed through coding interview questions with the power of AI.",
-      "keywords": "ai coding, screenshot to solution, electron, invisible coding app",
+      "keywords": "ai coding, screenshot to solution, electron, nestjs, invisible coding app",
       "robots": "index, follow",
       "creator": "Esdras"
     },
     "title": "A cross-platform desktop app that turns screenshots into solved code problems",
     "overview": "Project Overview",
-    "description": "Phantom Code is a desktop application developed with Electron and React that facilitates capturing code through screenshots and uses AI to extract and process this code, as well as generate solutions for programming problems."
+    "description": "Phantom Code is a desktop application developed with Electron and React, now featuring a robust API built with NestJS. The application facilitates capturing code through screenshots and uses AI to extract and process this code, as well as generate solutions for programming problems in a more efficient and scalable way."
   },
   "Tarevity": {
     "Metadata": {

@@ -92,6 +92,20 @@ export default function Technologies() {
       "bg-[#1F2D3D]",
       t("typescript"),
     ),
+    new Technology(
+      "Vue.js",
+      "/technologies/vue.svg",
+      "Vue.js",
+      "bg-[#3A6639]",
+      t("vue"),
+    ),
+    new Technology(
+      "NestJS",
+      "/technologies/nestjs.svg",
+      "NestJS",
+      "bg-[#DB8181]",
+      t("nest"),
+    ),
   ];
 
   return (

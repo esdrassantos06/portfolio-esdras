@@ -37,7 +37,9 @@
     "react": "Bibliothèque JavaScript",
     "git": "Contrôle de version",
     "tailwind": "Framework CSS",
-    "typescript": "JavaScript en mieux"
+    "typescript": "JavaScript en mieux",
+    "vue": "Framework JavaScript progressif",
+    "nest": "Framework Node.js évolutif"
   },
   "Work": {
     "title": "Mon portfolio",
@@ -76,13 +78,13 @@
     "Metadata": {
       "title": "Phantom Code | Portfolio d'Esdras",
       "description": "Une application de bureau multiplateforme qui transforme les captures d'écran en problèmes de code résolus — instantanément. Conçue pour les développeurs, étudiants et tous ceux qui veulent accélérer à travers les questions d'entretien de codage avec la puissance de l'IA.",
-      "keywords": "codage IA, capture d'écran vers solution, electron, application de codage invisible",
+      "keywords": "codage IA, capture d'écran vers solution, electron, nestjs, application de codage invisible",
       "robots": "index, follow",
       "creator": "Esdras"
     },
     "title": "Une application de bureau multiplateforme qui transforme les captures d'écran en problèmes de code résolus",
     "overview": "Aperçu du Projet",
-    "description": "Phantom Code est une application de bureau développée avec Electron et React qui facilite la capture de code via des captures d'écran et utilise l'IA pour extraire et traiter ce code, ainsi que générer des solutions pour les problèmes de programmation."
+    "description": "Phantom Code est une application de bureau développée avec Electron et React, maintenant avec une API robuste construite avec NestJS. L'application facilite la capture de code via des captures d'écran et utilise l'IA pour extraire et traiter ce code, ainsi que générer des solutions pour les problèmes de programmation de manière plus efficace et évolutive."
   },
   "Tarevity": {
     "Metadata": {
