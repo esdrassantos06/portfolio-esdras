@@ -31,7 +31,7 @@ export default function ProjectsHome() {
       "Phantom Code",
       "/projects-mockup/phantomcode.png",
       "/projects/phantomcode",
-      ["Electron", "TailwindCSS", "OpenAI API"],
+      ["Electron", "React", "TailwindCSS", "OpenAI API", "NestJS"],
     ),
     new Project("Zipway", "/projects-mockup/zipway.png", "/projects/zipway", [
       "NextJS",
@@ -45,7 +45,7 @@ export default function ProjectsHome() {
 
   return (
     <div className="flex w-full items-center justify-center">
-      <div className="grid w-[70%] gap-2 lg:grid-cols-2">
+      <div className="grid gap-2 lg:grid-cols-2">
         {projects.map((project, i) => {
           return (
             <ScrollAnimation
@@ -61,6 +61,7 @@ export default function ProjectsHome() {
                   <Image
                     src={project.image}
                     alt={project.name}
+                    sizes="100%"
                     fill
                     priority
                     className="pointer-events-none rounded-lg object-cover transition-all duration-800 select-none group-hover:scale-110"

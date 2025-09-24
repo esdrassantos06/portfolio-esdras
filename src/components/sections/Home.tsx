@@ -22,64 +22,64 @@ export default function HomeComponent() {
           <div className="flex flex-col items-center justify-center gap-4" />
         }
         normalContent={(isHovered, setIsHovered) => (
-          <div className="relative flex w-200 flex-col items-center justify-center gap-4">
-            <div
-              className={`title space-y-2`}
-              onMouseEnter={() => setIsHovered(true)}
-              onMouseLeave={() => setIsHovered(false)}
-            >
-              <ScrollAnimation delayIndex={0}>
-                <h2 className="text-principal text-center text-sm font-bold uppercase">
-                  {t("based")}
-                </h2>
-              </ScrollAnimation>
-              <div>
-                <ScrollAnimation delayIndex={1}>
-                  <h1 className="max-w-screen text-center text-5xl font-bold sm:text-6xl md:text-7xl">
-                    Full{" "}
-                    <span
-                      className={`${
-                        isHovered ? "text-principal" : "text-secundaria"
-                      } transition-all duration-300`}
-                    >
-                      Stack
-                    </span>
-                  </h1>
+          <div className="mx-auto w-3/4">
+            <div className="relative flex w-full flex-col items-center justify-center gap-4">
+              <div
+                className={`title relative z-40 space-y-2`}
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
+              >
+                <ScrollAnimation delayIndex={0}>
+                  <h2 className="text-principal text-center text-sm font-bold uppercase">
+                    {t("based")}
+                  </h2>
                 </ScrollAnimation>
-                <ScrollAnimation delayIndex={2}>
-                  <h1 className="max-w-screen text-center text-5xl font-bold sm:text-6xl md:text-7xl">
-                    <span
-                      className={`${
-                        isHovered ? "text-principal" : "text-secundaria"
-                      } transition-all duration-300`}
-                    >
-                      Developer
-                    </span>
-                  </h1>
-                </ScrollAnimation>
+                <div>
+                  <ScrollAnimation delayIndex={1}>
+                    <h1 className="max-w-screen text-center text-5xl font-bold sm:text-6xl md:text-7xl">
+                      Full{" "}
+                      <span
+                        className={`${
+                          isHovered ? "text-principal" : "text-secundaria"
+                        } transition-all duration-300`}
+                      >
+                        Stack
+                      </span>
+                    </h1>
+                  </ScrollAnimation>
+                  <ScrollAnimation delayIndex={2}>
+                    <h1 className="z-99 text-center text-5xl font-bold sm:text-6xl md:text-7xl">
+                      <span
+                        className={`${
+                          isHovered ? "text-principal" : "text-secundaria"
+                        } transition-all duration-300`}
+                      >
+                        Developer
+                      </span>
+                    </h1>
+                  </ScrollAnimation>
+                </div>
               </div>
-            </div>
 
-            <ScrollAnimation
-              delayIndex={3}
-              className="flex w-[40%] items-center justify-center sm:w-[60%] md:w-[80%] lg:w-full"
-            >
-              <span className="flex items-center justify-center text-center text-lg">
-                {t("description")}
-              </span>
-            </ScrollAnimation>
-            <ScrollAnimation
-              delayIndex={4}
-              className="flex flex-col items-center justify-center gap-4"
-            >
-              <div className="buttons relative z-30 mt-2 flex flex-col items-center gap-4 sm:flex-row sm:gap-2">
-                <ShinyButton text={t("shinyWork")} link="#work" />
-                <CvDownload />
-              </div>
-              <div className="icons mt-4">
-                <Icons />
-              </div>
-            </ScrollAnimation>
+              <ScrollAnimation
+                delayIndex={3}
+                className="relative z-40 w-3/4 text-center"
+              >
+                <span className="text-lg">{t("description")}</span>
+              </ScrollAnimation>
+              <ScrollAnimation
+                delayIndex={4}
+                className="flex flex-col items-center justify-center gap-4"
+              >
+                <div className="buttons relative z-20 mt-2 flex flex-col items-center gap-4 sm:flex-row sm:gap-2">
+                  <ShinyButton text={t("shinyWork")} link="#work" />
+                  <CvDownload />
+                </div>
+                <div className="icons mt-4">
+                  <Icons />
+                </div>
+              </ScrollAnimation>
+            </div>
           </div>
         )}
       />

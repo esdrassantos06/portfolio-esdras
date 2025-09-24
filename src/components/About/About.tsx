@@ -86,7 +86,7 @@ export default function About() {
         <div className="interactive max-md:hidden" />
       </div>
 
-      <section className="relative z-50 mx-auto flex w-full max-w-[1440px] flex-col items-center justify-center px-4 sm:px-10">
+      <section className="relative z-50 mx-auto flex w-3/4 flex-col items-center justify-center">
         <div className="title mb-10 flex w-full flex-col items-center justify-center space-y-2 self-start sm:mb-18">
           <ScrollAnimation delayIndex={0}>
             <h1 className="mb-4 text-center text-4xl font-bold sm:mb-6 sm:text-5xl lg:text-6xl">
@@ -97,7 +97,7 @@ export default function About() {
             delayIndex={1}
             className="flex w-full justify-center"
           >
-            <p className="text-principal/70 font-satoshi max-w-[600px] text-center text-sm sm:text-base">
+            <p className="text-principal/70 font-satoshi text-center text-sm sm:text-base">
               {t("description")}
             </p>
           </ScrollAnimation>

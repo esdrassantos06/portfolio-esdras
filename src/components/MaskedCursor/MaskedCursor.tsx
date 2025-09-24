@@ -33,6 +33,7 @@ export default function MaskedCursor({
     y: 0,
   });
   const [isHovered, setIsHovered] = useState(false);
+  const [isPressed, setIsPressed] = useState(false);
 
   useEffect(() => {
     const setFromEvent = (e: MouseEvent) => {
@@ -45,14 +46,25 @@ export default function MaskedCursor({
       }
     };
 
+    const handleMouseDown = () => setIsPressed(true);
+    const handleMouseUp = () => setIsPressed(false);
+
     const container = containerRef.current;
     container?.addEventListener("mousemove", setFromEvent);
+    container?.addEventListener("mousedown", handleMouseDown);
+    container?.addEventListener("mouseup", handleMouseUp);
+
+    document.addEventListener("mouseup", handleMouseUp);
+
     return () => {
       container?.removeEventListener("mousemove", setFromEvent);
+      container?.removeEventListener("mousedown", handleMouseDown);
+      container?.removeEventListener("mouseup", handleMouseUp);
+      document.removeEventListener("mouseup", handleMouseUp);
     };
   }, []);
 
-  const size: number = isHovered ? 400 : 50;
+  const size: number = isPressed && !isHovered ? 40 : isHovered ? 400 : 50;
 
   return (
     <div
@@ -66,13 +78,18 @@ export default function MaskedCursor({
           }px`,
           WebkitMaskSize: `${size}px`,
         }}
-        transition={{ ease: "backOut" }}
-        className="cursor bg-secundaria pointer-events-none absolute inset-0 z-11"
+        transition={{
+          ease: "backOut",
+          duration: 0.2,
+          maskSize: { duration: 0.15, ease: "easeOut" },
+          maskPosition: { duration: 0.1 },
+        }}
+        className="cursor bg-secundaria pointer-events-none absolute inset-0 z-30"
       >
         <div>{maskedContent}</div>
       </motion.div>
 
-      <div className="normal relative z-20">
+      <div className="normal relative z-35">
         {typeof normalContent === "function"
           ? normalContent(isHovered, setIsHovered)
           : normalContent}

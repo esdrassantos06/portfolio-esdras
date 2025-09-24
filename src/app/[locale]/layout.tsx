@@ -37,7 +37,7 @@ export default async function LocaleLayout({ children, params }: Props) {
     <html
       lang={locale}
       data-scroll-behavior="smooth"
-      className="overflow-x-hidden"
+      className="overflow-x-hidden scroll-smooth"
     >
       <Head>
         <link rel="manifest" href="/manifest.json" />

@@ -6,8 +6,6 @@ import ScrollAnimation from "@/components/ui/ScrollAnimation";
 import TechnologiesProject from "@/components/TechnologiesProject";
 import ShinyButtonProject from "@/components/ui/ShinyButtonProject";
 import Image from "next/image";
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
 import ArrowDownIcon from "@/components/icons/ArrowDownIcon";
 import { getTranslations } from "next-intl/server";
 import { Metadata } from "next";
@@ -60,10 +58,9 @@ export default async function ProjetoPage({ params }: Props) {
 
   return (
     <>
-      <Navbar />
-      <main className="w-full pt-20">
+      <main className="w-full">
         <GridBackground />
-        <div className="flex h-screen w-full flex-col items-center justify-center">
+        <section className="flex min-h-screen w-full flex-col items-center justify-center">
           <ScrollAnimation delayIndex={1}>
             <div className="flex w-full flex-col items-center justify-center gap-2">
               <h1 className="text-6xl font-extrabold max-md:text-center md:text-7xl/tight">
@@ -79,43 +76,44 @@ export default async function ProjetoPage({ params }: Props) {
               <ArrowDownIcon />
             </ScrollAnimation>
           </div>
-        </div>
-        <div className="bg-fundo mx-auto mt-20 flex w-4/5 flex-col items-center justify-center">
-          <ScrollAnimation delayIndex={3}>
-            <Image
-              id="image"
-              src={projeto.image}
-              alt={t("title")}
-              width={1400}
-              height={1400}
-              className="mx-auto w-4/5 max-w-full rounded-lg object-cover select-none"
-            />
-          </ScrollAnimation>
-          <div className="mx-auto mt-12 flex flex-col items-center justify-between gap-10 pt-10 pb-20 sm:flex-row">
-            <div className="flex flex-col gap-8">
-              <ScrollAnimation delayIndex={4}>
-                <h1 className="text-5xl font-light">{t("overview")}</h1>
-              </ScrollAnimation>
-              <ScrollAnimation delayIndex={5}>
-                <TechnologiesProject
-                  technologies={projeto.technologies.map((tech) => ({
-                    name: tech,
-                  }))}
-                />
-              </ScrollAnimation>
-              <ScrollAnimation delayIndex={6}>
-                <ShinyButtonProject demo={projeto.demo} code={projeto.code} />
-              </ScrollAnimation>
-            </div>
-            <div className="md:w-1/2">
-              <ScrollAnimation delayIndex={7}>
-                <p>{t("description")}</p>
-              </ScrollAnimation>
+        </section>
+        <section className="bg-fundo flex min-h-screen w-full flex-col items-center justify-center pt-10">
+          <div className="mx-auto w-3/4">
+            <ScrollAnimation delayIndex={3}>
+              <Image
+                id="image"
+                src={projeto.image}
+                alt={t("title")}
+                width={1400}
+                height={1400}
+                className="mx-auto w-full max-w-full rounded-lg object-cover select-none sm:w-3/4 md:w-2/3"
+              />
+            </ScrollAnimation>
+            <div className="mx-auto mt-12 flex w-full flex-col items-center justify-between gap-10 pt-10 pb-20 sm:flex-row">
+              <div className="flex flex-col gap-8">
+                <ScrollAnimation delayIndex={4}>
+                  <h1 className="text-5xl font-light">{t("overview")}</h1>
+                </ScrollAnimation>
+                <ScrollAnimation delayIndex={5}>
+                  <TechnologiesProject
+                    technologies={projeto.technologies.map((tech) => ({
+                      name: tech,
+                    }))}
+                  />
+                </ScrollAnimation>
+                <ScrollAnimation delayIndex={6}>
+                  <ShinyButtonProject demo={projeto.demo} code={projeto.code} />
+                </ScrollAnimation>
+              </div>
+              <div className="md:w-1/2">
+                <ScrollAnimation delayIndex={7}>
+                  <p className="text-justify text-lg">{t("description")}</p>
+                </ScrollAnimation>
+              </div>
             </div>
           </div>
-        </div>
+        </section>
       </main>
-      <Footer />
     </>
   );
 }

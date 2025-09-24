@@ -9,7 +9,7 @@ export default function Footer() {
   const t = useTranslations("Footer");
 
   return (
-    <div className="relative bottom-4 mx-auto mb-8 flex h-fit w-[70%] flex-col items-center justify-between overflow-hidden rounded-2xl border-1 border-gray-200/20">
+    <div className="relative bottom-4 mx-auto mb-8 flex h-fit w-3/4 flex-col items-center justify-between overflow-hidden rounded-2xl border-1 border-gray-200/20">
       <footer id="contact" className="h-fit w-full">
         <div className="first-part-footer flex w-full flex-col items-start justify-start gap-8 p-8 pt-10">
           <ScrollAnimation delayIndex={1} initialY={10}>
@@ -17,7 +17,7 @@ export default function Footer() {
               {t("like")}{" "}
               <a
                 href="mailto:esdrasirion1@gmail.com"
-                className="text-blue-600 underline decoration-2 underline-offset-8 transition-all duration-300 hover:text-blue-800 max-md:text-center"
+                className="text-blue-600 underline decoration-2 transition-all duration-300 hover:text-blue-800 max-md:text-center"
               >
                 {t("viaEmail")}
               </a>{" "}
