@@ -27,6 +27,12 @@
     "description": "I'm proficient in a range of modern technologies that empower me to build highly functional solutions. These are some of my main technologies."
   },
   "TechnologiesComponent": {
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "cloud": "Cloud",
+      "infrastructure": "Infrastructure"
+    },
     "aws": "Cloud services",
     "next": "React SSR framework",
     "node": "JavaScript runtime",
@@ -39,7 +45,11 @@
     "tailwind": "CSS framework",
     "typescript": "Javascript but better",
     "vue": "Progressive JavaScript framework",
-    "nest": "Scalable Node.js framework"
+    "nest": "Scalable Node.js framework",
+    "docker": "Container platform",
+    "github": "Code repository platform",
+    "flask": "Python web framework",
+    "fastapi": "Modern Python API framework"
   },
   "Work": {
     "title": "My portfolio",

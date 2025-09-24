@@ -27,6 +27,12 @@
     "description": "Sou proficiente numa gama de tecnologias modernas que me permitem construir soluções altamente funcionais. Estas são algumas das minhas principais tecnologias."
   },
   "TechnologiesComponent": {
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "cloud": "Cloud",
+      "infrastructure": "Infraestrutura"
+    },
     "aws": "Serviços cloud",
     "next": "Framework React SSR",
     "node": "Ambiente de execução JavaScript",
@@ -39,7 +45,11 @@
     "tailwind": "Framework CSS",
     "typescript": "JavaScript mas melhor",
     "vue": "Framework JavaScript progressivo",
-    "nest": "Framework Node.js escalável"
+    "nest": "Framework Node.js escalável",
+    "docker": "Plataforma de contentores",
+    "github": "Plataforma de repositório de código",
+    "flask": "Framework web Python",
+    "fastapi": "Framework Python API moderno"
   },
   "Work": {
     "title": "O meu portfólio",

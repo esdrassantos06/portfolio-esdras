@@ -27,6 +27,12 @@
     "description": "Ich beherrsche eine Reihe moderner Technologien, die es mir ermöglichen, hochfunktionale Lösungen zu entwickeln. Dies sind einige meiner Haupttechnologien."
   },
   "TechnologiesComponent": {
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "cloud": "Cloud",
+      "infrastructure": "Infrastruktur"
+    },
     "aws": "Cloud-Dienste",
     "next": "React SSR-Framework",
     "node": "JavaScript-Laufzeitumgebung",
@@ -39,7 +45,11 @@
     "tailwind": "CSS-Framework",
     "typescript": "JavaScript aber besser",
     "vue": "Progressives JavaScript-Framework",
-    "nest": "Skalierbares Node.js-Framework"
+    "nest": "Skalierbares Node.js-Framework",
+    "docker": "Container-Plattform",
+    "github": "Code-Repository-Plattform",
+    "flask": "Python Web-Framework",
+    "fastapi": "Modernes Python API-Framework"
   },
   "Work": {
     "title": "Mein Portfolio",

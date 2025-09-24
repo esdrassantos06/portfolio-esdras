@@ -34,7 +34,7 @@ export default function LocaleSwitcher() {
         <div className="bg-principal absolute -bottom-1 left-1/2 h-1 w-1 -translate-x-1/2 transform rounded-full opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
       </SelectTrigger>
 
-      <SelectContent className="text-principal relative min-w-[140px] overflow-hidden rounded-xl border border-gray-200/30 bg-gradient-to-b from-white/5 to-transparent p-1 shadow-xl backdrop-blur-xl">
+      <SelectContent className="text-principal relative z-[10000] min-w-[140px] overflow-hidden rounded-xl border border-gray-200/30 bg-gradient-to-b from-white/5 to-transparent p-1 shadow-xl backdrop-blur-xl">
         <SelectGroup>
           <SelectLabel className="text-secundaria/80 px-3 py-2 text-xs font-semibold tracking-wider uppercase">
             {t("label")}
@@ -52,7 +52,8 @@ export default function LocaleSwitcher() {
                     src={localeFlagMap[cur]}
                     alt={cur}
                     width={18}
-                    height={18}
+                    height={12}
+                    className="h-3 w-[18px] object-contain"
                   />
                 </div>
                 <span className="text-principal/90 group-hover:text-principal text-sm transition-colors duration-200">
