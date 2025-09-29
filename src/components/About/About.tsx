@@ -80,13 +80,13 @@ export default function About() {
   return (
     <main
       id="about"
-      className="gradient-bg flex h-fit min-h-screen w-full items-center justify-center py-10 sm:py-20"
+      className="gradient-bg mx-auto flex h-fit min-h-screen w-full items-center justify-center py-10 sm:py-20"
     >
       <div className="gradient-container">
         <div className="interactive max-md:hidden" />
       </div>
 
-      <section className="relative z-50 mx-auto flex w-3/4 flex-col items-center justify-center">
+      <section className="relative z-50 flex flex-col items-center justify-center">
         <div className="title mb-10 flex w-full flex-col items-center justify-center space-y-2 self-start sm:mb-18">
           <ScrollAnimation delayIndex={0}>
             <h1 className="mb-4 text-center text-4xl font-bold sm:mb-6 sm:text-5xl lg:text-6xl">
