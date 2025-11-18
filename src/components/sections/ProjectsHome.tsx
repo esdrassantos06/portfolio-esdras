@@ -25,7 +25,15 @@ export default function ProjectsHome() {
       "Tarevity",
       "/projects-mockup/tarevity.png",
       "/projects/tarevity",
-      ["NextJS", "TailwindCSS", "Typescript", "Supabase", "Redis", "NextAuth"],
+      [
+        "NextJS",
+        "TailwindCSS",
+        "Typescript",
+        "Prisma",
+        "Postgres",
+        "Redis",
+        "Better Auth",
+      ],
     ),
     new Project(
       "Phantom Code",

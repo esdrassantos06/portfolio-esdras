@@ -181,7 +181,7 @@ export default function Technologies() {
               return (
                 <ScrollAnimation
                   delayIndex={categoryIndex}
-                  className={`tech-${tech.getSlugName()} bg-fundo2 hover:bg-fundo2hover flex h-[100px] items-center rounded-2xl border-1 border-transparent px-6 py-4 transition-all duration-300 hover:border-gray-200/50`}
+                  className={`tech-${tech.getSlugName()} bg-fundo2 hover:bg-fundo2hover flex h-22 w-100 items-center rounded-2xl border-1 border-transparent px-6 py-4 transition-all duration-300 hover:border-gray-200/50`}
                   key={`${categoryIndex}-${techIndex}`}
                 >
                   <div className="flex w-full items-center gap-4">

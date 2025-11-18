@@ -93,7 +93,7 @@ export default function Navbar() {
                   <div className="from-principal/0 via-principal/5 to-principal/0 absolute inset-0 rounded-xl bg-gradient-to-r opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
 
                   {/* Desktop text */}
-                  <span className="text-principal/90 group-hover:text-principal relative z-10 hidden transition-colors duration-300 sm:block">
+                  <span className="text-principal/90 group-hover:text-principal relative z-10 hidden text-center transition-colors duration-300 sm:block">
                     {item.label}
                   </span>
 

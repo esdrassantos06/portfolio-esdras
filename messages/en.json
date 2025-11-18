@@ -99,13 +99,13 @@
   "Tarevity": {
     "Metadata": {
       "title": "Tarevity | Esdras Portfolio",
-      "description": "Tarevity is a modern task management application built with Next.js 15, React 19, TypeScript, and Supabase. The application provides an intuitive and secure interface to help users organize their daily tasks with efficiency and style.",
+      "description": "Tarevity is a modern task management application built with Next.js 16, TypeScript, Prisma ORM, and PostgreSQL. The application provides an intuitive and secure interface to help users organize their daily tasks with efficiency and style.",
       "robots": "index, follow",
       "creator": "Esdras"
     },
     "title": "a modern task management application",
     "overview": "Project Overview",
-    "description": "Tarevity is a modern task management application built with Next.js 15, React 19, TypeScript, and Supabase. The application provides an intuitive and secure interface to help users organize their daily tasks with efficiency and style."
+    "description": "Tarevity is a modern task management application built with Next.js 16, TypeScript, Prisma ORM, and PostgreSQL. The application provides an intuitive and secure interface to help users organize their daily tasks with efficiency and style."
   },
   "Zipway": {
     "Metadata": {

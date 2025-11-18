@@ -15,6 +15,7 @@ const tech = {
   rtl: "React Testing Library",
   docker: "Docker",
   nestjs: "NestJS",
+  prisma: "Prisma",
 };
 
 type TechName = (typeof tech)[keyof typeof tech];
@@ -60,9 +61,9 @@ export const projetos: Record<string, Project> = {
       tech.next,
       tech.tailwind,
       tech.ts,
-      tech.pg,
+      tech.prisma,
       tech.redis,
-      tech.nextauth,
+      tech.betterAuth,
     ],
     namespace: "Tarevity",
   },
