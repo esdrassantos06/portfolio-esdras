@@ -13,7 +13,7 @@ export default function HomeComponent() {
   return (
     <main
       id="home"
-      className="z-10 flex min-h-screen w-full max-w-full flex-grow flex-col items-center justify-center gap-4 inset-shadow-sm"
+      className="z-10 flex min-h-screen w-full max-w-full flex-grow flex-col items-center justify-center gap-4 pt-8 inset-shadow-sm sm:pt-0"
     >
       <MaskedCursor
         width="full"

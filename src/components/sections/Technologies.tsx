@@ -168,7 +168,7 @@ export default function Technologies() {
   ];
 
   return (
-    <div className="flex flex-col gap-2">
+    <div className="flex w-full flex-col gap-2">
       {technologyCategories.map((category, categoryIndex) => (
         <div key={categoryIndex} className="flex flex-col gap-4">
           <ScrollAnimation delayIndex={categoryIndex} className="w-fit">
@@ -176,12 +176,12 @@ export default function Technologies() {
               {category.title}
             </h3>
           </ScrollAnimation>
-          <div className="grid h-fit w-full grid-cols-1 gap-4 max-md:place-items-center sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
+          <div className="grid h-fit w-full grid-cols-1 gap-8 max-md:place-items-center sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
             {category.technologies.map((tech, techIndex) => {
               return (
                 <ScrollAnimation
                   delayIndex={categoryIndex}
-                  className={`tech-${tech.getSlugName()} bg-fundo2 hover:bg-fundo2hover flex h-22 w-100 items-center rounded-2xl border-1 border-transparent px-6 py-4 transition-all duration-300 hover:border-gray-200/50`}
+                  className={`tech-${tech.getSlugName()} bg-fundo2 hover:bg-fundo2hover flex h-22 w-full items-center rounded-2xl border-1 border-transparent px-6 py-4 transition-all duration-300 hover:border-gray-200/50`}
                   key={`${categoryIndex}-${techIndex}`}
                 >
                   <div className="flex w-full items-center gap-4">
