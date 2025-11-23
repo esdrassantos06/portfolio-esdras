@@ -8,12 +8,12 @@ export default async function Work() {
   return (
     <main
       id="work"
-      className="mx-auto my-20 flex min-h-screen w-3/4 items-center justify-center"
+      className="mx-auto flex min-h-screen w-3/4 items-center justify-center pt-8 sm:py-20"
     >
-      <div className="flex w-full flex-col items-center justify-center">
+      <div className="flex w-full flex-col items-center justify-center py-20">
         <div className="title-and-button mb-20 flex w-full flex-col items-center justify-between gap-4 self-start px-2 md:gap-6 lg:flex-row">
           <ScrollAnimation delayIndex={0}>
-            <h1 className="mt-2 text-center text-5xl font-bold sm:text-6xl">
+            <h1 className="text-center text-4xl font-bold sm:mb-6 sm:text-5xl lg:text-6xl">
               {t("title")}
             </h1>
           </ScrollAnimation>
