@@ -4,16 +4,15 @@ import Image from "next/image";
 import { ArrowUpRightIcon } from "@phosphor-icons/react";
 import ScrollAnimation from "../ui/ScrollAnimation";
 
+class Project {
+  constructor(
+    public name: string,
+    public image: string,
+    public link: string,
+    public technologies: string[],
+  ) {}
+}
 export default function ProjectsHome() {
-  class Project {
-    constructor(
-      public name: string,
-      public image: string,
-      public link: string,
-      public technologies: string[],
-    ) {}
-  }
-
   const projects: Project[] = [
     new Project(
       "Nova Horizonte",

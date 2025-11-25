@@ -1,79 +1,65 @@
 "use client";
 
 import ScrollAnimation from "../ui/ScrollAnimation";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import Technologies from "../sections/Technologies";
 import "./aboutgradient.css";
 import { useTranslations } from "next-intl";
 
 export default function About() {
-  const [mounted, setMounted] = useState(false);
-
   useEffect(() => {
-    setMounted(true);
-  }, []);
+    if (typeof window === "undefined") return;
 
-  useEffect(() => {
-    if (!mounted) return;
-    const interBubble = document.querySelector(".interactive");
+    const interBubble = document.querySelector<HTMLDivElement>(".interactive");
     const aboutSection = document.getElementById("about");
     if (!interBubble || !aboutSection) return;
 
-    if (mounted && typeof window !== "undefined") {
-      let curX = 0;
-      let curY = 0;
-      let tgX = 0;
-      let tgY = 0;
-      let animationFrameId: number;
+    let curX = 0;
+    let curY = 0;
+    let tgX = 0;
+    let tgY = 0;
+    let animationFrameId: number;
+    let isActive = false;
 
-      const interBubble =
-        document.querySelector<HTMLDivElement>(".interactive");
-      const aboutSection = document.getElementById("about");
+    const move = () => {
+      if (!isActive) return;
 
-      let isActive = false;
+      curX += (tgX - curX) / 20;
+      curY += (tgY - curY) / 20;
 
-      if (interBubble && aboutSection) {
-        const move = () => {
-          if (!isActive) return;
+      interBubble.style.transform = `translate(${Math.round(curX)}px, ${Math.round(curY)}px)`;
+      animationFrameId = requestAnimationFrame(move);
+    };
 
-          curX += (tgX - curX) / 20;
-          curY += (tgY - curY) / 20;
+    const handleMouseMove = (event: MouseEvent) => {
+      if (!isActive) return;
 
-          interBubble.style.transform = `translate(${Math.round(curX)}px, ${Math.round(curY)}px)`;
-          animationFrameId = requestAnimationFrame(move);
-        };
+      const rect = aboutSection.getBoundingClientRect();
+      tgX = event.clientX - rect.left;
+      tgY = event.clientY - rect.top;
+    };
 
-        const handleMouseMove = (event: MouseEvent) => {
-          if (!isActive) return;
+    const handleMouseEnter = () => {
+      isActive = true;
+      move();
+    };
 
-          const rect = aboutSection.getBoundingClientRect();
-          tgX = event.clientX - rect.left;
-          tgY = event.clientY - rect.top;
-        };
+    const handleMouseLeave = () => {
+      isActive = false;
+      cancelAnimationFrame(animationFrameId);
+    };
 
-        const handleMouseEnter = () => {
-          isActive = true;
-          move();
-        };
+    aboutSection.addEventListener("mousemove", handleMouseMove);
+    aboutSection.addEventListener("mouseenter", handleMouseEnter);
+    aboutSection.addEventListener("mouseleave", handleMouseLeave);
 
-        const handleMouseLeave = () => {
-          isActive = false;
-          cancelAnimationFrame(animationFrameId);
-        };
-
-        aboutSection.addEventListener("mousemove", handleMouseMove);
-        aboutSection.addEventListener("mouseenter", handleMouseEnter);
-        aboutSection.addEventListener("mouseleave", handleMouseLeave);
-
-        return () => {
-          aboutSection.removeEventListener("mousemove", handleMouseMove);
-          aboutSection.removeEventListener("mouseenter", handleMouseEnter);
-          aboutSection.removeEventListener("mouseleave", handleMouseLeave);
-          cancelAnimationFrame(animationFrameId);
-        };
-      }
-    }
-  }, [mounted]);
+    return () => {
+      aboutSection.removeEventListener("mousemove", handleMouseMove);
+      aboutSection.removeEventListener("mouseenter", handleMouseEnter);
+      aboutSection.removeEventListener("mouseleave", handleMouseLeave);
+      cancelAnimationFrame(animationFrameId);
+    };
+  }, []);
 
   const t = useTranslations("About");
 
