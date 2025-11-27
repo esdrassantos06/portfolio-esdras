@@ -49,7 +49,10 @@
     "docker": "Container platform",
     "github": "Code repository platform",
     "flask": "Python web framework",
-    "fastapi": "Modern Python API framework"
+    "fastapi": "Modern Python API framework",
+    "go": "High-performance backend language",
+    "mysql": "Relational database engine",
+    "redis": "In-memory data store"
   },
   "Work": {
     "title": "My portfolio",
@@ -110,13 +113,13 @@
   "Zipway": {
     "Metadata": {
       "title": "Zipway | Esdras Portfolio",
-      "description": "Zipway is a fully-featured, responsive URL shortener that provides a seamless experience for authenticated users to create, manage, and share short links. Built on cutting-edge technologies like Next.js (App Router), Prisma ORM, Supabase, Tailwind CSS, and shadcn/ui library components. It features secure authentication, short link redirection middleware, and automated testing with Jest and React Testing Library.",
+      "description": "Zipway is a latency-obsessed URL shortener rebuilt on a hexagonal Go (Fiber) core, a Next.js control panel, and a local -> Redis -> PostgreSQL cache pipeline. Link creation now completes in 50-55ms, cached redirects return in under 1ms, and session validation runs in under 5 microseconds thanks to local caching, a 50-connection Redis pool, and prepared SQL statements.",
       "robots": "index, follow",
       "creator": "Esdras"
     },
-    "title": "Modern URL shortener with control panel",
+    "title": "Performance-first URL shortener",
     "overview": "Project Overview",
-    "description": "Zipway is a fully-featured, responsive URL shortener that provides a seamless experience for authenticated users to create, manage, and share short links. Built on cutting-edge technologies like Next.js (App Router), Prisma ORM, Supabase, Tailwind CSS, and shadcn/ui library components. It features secure authentication, short link redirection middleware, and automated testing with Jest and React Testing Library."
+    "description": "I re-architected Zipway with Go (Fiber) and a hexagonal design to keep responsibilities clean while the Next.js dashboard focuses on the product experience. Before the refactor link creation and redirects took ~1 second each; after the performance pass creation stabilized at 50-55ms, cache hits redirect in <1ms, and session validation executes in <5 microseconds through a hot local cache. The stack now uses cascading caches (local, Redis, PostgreSQL/Supabase), an optimized pool of 50 Redis connections, prepared statements for every query, and Dockerized services to sustain low latency under heavy traffic."
   },
   "DownloadCV": "Download CV",
   "LocaleSwitcher": {
