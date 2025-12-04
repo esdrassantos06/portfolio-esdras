@@ -33,7 +33,7 @@ interface Project {
 export const projetos: Record<string, Project> = {
   novahorizonte: {
     slug: "novahorizonte",
-    image: "/projects-mockup/novahorizonte.png",
+    image: "/projects-mockup/novahorizonte.webp",
     demo: "https://novahorizonte.vercel.app/",
     code: "https://github.com/esdrassantos06/novahorizonte",
     technologies: [tech.react, tech.tailwind, tech.shadcn, tech.vite],
@@ -41,7 +41,7 @@ export const projetos: Record<string, Project> = {
   },
   phantomcode: {
     slug: "phantomcode",
-    image: "/projects-mockup/phantomcode.png",
+    image: "/projects-mockup/phantomcode.webp",
     demo: "https://phantomcode.site",
     code: "https://github.com/esdrassantos06/phantomcode",
     technologies: [
@@ -55,7 +55,7 @@ export const projetos: Record<string, Project> = {
   },
   tarevity: {
     slug: "tarevity",
-    image: "/projects-mockup/tarevity.png",
+    image: "/projects-mockup/tarevity.webp",
     demo: "https://www.tarevity.pt/",
     code: "https://github.com/esdrassantos06/tarevity",
     technologies: [
@@ -70,7 +70,7 @@ export const projetos: Record<string, Project> = {
   },
   zipway: {
     slug: "zipway",
-    image: "/projects-mockup/zipway.png",
+    image: "/projects-mockup/zipway.webp",
     demo: "https://shly.pt",
     code: "https://github.com/esdrassantos06/zipway",
     technologies: [
