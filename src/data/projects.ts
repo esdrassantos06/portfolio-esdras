@@ -16,6 +16,7 @@ const tech = {
   docker: "Docker",
   nestjs: "NestJS",
   prisma: "Prisma",
+  go: "Go",
 };
 
 type TechName = (typeof tech)[keyof typeof tech];
@@ -73,6 +74,7 @@ export const projetos: Record<string, Project> = {
     demo: "https://shly.pt",
     code: "https://github.com/esdrassantos06/zipway",
     technologies: [
+      tech.go,
       tech.next,
       tech.tailwind,
       tech.ts,

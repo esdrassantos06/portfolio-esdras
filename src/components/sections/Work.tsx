@@ -8,7 +8,7 @@ export default async function Work() {
   return (
     <main
       id="work"
-      className="mx-auto flex min-h-screen w-3/4 items-center justify-center pt-8 sm:py-20"
+      className="mx-auto flex min-h-screen w-3/4 items-center justify-center pt-20 sm:py-20"
     >
       <div className="flex w-full flex-col items-center justify-center py-20">
         <div className="title-and-button mb-20 flex w-full flex-col items-center justify-between gap-4 self-start px-2 md:gap-6 lg:flex-row">

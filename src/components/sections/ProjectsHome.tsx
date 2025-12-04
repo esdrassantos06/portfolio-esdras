@@ -44,6 +44,7 @@ export default function ProjectsHome() {
       "NextJS",
       "TailwindCSS",
       "Typescript",
+      "Go",
       "Postgres",
       "Redis",
       "Docker",

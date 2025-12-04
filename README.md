@@ -19,7 +19,7 @@ This is a personal portfolio website showcasing my skills, projects, and profess
 
 ### Frontend
 
-- Next.js 15
+- Next.js 16
 - React 19
 - TypeScript
 - Tailwind CSS

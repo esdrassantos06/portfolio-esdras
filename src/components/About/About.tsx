@@ -66,7 +66,7 @@ export default function About() {
   return (
     <main
       id="about"
-      className="gradient-bg mx-auto flex h-fit min-h-screen w-full items-center justify-center pt-8 sm:py-20"
+      className="gradient-bg mx-auto flex h-fit min-h-screen w-full items-center justify-center pt-30 sm:py-20"
     >
       <div className="gradient-container">
         <div className="interactive max-md:hidden" />

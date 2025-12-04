@@ -49,7 +49,10 @@
     "docker": "Plateforme de conteneurs",
     "github": "Plateforme de dépôt de code",
     "flask": "Framework web Python",
-    "fastapi": "Framework Python API moderne"
+    "fastapi": "Framework Python API moderne",
+    "go": "Langage backend haute performance",
+    "mysql": "Moteur de base de données relationnelle",
+    "redis": "Stockage en mémoire"
   },
   "Work": {
     "title": "Mon portfolio",
@@ -110,13 +113,13 @@
   "Zipway": {
     "Metadata": {
       "title": "Zipway | Esdras Portfolio",
-      "description": "Zipway est un raccourcisseur d'URL entièrement fonctionnel et réactif qui offre une expérience fluide aux utilisateurs authentifiés pour créer, gérer et partager des liens courts. Construit avec des technologies de pointe comme Next.js (App Router), Prisma ORM, Supabase, Tailwind CSS et les composants de la bibliothèque shadcn/ui. Il comprend une authentification sécurisée, un middleware de redirection de liens courts et des tests automatisés avec Jest et React Testing Library.",
+      "description": "Zipway est un raccourcisseur d'URL obsédé par la latence, reconstruit autour d'un noyau hexagonal en Go (Fiber), d'un panneau Next.js et d'une chaîne de cache local -> Redis -> PostgreSQL. La création de liens se termine désormais en 50-55 ms, les redirections en cache répondent en moins de 1 ms et la validation de session se produit en moins de 5 microsecondes grâce au cache local, à un pool Redis optimisé de 50 connexions et aux requêtes préparées.",
       "robots": "index, follow",
       "creator": "Esdras"
     },
-    "title": "Raccourcisseur d'URL moderne avec panneau de contrôle",
+    "title": "Raccourcisseur d'URL orienté performance",
     "overview": "Aperçu du Projet",
-    "description": "Zipway est un raccourcisseur d'URL entièrement fonctionnel et réactif qui offre une expérience fluide aux utilisateurs authentifiés pour créer, gérer et partager des liens courts. Construit avec des technologies de pointe comme Next.js (App Router), Prisma ORM, Supabase, Tailwind CSS et les composants de la bibliothèque shadcn/ui. Il comprend une authentification sécurisée, un middleware de redirection de liens courts et des tests automatisés avec Jest et React Testing Library."
+    "description": "J'ai réarchitecturé Zipway avec Go (Fiber) et une approche hexagonale pour isoler chaque responsabilité tandis que le tableau de bord Next.js reste axé produit. Avant le travail de performance, la création et la redirection prenaient environ 1 seconde; après l'optimisation, la création se stabilise à 50-55 ms, les hits de cache redirigent en moins de 1 ms et la validation de session s'exécute en moins de 5 microsecondes grâce à un cache local chaud. La stack combine désormais des caches en cascade (local, Redis, PostgreSQL/Supabase), un pool Redis réglé à 50 connexions, des requêtes préparées pour chaque SQL et des services Dockerisés pour conserver une latence faible sous forte charge."
   },
   "DownloadCV": "Télécharger CV",
   "LocaleSwitcher": {

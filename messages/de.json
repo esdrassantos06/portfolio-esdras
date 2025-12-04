@@ -49,7 +49,10 @@
     "docker": "Container-Plattform",
     "github": "Code-Repository-Plattform",
     "flask": "Python Web-Framework",
-    "fastapi": "Modernes Python API-Framework"
+    "fastapi": "Modernes Python API-Framework",
+    "go": "Hochperformante Backend-Sprache",
+    "mysql": "Relationale Datenbank-Engine",
+    "redis": "In-Memory-Datenspeicher"
   },
   "Work": {
     "title": "Mein Portfolio",
@@ -110,13 +113,13 @@
   "Zipway": {
     "Metadata": {
       "title": "Zipway | Esdras Portfolio",
-      "description": "Zipway ist ein vollständig ausgestatteter, responsiver URL-Verkürzer, der authentifizierten Benutzern eine nahtlose Erfahrung beim Erstellen, Verwalten und Teilen von Kurz-Links bietet. Aufgebaut auf modernsten Technologien wie Next.js (App Router), Prisma ORM, Supabase, Tailwind CSS und shadcn/ui-Bibliothekskomponenten. Es bietet sichere Authentifizierung, Kurz-Link-Weiterleitungs-Middleware und automatisierte Tests mit Jest und React Testing Library.",
+      "description": "Zipway ist ein latenzfokussierter URL-Verkürzer, der mit einem hexagonalen Go-(Fiber)-Kern, einem Next.js-Panel und einer Cache-Kette lokal -> Redis -> PostgreSQL neu aufgebaut wurde. Link-Erstellungen dauern nun 50-55 ms, gecachte Weiterleitungen benötigen weniger als 1 ms und die Sitzungsvalidierung läuft dank lokalem Cache, einem optimierten Redis-Pool mit 50 Verbindungen und vorbereiteten SQL-Statements in unter 5 Mikrosekunden.",
       "robots": "index, follow",
       "creator": "Esdras"
     },
-    "title": "Moderner URL-Verkürzer mit Kontrollpanel",
+    "title": "Performanceorientierter URL-Verkürzer",
     "overview": "Projektübersicht",
-    "description": "Zipway ist ein vollständig ausgestatteter, responsiver URL-Verkürzer, der authentifizierten Benutzern eine nahtlose Erfahrung beim Erstellen, Verwalten und Teilen von Kurz-Links bietet. Aufgebaut auf modernsten Technologien wie Next.js (App Router), Prisma ORM, Supabase, Tailwind CSS und shadcn/ui-Bibliothekskomponenten. Es bietet sichere Authentifizierung, Kurz-Link-Weiterleitungs-Middleware und automatisierte Tests mit Jest und React Testing Library."
+    "description": "Ich habe Zipway mit Go (Fiber) und einer hexagonalen Architektur neu strukturiert, sodass jede Verantwortung sauber getrennt bleibt, während das Next.js-Dashboard die Produkterfahrung abdeckt. Vor der Optimierung benötigten Link-Erstellung und Redirects rund 1 Sekunde; danach stabilisierte sich die Erstellung auf 50-55 ms, Cache-Treffer leiten in unter 1 ms weiter und die Sitzungsvalidierung läuft durch einen heißen lokalen Cache in unter 5 Mikrosekunden. Die Stack nutzt jetzt gestufte Caches (lokal, Redis, PostgreSQL/Supabase), einen fein abgestimmten Redis-Pool mit 50 Verbindungen, vorbereitete Statements für jede Abfrage und Docker-Services, um auch bei hoher Last niedrige Latenzen zu halten."
   },
   "DownloadCV": "Lehrplan",
   "LocaleSwitcher": {
