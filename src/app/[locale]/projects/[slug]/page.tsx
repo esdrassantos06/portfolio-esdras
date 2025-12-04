@@ -138,7 +138,7 @@ export default async function ProjetoPage({ params }: Props) {
               <h1 className="text-6xl font-extrabold max-md:text-center md:text-7xl/tight">
                 {projeto.slug.toUpperCase()}
               </h1>
-              <p className="w-fit text-center text-5xl font-normal uppercase sm:text-6xl md:w-300 md:text-7xl">
+              <p className="w-fit text-center text-3xl font-normal uppercase sm:text-6xl md:w-300 md:text-5xl">
                 {t("title")}
               </p>
             </div>
@@ -164,7 +164,12 @@ export default async function ProjetoPage({ params }: Props) {
             </FadeIn>
             <div className="mx-auto mt-12 flex w-full flex-col items-center justify-between gap-10 pt-10 pb-20 sm:flex-row">
               <aside className="flex flex-col gap-8">
-                <FadeIn direction="up" once staggerChildren={0.1}>
+                <FadeIn
+                  className="flex flex-col gap-8"
+                  direction="up"
+                  once
+                  staggerChildren={0.1}
+                >
                   <h2 className="text-5xl font-light">{t("overview")}</h2>
                   <TechnologiesProject
                     technologies={projeto.technologies.map((tech) => ({

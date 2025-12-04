@@ -40,7 +40,7 @@ export const projetos: Record<string, Project> = {
     namespace: "NovaHorizonte",
   },
   phantomcode: {
-    slug: "phantomcode",
+    slug: "phantom code",
     image: "/projects-mockup/phantomcode.webp",
     demo: "https://phantomcode.site",
     code: "https://github.com/esdrassantos06/phantomcode",
