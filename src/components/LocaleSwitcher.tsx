@@ -66,7 +66,7 @@ export default function LocaleSwitcher() {
         <div className="bg-principal absolute -bottom-1 left-1/2 size-1 -translate-x-1/2 transform rounded-full opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
       </SelectTrigger>
 
-      <SelectContent className="text-principal relative z-[10000] overflow-hidden rounded-xl border border-gray-200/30 bg-gradient-to-b from-white/5 to-transparent backdrop-blur-md shadow-xl p-1">
+      <SelectContent className="text-principal relative z-[10000] overflow-hidden rounded-xl border border-gray-200/30 bg-gradient-to-b from-white/5 to-transparent p-1 shadow-xl backdrop-blur-md">
         <SelectGroup>
           <SelectLabel className="text-secundaria/80 px-3 py-2 text-xs font-semibold tracking-wider uppercase">
             {t("label")}

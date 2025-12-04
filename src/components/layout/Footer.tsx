@@ -12,7 +12,12 @@ export default function Footer() {
     <div className="relative bottom-4 mx-auto mb-8 flex h-fit w-3/4 flex-col items-center justify-between overflow-hidden rounded-2xl border-1 border-gray-200/20">
       <footer id="contact" className="h-fit w-full">
         <div className="first-part-footer flex w-full flex-col items-start justify-start gap-8 p-8 pt-10">
-          <FadeIn direction="up" className="flex flex-col gap-6" once staggerChildren={0.1}>
+          <FadeIn
+            direction="up"
+            className="flex flex-col gap-6"
+            once
+            staggerChildren={0.1}
+          >
             <h2 className="w-fit max-w-full text-4xl font-bold md:text-5xl lg:w-160">
               {t("like")}{" "}
               <a
