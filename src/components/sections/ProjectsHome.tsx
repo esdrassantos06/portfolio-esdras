@@ -2,7 +2,7 @@
 import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import { ArrowUpRightIcon } from "@phosphor-icons/react";
-import ScrollAnimation from "../ui/ScrollAnimation";
+import { FadeIn } from "../ui/ScrollAnimation";
 
 class Project {
   constructor(
@@ -16,13 +16,13 @@ export default function ProjectsHome() {
   const projects: Project[] = [
     new Project(
       "Nova Horizonte",
-      "/projects-mockup/novahorizonte.png",
+      "/projects-mockup/novahorizonte.webp",
       "/projects/novahorizonte",
       ["React", "TailwindCSS", "shadcn/ui", "Vite"],
     ),
     new Project(
       "Tarevity",
-      "/projects-mockup/tarevity.png",
+      "/projects-mockup/tarevity.webp",
       "/projects/tarevity",
       [
         "NextJS",
@@ -36,11 +36,11 @@ export default function ProjectsHome() {
     ),
     new Project(
       "Phantom Code",
-      "/projects-mockup/phantomcode.png",
+      "/projects-mockup/phantomcode.webp",
       "/projects/phantomcode",
       ["Electron", "React", "TailwindCSS", "OpenAI API", "NestJS"],
     ),
-    new Project("Zipway", "/projects-mockup/zipway.png", "/projects/zipway", [
+    new Project("Zipway", "/projects-mockup/zipway.webp", "/projects/zipway", [
       "NextJS",
       "TailwindCSS",
       "Typescript",
@@ -53,67 +53,76 @@ export default function ProjectsHome() {
 
   return (
     <div className="flex w-full items-center justify-center">
-      <div className="grid gap-2 lg:grid-cols-2">
+      <ul className="grid gap-2 lg:grid-cols-2 lg:items-stretch" role="list">
         {projects.map((project, i) => {
           return (
-            <ScrollAnimation
-              key={i}
-              className="flex flex-col items-center justify-center"
-              delayIndex={i + 2}
-            >
-              <div className="card bg-fundo2 mb-2 flex size-full flex-col gap-4 rounded-2xl p-8">
-                <Link
-                  href={project.link}
-                  className="group relative mb-6 flex aspect-video w-full overflow-hidden rounded-lg"
-                >
-                  <Image
-                    src={project.image}
-                    alt={project.name}
-                    sizes="100%"
-                    fill
-                    priority
-                    className="pointer-events-none rounded-lg object-cover transition-all duration-800 select-none group-hover:scale-110"
-                  />
-                </Link>
-                <div className="project-name flex w-full">
-                  <h1 className="text-xl font-semibold md:text-2xl">
-                    {project.name}
-                  </h1>
-                </div>
+            <li key={i} className="flex h-full">
+              <FadeIn
+                direction="up"
+                className="flex h-full w-full flex-col"
+                once
+              >
+                <article className="card bg-fundo2 mb-2 flex h-full w-full flex-col gap-4 rounded-2xl p-8">
+                  <Link
+                    href={project.link}
+                    className="group relative mb-6 flex aspect-video w-full overflow-hidden rounded-lg"
+                    aria-label={`View ${project.name} project`}
+                  >
+                    <Image
+                      src={project.image}
+                      alt={`${project.name} project preview`}
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                      fill
+                      priority={i < 2}
+                      className="pointer-events-none rounded-lg object-cover transition-all duration-800 select-none group-hover:scale-110"
+                    />
+                  </Link>
+                  <header className="project-name flex w-full flex-shrink-0">
+                    <h3 className="text-xl font-semibold md:text-2xl">
+                      {project.name}
+                    </h3>
+                  </header>
 
-                <div className="flex w-full flex-1 items-center justify-between gap-2">
-                  <div className="technologies flex flex-1 flex-wrap gap-2">
-                    {project.technologies.map((tech, i) => {
-                      return (
-                        <div
-                          key={i}
-                          className={`${tech.toLowerCase()} border-opacity-20 flex h-10 w-20 items-center justify-center rounded-md border border-gray-200/20 bg-[#262626] p-1 text-center text-xs font-light transition-all duration-300 select-none hover:bg-gray-200/20 sm:text-sm md:w-30`}
-                        >
-                          {tech}
-                        </div>
-                      );
-                    })}
-                  </div>
-
-                  <div className="redirect-btn flex">
-                    <Link
-                      key={i}
-                      href={project.link}
-                      aria-label={project.name}
-                      className="group active:bg-secundaria/70 hover:bg-secundaria/70 bg-secundaria flex h-18 w-18 items-center justify-center rounded-md transition-all duration-300"
+                  <div className="mt-auto flex w-full flex-1 items-center justify-between gap-2">
+                    <ul
+                      className="technologies flex flex-1 flex-wrap gap-2"
+                      role="list"
+                      aria-label="Technologies used"
                     >
-                      <ArrowUpRightIcon
-                        className="rotate-0 transition-all duration-300 group-hover:rotate-45 group-active:rotate-45"
-                        size={30}
-                      />
-                    </Link>
+                      {project.technologies.map((tech, techIndex) => {
+                        return (
+                          <li key={techIndex}>
+                            <span
+                              className={`${tech.toLowerCase()} border-opacity-20 flex h-10 w-20 items-center justify-center rounded-md border border-gray-200/20 bg-[#262626] p-1 text-center text-xs font-light transition-all duration-300 select-none hover:bg-gray-200/20 sm:text-sm md:w-30`}
+                              aria-label={tech}
+                            >
+                              {tech}
+                            </span>
+                          </li>
+                        );
+                      })}
+                    </ul>
+
+                    <div className="redirect-btn flex">
+                      <Link
+                        href={project.link}
+                        aria-label={`View ${project.name} project details`}
+                        className="group active:bg-secundaria/70 hover:bg-secundaria/70 bg-secundaria flex h-18 w-18 items-center justify-center rounded-md transition-all duration-300"
+                      >
+                        <ArrowUpRightIcon
+                          className="rotate-0 transition-all duration-300 group-hover:rotate-45 group-active:rotate-45"
+                          size={30}
+                          aria-hidden="true"
+                        />
+                      </Link>
+                    </div>
                   </div>
-                </div>
-              </div>
-            </ScrollAnimation>
+                </article>
+              </FadeIn>
+            </li>
           );
         })}
-      </div>
+      </ul>
     </div>
   );
 }

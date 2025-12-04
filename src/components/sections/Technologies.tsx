@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import ScrollAnimation from "../ui/ScrollAnimation";
+import { FadeIn } from "../ui/ScrollAnimation";
 import { useTranslations } from "next-intl";
 
 class Technology {
@@ -192,16 +192,20 @@ export default function Technologies() {
     <div className="flex w-full flex-col gap-2">
       {technologyCategories.map((category, categoryIndex) => (
         <div key={categoryIndex} className="flex flex-col gap-4">
-          <ScrollAnimation delayIndex={categoryIndex} className="w-fit">
+          <FadeIn direction="up" className="w-fit" once>
             <h3 className="text-principal text-xl font-semibold">
               {category.title}
             </h3>
-          </ScrollAnimation>
-          <div className="grid h-fit w-full grid-cols-1 gap-8 max-md:place-items-center sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
+          </FadeIn>
+          <FadeIn
+            direction="up"
+            staggerChildren={0.05}
+            once
+            className="grid h-fit w-full grid-cols-1 gap-8 max-md:place-items-center sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4"
+          >
             {category.technologies.map((tech, techIndex) => {
               return (
-                <ScrollAnimation
-                  delayIndex={categoryIndex}
+                <div
                   className={`tech-${tech.getSlugName()} bg-fundo2 hover:bg-fundo2hover flex h-22 w-full items-center rounded-2xl border-1 border-transparent px-6 py-4 transition-all duration-300 hover:border-gray-200/50`}
                   key={`${categoryIndex}-${techIndex}`}
                 >
@@ -224,10 +228,10 @@ export default function Technologies() {
                       </p>
                     </div>
                   </div>
-                </ScrollAnimation>
+                </div>
               );
             })}
-          </div>
+          </FadeIn>
         </div>
       ))}
     </div>
