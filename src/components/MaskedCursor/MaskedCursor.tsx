@@ -64,13 +64,19 @@ export default function MaskedCursor({
     };
   }, []);
 
-  const size: number = isPressed && !isHovered ? 40 : isHovered ? 400 : 50;
+  const size: number = isPressed && !isHovered ? 25 : isHovered ? 400 : 30;
 
   return (
     <div
       ref={containerRef}
       className={`cursor-container w-${width} h-${height} relative flex flex-col items-center justify-center select-none`}
     >
+      <div className="normal relative">
+        {typeof normalContent === "function"
+          ? normalContent(isHovered, setIsHovered)
+          : normalContent}
+      </div>
+
       <motion.div
         style={{
           WebkitMaskPosition: `${mousePosition.x - size / 2}px ${
@@ -84,16 +90,10 @@ export default function MaskedCursor({
           maskSize: { duration: 0.15, ease: "easeOut" },
           maskPosition: { duration: 0.1 },
         }}
-        className="cursor bg-secundaria pointer-events-none absolute inset-0 z-30"
+        className={`cursor bg-secundaria pointer-events-none absolute inset-0`}
       >
         <div>{maskedContent}</div>
       </motion.div>
-
-      <div className="normal relative z-35">
-        {typeof normalContent === "function"
-          ? normalContent(isHovered, setIsHovered)
-          : normalContent}
-      </div>
     </div>
   );
 }
