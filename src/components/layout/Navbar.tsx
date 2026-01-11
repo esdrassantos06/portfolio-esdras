@@ -115,8 +115,8 @@ export default function Navbar() {
             {navItems.map((item) => {
               const isActive = pathname === "/" && activeSection === item.id;
               return (
-                <FadeIn key={item.id} direction="down" once>
-                  <li>
+                <li key={item.id}>
+                  <FadeIn direction="down" once>
                     <Link
                       href={item.href}
                       aria-label={item.label}
@@ -150,24 +150,24 @@ export default function Navbar() {
                         aria-hidden="true"
                       />
                     </Link>
-                  </li>
-                </FadeIn>
+                  </FadeIn>
+                </li>
               );
             })}
 
             {/* Separator */}
-            <FadeIn direction="down" once>
-              <li>
+            <li>
+              <FadeIn direction="down" once>
                 <div className="h-6 w-px bg-gradient-to-b from-transparent via-gray-300/30 to-transparent sm:mx-2" />
-              </li>
-            </FadeIn>
+              </FadeIn>
+            </li>
 
             {/* Locale Switcher */}
-            <FadeIn direction="down" once>
-              <li>
+            <li>
+              <FadeIn direction="down" once>
                 <LocaleSwitcher />
-              </li>
-            </FadeIn>
+              </FadeIn>
+            </li>
           </ul>
         </div>
       </nav>
