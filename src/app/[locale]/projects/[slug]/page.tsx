@@ -48,6 +48,7 @@ export async function generateMetadata({
   const imageUrl = `${baseUrl}${projeto.image}`;
 
   const metadata: Metadata = {
+    metadataBase: new URL(baseUrl),
     title: t("title"),
     description: t("description"),
     keywords: t.has("keywords") ? t("keywords").split(", ") : undefined,
@@ -78,10 +79,17 @@ export async function generateMetadata({
       title: t("title"),
       description: t("description"),
       images: [imageUrl],
-      creator: "@esdrasdev",
+      creator: "@esdrasprft",
     },
     alternates: {
       canonical: url,
+      languages: {
+        en: `${baseUrl}/en/projects/${slug}`,
+        pt: `${baseUrl}/pt/projects/${slug}`,
+        es: `${baseUrl}/es/projects/${slug}`,
+        fr: `${baseUrl}/fr/projects/${slug}`,
+        de: `${baseUrl}/de/projects/${slug}`,
+      },
     },
   };
 
@@ -105,7 +113,7 @@ export default async function ProjetoPage({ params }: Props) {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    name: projeto.slug,
+    name: projeto.name,
     applicationCategory: "WebApplication",
     description: t("description"),
     url: projeto.demo,
@@ -121,7 +129,6 @@ export default async function ProjetoPage({ params }: Props) {
       price: "0",
       priceCurrency: "USD",
     },
-    aggregateRating: undefined,
   };
 
   return (
@@ -135,15 +142,15 @@ export default async function ProjetoPage({ params }: Props) {
         <header className="flex min-h-screen w-full flex-col items-center justify-center">
           <FadeIn direction="up" once>
             <div className="flex w-full flex-col items-center justify-center gap-2">
-              <h1 className="text-6xl font-extrabold max-md:text-center md:text-7xl/tight">
-                {projeto.slug.toUpperCase()}
+              <h1 className="text-4xl font-extrabold max-md:text-center sm:text-6xl md:text-7xl/tight">
+                {projeto.name.toUpperCase()}
               </h1>
               <p className="w-fit text-center text-3xl font-normal uppercase sm:text-6xl md:w-300 md:text-5xl">
                 {t("title")}
               </p>
             </div>
           </FadeIn>
-          <div className="arrow-down mt-20 flex w-full items-center justify-center">
+          <div className="arrow-down mt-10 flex w-full items-center justify-center sm:mt-20">
             <FadeIn direction="up" once>
               <ArrowDownIcon />
             </FadeIn>

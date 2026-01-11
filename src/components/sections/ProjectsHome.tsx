@@ -56,13 +56,13 @@ export default function ProjectsHome() {
       <ul className="grid gap-2 lg:grid-cols-2 lg:items-stretch" role="list">
         {projects.map((project, i) => {
           return (
-            <li key={i} className="flex h-full">
+            <li key={project.name} className="flex h-full">
               <FadeIn
                 direction="up"
                 className="flex h-full w-full flex-col"
                 once
               >
-                <article className="card bg-fundo2 mb-2 flex h-full w-full flex-col gap-4 rounded-2xl p-8">
+                <article className="card bg-fundo2 mb-2 flex h-full w-full flex-col gap-4 rounded-2xl p-8 md:h-130">
                   <Link
                     href={project.link}
                     className="group relative mb-6 flex aspect-video w-full overflow-hidden rounded-lg"

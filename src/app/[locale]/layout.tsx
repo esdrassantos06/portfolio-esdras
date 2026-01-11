@@ -59,7 +59,7 @@ export async function generateMetadata(
       card: "summary_large_image",
       title: t("title"),
       description: t("description"),
-      creator: "@esdrasdev",
+      creator: "@esdrasprft",
     },
     alternates: {
       canonical: url,
@@ -114,8 +114,13 @@ export default async function LocaleLayout({ children, params }: Props) {
     >
       <body className="font-satoshi bg-fundo text-principal w-full overflow-x-hidden">
         <NextIntlClientProvider>
+          <a href="#main-content" className="skip-link">
+            Skip to main content
+          </a>
           <Navbar />
-          {children}
+          <main id="main-content" tabIndex={-1}>
+            {children}
+          </main>
           <Footer />
         </NextIntlClientProvider>
       </body>

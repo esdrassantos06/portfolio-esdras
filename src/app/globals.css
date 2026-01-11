@@ -320,3 +320,25 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Accessibility improvements */
+@layer utilities {
+  /* Skip to main content link */
+  .skip-link {
+    @apply focus:bg-principal focus:text-background focus:outline-principal sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[999999] focus:rounded-lg focus:px-4 focus:py-2 focus:font-semibold focus:outline-2 focus:outline-offset-2;
+  }
+
+  /* Focus visible styles */
+  *:focus-visible {
+    @apply outline-principal rounded outline-2 outline-offset-2;
+  }
+
+  /* Better focus for interactive elements */
+  a:focus-visible,
+  button:focus-visible,
+  [role="button"]:focus-visible,
+  [role="link"]:focus-visible,
+  [tabindex]:focus-visible {
+    @apply outline-principal ring-principal/50 ring-2 outline-2 outline-offset-2;
+  }
+}

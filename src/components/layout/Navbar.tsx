@@ -7,7 +7,7 @@ import {
 } from "@phosphor-icons/react";
 import { useState, useEffect } from "react";
 import { motion } from "motion/react";
-import { Link } from "@/i18n/navigation";
+import { Link, usePathname } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 import LocaleSwitcher from "@/components/LocaleSwitcher";
 import { Inter } from "next/font/google";
@@ -19,30 +19,69 @@ type ScrollDirection = "up" | "down" | null;
 
 export default function Navbar() {
   const [scrollDirection, setScrollDirection] = useState<ScrollDirection>(null);
+  const [activeSection, setActiveSection] = useState<string>("");
+  const pathname = usePathname();
 
   const t = useTranslations("Header");
 
   useEffect(() => {
     let lastScrollY = window.scrollY;
+    let ticking = false;
 
     const handleScroll = () => {
-      const currentScrollY = window.scrollY;
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const currentScrollY = window.scrollY;
 
-      if (currentScrollY > lastScrollY && currentScrollY > 100) {
-        setScrollDirection("down");
-      } else {
-        setScrollDirection("up");
+          if (currentScrollY > lastScrollY && currentScrollY > 100) {
+            setScrollDirection("down");
+          } else {
+            setScrollDirection("up");
+          }
+
+          lastScrollY = currentScrollY;
+          ticking = false;
+        });
+
+        ticking = true;
       }
-
-      lastScrollY = currentScrollY;
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     handleScroll(); // Check initial scroll position
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
+  }, []);
+
+  useEffect(() => {
+    const observerOptions = {
+      root: null,
+      rootMargin: "-20% 0px -70% 0px",
+      threshold: 0,
+    };
+
+    const observerCallback = (entries: IntersectionObserverEntry[]) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(
+      observerCallback,
+      observerOptions,
+    );
+
+    const sections = ["home", "about", "work", "contact"];
+    sections.forEach((id) => {
+      const element = document.getElementById(id);
+      if (element) observer.observe(element);
+    });
+
+    return () => observer.disconnect();
   }, []);
 
   const navItems = [
@@ -67,39 +106,54 @@ export default function Navbar() {
       }}
     >
       <nav
+        aria-label="Main navigation"
         className={`${inter.className} relative z-[99999] overflow-hidden rounded-2xl border border-gray-200/50 backdrop-blur-xl`}
       >
         {/* Content */}
-        <div className="relative flex min-w-fit items-center px-6 py-2">
-          <ul className="flex items-center gap-1 font-medium">
-            {navItems.map((item, index) => (
-              <FadeIn key={item.id} direction="down" once>
-                <li>
-                  <Link
-                    href={item.href}
-                    aria-label={item.label}
-                    className="group relative flex items-center justify-center rounded-xl px-2 py-2.5 transition-all duration-300 hover:bg-white/10 active:scale-95 sm:px-4"
-                  >
-                    {/* Hover background effect */}
-                    <div className="from-principal/0 via-principal/5 to-principal/0 absolute inset-0 rounded-xl bg-gradient-to-r opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+        <div className="relative flex min-w-fit items-center px-4 py-2 sm:px-6">
+          <ul className="flex items-center gap-1 font-medium" role="list">
+            {navItems.map((item) => {
+              const isActive = pathname === "/" && activeSection === item.id;
+              return (
+                <FadeIn key={item.id} direction="down" once>
+                  <li>
+                    <Link
+                      href={item.href}
+                      aria-label={item.label}
+                      aria-current={isActive ? "page" : undefined}
+                      className={`group focus-visible:outline-principal relative flex items-center justify-center rounded-xl px-2 py-2.5 transition-all duration-300 hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 active:scale-95 sm:px-4 ${
+                        isActive ? "bg-white/10" : ""
+                      }`}
+                    >
+                      {/* Hover background effect */}
+                      <div className="from-principal/0 via-principal/5 to-principal/0 absolute inset-0 rounded-xl bg-gradient-to-r opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
 
-                    {/* Desktop text */}
-                    <span className="text-principal/90 group-hover:text-principal relative z-10 hidden text-center transition-colors duration-300 sm:block">
-                      {item.label}
-                    </span>
+                      {/* Desktop text */}
+                      <span className="text-principal/90 group-hover:text-principal relative z-10 hidden text-center transition-colors duration-300 sm:block">
+                        {item.label}
+                      </span>
 
-                    {/* Mobile icon */}
-                    <item.icon
-                      size={24}
-                      className="text-principal/90 group-hover:text-principal relative z-10 transition-all duration-300 group-hover:scale-110 sm:hidden"
-                    />
+                      {/* Mobile icon */}
+                      <item.icon
+                        size={24}
+                        className="text-principal/90 group-hover:text-principal relative z-10 transition-all duration-300 group-hover:scale-110 sm:hidden"
+                        aria-hidden="true"
+                      />
 
-                    {/* Active indicator dot */}
-                    <div className="bg-principal absolute -bottom-1 left-1/2 h-1 w-1 -translate-x-1/2 transform rounded-full opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-                  </Link>
-                </li>
-              </FadeIn>
-            ))}
+                      {/* Active indicator dot */}
+                      <div
+                        className={`bg-principal absolute -bottom-1 left-1/2 h-1 w-1 -translate-x-1/2 transform rounded-full transition-opacity duration-300 ${
+                          isActive
+                            ? "opacity-100"
+                            : "opacity-0 group-hover:opacity-100"
+                        }`}
+                        aria-hidden="true"
+                      />
+                    </Link>
+                  </li>
+                </FadeIn>
+              );
+            })}
 
             {/* Separator */}
             <FadeIn direction="down" once>
@@ -116,9 +170,6 @@ export default function Navbar() {
             </FadeIn>
           </ul>
         </div>
-
-        {/* Bottom glow effect */}
-        <div className="via-principal/20 absolute -bottom-2 left-1/2 h-1 w-3/4 -translate-x-1/2 transform bg-gradient-to-r from-transparent to-transparent blur-sm" />
       </nav>
     </motion.header>
   );
