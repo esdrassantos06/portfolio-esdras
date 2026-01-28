@@ -25,10 +25,13 @@ const ShinyButton: React.FC<ShinyButtonProps> = ({
       rel={rel}
       href={link}
       target={target}
-      aria-label={ariaLabel}
-      className={`before:animate-shine bg-fundo2 hover:bg-fundo2/80 relative flex h-12 w-50 items-center justify-center gap-3 overflow-hidden rounded-lg border-1 border-gray-200/50 text-lg transition-all duration-300 before:absolute before:top-0 before:left-[-100%] before:h-full before:w-4 before:scale-120 before:rotate-10 before:bg-gradient-to-r before:from-transparent before:to-white/5`}
+      aria-label={ariaLabel || text}
+      className={`before:animate-shine bg-fundo2 hover:bg-fundo2/80 focus-visible:outline-principal relative flex h-12 w-50 items-center justify-center gap-3 overflow-hidden rounded-lg border-1 border-gray-200/50 text-lg transition-all duration-300 before:absolute before:top-0 before:left-[-100%] before:h-full before:w-4 before:scale-120 before:rotate-10 before:bg-gradient-to-r before:from-transparent before:to-white/5 focus-visible:outline-2 focus-visible:outline-offset-2`}
     >
-      {text} {showArrow && <CaretRightIcon size={20} weight="bold" />}
+      {text}{" "}
+      {showArrow && (
+        <CaretRightIcon size={20} weight="bold" aria-hidden="true" />
+      )}
     </Link>
   );
 };

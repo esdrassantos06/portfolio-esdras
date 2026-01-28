@@ -2,7 +2,7 @@ import { Link } from "@/i18n/navigation";
 
 export default function ArrowDownIcon() {
   return (
-    <Link
+    <a
       aria-label="Scroll to image"
       href={"#image"}
       className="relative transition-all duration-300"
@@ -13,7 +13,7 @@ export default function ArrowDownIcon() {
         width="80"
         height="80"
         viewBox="0 0 1080 1080"
-        className="animate-bounce"
+        className="size-12 animate-bounce sm:size-20"
       >
         <g transform="matrix(52.02 0 0 48.24 540 517.34)">
           <path
@@ -24,6 +24,6 @@ export default function ArrowDownIcon() {
           />
         </g>
       </svg>
-    </Link>
+    </a>
   );
 }

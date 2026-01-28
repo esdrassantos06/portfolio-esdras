@@ -23,6 +23,7 @@ type TechName = (typeof tech)[keyof typeof tech];
 
 interface Project {
   slug: string;
+  name: string;
   image: string;
   demo: string;
   code?: string;
@@ -33,6 +34,7 @@ interface Project {
 export const projetos: Record<string, Project> = {
   novahorizonte: {
     slug: "novahorizonte",
+    name: "Nova Horizonte",
     image: "/projects-mockup/novahorizonte.webp",
     demo: "https://novahorizonte.vercel.app/",
     code: "https://github.com/esdrassantos06/novahorizonte",
@@ -40,7 +42,8 @@ export const projetos: Record<string, Project> = {
     namespace: "NovaHorizonte",
   },
   phantomcode: {
-    slug: "phantom code",
+    slug: "phantomcode",
+    name: "Phantom Code",
     image: "/projects-mockup/phantomcode.webp",
     demo: "https://phantomcode.site",
     code: "https://github.com/esdrassantos06/phantomcode",
@@ -55,6 +58,7 @@ export const projetos: Record<string, Project> = {
   },
   tarevity: {
     slug: "tarevity",
+    name: "Tarevity",
     image: "/projects-mockup/tarevity.webp",
     demo: "https://www.tarevity.pt/",
     code: "https://github.com/esdrassantos06/tarevity",
@@ -70,6 +74,7 @@ export const projetos: Record<string, Project> = {
   },
   zipway: {
     slug: "zipway",
+    name: "Zipway",
     image: "/projects-mockup/zipway.webp",
     demo: "https://shly.pt",
     code: "https://github.com/esdrassantos06/zipway",

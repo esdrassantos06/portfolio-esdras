@@ -191,7 +191,7 @@ export default function Technologies() {
   return (
     <div className="flex w-full flex-col gap-2">
       {technologyCategories.map((category, categoryIndex) => (
-        <div key={categoryIndex} className="flex flex-col gap-4">
+        <div key={categoryIndex} className="flex flex-col gap-4 py-4">
           <FadeIn direction="up" className="w-fit" once>
             <h3 className="text-principal text-xl font-semibold">
               {category.title}
@@ -201,29 +201,34 @@ export default function Technologies() {
             direction="up"
             staggerChildren={0.05}
             once
-            className="grid h-fit w-full grid-cols-1 gap-8 max-md:place-items-center sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4"
+            className="grid h-fit w-full grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 md:grid-cols-2 md:gap-8 lg:grid-cols-3"
           >
             {category.technologies.map((tech, techIndex) => {
               return (
                 <div
-                  className={`tech-${tech.getSlugName()} bg-fundo2 hover:bg-fundo2hover flex h-22 w-full items-center rounded-2xl border-1 border-transparent px-6 py-4 transition-all duration-300 hover:border-gray-200/50`}
+                  className={`tech-${tech.getSlugName()} bg-fundo2 hover:bg-fundo2hover flex h-22 w-full items-center rounded-2xl border-1 border-transparent px-4 py-3 transition-all duration-300 hover:border-gray-200/50 sm:px-5 sm:py-4 md:px-6`}
                   key={`${categoryIndex}-${techIndex}`}
                 >
-                  <div className="flex w-full items-center gap-4">
+                  <div className="flex w-full items-center gap-3 sm:gap-4">
                     <span
-                      className={`icon flex size-14 items-center justify-center rounded-lg p-2 ${tech.background}`}
+                      className={`icon flex size-12 shrink-0 items-center justify-center rounded-lg p-2 sm:size-14 ${tech.background}`}
                     >
                       <Image
                         src={tech.src}
-                        className="size-9"
+                        className="size-8 object-contain sm:size-9"
                         width={36}
                         height={36}
                         alt={tech.alt}
                       />
                     </span>
-                    <div className="text flex flex-col justify-center">
-                      <h1 className="text-base font-semibold">{tech.name}</h1>
-                      <p className="text-principal/80 text-sm">
+                    <div
+                      title={tech.description}
+                      className="text flex min-w-0 flex-1 flex-col justify-center"
+                    >
+                      <h1 className="line-clamp-1 text-sm font-semibold sm:text-base">
+                        {tech.name}
+                      </h1>
+                      <p className="text-principal/80 line-clamp-2 text-xs sm:text-sm">
                         {tech.description}
                       </p>
                     </div>
