@@ -65,7 +65,7 @@ export default function LocaleSwitcher() {
         />
       </SelectTrigger>
 
-      <SelectContent className="text-principal relative z-[999999] w-40 overflow-hidden rounded-xl border border-gray-200/30 bg-gradient-to-b from-white/5 to-transparent p-1 backdrop-blur-md sm:w-50">
+      <SelectContent className="text-principal relative z-999999 w-40 overflow-hidden rounded-xl border border-gray-200/30 bg-gradient-to-b from-white/5 to-transparent p-1 backdrop-blur-md sm:w-50">
         <SelectGroup>
           <SelectLabel className="text-secundaria/80 hidden px-3 py-2 text-xs font-semibold tracking-wider uppercase sm:block">
             {t("label")}
@@ -83,6 +83,7 @@ export default function LocaleSwitcher() {
               >
                 <div className="pointer-events-none absolute left-3">
                   <Image
+                    draggable={false}
                     src={language.flag}
                     alt={language.code}
                     width={20}

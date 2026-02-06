@@ -206,7 +206,7 @@ export default function Technologies() {
             {category.technologies.map((tech, techIndex) => {
               return (
                 <div
-                  className={`tech-${tech.getSlugName()} bg-fundo2 hover:bg-fundo2hover flex h-22 w-full items-center rounded-2xl border-1 border-transparent px-4 py-3 transition-all duration-300 hover:border-gray-200/50 sm:px-5 sm:py-4 md:px-6`}
+                  className={`tech-${tech.getSlugName()} bg-fundo2 hover:bg-fundo2hover flex h-22 w-full items-center rounded-2xl border border-transparent px-4 py-3 transition-all duration-300 hover:border-gray-200/50 sm:px-5 sm:py-4 md:px-6`}
                   key={`${categoryIndex}-${techIndex}`}
                 >
                   <div className="flex w-full items-center gap-3 sm:gap-4">
@@ -214,6 +214,7 @@ export default function Technologies() {
                       className={`icon flex size-12 shrink-0 items-center justify-center rounded-lg p-2 sm:size-14 ${tech.background}`}
                     >
                       <Image
+                        draggable={false}
                         src={tech.src}
                         className="size-8 object-contain sm:size-9"
                         width={36}
