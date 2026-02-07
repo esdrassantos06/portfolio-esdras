@@ -77,7 +77,7 @@ export default function ProjectsHome() {
                       className="pointer-events-none rounded-lg object-cover transition-all duration-800 select-none group-hover:scale-110"
                     />
                   </Link>
-                  <header className="project-name flex w-full flex-shrink-0">
+                  <header className="project-name flex w-full shrink-0">
                     <h3 className="text-xl font-semibold md:text-2xl">
                       {project.name}
                     </h3>
