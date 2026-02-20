@@ -9,7 +9,7 @@ export default function Footer() {
   const t = useTranslations("Footer");
 
   return (
-    <div className="relative bottom-4 mx-auto mb-8 flex h-fit w-3/4 flex-col items-center justify-between overflow-hidden rounded-2xl border-1 border-gray-200/20">
+    <div className="relative bottom-4 mx-auto mb-8 flex h-fit w-3/4 flex-col items-center justify-between overflow-hidden rounded-2xl border border-gray-200/20">
       <footer id="contact" className="h-fit w-full">
         <div className="first-part-footer flex w-full flex-col items-start justify-start gap-8 p-8 pt-10">
           <FadeIn
@@ -86,11 +86,8 @@ export default function Footer() {
                 </h3>
                 <ul className="mt-1 flex flex-col gap-2">
                   <li className="hover:text-principal text-principal/70 font-light">
-                    <Link
-                      aria-label="Project Nova Horizonte"
-                      href={"/projects/novahorizonte"}
-                    >
-                      Nova Horizonte
+                    <Link aria-label="Project JWeb" href={"/projects/jweb"}>
+                      JWeb
                     </Link>
                   </li>
                   <li className="hover:text-principal text-principal/70 font-light">

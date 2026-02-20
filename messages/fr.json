@@ -75,17 +75,17 @@
       "contact": "Contact"
     }
   },
-  "NovaHorizonte": {
+  "JWeb": {
     "Metadata": {
-      "title": "Nova Horizonte | Portfolio d'Esdras",
-      "description": "Nova Horizonte est un projet axé sur la construction civile et les services d'ingénierie, permettant aux clients de demander des devis directement via le site web. Le projet privilégie une interface intuitive, responsive et moderne, garantissant la meilleure expérience utilisateur.",
-      "keywords": "construction civile, projets, compétences, construction, ingénierie",
+      "title": "JWeb | Portfolio d'Esdras",
+      "description": "Site web institutionnel de JWeb, une agence de solutions digitales complète. Développé avec Next.js 16, React 19, TypeScript et internationalisation multilingue (Portugais, Anglais et Espagnol).",
+      "keywords": "agence digitale, solutions digitales, Next.js, React, TypeScript, internationalisation, CMS",
       "robots": "index, follow",
       "creator": "Esdras"
     },
-    "title": "UN SITE WEB MODERNE DE CONSTRUCTION CIVILE",
+    "title": "SITE WEB INSTITUTIONNEL COMPLET POUR AGENCE DIGITALE",
     "overview": "Aperçu du Projet",
-    "description": "Nova Horizonte est un projet axé sur la construction civile et les services d'ingénierie, permettant aux clients de demander des devis directement via le site web. Le projet privilégie une interface intuitive, responsive et moderne, garantissant la meilleure expérience utilisateur."
+    "description": "Site web institutionnel de JWeb, une agence de solutions digitales complète. Développé avec Next.js 16, React 19, TypeScript et internationalisation multilingue (Portugais, Anglais et Espagnol). Le projet inclut un CMS headless avec Keystatic, système de blog avec Markdoc, formulaires validés avec React Hook Form et Zod, envoi d'emails avec Resend, et intégration complète avec Google Tag Manager pour analytics et GDPR Consent Mode v2. Entièrement responsive avec Tailwind CSS 4 et composants accessibles de shadcn/ui."
   },
   "PhantomCode": {
     "Metadata": {

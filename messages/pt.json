@@ -75,17 +75,17 @@
       "contact": "Contacto"
     }
   },
-  "NovaHorizonte": {
+  "JWeb": {
     "Metadata": {
-      "title": "Nova Horizonte | Portfólio do Esdras",
-      "description": "Nova Horizonte é um projeto focado em construção civil e serviços de engenharia, permitindo aos clientes solicitar orçamentos diretamente através do website. O projeto prioriza uma interface intuitiva, responsiva e moderna, garantindo a melhor experiência do utilizador.",
-      "keywords": "construção civil, projetos, competências, construção, engenharia",
+      "title": "JWeb | Portfólio do Esdras",
+      "description": "Website institucional da JWeb, uma agência de soluções digitais completa. Desenvolvido com Next.js 16, React 19, TypeScript e internacionalização multi-idioma (Português, Inglês e Espanhol).",
+      "keywords": "agência digital, soluções digitais, Next.js, React, TypeScript, internacionalização, CMS",
       "robots": "index, follow",
       "creator": "Esdras"
     },
-    "title": "UM WEBSITE MODERNO DE CONSTRUÇÃO CIVIL",
+    "title": "WEBSITE INSTITUCIONAL COMPLETO PARA AGÊNCIA DIGITAL",
     "overview": "Visão Geral do Projeto",
-    "description": "Nova Horizonte é um projeto focado em construção civil e serviços de engenharia, permitindo aos clientes solicitar orçamentos diretamente através do website. O projeto prioriza uma interface intuitiva, responsiva e moderna, garantindo a melhor experiência do utilizador."
+    "description": "Website institucional da JWeb, uma agência de soluções digitais completa. Desenvolvido com Next.js 16, React 19, TypeScript e internacionalização multi-idioma (Português, Inglês e Espanhol). O projeto inclui CMS headless com Keystatic, sistema de blog com Markdoc, formulários validados com React Hook Form e Zod, envio de emails com Resend, e integração completa com Google Tag Manager para analytics e GDPR Consent Mode v2. Totalmente responsivo com Tailwind CSS 4 e componentes acessíveis do shadcn/ui."
   },
   "PhantomCode": {
     "Metadata": {

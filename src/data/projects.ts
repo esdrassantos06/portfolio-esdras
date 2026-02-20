@@ -32,14 +32,13 @@ interface Project {
 }
 
 export const projetos: Record<string, Project> = {
-  novahorizonte: {
-    slug: "novahorizonte",
-    name: "Nova Horizonte",
-    image: "/projects-mockup/novahorizonte.webp",
-    demo: "https://novahorizonte.vercel.app/",
-    code: "https://github.com/esdrassantos06/novahorizonte",
-    technologies: [tech.react, tech.tailwind, tech.shadcn, tech.vite],
-    namespace: "NovaHorizonte",
+  jweb: {
+    slug: "jweb",
+    name: "JWeb",
+    image: "/projects-mockup/jweb.avif",
+    demo: "https://jweb.pt",
+    technologies: [tech.next, tech.ts, tech.react, tech.tailwind, tech.shadcn],
+    namespace: "JWeb",
   },
   phantomcode: {
     slug: "phantomcode",

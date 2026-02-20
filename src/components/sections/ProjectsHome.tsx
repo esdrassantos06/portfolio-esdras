@@ -14,12 +14,13 @@ class Project {
 }
 export default function ProjectsHome() {
   const projects: Project[] = [
-    new Project(
-      "Nova Horizonte",
-      "/projects-mockup/novahorizonte.webp",
-      "/projects/novahorizonte",
-      ["React", "TailwindCSS", "shadcn/ui", "Vite"],
-    ),
+    new Project("JWeb", "/projects-mockup/jweb.avif", "/projects/jweb", [
+      "NextJS",
+      "React",
+      "Typescript",
+      "TailwindCSS",
+      "shadcn/ui",
+    ]),
     new Project(
       "Tarevity",
       "/projects-mockup/tarevity.webp",

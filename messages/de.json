@@ -75,17 +75,17 @@
       "contact": "Kontakt"
     }
   },
-  "NovaHorizonte": {
+  "JWeb": {
     "Metadata": {
-      "title": "Nova Horizonte | Esdras Portfolio",
-      "description": "Nova Horizonte ist ein Projekt, das sich auf Tiefbau und Ingenieurdienstleistungen konzentriert und es Kunden ermöglicht, Angebote direkt über die Website anzufordern. Das Projekt priorisiert eine intuitive, responsive und moderne Benutzeroberfläche, um die beste Benutzererfahrung zu gewährleisten.",
-      "keywords": "Tiefbau, Projekte, Fähigkeiten, Bau, Ingenieurwesen",
+      "title": "JWeb | Esdras Portfolio",
+      "description": "Institutionelle Website von JWeb, einer vollständigen Agentur für digitale Lösungen. Entwickelt mit Next.js 16, React 19, TypeScript und mehrsprachiger Internationalisierung (Portugiesisch, Englisch und Spanisch).",
+      "keywords": "digitale Agentur, digitale Lösungen, Next.js, React, TypeScript, Internationalisierung, CMS",
       "robots": "index, follow",
       "creator": "Esdras"
     },
-    "title": "EINE MODERNE TIEFBAU-WEBSITE",
+    "title": "VOLLSTÄNDIGE INSTITUTIONELLE WEBSITE FÜR DIGITALE AGENTUR",
     "overview": "Projekt-Übersicht",
-    "description": "Nova Horizonte ist ein Projekt, das sich auf Tiefbau und Ingenieurdienstleistungen konzentriert und es Kunden ermöglicht, Angebote direkt über die Website anzufordern. Das Projekt priorisiert eine intuitive, responsive und moderne Benutzeroberfläche, um die beste Benutzererfahrung zu gewährleisten."
+    "description": "Institutionelle Website von JWeb, einer vollständigen Agentur für digitale Lösungen. Entwickelt mit Next.js 16, React 19, TypeScript und mehrsprachiger Internationalisierung (Portugiesisch, Englisch und Spanisch). Das Projekt umfasst ein Headless-CMS mit Keystatic, Blog-System mit Markdoc, validierte Formulare mit React Hook Form und Zod, E-Mail-Versand mit Resend und vollständige Integration mit Google Tag Manager für Analytics und GDPR Consent Mode v2. Vollständig responsive mit Tailwind CSS 4 und barrierefreien Komponenten von shadcn/ui."
   },
   "PhantomCode": {
     "Metadata": {

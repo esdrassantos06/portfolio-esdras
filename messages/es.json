@@ -75,17 +75,17 @@
       "contact": "Contacto"
     }
   },
-  "NovaHorizonte": {
+  "JWeb": {
     "Metadata": {
-      "title": "Nova Horizonte | Portafolio de Esdras",
-      "description": "Nova Horizonte es un proyecto enfocado en construcción civil y servicios de ingeniería, permitiendo a los clientes solicitar cotizaciones directamente a través del sitio web. El proyecto prioriza una interfaz intuitiva, responsive y moderna, asegurando la mejor experiencia de usuario.",
-      "keywords": "construcción civil, proyectos, habilidades, construcción, ingeniería",
+      "title": "JWeb | Portafolio de Esdras",
+      "description": "Sitio web institucional de JWeb, una agencia de soluciones digitales completa. Desarrollado con Next.js 16, React 19, TypeScript e internacionalización multiidioma (Portugués, Inglés y Español).",
+      "keywords": "agencia digital, soluciones digitales, Next.js, React, TypeScript, internacionalización, CMS",
       "robots": "index, follow",
       "creator": "Esdras"
     },
-    "title": "UN SITIO WEB MODERNO DE CONSTRUCCIÓN CIVIL",
+    "title": "SITIO WEB INSTITUCIONAL COMPLETO PARA AGENCIA DIGITAL",
     "overview": "Resumen del Proyecto",
-    "description": "Nova Horizonte es un proyecto enfocado en construcción civil y servicios de ingeniería, permitiendo a los clientes solicitar cotizaciones directamente a través del sitio web. El proyecto prioriza una interfaz intuitiva, responsive y moderna, asegurando la mejor experiencia de usuario."
+    "description": "Sitio web institucional de JWeb, una agencia de soluciones digitales completa. Desarrollado con Next.js 16, React 19, TypeScript e internacionalización multiidioma (Portugués, Inglés y Español). El proyecto incluye un CMS headless con Keystatic, sistema de blog con Markdoc, formularios validados con React Hook Form y Zod, envío de correos con Resend, e integración completa con Google Tag Manager para analytics y GDPR Consent Mode v2. Completamente responsive con Tailwind CSS 4 y componentes accesibles de shadcn/ui."
   },
   "PhantomCode": {
     "Metadata": {
