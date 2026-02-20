@@ -13,7 +13,7 @@ export default function HomeComponent() {
   return (
     <section
       id="home"
-      className="z-10 flex min-h-screen w-full max-w-full flex-grow flex-col items-center justify-center gap-4 pt-30 inset-shadow-sm sm:pt-0"
+      className="z-10 flex min-h-screen w-full max-w-full grow flex-col items-center justify-center gap-4 pt-30 inset-shadow-sm sm:pt-0"
       aria-label="Home section"
     >
       <MaskedCursor
@@ -26,7 +26,7 @@ export default function HomeComponent() {
           <div className="mx-auto w-3/4">
             <header className="relative flex w-full flex-col items-center justify-center gap-4">
               <div
-                className="title relative z-[10000] space-y-2"
+                className="title relative z-10000 space-y-2"
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
               >
@@ -62,7 +62,7 @@ export default function HomeComponent() {
 
               <FadeIn
                 direction="up"
-                className="relative z-[10000] w-3/4 text-center"
+                className="relative z-10000 w-3/4 text-center"
                 once
               >
                 <p className="text-lg">{t("description")}</p>
