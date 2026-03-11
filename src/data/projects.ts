@@ -59,7 +59,7 @@ export const projetos: Record<string, Project> = {
     slug: "tarevity",
     name: "Tarevity",
     image: "/projects-mockup/tarevity.webp",
-    demo: "https://www.tarevity.pt/",
+    demo: "https://www.tarevity.me/",
     code: "https://github.com/esdrassantos06/tarevity",
     technologies: [
       tech.next,
