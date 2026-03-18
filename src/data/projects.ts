@@ -45,7 +45,6 @@ export const projetos: Record<string, Project> = {
     name: "Phantom Code",
     image: "/projects-mockup/phantomcode.webp",
     demo: "https://phantomcode.pt",
-    code: "https://github.com/esdrassantos06/phantomcode",
     technologies: [
       tech.electron,
       tech.react,
