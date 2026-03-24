@@ -44,8 +44,7 @@ export const projetos: Record<string, Project> = {
     slug: "phantomcode",
     name: "Phantom Code",
     image: "/projects-mockup/phantomcode.webp",
-    demo: "https://phantomcode.site",
-    code: "https://github.com/esdrassantos06/phantomcode",
+    demo: "https://phantomcode.pt",
     technologies: [
       tech.electron,
       tech.react,
