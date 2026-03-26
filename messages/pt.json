@@ -110,16 +110,16 @@
     "overview": "Visão Geral do Projeto",
     "description": "Tarevity é uma aplicação moderna de gestão de tarefas construída com Next.js 16, TypeScript, Prisma ORM e PostgreSQL. A aplicação fornece uma interface intuitiva e segura para ajudar os utilizadores a organizar as suas tarefas diárias com eficiência e estilo."
   },
-  "Zipway": {
+  "NexebraTrail": {
     "Metadata": {
-      "title": "Zipway | Esdras Portfolio",
-      "description": "Zipway é um encurtador de URL obcecado por latência, reconstruído com um núcleo hexagonal em Go (Fiber), painel em Next.js e um pipeline de cache local -> Redis -> PostgreSQL. A criação de links agora termina em 50-55 ms, redirecionamentos em cache respondem em menos de 1 ms e a validação de sessão acontece em menos de 5 microssegundos graças ao cache local, a um pool otimizado de 50 conexões Redis e ao uso de prepared statements.",
+      "title": "Nexebra Trail | Portfólio do Esdras",
+      "description": "Website oficial do Trilhos da Nexebra Trail, uma prova de trail running que promove a modalidade, a prática desportiva e o património natural da região.",
       "robots": "index, follow",
       "creator": "Esdras"
     },
-    "title": "Encurtador de URL orientado à performance",
+    "title": "Eventos Desportivos e Trail Running",
     "overview": "Visão Geral do Projeto",
-    "description": "Re-arquiteturei o Zipway com Go (Fiber) e design hexagonal para manter responsabilidades claras enquanto o dashboard em Next.js foca na experiência. Antes do refactor a criação e o redirecionamento levavam cerca de 1 segundo; depois da otimização, criar links passou para 50-55 ms, acertos de cache redirecionam em menos de 1 ms e a validação de sessão ocorre em menos de 5 microssegundos através de um cache local quente. A stack agora usa cache em camadas (local, Redis, PostgreSQL/Supabase), um pool ajustado de 50 conexões Redis, prepared statements em todas as queries e serviços Dockerizados para manter a latência baixa mesmo sob tráfego intenso."
+    "description": "Website do evento Trilhos da Nexebra Trail - TNT®, criado para promover a prática desportiva e o património natural. O evento já contou com a participação de mais de 4.500 atletas. O site foi desenvolvido focado na performance e melhor experiência para o utilizador, utilizando Next.js, Tailwind CSS, Shadcn UI e TypeScript."
   },
   "DownloadCV": "Descarregar CV",
   "LocaleSwitcher": {

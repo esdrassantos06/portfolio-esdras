@@ -34,23 +34,6 @@ This is a personal portfolio website showcasing my skills, projects, and profess
 - Masked cursor effect
 - Shiny button animations
 
-## 🖥 Projects Highlighted
-
-### 1. Nova Horizonte
-
-- Civil construction website
-- Technologies: React, TailwindCSS, shadcn/ui, Vite
-
-### 2. Tarevity
-
-- Task management application
-- Technologies: NextJS, TailwindCSS, TypeScript, Supabase, Redis, NextAuth
-
-### 3. Phantom Code
-
-- A cross-platform desktop app that turns screenshots into solved code problems
-- Technologies: Electron, TailwindCSS, OpenAI API
-
 ## 📦 Getting Started
 
 ### Prerequisites

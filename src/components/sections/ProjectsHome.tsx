@@ -3,54 +3,15 @@ import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import { ArrowUpRightIcon } from "@phosphor-icons/react";
 import { FadeIn } from "../ui/ScrollAnimation";
+import { projetos } from "@/data/projects";
 
-class Project {
-  constructor(
-    public name: string,
-    public image: string,
-    public link: string,
-    public technologies: string[],
-  ) {}
-}
 export default function ProjectsHome() {
-  const projects: Project[] = [
-    new Project("JWeb", "/projects-mockup/jweb.avif", "/projects/jweb", [
-      "NextJS",
-      "React",
-      "Typescript",
-      "TailwindCSS",
-      "shadcn/ui",
-    ]),
-    new Project(
-      "Tarevity",
-      "/projects-mockup/tarevity.webp",
-      "/projects/tarevity",
-      [
-        "NextJS",
-        "TailwindCSS",
-        "Typescript",
-        "Prisma",
-        "Postgres",
-        "Redis",
-        "Better Auth",
-      ],
-    ),
-    new Project(
-      "Phantom Code",
-      "/projects-mockup/phantomcode.webp",
-      "/projects/phantomcode",
-      ["Electron", "React", "TailwindCSS", "OpenAI API", "NestJS"],
-    ),
-    new Project("Zipway", "/projects-mockup/zipway.webp", "/projects/zipway", [
-      "NextJS",
-      "TailwindCSS",
-      "Typescript",
-      "Go",
-      "Postgres",
-      "Redis",
-      "Docker",
-    ]),
-  ];
+  const projects = Object.values(projetos).map((p) => ({
+    name: p.name,
+    image: p.image,
+    link: `/projects/${p.slug}`,
+    technologies: p.technologies,
+  }));
 
   return (
     <div className="flex w-full items-center justify-center">

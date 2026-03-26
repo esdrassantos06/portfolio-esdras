@@ -4,7 +4,7 @@ import ShinyButton from "../ui/ShinyButton";
 import { Link } from "@/i18n/navigation";
 import { FadeIn } from "../ui/ScrollAnimation";
 import { useTranslations } from "next-intl";
-
+import { projetos } from "@/data/projects";
 export default function Footer() {
   const t = useTranslations("Footer");
 
@@ -85,29 +85,19 @@ export default function Footer() {
                   {t("footerNav.title2")}
                 </h3>
                 <ul className="mt-1 flex flex-col gap-2">
-                  <li className="hover:text-principal text-principal/70 font-light">
-                    <Link aria-label="Project JWeb" href={"/projects/jweb"}>
-                      JWeb
-                    </Link>
-                  </li>
-                  <li className="hover:text-principal text-principal/70 font-light">
-                    <Link aria-label="Tarevity" href={"/projects/tarevity"}>
-                      Tarevity
-                    </Link>
-                  </li>
-                  <li className="hover:text-principal text-principal/70 font-light">
-                    <Link
-                      aria-label="Phantom Code"
-                      href={"/projects/phantomcode"}
+                  {Object.values(projetos).map((projeto) => (
+                    <li
+                      key={projeto.slug}
+                      className="hover:text-principal text-principal/70 font-light"
                     >
-                      Phantom Code
-                    </Link>
-                  </li>
-                  <li className="hover:text-principal text-principal/70 font-light">
-                    <Link aria-label="Zipway" href={"/projects/zipway"}>
-                      Zipway
-                    </Link>
-                  </li>
+                      <Link
+                        aria-label={projeto.name}
+                        href={`/projects/${projeto.slug}` as any}
+                      >
+                        {projeto.name}
+                      </Link>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </FadeIn>

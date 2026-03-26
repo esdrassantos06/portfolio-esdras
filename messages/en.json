@@ -110,16 +110,16 @@
     "overview": "Project Overview",
     "description": "Tarevity is a modern task management application built with Next.js 16, TypeScript, Prisma ORM, and PostgreSQL. The application provides an intuitive and secure interface to help users organize their daily tasks with efficiency and style."
   },
-  "Zipway": {
+  "NexebraTrail": {
     "Metadata": {
-      "title": "Zipway | Esdras Portfolio",
-      "description": "Zipway is a latency-obsessed URL shortener rebuilt on a hexagonal Go (Fiber) core, a Next.js control panel, and a local -> Redis -> PostgreSQL cache pipeline. Link creation now completes in 50-55ms, cached redirects return in under 1ms, and session validation runs in under 5 microseconds thanks to local caching, a 50-connection Redis pool, and prepared SQL statements.",
+      "title": "Nexebra Trail | Esdras Portfolio",
+      "description": "Official website for Trilhos da Nexebra Trail, a trail running event promoting the sport and the region's natural heritage.",
       "robots": "index, follow",
       "creator": "Esdras"
     },
-    "title": "Performance-first URL shortener",
+    "title": "Sports Events and Trail Running",
     "overview": "Project Overview",
-    "description": "I re-architected Zipway with Go (Fiber) and a hexagonal design to keep responsibilities clean while the Next.js dashboard focuses on the product experience. Before the refactor link creation and redirects took ~1 second each; after the performance pass creation stabilized at 50-55ms, cache hits redirect in <1ms, and session validation executes in <5 microseconds through a hot local cache. The stack now uses cascading caches (local, Redis, PostgreSQL/Supabase), an optimized pool of 50 Redis connections, prepared statements for every query, and Dockerized services to sustain low latency under heavy traffic."
+    "description": "Website for the Trilhos da Nexebra Trail - TNT® event, created to promote sports and natural heritage. The event has already welcomed over 4,500 athletes. The site was developed with a focus on performance and seamless user experience, utilizing Next.js, Tailwind CSS, Shadcn UI, and TypeScript."
   },
   "DownloadCV": "Download CV",
   "LocaleSwitcher": {
