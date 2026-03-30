@@ -1,10 +1,10 @@
 {
   "LocaleLayout": {
-    "title": "Page d'Accueil | Portfolio d'Esdras",
-    "description": "Bienvenue dans mon portfolio ! Découvrez mes projets et compétences.",
-    "keywords": "portfolio, projets, compétences, développeur",
+    "title": "Esdras Santos | Développeur Full Stack",
+    "description": "Développeur Full Stack basé au Portugal. Je construis des applications web de bout en bout avec React, Next.js, TypeScript et Node.js. Disponible pour freelance et collaboration.",
+    "keywords": "Esdras Santos, Développeur Full Stack, React, Next.js, TypeScript, Node.js, portfolio, développeur web Portugal",
     "robots": "index, follow",
-    "creator": "Esdras"
+    "creator": "Esdras Santos"
   },
   "Header": {
     "home": "Accueil",
@@ -103,8 +103,9 @@
     "Metadata": {
       "title": "Tarevity | Portfolio d'Esdras",
       "description": "Tarevity est une application moderne de gestion de tâches construite avec Next.js 16, TypeScript, Prisma ORM et PostgreSQL. L'application fournit une interface intuitive et sécurisée pour aider les utilisateurs à organiser leurs tâches quotidiennes avec efficacité et style.",
+      "keywords": "gestion de tâches, to-do app, Next.js, TypeScript, Prisma, PostgreSQL, Better Auth, Redis",
       "robots": "index, follow",
-      "creator": "Esdras"
+      "creator": "Esdras Santos"
     },
     "title": "une application moderne de gestion de tâches",
     "overview": "Aperçu du Projet",
@@ -114,8 +115,9 @@
     "Metadata": {
       "title": "Nexebra Trail | Portfolio d'Esdras",
       "description": "Site officiel de Trilhos da Nexebra Trail, un événement de trail running visant à promouvoir le sport et le patrimoine naturel de la région.",
+      "keywords": "Nexebra Trail, trail running, événement sportif, Next.js, Tailwind CSS, TypeScript, Portugal",
       "robots": "index, follow",
-      "creator": "Esdras"
+      "creator": "Esdras Santos"
     },
     "title": "Événements Sportifs et Trail Running",
     "overview": "Aperçu du Projet",

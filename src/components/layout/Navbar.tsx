@@ -93,7 +93,7 @@ export default function Navbar() {
 
   return (
     <motion.header
-      className="fixed top-6 left-1/2 z-[99999] -translate-x-1/2 transform transition-all duration-300"
+      className="fixed top-6 left-1/2 z-99999 -translate-x-1/2 transform transition-all duration-300"
       animate={{
         y: scrollDirection === "down" ? -120 : 0,
         scale: scrollDirection === "down" ? 0.95 : 1,
@@ -107,9 +107,8 @@ export default function Navbar() {
     >
       <nav
         aria-label="Main navigation"
-        className={`${inter.className} relative z-[99999] overflow-hidden rounded-2xl border border-gray-200/50 backdrop-blur-xl`}
+        className={`${inter.className} relative z-99999 overflow-hidden rounded-2xl border border-gray-200/50 backdrop-blur-xl`}
       >
-        {/* Content */}
         <div className="relative flex min-w-fit items-center px-4 py-2 sm:px-6">
           <ul className="flex items-center gap-1 font-medium" role="list">
             {navItems.map((item) => {
@@ -125,22 +124,18 @@ export default function Navbar() {
                         isActive ? "bg-white/10" : ""
                       }`}
                     >
-                      {/* Hover background effect */}
-                      <div className="from-principal/0 via-principal/5 to-principal/0 absolute inset-0 rounded-xl bg-gradient-to-r opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                      <div className="from-principal/0 via-principal/5 to-principal/0 absolute inset-0 rounded-xl bg-linear-to-r opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
 
-                      {/* Desktop text */}
                       <span className="text-principal/90 group-hover:text-principal relative z-10 hidden text-center transition-colors duration-300 sm:block">
                         {item.label}
                       </span>
 
-                      {/* Mobile icon */}
                       <item.icon
                         size={24}
                         className="text-principal/90 group-hover:text-principal relative z-10 transition-all duration-300 group-hover:scale-110 sm:hidden"
                         aria-hidden="true"
                       />
 
-                      {/* Active indicator dot */}
                       <div
                         className={`bg-principal absolute -bottom-1 left-1/2 h-1 w-1 -translate-x-1/2 transform rounded-full transition-opacity duration-300 ${
                           isActive
@@ -155,14 +150,12 @@ export default function Navbar() {
               );
             })}
 
-            {/* Separator */}
             <li>
               <FadeIn direction="down" once>
-                <div className="h-6 w-px bg-gradient-to-b from-transparent via-gray-300/30 to-transparent sm:mx-2" />
+                <div className="h-6 w-px bg-linear-to-b from-transparent via-gray-300/30 to-transparent sm:mx-2" />
               </FadeIn>
             </li>
 
-            {/* Locale Switcher */}
             <li>
               <FadeIn direction="down" once>
                 <LocaleSwitcher />

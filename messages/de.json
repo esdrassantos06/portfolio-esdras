@@ -1,10 +1,10 @@
 {
   "LocaleLayout": {
-    "title": "Startseite | Esdras Portfolio",
-    "description": "Willkommen in meinem Portfolio! Schauen Sie sich meine Projekte und Fähigkeiten an.",
-    "keywords": "Portfolio, Projekte, Fähigkeiten, Entwickler",
+    "title": "Esdras Santos | Full Stack-Entwickler",
+    "description": "Full Stack-Entwickler mit Sitz in Portugal. Ich entwickle End-to-End-Webanwendungen mit React, Next.js, TypeScript und Node.js. Verfügbar für Freelance-Projekte und Zusammenarbeit.",
+    "keywords": "Esdras Santos, Full Stack-Entwickler, React, Next.js, TypeScript, Node.js, Portfolio, Webentwickler Portugal",
     "robots": "index, follow",
-    "creator": "Esdras"
+    "creator": "Esdras Santos"
   },
   "Header": {
     "home": "Startseite",
@@ -103,8 +103,9 @@
     "Metadata": {
       "title": "Tarevity | Esdras Portfolio",
       "description": "Tarevity ist eine moderne Aufgabenverwaltungsanwendung, die mit Next.js 16, TypeScript, Prisma ORM und PostgreSQL entwickelt wurde. Die Anwendung bietet eine intuitive und sichere Benutzeroberfläche, um Benutzern zu helfen, ihre täglichen Aufgaben mit Effizienz und Stil zu organisieren.",
+      "keywords": "Aufgabenverwaltung, To-do-App, Next.js, TypeScript, Prisma, PostgreSQL, Better Auth, Redis",
       "robots": "index, follow",
-      "creator": "Esdras"
+      "creator": "Esdras Santos"
     },
     "title": "Task-Manager",
     "overview": "Projekt-Übersicht",
@@ -114,14 +115,15 @@
     "Metadata": {
       "title": "Nexebra Trail | Esdras Portfolio",
       "description": "Offizielle Website für Trilhos da Nexebra Trail, ein Trailrunning-Event zur Förderung des Sports und des Naturerbes der Region.",
+      "keywords": "Nexebra Trail, Trailrunning, Sportveranstaltung, Next.js, Tailwind CSS, TypeScript, Portugal",
       "robots": "index, follow",
-      "creator": "Esdras"
+      "creator": "Esdras Santos"
     },
     "title": "Sportveranstaltungen und Trailrunning",
     "overview": "Projektübersicht",
     "description": "Website für die Veranstaltung Trilhos da Nexebra Trail - TNT®, die ins Leben gerufen wurde, um Sport und Naturerbe zu fördern. Das Event hat bereits über 4.500 Atheten begrüßt. Die Website wurde mit Fokus auf Leistung und nahtlose Benutzererfahrung unter Verwendung von Next.js, Tailwind CSS, Shadcn UI und TypeScript entwickelt."
   },
-  "DownloadCV": "Lehrplan",
+  "DownloadCV": "Lebenslauf herunterladen",
   "LocaleSwitcher": {
     "label": "Sprache ändern",
     "locale": "{locale, select, de {Deutsch} en {Englisch} es {Spanisch} fr {Französisch} pt {Portugiesisch} other {Unbekannt}}"

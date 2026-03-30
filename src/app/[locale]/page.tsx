@@ -24,8 +24,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const homeT = await getTranslations({ locale, namespace: "HomeComponent" });
 
   const baseUrl =
-    process.env.NEXT_PUBLIC_BASE_URL ||
-    "https://www.portfolio-esdrassantos06.site";
+    process.env.NEXT_PUBLIC_BASE_URL || "https://portfolioesdras.com";
   const url = `${baseUrl}/${locale}`;
 
   return {
@@ -57,6 +56,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     alternates: {
       canonical: url,
       languages: {
+        "x-default": `${baseUrl}/en`,
         en: `${baseUrl}/en`,
         pt: `${baseUrl}/pt`,
         es: `${baseUrl}/es`,
@@ -70,14 +70,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function Home({ params }: Props) {
   const { locale } = await params;
   const baseUrl =
-    process.env.NEXT_PUBLIC_BASE_URL ||
-    "https://www.portfolio-esdrassantos06.site";
+    process.env.NEXT_PUBLIC_BASE_URL || "https://portfolioesdras.com";
 
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Person",
-    name: "Esdras",
+    name: "Esdras Santos",
+    givenName: "Esdras",
+    familyName: "Santos",
     jobTitle: "Full Stack Developer",
+    description:
+      "Full Stack Developer based in Portugal, specializing in React, Next.js, TypeScript, and Node.js.",
+    image: `${baseUrl}/og-image.png`,
     address: {
       "@type": "PostalAddress",
       addressCountry: "PT",

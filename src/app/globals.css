@@ -5,12 +5,8 @@
 
 @font-face {
   font-family: "Satoshi-Variable";
-  src:
-    url("../../public/fonts/satoshi/fonts/Satoshi-Variable.woff2")
-      format("woff2"),
-    url("../../public/fonts/satoshi/fonts/Satoshi-Variable.woff") format("woff"),
-    url("../../public/fonts/satoshi/fonts/Satoshi-Variable.ttf")
-      format("truetype");
+  src: url("../../public/fonts/satoshi/fonts/Satoshi-Variable.woff2")
+    format("woff2");
   font-weight: 300 900;
   font-display: swap;
   font-style: normal;
@@ -18,140 +14,9 @@
 
 @font-face {
   font-family: "Satoshi-VariableItalic";
-  src:
-    url("../../public/fonts/satoshi/fonts/Satoshi-VariableItalic.woff2")
-      format("woff2"),
-    url("../../public/fonts/satoshi/fonts/Satoshi-VariableItalic.woff")
-      format("woff"),
-    url("../../public/fonts/satoshi/fonts/Satoshi-VariableItalic.ttf")
-      format("truetype");
+  src: url("../../public/fonts/satoshi/fonts/Satoshi-VariableItalic.woff2")
+    format("woff2");
   font-weight: 300 900;
-  font-display: swap;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Satoshi-Light";
-  src:
-    url("../../public/fonts/satoshi/fonts/Satoshi-Light.woff2") format("woff2"),
-    url("../../public/fonts/satoshi/fonts/Satoshi-Light.woff") format("woff"),
-    url("../../public/fonts/satoshi/fonts/Satoshi-Light.ttf") format("truetype");
-  font-weight: 300;
-  font-display: swap;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Satoshi-LightItalic";
-  src:
-    url("../../public/fonts/satoshi/fonts/Satoshi-LightItalic.woff2")
-      format("woff2"),
-    url("../../public/fonts/satoshi/fonts/Satoshi-LightItalic.woff")
-      format("woff"),
-    url("../../public/fonts/satoshi/fonts/Satoshi-LightItalic.ttf")
-      format("truetype");
-  font-weight: 300;
-  font-display: swap;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Satoshi-Regular";
-  src:
-    url("../../public/fonts/satoshi/fonts/Satoshi-Regular.woff2")
-      format("woff2"),
-    url("../../public/fonts/satoshi/fonts/Satoshi-Regular.woff") format("woff"),
-    url("../../public/fonts/satoshi/fonts/Satoshi-Regular.ttf")
-      format("truetype");
-  font-weight: 400;
-  font-display: swap;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Satoshi-Italic";
-  src:
-    url("../../public/fonts/satoshi/fonts/Satoshi-Italic.woff2") format("woff2"),
-    url("../../public/fonts/satoshi/fonts/Satoshi-Italic.woff") format("woff"),
-    url("../../public/fonts/satoshi/fonts/Satoshi-Italic.ttf")
-      format("truetype");
-  font-weight: 400;
-  font-display: swap;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Satoshi-Medium";
-  src:
-    url("../../public/fonts/satoshi/fonts/Satoshi-Medium.woff2") format("woff2"),
-    url("../../public/fonts/satoshi/fonts/Satoshi-Medium.woff") format("woff"),
-    url("../../public/fonts/satoshi/fonts/Satoshi-Medium.ttf")
-      format("truetype");
-  font-weight: 500;
-  font-display: swap;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Satoshi-MediumItalic";
-  src:
-    url("../../public/fonts/satoshi/fonts/Satoshi-MediumItalic.woff2")
-      format("woff2"),
-    url("../../public/fonts/satoshi/fonts/Satoshi-MediumItalic.woff")
-      format("woff"),
-    url("../../public/fonts/satoshi/fonts/Satoshi-MediumItalic.ttf")
-      format("truetype");
-  font-weight: 500;
-  font-display: swap;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Satoshi-Bold";
-  src:
-    url("../../public/fonts/satoshi/fonts/Satoshi-Bold.woff2") format("woff2"),
-    url("../../public/fonts/satoshi/fonts/Satoshi-Bold.woff") format("woff"),
-    url("../../public/fonts/satoshi/fonts/Satoshi-Bold.ttf") format("truetype");
-  font-weight: 700;
-  font-display: swap;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Satoshi-BoldItalic";
-  src:
-    url("../../public/fonts/satoshi/fonts/Satoshi-BoldItalic.woff2")
-      format("woff2"),
-    url("../../public/fonts/satoshi/fonts/Satoshi-BoldItalic.woff")
-      format("woff"),
-    url("../../public/fonts/satoshi/fonts/Satoshi-BoldItalic.ttf")
-      format("truetype");
-  font-weight: 700;
-  font-display: swap;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Satoshi-Black";
-  src:
-    url("../../public/fonts/satoshi/fonts/Satoshi-Black.woff2") format("woff2"),
-    url("../../public/fonts/satoshi/fonts/Satoshi-Black.woff") format("woff"),
-    url("../../public/fonts/satoshi/fonts/Satoshi-Black.ttf") format("truetype");
-  font-weight: 900;
-  font-display: swap;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Satoshi-BlackItalic";
-  src:
-    url("../../public/fonts/satoshi/fonts/Satoshi-BlackItalic.woff2")
-      format("woff2"),
-    url("../../public/fonts/satoshi/fonts/Satoshi-BlackItalic.woff")
-      format("woff"),
-    url("../../public/fonts/satoshi/fonts/Satoshi-BlackItalic.ttf")
-      format("truetype");
-  font-weight: 900;
   font-display: swap;
   font-style: italic;
 }
@@ -159,16 +24,6 @@
 @theme {
   --font-sans: "Satoshi-Variable", sans-serif;
   --font-satoshi: "Satoshi-Variable", sans-serif;
-  --font-satoshi-light: "Satoshi-Light", sans-serif;
-  --font-satoshi-regular: "Satoshi-Regular", sans-serif;
-  --font-satoshi-medium: "Satoshi-Medium", sans-serif;
-  --font-satoshi-bold: "Satoshi-Bold", sans-serif;
-  --font-satoshi-black: "Satoshi-Black", sans-serif;
-  --font-satoshi-italic: "Satoshi-Italic", sans-serif;
-  --font-satoshi-light-italic: "Satoshi-LightItalic", sans-serif;
-  --font-satoshi-medium-italic: "Satoshi-MediumItalic", sans-serif;
-  --font-satoshi-bold-italic: "Satoshi-BoldItalic", sans-serif;
-  --font-satoshi-black-italic: "Satoshi-BlackItalic", sans-serif;
   --font-satoshi-variable-italic: "Satoshi-VariableItalic", sans-serif;
 
   --color-fundo: #0a0a0a;
@@ -321,19 +176,15 @@
   }
 }
 
-/* Accessibility improvements */
 @layer utilities {
-  /* Skip to main content link */
   .skip-link {
     @apply focus:bg-principal focus:text-background focus:outline-principal sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-999999 focus:rounded-lg focus:px-4 focus:py-2 focus:font-semibold focus:outline-2 focus:outline-offset-2;
   }
 
-  /* Focus visible styles */
   *:focus-visible {
     @apply outline-principal rounded outline-2 outline-offset-2;
   }
 
-  /* Better focus for interactive elements */
   a:focus-visible,
   button:focus-visible,
   [role="button"]:focus-visible,

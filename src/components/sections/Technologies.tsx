@@ -220,6 +220,7 @@ export default function Technologies() {
                         width={36}
                         height={36}
                         alt={tech.alt}
+                        loading="lazy"
                       />
                     </span>
                     <div

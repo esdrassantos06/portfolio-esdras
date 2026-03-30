@@ -21,8 +21,7 @@ export async function generateMetadata(
   const t = await getTranslations({ locale, namespace: "LocaleLayout" });
 
   const baseUrl =
-    process.env.NEXT_PUBLIC_BASE_URL ||
-    "https://www.portfolio-esdrassantos06.site";
+    process.env.NEXT_PUBLIC_BASE_URL || "https://portfolioesdras.com";
   const url = `${baseUrl}/${locale}`;
   const siteName = "Esdras Portfolio";
 
@@ -54,6 +53,14 @@ export async function generateMetadata(
       siteName: siteName,
       title: t("title"),
       description: t("description"),
+      images: [
+        {
+          url: `${baseUrl}/og-image.png`,
+          width: 1200,
+          height: 630,
+          alt: t("title"),
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
@@ -64,6 +71,7 @@ export async function generateMetadata(
     alternates: {
       canonical: url,
       languages: {
+        "x-default": `${baseUrl}/en`,
         en: `${baseUrl}/en`,
         pt: `${baseUrl}/pt`,
         es: `${baseUrl}/es`,
@@ -112,6 +120,30 @@ export default async function LocaleLayout({ children, params }: Props) {
       data-scroll-behavior="smooth"
       className="overflow-x-hidden scroll-smooth"
     >
+      <head>
+        <link
+          rel="preload"
+          href="/fonts/satoshi/fonts/Satoshi-Variable.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        <link rel="preconnect" href="https://cdnjs.buymeacoffee.com" />
+        <link rel="dns-prefetch" href="https://cdnjs.buymeacoffee.com" />
+        <script
+          src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js"
+          data-name="BMC-Widget"
+          data-cfasync="false"
+          data-id="esdrasirioq"
+          data-description="Support me on Buy me a coffee!"
+          data-message="Thanks for visiting! You can now buy me a coffee"
+          data-color="#BD5FFF"
+          data-position="Right"
+          data-x_margin="18"
+          data-y_margin="18"
+          async
+        />
+      </head>
       <body className="font-satoshi bg-fundo text-principal w-full overflow-x-hidden">
         <NextIntlClientProvider>
           <a href="#main-content" className="skip-link">

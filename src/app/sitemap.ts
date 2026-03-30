@@ -4,8 +4,7 @@ import { projetos } from "@/data/projects";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl =
-    process.env.NEXT_PUBLIC_BASE_URL ||
-    "https://www.portfolio-esdrassantos06.site";
+    process.env.NEXT_PUBLIC_BASE_URL || "https://portfolioesdras.com";
 
   const routes: MetadataRoute.Sitemap = [];
 

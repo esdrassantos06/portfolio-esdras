@@ -42,8 +42,7 @@ export async function generateMetadata({
   });
 
   const baseUrl =
-    process.env.NEXT_PUBLIC_BASE_URL ||
-    "https://www.portfolio-esdrassantos06.site";
+    process.env.NEXT_PUBLIC_BASE_URL || "https://portfolioesdras.com";
   const url = `${baseUrl}/${locale}/projects/${slug}`;
   const imageUrl = `${baseUrl}${projeto.image}`;
 
@@ -84,6 +83,7 @@ export async function generateMetadata({
     alternates: {
       canonical: url,
       languages: {
+        "x-default": `${baseUrl}/en/projects/${slug}`,
         en: `${baseUrl}/en/projects/${slug}`,
         pt: `${baseUrl}/pt/projects/${slug}`,
         es: `${baseUrl}/es/projects/${slug}`,
@@ -106,8 +106,7 @@ export default async function ProjetoPage({ params }: Props) {
 
   const t = await getTranslations(projeto.namespace);
   const baseUrl =
-    process.env.NEXT_PUBLIC_BASE_URL ||
-    "https://www.portfolio-esdrassantos06.site";
+    process.env.NEXT_PUBLIC_BASE_URL || "https://portfolioesdras.com";
   const url = `${baseUrl}/projects/${slug}`;
 
   const structuredData = {
@@ -120,7 +119,7 @@ export default async function ProjetoPage({ params }: Props) {
     codeRepository: projeto.code,
     author: {
       "@type": "Person",
-      name: "Esdras",
+      name: "Esdras Santos",
     },
     image: `${baseUrl}${projeto.image}`,
     operatingSystem: "Web",
@@ -139,45 +138,50 @@ export default async function ProjetoPage({ params }: Props) {
       />
       <main className="w-full">
         <GridBackground />
+
         <header className="flex min-h-screen w-full flex-col items-center justify-center">
           <FadeIn direction="up" once>
-            <div className="flex w-full flex-col items-center justify-center gap-2">
-              <h1 className="text-4xl font-extrabold max-md:text-center sm:text-6xl md:text-7xl/tight">
+            <div className="flex w-full flex-col items-center justify-center gap-4 text-center">
+              <h1 className="text-4xl font-extrabold sm:text-6xl md:text-7xl/tight">
                 {projeto.name.toUpperCase()}
               </h1>
-              <p className="w-fit text-center text-3xl font-normal uppercase sm:text-6xl md:w-300 md:text-5xl">
+              <p className="text-principal/70 max-w-2xl text-xl font-normal uppercase sm:text-2xl md:text-3xl">
                 {t("title")}
               </p>
             </div>
           </FadeIn>
-          <div className="arrow-down mt-10 flex w-full items-center justify-center sm:mt-20">
+          <div className="mt-10 flex w-full items-center justify-center sm:mt-20">
             <FadeIn direction="up" once>
               <ArrowDownIcon />
             </FadeIn>
           </div>
         </header>
-        <article className="bg-fundo flex min-h-screen w-full flex-col items-center justify-center pt-10">
+
+        <article className="bg-fundo w-full pt-16 pb-24">
           <div className="mx-auto w-3/4">
             <FadeIn direction="up" once>
-              <Image
-                id="image"
-                src={projeto.image}
-                alt={t("title")}
-                width={1400}
-                height={1400}
-                className="mx-auto w-full max-w-full rounded-lg object-cover select-none sm:w-3/4 md:w-2/3"
-                priority
-              />
+              <div className="mx-auto w-full overflow-hidden rounded-2xl bg-[#141414] sm:w-3/4 md:w-2/3">
+                <Image
+                  id="image"
+                  src={projeto.image}
+                  alt={t("title")}
+                  width={1400}
+                  height={1400}
+                  className="w-full rounded-2xl object-contain select-none"
+                  priority
+                />
+              </div>
             </FadeIn>
-            <div className="mx-auto mt-12 flex w-full flex-col items-center justify-between gap-10 pt-10 pb-20 sm:flex-row">
-              <aside className="flex flex-col gap-8">
+
+            <div className="mt-16 grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-16">
+              <aside>
                 <FadeIn
                   className="flex flex-col gap-8"
                   direction="up"
                   once
                   staggerChildren={0.1}
                 >
-                  <h2 className="text-5xl font-light">{t("overview")}</h2>
+                  <h2 className="text-4xl font-light">{t("overview")}</h2>
                   <TechnologiesProject
                     technologies={projeto.technologies.map((tech) => ({
                       name: tech,
@@ -186,9 +190,12 @@ export default async function ProjetoPage({ params }: Props) {
                   <ShinyButtonProject demo={projeto.demo} code={projeto.code} />
                 </FadeIn>
               </aside>
-              <section className="md:w-1/2">
+
+              <section>
                 <FadeIn direction="up" once>
-                  <p className="text-justify text-lg">{t("description")}</p>
+                  <p className="text-principal/90 text-justify text-lg leading-relaxed">
+                    {t("description")}
+                  </p>
                 </FadeIn>
               </section>
             </div>

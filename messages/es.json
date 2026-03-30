@@ -1,10 +1,10 @@
 {
   "LocaleLayout": {
-    "title": "Página de Inicio | Portafolio de Esdras",
-    "description": "¡Bienvenido a mi portafolio! Echa un vistazo a mis proyectos y habilidades.",
-    "keywords": "portafolio, proyectos, habilidades, desarrollador",
+    "title": "Esdras Santos | Desarrollador Full Stack",
+    "description": "Desarrollador Full Stack con base en Portugal. Construyo aplicaciones web de extremo a extremo con React, Next.js, TypeScript y Node.js. Disponible para freelance y colaboración.",
+    "keywords": "Esdras Santos, Desarrollador Full Stack, React, Next.js, TypeScript, Node.js, portafolio, desarrollador web Portugal",
     "robots": "index, follow",
-    "creator": "Esdras"
+    "creator": "Esdras Santos"
   },
   "Header": {
     "home": "Inicio",
@@ -103,8 +103,9 @@
     "Metadata": {
       "title": "Tarevity | Portafolio de Esdras",
       "description": "Tarevity es una aplicación moderna de gestión de tareas construida con Next.js 16, TypeScript, Prisma ORM y PostgreSQL. La aplicación proporciona una interfaz intuitiva y segura para ayudar a los usuarios a organizar sus tareas diarias con eficiencia y estilo.",
+      "keywords": "gestión de tareas, to-do app, Next.js, TypeScript, Prisma, PostgreSQL, Better Auth, Redis",
       "robots": "index, follow",
-      "creator": "Esdras"
+      "creator": "Esdras Santos"
     },
     "title": "una aplicación moderna de gestión de tareas",
     "overview": "Resumen del Proyecto",
@@ -114,8 +115,9 @@
     "Metadata": {
       "title": "Nexebra Trail | Portafolio de Esdras",
       "description": "Sitio web oficial de Trilhos da Nexebra Trail, un evento de trail running que promueve el deporte y el patrimonio natural de la región.",
+      "keywords": "Nexebra Trail, trail running, evento deportivo, Next.js, Tailwind CSS, TypeScript, Portugal",
       "robots": "index, follow",
-      "creator": "Esdras"
+      "creator": "Esdras Santos"
     },
     "title": "Eventos Deportivos y Trail Running",
     "overview": "Resumen del Proyecto",

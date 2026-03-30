@@ -1,7 +1,6 @@
 "use client";
 
-import { motion, useInView, Variants } from "motion/react";
-
+import { motion, useInView, useReducedMotion, Variants } from "motion/react";
 import * as React from "react";
 
 export function FadeIn({
@@ -17,6 +16,8 @@ export function FadeIn({
   staggerChildren?: number;
   once?: boolean;
 }) {
+  const shouldReduceMotion = useReducedMotion();
+
   const FADE_DOWN = {
     show: { opacity: 1, y: 0, transition: { type: "spring" } },
     hidden: { opacity: 0, y: direction === "down" ? -18 : 18 },
@@ -24,6 +25,10 @@ export function FadeIn({
 
   const ref = React.useRef(null);
   const isInView = useInView(ref, { once });
+
+  if (shouldReduceMotion) {
+    return <div className={className}>{children}</div>;
+  }
 
   return (
     <motion.div
@@ -42,7 +47,9 @@ export function FadeIn({
     >
       {React.Children.map(children, (child) =>
         React.isValidElement(child) ? (
-          <motion.div variants={FADE_DOWN as Variants}>{child}</motion.div>
+          <motion.div variants={FADE_DOWN as Variants} className="h-full">
+            {child}
+          </motion.div>
         ) : (
           child
         ),
