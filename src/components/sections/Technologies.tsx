@@ -37,6 +37,13 @@ export default function Technologies() {
           t("react"),
         ),
         new Technology(
+          "React Native",
+          "/technologies/react.svg",
+          "React Native",
+          "bg-[#20232A]",
+          t("reactNative"),
+        ),
+        new Technology(
           "Next.js",
           "/technologies/next.svg",
           "Next.js",

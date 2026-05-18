@@ -3,10 +3,10 @@ import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import { ArrowUpRightIcon } from "@phosphor-icons/react";
 import { FadeIn } from "../ui/ScrollAnimation";
-import { projetos } from "@/data/projects";
+import { homeProjects } from "@/data/projects";
 
 export default function ProjectsHome() {
-  const projects = Object.values(projetos).map((p) => ({
+  const projects = homeProjects.map((p) => ({
     name: p.name,
     image: p.image,
     link: `/projects/${p.slug}`,
@@ -19,7 +19,7 @@ export default function ProjectsHome() {
         className="grid w-full gap-2 lg:grid-cols-2 lg:items-stretch"
         role="list"
       >
-        {projects.map((project, i) => {
+        {projects.map((project) => {
           return (
             <li key={project.name} className="flex h-full">
               <FadeIn direction="up" className="flex size-full flex-col" once>
@@ -56,7 +56,7 @@ export default function ProjectsHome() {
                         return (
                           <li key={techIndex}>
                             <span
-                              className={`${tech.toLowerCase()} border-opacity-20 flex h-10 w-20 items-center justify-center rounded-md border border-gray-200/20 bg-[#262626] p-1 text-center text-xs font-light transition-all duration-300 select-none hover:bg-gray-200/20 sm:text-sm md:w-30`}
+                              className="flex h-10 w-20 items-center justify-center rounded-md border border-gray-200/20 bg-[#262626] p-1 text-center text-xs font-light transition-all duration-300 select-none hover:bg-gray-200/20 sm:text-sm md:w-30"
                               aria-label={tech}
                             >
                               {tech}

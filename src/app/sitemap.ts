@@ -18,6 +18,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
   });
 
   routing.locales.forEach((locale) => {
+    routes.push({
+      url: `${baseUrl}/${locale}/projects`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.9,
+    });
+  });
+
+  routing.locales.forEach((locale) => {
     Object.values(projetos).forEach((project) => {
       routes.push({
         url: `${baseUrl}/${locale}/projects/${project.slug}`,

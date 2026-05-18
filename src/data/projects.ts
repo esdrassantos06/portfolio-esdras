@@ -17,7 +17,18 @@ const tech = {
   nestjs: "NestJS",
   prisma: "Prisma",
   go: "Go",
-};
+  medusa: "Medusa",
+  strapi: "Strapi",
+  expo: "Expo",
+  reactNative: "React Native",
+  meilisearch: "Meilisearch",
+  s3: "AWS S3",
+  paypal: "PayPal",
+  vitest: "Vitest",
+  playwright: "Playwright",
+  resend: "Resend",
+  odoo: "Odoo",
+} as const;
 
 type TechName = (typeof tech)[keyof typeof tech];
 
@@ -29,6 +40,7 @@ interface Project {
   code?: string;
   technologies: TechName[];
   namespace: string;
+  featuredHome?: boolean;
 }
 
 export const projetos: Record<string, Project> = {
@@ -39,6 +51,23 @@ export const projetos: Record<string, Project> = {
     demo: "https://jweb.pt",
     technologies: [tech.next, tech.ts, tech.react, tech.tailwind, tech.shadcn],
     namespace: "JWeb",
+    featuredHome: true,
+  },
+  pcbyte: {
+    slug: "pcbyte",
+    name: "PCByte",
+    image: "/projects-mockup/pcbyte.webp",
+    demo: "https://pcbyte.pt",
+    technologies: [
+      tech.medusa,
+      tech.next,
+      tech.strapi,
+      tech.reactNative,
+      tech.redis,
+      tech.meilisearch,
+    ],
+    namespace: "PCByte",
+    featuredHome: true,
   },
   phantomcode: {
     slug: "phantomcode",
@@ -53,6 +82,25 @@ export const projetos: Record<string, Project> = {
       tech.openai,
     ],
     namespace: "PhantomCode",
+    featuredHome: true,
+  },
+  nexebratrail: {
+    slug: "nexebratrail",
+    name: "Nexebra Trail",
+    image: "/projects-mockup/nexebratrail.webp",
+    demo: "https://nexebratrail.com",
+    technologies: [tech.next, tech.tailwind, tech.ts, tech.shadcn],
+    namespace: "NexebraTrail",
+    featuredHome: true,
+  },
+  zipway: {
+    slug: "zipway",
+    name: "Zipway",
+    image: "/projects-mockup/zipway.webp",
+    demo: "https://www.shly.pt/",
+    code: "https://github.com/esdrassantos06/zipway",
+    technologies: [tech.next, tech.ts, tech.go, tech.tailwind, tech.redis],
+    namespace: "Zipway",
   },
   tarevity: {
     slug: "tarevity",
@@ -70,12 +118,10 @@ export const projetos: Record<string, Project> = {
     ],
     namespace: "Tarevity",
   },
-  nexebratrail: {
-    slug: "nexebratrail",
-    name: "Nexebra Trail",
-    image: "/projects-mockup/nexebratrail.webp",
-    demo: "https://nexebratrail.com",
-    technologies: [tech.next, tech.tailwind, tech.ts, tech.shadcn],
-    namespace: "NexebraTrail",
-  },
 };
+
+export const homeProjects = Object.values(projetos).filter(
+  (p) => p.featuredHome,
+);
+
+export const allProjects = Object.values(projetos);

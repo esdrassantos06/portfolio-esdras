@@ -21,9 +21,7 @@ export default async function Work() {
           <FadeIn direction="up" once>
             <ShinyButton
               text={t("shinyText")}
-              link="https://github.com/esdrassantos06"
-              rel="noopener noreferrer"
-              target="_blank"
+              link="/projects"
               ariaLabel={t("ariaLabel")}
             />
           </FadeIn>
