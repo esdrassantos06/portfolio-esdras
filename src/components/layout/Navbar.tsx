@@ -7,13 +7,20 @@ import {
 } from "@phosphor-icons/react";
 import { useState, useEffect } from "react";
 import { motion } from "motion/react";
+import dynamic from "next/dynamic";
 import { Link, usePathname } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
-import LocaleSwitcher from "@/components/LocaleSwitcher";
-import { Inter } from "next/font/google";
 import { FadeIn } from "@/components/ui/ScrollAnimation";
 
-const inter = Inter({ subsets: ["latin"] });
+const LocaleSwitcher = dynamic(() => import("@/components/LocaleSwitcher"), {
+  ssr: false,
+  loading: () => (
+    <div
+      aria-hidden="true"
+      className="h-9 w-12 rounded-xl bg-white/0 sm:w-20"
+    />
+  ),
+});
 
 type ScrollDirection = "up" | "down" | null;
 
@@ -56,6 +63,11 @@ export default function Navbar() {
   }, []);
 
   useEffect(() => {
+    if (pathname !== "/") {
+      setActiveSection("");
+      return;
+    }
+
     const observerOptions = {
       root: null,
       rootMargin: "-20% 0px -70% 0px",
@@ -82,7 +94,7 @@ export default function Navbar() {
     });
 
     return () => observer.disconnect();
-  }, []);
+  }, [pathname]);
 
   const navItems = [
     { href: "/#home", label: t("home"), icon: HouseIcon, id: "home" },
@@ -93,7 +105,10 @@ export default function Navbar() {
 
   return (
     <motion.header
-      className="fixed top-6 left-1/2 z-99999 -translate-x-1/2 transform transition-all duration-300"
+      style={{
+        top: "max(1.5rem, calc(env(safe-area-inset-top) + 0.5rem))",
+      }}
+      className="fixed left-1/2 z-99999 -translate-x-1/2 transform transition-all duration-300"
       animate={{
         y: scrollDirection === "down" ? -120 : 0,
         scale: scrollDirection === "down" ? 0.95 : 1,
@@ -107,12 +122,15 @@ export default function Navbar() {
     >
       <nav
         aria-label="Main navigation"
-        className={`${inter.className} relative z-99999 overflow-hidden rounded-2xl border border-gray-200/50 backdrop-blur-xl`}
+        className="font-mono relative z-99999 overflow-hidden rounded-2xl border border-gray-200/50 backdrop-blur-xl"
       >
         <div className="relative flex min-w-fit items-center px-4 py-2 sm:px-6">
           <ul className="flex items-center gap-1 font-medium" role="list">
             {navItems.map((item) => {
-              const isActive = pathname === "/" && activeSection === item.id;
+              const isProjectsRoute = pathname.startsWith("/projects");
+              const isActive =
+                (pathname === "/" && activeSection === item.id) ||
+                (isProjectsRoute && item.id === "work");
               return (
                 <li key={item.id}>
                   <FadeIn direction="down" once>
@@ -126,7 +144,7 @@ export default function Navbar() {
                     >
                       <div className="from-principal/0 via-principal/5 to-principal/0 absolute inset-0 rounded-xl bg-linear-to-r opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
 
-                      <span className="text-principal/90 group-hover:text-principal relative z-10 hidden text-center transition-colors duration-300 sm:block">
+                      <span className="text-principal/90 group-hover:text-principal relative z-10 hidden text-center text-sm tracking-tight transition-colors duration-300 sm:block">
                         {item.label}
                       </span>
 
