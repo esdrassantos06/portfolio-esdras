@@ -34,7 +34,7 @@ export function FadeIn({
     <motion.div
       ref={ref}
       initial="hidden"
-      animate={isInView ? "show" : ""}
+      animate={isInView ? "show" : "hidden"}
       variants={{
         hidden: {},
         show: {

@@ -1,17 +1,25 @@
-/* Cursor */
-
 .cursor {
+  --mask-x: 0px;
+  --mask-y: 0px;
+  --mask-size: 30px;
   position: absolute;
   mask-image: url("../../../public/cursor/mask.svg");
   mask-repeat: no-repeat;
-  mask-size: 50px;
+  mask-position: var(--mask-x) var(--mask-y);
+  mask-size: var(--mask-size);
   -webkit-mask-image: url("../../../public/cursor/mask.svg");
   -webkit-mask-repeat: no-repeat;
-  -webkit-mask-size: 50px;
-  height: 100vh;
-  width: 100%;
+  -webkit-mask-position: var(--mask-x) var(--mask-y);
+  -webkit-mask-size: var(--mask-size);
   display: flex;
   align-items: center;
   justify-content: center;
   color: #f5f5f5;
+  will-change: mask-position, mask-size;
+}
+
+@media (prefers-reduced-motion: reduce), (pointer: coarse) {
+  .cursor {
+    display: none;
+  }
 }

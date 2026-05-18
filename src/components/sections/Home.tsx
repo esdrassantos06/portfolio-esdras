@@ -17,8 +17,7 @@ export default function HomeComponent() {
       aria-label="Home section"
     >
       <MaskedCursor
-        width="full"
-        height="screen"
+        className="h-screen w-full"
         maskedContent={
           <div className="flex flex-col items-center justify-center gap-4" />
         }

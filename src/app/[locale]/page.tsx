@@ -20,8 +20,10 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "LocaleLayout" });
-  const homeT = await getTranslations({ locale, namespace: "HomeComponent" });
+  const [t, homeT] = await Promise.all([
+    getTranslations({ locale, namespace: "LocaleLayout" }),
+    getTranslations({ locale, namespace: "HomeComponent" }),
+  ]);
 
   const baseUrl =
     process.env.NEXT_PUBLIC_BASE_URL || "https://portfolioesdras.com";
@@ -39,7 +41,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       siteName: "Esdras Portfolio",
       images: [
         {
-          url: `${baseUrl}/og-image.png`,
+          url: `${baseUrl}/og-image.jpg`,
           width: 1200,
           height: 630,
           alt: t("title"),
@@ -51,7 +53,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: t("title"),
       description: homeT("description"),
       creator: "@esdrasprft",
-      images: [`${baseUrl}/og-image.png`],
+      images: [`${baseUrl}/og-image.jpg`],
     },
     alternates: {
       canonical: url,
@@ -81,7 +83,7 @@ export default async function Home({ params }: Props) {
     jobTitle: "Full Stack Developer",
     description:
       "Full Stack Developer based in Portugal, specializing in React, Next.js, TypeScript, and Node.js.",
-    image: `${baseUrl}/og-image.png`,
+    image: `${baseUrl}/og-image.jpg`,
     address: {
       "@type": "PostalAddress",
       addressCountry: "PT",

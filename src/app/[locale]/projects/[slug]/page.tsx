@@ -31,15 +31,16 @@ export async function generateMetadata({
     };
   }
 
-  const t = await getTranslations({
-    locale,
-    namespace: `${projeto.namespace}.Metadata`,
-  });
-
-  const projectT = await getTranslations({
-    locale,
-    namespace: projeto.namespace,
-  });
+  const [t, projectT] = await Promise.all([
+    getTranslations({
+      locale,
+      namespace: `${projeto.namespace}.Metadata`,
+    }),
+    getTranslations({
+      locale,
+      namespace: projeto.namespace,
+    }),
+  ]);
 
   const baseUrl =
     process.env.NEXT_PUBLIC_BASE_URL || "https://portfolioesdras.com";

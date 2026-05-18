@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl";
 export default function NotFound() {
   const t = useTranslations("NotFound");
   return (
-    <main className="relative flex min-h-screen w-full items-center justify-center bg-[--color-fundo]">
+    <main className="bg-fundo relative flex min-h-dvh w-full items-center justify-center">
       <GridBackground />
 
       <div className="z-10 flex flex-col items-center gap-4 px-4 text-center">

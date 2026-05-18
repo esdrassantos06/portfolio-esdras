@@ -10,6 +10,12 @@ export default function About() {
   useEffect(() => {
     if (typeof window === "undefined") return;
 
+    const reducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
+    const noHover = window.matchMedia("(hover: none)").matches;
+    if (reducedMotion || noHover) return;
+
     const interBubble = document.querySelector<HTMLDivElement>(".interactive");
     const aboutSection = document.getElementById("about");
     if (!interBubble || !aboutSection) return;
