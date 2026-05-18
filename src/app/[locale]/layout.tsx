@@ -4,8 +4,10 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { getTranslations } from "next-intl/server";
 import { ReactNode } from "react";
+import { GeistMono } from "geist/font/mono";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import BuyMeACoffeeWidget from "@/components/BuyMeACoffeeWidget";
 import { Metadata } from "next";
 
 type Props = {
@@ -55,7 +57,7 @@ export async function generateMetadata(
       description: t("description"),
       images: [
         {
-          url: `${baseUrl}/og-image.png`,
+          url: `${baseUrl}/og-image.jpg`,
           width: 1200,
           height: 630,
           alt: t("title"),
@@ -118,7 +120,7 @@ export default async function LocaleLayout({ children, params }: Props) {
     <html
       lang={locale}
       data-scroll-behavior="smooth"
-      className="overflow-x-hidden scroll-smooth"
+      className={`${GeistMono.variable} overflow-x-hidden scroll-smooth`}
     >
       <head>
         <link
@@ -130,19 +132,6 @@ export default async function LocaleLayout({ children, params }: Props) {
         />
         <link rel="preconnect" href="https://cdnjs.buymeacoffee.com" />
         <link rel="dns-prefetch" href="https://cdnjs.buymeacoffee.com" />
-        <script
-          src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js"
-          data-name="BMC-Widget"
-          data-cfasync="false"
-          data-id="esdrasirioq"
-          data-description="Support me on Buy me a coffee!"
-          data-message="Thanks for visiting! You can now buy me a coffee"
-          data-color="#BD5FFF"
-          data-position="Right"
-          data-x_margin="18"
-          data-y_margin="18"
-          async
-        />
       </head>
       <body className="font-satoshi bg-fundo text-principal w-full overflow-x-hidden">
         <NextIntlClientProvider>
@@ -155,6 +144,7 @@ export default async function LocaleLayout({ children, params }: Props) {
           </main>
           <Footer />
         </NextIntlClientProvider>
+        <BuyMeACoffeeWidget />
       </body>
     </html>
   );
