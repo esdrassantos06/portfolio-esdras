@@ -19,12 +19,12 @@
   },
   "HomeComponent": {
     "based": "Ansässig in Portugal",
-    "description": "Hallo, ich bin Esdras, ein Full Stack-Entwickler, der End-to-End-Lösungen erstellt, die Design, Performance und Benutzererfahrung verbinden. Von Backend-APIs bis hin zu pixelgenauen Frontend-Schnittstellen verwandle ich komplexe Herausforderungen in nahtlose digitale Erlebnisse.",
+    "description": "Hallo, ich bin Esdras. Ich entwickle Web-Apps von Anfang bis Ende, von APIs und Datenbanken bis hin zu polierten Frontend-Oberflächen und Mobile. Verfügbar für Freelance-Projekte und neue Zusammenarbeit.",
     "shinyWork": "Meine Arbeit"
   },
   "About": {
     "currentTech": "Aktuelle Technologien",
-    "description": "Ich beherrsche eine Reihe moderner Technologien, die es mir ermöglichen, hochfunktionale Lösungen zu entwickeln. Dies sind einige meiner Haupttechnologien."
+    "description": "Das sind die Tools, die ich am häufigsten einsetze, wenn ich Projekte in Produktion bringe."
   },
   "TechnologiesComponent": {
     "categories": {
@@ -63,7 +63,7 @@
   "Footer": {
     "like": "Gefällt Ihnen, was Sie sehen? Kontaktieren Sie mich",
     "viaEmail": "per E-Mail",
-    "toColabor": "zur Zusammenarbeit!",
+    "toColabor": "zur Zusammenarbeit.",
     "schedule": "Anruf planen",
     "rights": "Alle Rechte vorbehalten.",
     "footerNav": {
@@ -92,26 +92,26 @@
   "PhantomCode": {
     "Metadata": {
       "title": "Phantom Code | Esdras Portfolio",
-      "description": "Eine plattformübergreifende Desktop-App, die Screenshots sofort in gelöste Code-Probleme verwandelt. Entwickelt für Entwickler, Studenten und alle, die durch Coding-Interview-Fragen mit der Kraft der KI beschleunigen wollen.",
+      "description": "Plattformübergreifende Desktop-App, die Screenshots in gelöste Code-Probleme verwandelt. Gebaut für Entwickler und Studierende, die sich auf technische Interviews vorbereiten.",
       "keywords": "KI-Codierung, Screenshot zu Lösung, Electron, NestJS, unsichtbare Coding-App",
       "robots": "index, follow",
       "creator": "Esdras"
     },
     "title": "Eine plattformübergreifende Desktop-App, die Screenshots in gelöste Code-Probleme verwandelt",
     "overview": "Projekt-Übersicht",
-    "description": "Phantom Code ist eine Desktop-Anwendung, die mit Electron und React entwickelt wurde, jetzt mit einer robusten API, die mit NestJS erstellt wurde. Die Anwendung erleichtert das Erfassen von Code durch Screenshots und verwendet KI, um diesen Code zu extrahieren und zu verarbeiten sowie Lösungen für Programmierprobleme auf eine effizientere und skalierbarere Weise zu generieren."
+    "description": "Phantom Code ist eine Desktop-App, gebaut mit Electron und React und unterstützt von einer NestJS-API. Sie erfasst Code aus Screenshots, extrahiert ihn mit KI und liefert funktionierende Lösungen für Programmieraufgaben."
   },
   "Tarevity": {
     "Metadata": {
       "title": "Tarevity | Esdras Portfolio",
-      "description": "Tarevity ist eine moderne Aufgabenverwaltungsanwendung, die mit Next.js 16, TypeScript, Prisma ORM und PostgreSQL entwickelt wurde. Die Anwendung bietet eine intuitive und sichere Benutzeroberfläche, um Benutzern zu helfen, ihre täglichen Aufgaben mit Effizienz und Stil zu organisieren.",
+      "description": "Tarevity ist eine Aufgabenverwaltungs-App, entwickelt mit Next.js 16, TypeScript, Prisma ORM und PostgreSQL. Schnell, fokussiert und so gebaut, dass deine tägliche To-do-Liste nicht im Weg steht.",
       "keywords": "Aufgabenverwaltung, To-do-App, Next.js, TypeScript, Prisma, PostgreSQL, Better Auth, Redis",
       "robots": "index, follow",
       "creator": "Esdras Santos"
     },
     "title": "Task-Manager",
     "overview": "Projekt-Übersicht",
-    "description": "Tarevity ist eine moderne Aufgabenverwaltungsanwendung, die mit Next.js 16, TypeScript, Prisma ORM und PostgreSQL entwickelt wurde. Die Anwendung bietet eine intuitive und sichere Benutzeroberfläche, um Benutzern zu helfen, ihre täglichen Aufgaben mit Effizienz und Stil zu organisieren."
+    "description": "Tarevity ist eine Aufgabenverwaltungs-App, entwickelt mit Next.js 16, TypeScript, Prisma ORM und PostgreSQL. Schnell, fokussiert und so gebaut, dass deine tägliche To-do-Liste nicht im Weg steht."
   },
   "NexebraTrail": {
     "Metadata": {
@@ -153,7 +153,7 @@
     "metaTitle": "Projekte | Esdras Portfolio",
     "metaDescription": "Entdecken Sie alle Projekte von Esdras Santos: Full-Stack-Webanwendungen, Headless-E-Commerce-Plattformen, Desktop-Tools und Mobile Apps.",
     "title": "Alle Projekte",
-    "subtitle": "Eine kuratierte Sammlung von allem, was ich gebaut habe, von kompletten E-Commerce-Stacks bis hin zu Desktop-Tools mit KI."
+    "subtitle": "Alles, was ich gebaut habe, von kompletten E-Commerce-Stacks bis hin zu Desktop-Tools mit KI."
   },
   "ProjectCTA": {
     "viewDemo": "Demo ansehen",

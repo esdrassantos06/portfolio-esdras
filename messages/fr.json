@@ -19,12 +19,12 @@
   },
   "HomeComponent": {
     "based": "Basé au Portugal",
-    "description": "Salut, je suis Esdras, un Développeur Full Stack qui crée des solutions de bout en bout qui relient design, performance et expérience utilisateur. Des APIs backend aux interfaces frontend au pixel près, je transforme les défis complexes en expériences numériques fluides.",
+    "description": "Salut, je suis Esdras. Je construis des applications web de bout en bout, des APIs et bases de données aux interfaces frontend soignées et au mobile. Disponible pour des missions freelance et de nouvelles collaborations.",
     "shinyWork": "Voir Mon Travail"
   },
   "About": {
     "currentTech": "Technologies actuelles",
-    "description": "Je maîtrise une gamme de technologies modernes qui me permettent de construire des solutions hautement fonctionnelles. Voici quelques-unes de mes principales technologies."
+    "description": "Voici les outils que j'utilise le plus souvent pour mettre des projets en production."
   },
   "TechnologiesComponent": {
     "categories": {
@@ -63,7 +63,7 @@
   "Footer": {
     "like": "Vous aimez ce que vous voyez ? Contactez-moi",
     "viaEmail": "par email",
-    "toColabor": "pour collaborer !",
+    "toColabor": "pour collaborer.",
     "schedule": "Programmer un appel",
     "rights": "Tous droits réservés.",
     "footerNav": {
@@ -92,26 +92,26 @@
   "PhantomCode": {
     "Metadata": {
       "title": "Phantom Code | Portfolio d'Esdras",
-      "description": "Une application de bureau multiplateforme qui transforme les captures d'écran en problèmes de code résolus instantanément. Conçue pour les développeurs, étudiants et tous ceux qui veulent accélérer à travers les questions d'entretien de codage avec la puissance de l'IA.",
+      "description": "Application de bureau multiplateforme qui transforme les captures d'écran en problèmes de code résolus. Conçue pour les développeurs et les étudiants qui préparent des entretiens techniques.",
       "keywords": "codage IA, capture d'écran vers solution, electron, nestjs, application de codage invisible",
       "robots": "index, follow",
       "creator": "Esdras"
     },
     "title": "Une application de bureau multiplateforme qui transforme les captures d'écran en problèmes de code résolus",
     "overview": "Aperçu du Projet",
-    "description": "Phantom Code est une application de bureau développée avec Electron et React, maintenant avec une API robuste construite avec NestJS. L'application facilite la capture de code via des captures d'écran et utilise l'IA pour extraire et traiter ce code, ainsi que générer des solutions pour les problèmes de programmation de manière plus efficace et évolutive."
+    "description": "Phantom Code est une application de bureau construite avec Electron et React, soutenue par une API NestJS. Elle capture du code depuis des captures d'écran, l'extrait avec l'IA et renvoie des solutions fonctionnelles pour des problèmes de programmation."
   },
   "Tarevity": {
     "Metadata": {
       "title": "Tarevity | Portfolio d'Esdras",
-      "description": "Tarevity est une application moderne de gestion de tâches construite avec Next.js 16, TypeScript, Prisma ORM et PostgreSQL. L'application fournit une interface intuitive et sécurisée pour aider les utilisateurs à organiser leurs tâches quotidiennes avec efficacité et style.",
+      "description": "Tarevity est une application de gestion de tâches construite avec Next.js 16, TypeScript, Prisma ORM et PostgreSQL. Rapide, ciblée et conçue pour que votre liste de tâches quotidienne ne soit jamais dans votre chemin.",
       "keywords": "gestion de tâches, to-do app, Next.js, TypeScript, Prisma, PostgreSQL, Better Auth, Redis",
       "robots": "index, follow",
       "creator": "Esdras Santos"
     },
     "title": "une application moderne de gestion de tâches",
     "overview": "Aperçu du Projet",
-    "description": "Tarevity est une application moderne de gestion de tâches construite avec Next.js 16, TypeScript, Prisma ORM et PostgreSQL. L'application fournit une interface intuitive et sécurisée pour aider les utilisateurs à organiser leurs tâches quotidiennes avec efficacité et style."
+    "description": "Tarevity est une application de gestion de tâches construite avec Next.js 16, TypeScript, Prisma ORM et PostgreSQL. Rapide, ciblée et conçue pour que votre liste de tâches quotidienne ne soit jamais dans votre chemin."
   },
   "NexebraTrail": {
     "Metadata": {

@@ -19,12 +19,12 @@
   },
   "HomeComponent": {
     "based": "Based in Portugal",
-    "description": "Hi, I'm Esdras, a Full Stack Developer crafting end-to-end solutions that bridge design, performance, and user experience. From backend API's to pixel-perfect frontend interfaces, I transform complex challenges into seamless digital experiences.",
+    "description": "Hi, I'm Esdras. I build web apps end-to-end, from APIs and databases to polished frontends and mobile. Available for freelance work and new collaborations.",
     "shinyWork": "See My Work"
   },
   "About": {
     "currentTech": "Current technologies",
-    "description": "I'm proficient in a range of modern technologies that empower me to build highly functional solutions. These are some of my main technologies."
+    "description": "These are the tools I reach for most often when shipping production work."
   },
   "TechnologiesComponent": {
     "categories": {
@@ -63,7 +63,7 @@
   "Footer": {
     "like": "Like what you see? Reach out",
     "viaEmail": "via email",
-    "toColabor": "to collaborate!",
+    "toColabor": "to collaborate.",
     "schedule": "Schedule call",
     "rights": "All rights reserved.",
     "footerNav": {
@@ -92,26 +92,26 @@
   "PhantomCode": {
     "Metadata": {
       "title": "Phantom Code | Esdras Portfolio",
-      "description": "A cross-platform desktop app that turns screenshots into solved code problems, instantly. Built for developers, students, and anyone who wants to speed through coding interview questions with the power of AI.",
+      "description": "A cross-platform desktop app that turns screenshots into solved code problems. Built for developers and students prepping for coding interviews.",
       "keywords": "ai coding, screenshot to solution, electron, nestjs, invisible coding app",
       "robots": "index, follow",
       "creator": "Esdras"
     },
     "title": "A cross-platform desktop app that turns screenshots into solved code problems",
     "overview": "Project Overview",
-    "description": "Phantom Code is a desktop application developed with Electron and React, now featuring a robust API built with NestJS. The application facilitates capturing code through screenshots and uses AI to extract and process this code, as well as generate solutions for programming problems in a more efficient and scalable way."
+    "description": "Phantom Code is a desktop app built with Electron and React, backed by a NestJS API. It captures code from screenshots, extracts it with AI and returns working solutions for programming problems."
   },
   "Tarevity": {
     "Metadata": {
       "title": "Tarevity | Esdras Portfolio",
-      "description": "Tarevity is a modern task management application built with Next.js 16, TypeScript, Prisma ORM, and PostgreSQL. The application provides an intuitive and secure interface to help users organize their daily tasks with efficiency and style.",
+      "description": "Tarevity is a task management app built with Next.js 16, TypeScript, Prisma ORM and PostgreSQL. Fast, focused and built to keep your daily to-do list out of your way.",
       "keywords": "task management, to-do app, Next.js, TypeScript, Prisma, PostgreSQL, Better Auth, Redis",
       "robots": "index, follow",
       "creator": "Esdras Santos"
     },
-    "title": "a modern task management application",
+    "title": "a modern task management app",
     "overview": "Project Overview",
-    "description": "Tarevity is a modern task management application built with Next.js 16, TypeScript, Prisma ORM, and PostgreSQL. The application provides an intuitive and secure interface to help users organize their daily tasks with efficiency and style."
+    "description": "Tarevity is a task management app built with Next.js 16, TypeScript, Prisma ORM and PostgreSQL. Fast, focused and built to keep your daily to-do list out of your way."
   },
   "NexebraTrail": {
     "Metadata": {
@@ -153,7 +153,7 @@
     "metaTitle": "Projects | Esdras Portfolio",
     "metaDescription": "Browse every project built by Esdras Santos: full-stack web apps, headless e-commerce platforms, desktop tools and mobile apps.",
     "title": "All Projects",
-    "subtitle": "A curated collection of everything I've built, from full e-commerce stacks to desktop AI tools."
+    "subtitle": "Everything I've built, from full e-commerce stacks to desktop AI tools."
   },
   "ProjectCTA": {
     "viewDemo": "View Demo",

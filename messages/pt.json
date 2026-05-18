@@ -19,12 +19,12 @@
   },
   "HomeComponent": {
     "based": "Sediado em Portugal",
-    "description": "Olá, sou Esdras, um Programador Full Stack que cria soluções end-to-end que conectam design, performance e experiência do utilizador. Desde APIs de backend até interfaces frontend pixel-perfect, transformo desafios complexos em experiências digitais fluidas.",
+    "description": "Olá, sou o Esdras. Construo aplicações web de ponta a ponta, desde APIs e bases de dados até interfaces frontend polidas e mobile. Disponível para freelance e novas colaborações.",
     "shinyWork": "Ver o Meu Trabalho"
   },
   "About": {
     "currentTech": "Tecnologias atuais",
-    "description": "Sou proficiente numa gama de tecnologias modernas que me permitem construir soluções altamente funcionais. Estas são algumas das minhas principais tecnologias."
+    "description": "Estas são as ferramentas a que recorro com mais frequência quando coloco projetos em produção."
   },
   "TechnologiesComponent": {
     "categories": {
@@ -63,7 +63,7 @@
   "Footer": {
     "like": "Gosta do que vê? Entre em contacto",
     "viaEmail": "por email",
-    "toColabor": "para colaborar!",
+    "toColabor": "para colaborar.",
     "schedule": "Agendar chamada",
     "rights": "Todos os direitos reservados.",
     "footerNav": {
@@ -92,26 +92,26 @@
   "PhantomCode": {
     "Metadata": {
       "title": "Phantom Code | Portfólio do Esdras",
-      "description": "Uma aplicação desktop multiplataforma que transforma capturas de ecrã em problemas de código resolvidos, instantaneamente. Construída para programadores, estudantes e qualquer pessoa que queira acelerar através de questões de entrevistas de programação com o poder da IA.",
+      "description": "Aplicação desktop multiplataforma que transforma capturas de ecrã em problemas de código resolvidos. Feita para programadores e estudantes a preparar entrevistas técnicas.",
       "keywords": "programação com IA, captura de ecrã para solução, electron, nestjs, aplicação de programação invisível",
       "robots": "index, follow",
       "creator": "Esdras"
     },
     "title": "Uma aplicação desktop multiplataforma que transforma capturas de ecrã em problemas de código resolvidos",
     "overview": "Visão Geral do Projeto",
-    "description": "Phantom Code é uma aplicação desktop desenvolvida com Electron e React, agora com uma API robusta construída em NestJS. A aplicação facilita a captura de código através de capturas de ecrã e usa IA para extrair e processar este código, bem como gerar soluções para problemas de programação de forma mais eficiente e escalável."
+    "description": "O Phantom Code é uma aplicação desktop construída com Electron e React, suportada por uma API em NestJS. Captura código a partir de capturas de ecrã, extrai-o com IA e devolve soluções funcionais para problemas de programação."
   },
   "Tarevity": {
     "Metadata": {
       "title": "Tarevity | Portfólio do Esdras",
-      "description": "Tarevity é uma aplicação moderna de gestão de tarefas construída com Next.js 16, TypeScript, Prisma ORM e PostgreSQL. A aplicação fornece uma interface intuitiva e segura para ajudar os utilizadores a organizar as suas tarefas diárias com eficiência e estilo.",
+      "description": "Tarevity é uma aplicação de gestão de tarefas construída com Next.js 16, TypeScript, Prisma ORM e PostgreSQL. Rápida, focada e desenhada para manter a lista de tarefas diária fora do caminho.",
       "keywords": "gestão de tarefas, to-do app, Next.js, TypeScript, Prisma, PostgreSQL, Better Auth, Redis",
       "robots": "index, follow",
       "creator": "Esdras Santos"
     },
     "title": "uma aplicação moderna de gestão de tarefas",
     "overview": "Visão Geral do Projeto",
-    "description": "Tarevity é uma aplicação moderna de gestão de tarefas construída com Next.js 16, TypeScript, Prisma ORM e PostgreSQL. A aplicação fornece uma interface intuitiva e segura para ajudar os utilizadores a organizar as suas tarefas diárias com eficiência e estilo."
+    "description": "Tarevity é uma aplicação de gestão de tarefas construída com Next.js 16, TypeScript, Prisma ORM e PostgreSQL. Rápida, focada e desenhada para manter a lista de tarefas diária fora do caminho."
   },
   "NexebraTrail": {
     "Metadata": {
