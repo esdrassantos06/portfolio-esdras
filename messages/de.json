@@ -19,7 +19,7 @@
   },
   "HomeComponent": {
     "based": "Ansässig in Portugal",
-    "description": "Hallo, ich bin Esdras — ein Full Stack-Entwickler, der End-to-End-Lösungen erstellt, die Design, Performance und Benutzererfahrung verbinden. Von Backend-APIs bis hin zu pixelgenauen Frontend-Schnittstellen verwandle ich komplexe Herausforderungen in nahtlose digitale Erlebnisse.",
+    "description": "Hallo, ich bin Esdras, ein Full Stack-Entwickler, der End-to-End-Lösungen erstellt, die Design, Performance und Benutzererfahrung verbinden. Von Backend-APIs bis hin zu pixelgenauen Frontend-Schnittstellen verwandle ich komplexe Herausforderungen in nahtlose digitale Erlebnisse.",
     "shinyWork": "Meine Arbeit"
   },
   "About": {
@@ -41,6 +41,7 @@
     "sqlite": "Eingebettete Datenbank",
     "python": "Backend-Sprache",
     "react": "JavaScript-Bibliothek",
+    "reactNative": "Framework für mobile Apps",
     "git": "Versionsverwaltung",
     "tailwind": "CSS-Framework",
     "typescript": "JavaScript aber besser",
@@ -72,7 +73,8 @@
       "home": "Startseite",
       "about": "Über mich",
       "work": "Arbeit",
-      "contact": "Kontakt"
+      "contact": "Kontakt",
+      "allProjects": "Alle Projekte"
     }
   },
   "JWeb": {
@@ -90,7 +92,7 @@
   "PhantomCode": {
     "Metadata": {
       "title": "Phantom Code | Esdras Portfolio",
-      "description": "Eine plattformübergreifende Desktop-App, die Screenshots in gelöste Code-Probleme verwandelt — sofort. Entwickelt für Entwickler, Studenten und alle, die durch Coding-Interview-Fragen mit der Kraft der KI beschleunigen wollen.",
+      "description": "Eine plattformübergreifende Desktop-App, die Screenshots sofort in gelöste Code-Probleme verwandelt. Entwickelt für Entwickler, Studenten und alle, die durch Coding-Interview-Fragen mit der Kraft der KI beschleunigen wollen.",
       "keywords": "KI-Codierung, Screenshot zu Lösung, Electron, NestJS, unsichtbare Coding-App",
       "robots": "index, follow",
       "creator": "Esdras"
@@ -122,6 +124,40 @@
     "title": "Sportveranstaltungen und Trailrunning",
     "overview": "Projektübersicht",
     "description": "Website für die Veranstaltung Trilhos da Nexebra Trail - TNT®, die ins Leben gerufen wurde, um Sport und Naturerbe zu fördern. Das Event hat bereits über 4.500 Atheten begrüßt. Die Website wurde mit Fokus auf Leistung und nahtlose Benutzererfahrung unter Verwendung von Next.js, Tailwind CSS, Shadcn UI und TypeScript entwickelt."
+  },
+  "PCByte": {
+    "Metadata": {
+      "title": "PCByte | Esdras Portfolio",
+      "description": "PCByte ist eine Full-Stack-E-Commerce-Plattform für Technologieprodukte mit einem Medusa.js-Backend, einem Next.js-Storefront, einer Expo-Mobile-App und einem Strapi-CMS. Enthält benutzerdefinierte Module für S3, PayPal, Banküberweisung, Meilisearch, Odoo und Resend, mit sicherheitsorientierten Best Practices im gesamten Stack.",
+      "keywords": "E-Commerce, Medusa, Next.js, Strapi, React Native, Expo, Meilisearch, PayPal, Odoo, Redis, AWS S3, Headless Commerce",
+      "robots": "index, follow",
+      "creator": "Esdras Santos"
+    },
+    "title": "Headless Full-Stack-E-Commerce für einen Technologie-Shop",
+    "overview": "Projektübersicht",
+    "description": "PCByte ist ein komplettes E-Commerce-Ökosystem für einen Technologie-Shop, das in vier unabhängigen Projekten konzipiert ist. Das Backend basiert auf Medusa.js mit Redis-Caching und benutzerdefinierten Modulen für AWS-S3-Dual-Bucket-Speicherung, PayPal-Zahlungen, manuelle Banküberweisung, Meilisearch-Indexierung, Synchronisation mit dem Odoo-ERP, Transaktions-E-Mails über Resend, gewichtsbasierte Fulfillment-Logik, Produktattribute, Medien und Bewertungen. Der Next.js-16-Storefront verwendet React 19, next-intl, TanStack Query, Zustand und Jotai und enthält Redis-basiertes Rate Limiting, Google reCAPTCHA v3, Honeypot-Felder, DOMPurify-Sanitisierung sowie ein Headless-CMS mit Strapi. Die Mobile-App wurde mit Expo und React Native gebaut und nutzt sicheren Speicher, biometrische Authentifizierung und MMKV. Strapi (PostgreSQL + S3) verwaltet redaktionelle Inhalte. Die Qualität wird durch Unit-, Integrations- und Playwright-End-to-End-Tests im Backend und Storefront, eine Vitest-Suite im Frontend und Jest-Unit-Tests in der Mobile-App sichergestellt."
+  },
+  "Zipway": {
+    "Metadata": {
+      "title": "Zipway | Esdras Portfolio",
+      "description": "Zipway ist ein schneller und minimaler URL-Shortener mit einem Next.js-Frontend und einem leistungsstarken Go-Backend, optimiert für Weiterleitungen mit niedriger Latenz und übersichtliche Link-Analytics.",
+      "keywords": "URL-Shortener, Link-Shortener, Next.js, Go, Golang, TypeScript, Tailwind CSS, Redis",
+      "robots": "index, follow",
+      "creator": "Esdras Santos"
+    },
+    "title": "Ein schneller URL-Shortener mit Go und Next.js",
+    "overview": "Projektübersicht",
+    "description": "Zipway ist ein moderner URL-Shortener mit Fokus auf Geschwindigkeit, Einfachheit und Zuverlässigkeit. Das Frontend ist mit Next.js, TypeScript und Tailwind CSS gebaut und bietet eine saubere, responsive Oberfläche zum Erstellen und Verwalten von Kurzlinks. Das Backend ist in Go geschrieben, um maximale Performance und niedrige Latenz bei Weiterleitungen zu erreichen, und stellt eine schlanke HTTP-API bereit. Das System ist horizontal skalierbar und betreibt den Shortener live unter shly.pt."
+  },
+  "AllProjects": {
+    "metaTitle": "Projekte | Esdras Portfolio",
+    "metaDescription": "Entdecken Sie alle Projekte von Esdras Santos: Full-Stack-Webanwendungen, Headless-E-Commerce-Plattformen, Desktop-Tools und Mobile Apps.",
+    "title": "Alle Projekte",
+    "subtitle": "Eine kuratierte Sammlung von allem, was ich gebaut habe, von kompletten E-Commerce-Stacks bis hin zu Desktop-Tools mit KI."
+  },
+  "ProjectCTA": {
+    "viewDemo": "Demo ansehen",
+    "sourceCode": "Quellcode"
   },
   "DownloadCV": "Lebenslauf herunterladen",
   "LocaleSwitcher": {

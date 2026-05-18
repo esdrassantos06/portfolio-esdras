@@ -19,7 +19,7 @@
   },
   "HomeComponent": {
     "based": "Basé au Portugal",
-    "description": "Salut, je suis Esdras — un Développeur Full Stack qui crée des solutions de bout en bout qui relient design, performance et expérience utilisateur. Des APIs backend aux interfaces frontend au pixel près, je transforme les défis complexes en expériences numériques fluides.",
+    "description": "Salut, je suis Esdras, un Développeur Full Stack qui crée des solutions de bout en bout qui relient design, performance et expérience utilisateur. Des APIs backend aux interfaces frontend au pixel près, je transforme les défis complexes en expériences numériques fluides.",
     "shinyWork": "Voir Mon Travail"
   },
   "About": {
@@ -41,6 +41,7 @@
     "sqlite": "Base de données intégrée",
     "python": "Langage backend",
     "react": "Bibliothèque JavaScript",
+    "reactNative": "Framework pour apps mobiles",
     "git": "Contrôle de version",
     "tailwind": "Framework CSS",
     "typescript": "JavaScript en mieux",
@@ -72,7 +73,8 @@
       "home": "Accueil",
       "about": "À propos",
       "work": "Travail",
-      "contact": "Contact"
+      "contact": "Contact",
+      "allProjects": "Tous les Projets"
     }
   },
   "JWeb": {
@@ -90,7 +92,7 @@
   "PhantomCode": {
     "Metadata": {
       "title": "Phantom Code | Portfolio d'Esdras",
-      "description": "Une application de bureau multiplateforme qui transforme les captures d'écran en problèmes de code résolus — instantanément. Conçue pour les développeurs, étudiants et tous ceux qui veulent accélérer à travers les questions d'entretien de codage avec la puissance de l'IA.",
+      "description": "Une application de bureau multiplateforme qui transforme les captures d'écran en problèmes de code résolus instantanément. Conçue pour les développeurs, étudiants et tous ceux qui veulent accélérer à travers les questions d'entretien de codage avec la puissance de l'IA.",
       "keywords": "codage IA, capture d'écran vers solution, electron, nestjs, application de codage invisible",
       "robots": "index, follow",
       "creator": "Esdras"
@@ -122,6 +124,40 @@
     "title": "Événements Sportifs et Trail Running",
     "overview": "Aperçu du Projet",
     "description": "Site web de l'événement Trilhos da Nexebra Trail - TNT®, créé pour promouvoir le sport et le patrimoine naturel. L'événement a déjà accueilli plus de 4 500 athlètes. Le site a été développé en mettant l'accent sur les performances et la fluidité de l'expérience utilisateur, en utilisant Next.js, Tailwind CSS, Shadcn UI et TypeScript."
+  },
+  "PCByte": {
+    "Metadata": {
+      "title": "PCByte | Portfolio d'Esdras",
+      "description": "PCByte est une plateforme de commerce électronique technologique full-stack avec un backend Medusa.js, une vitrine Next.js, une application mobile Expo et un CMS Strapi. Comprend des modules personnalisés pour S3, PayPal, virement bancaire, Meilisearch, Odoo et Resend, avec de bonnes pratiques de sécurité sur toute la stack.",
+      "keywords": "e-commerce, Medusa, Next.js, Strapi, React Native, Expo, Meilisearch, PayPal, Odoo, Redis, AWS S3, headless commerce",
+      "robots": "index, follow",
+      "creator": "Esdras Santos"
+    },
+    "title": "E-commerce headless full-stack pour magasin de technologie",
+    "overview": "Aperçu du Projet",
+    "description": "PCByte est un écosystème e-commerce complet pour un magasin de technologie, architecturé en quatre projets indépendants. Le backend est construit sur Medusa.js avec un cache Redis et des modules personnalisés pour le stockage dual-bucket AWS S3, les paiements PayPal, le virement bancaire manuel, l'indexation Meilisearch, la synchronisation avec l'ERP Odoo, les emails transactionnels via Resend, le fulfillment basé sur le poids, les attributs de produit, les médias et les avis. La vitrine Next.js 16 utilise React 19, next-intl, TanStack Query, Zustand, Jotai et intègre le rate limiting basé sur Redis, Google reCAPTCHA v3, des champs honeypot, la sanitisation DOMPurify et un CMS headless propulsé par Strapi. L'application mobile est construite avec Expo et React Native, en utilisant le stockage sécurisé, l'authentification biométrique et MMKV. Strapi (PostgreSQL + S3) gère le contenu éditorial. La qualité est garantie par des tests unitaires, d'intégration et end-to-end avec Playwright sur le backend et la vitrine, une suite Vitest sur le frontend et des tests unitaires Jest sur le mobile."
+  },
+  "Zipway": {
+    "Metadata": {
+      "title": "Zipway | Portfolio d'Esdras",
+      "description": "Zipway est un raccourcisseur d'URL rapide et minimaliste, avec un frontend Next.js et un backend haute performance en Go, conçu pour des redirections à faible latence et des analyses simples.",
+      "keywords": "raccourcisseur d'URL, raccourcisseur de liens, Next.js, Go, Golang, TypeScript, Tailwind CSS, Redis",
+      "robots": "index, follow",
+      "creator": "Esdras Santos"
+    },
+    "title": "Un raccourcisseur d'URL rapide avec Go et Next.js",
+    "overview": "Aperçu du Projet",
+    "description": "Zipway est un raccourcisseur d'URL moderne axé sur la vitesse, la simplicité et la fiabilité. Le frontend est construit avec Next.js, TypeScript et Tailwind CSS, offrant une interface propre et responsive pour générer et gérer des liens courts. Le backend est écrit en Go pour des performances maximales et des redirections à faible latence, exposant une API HTTP légère. Le système est conçu pour évoluer horizontalement et sert le raccourcisseur en production sur shly.pt."
+  },
+  "AllProjects": {
+    "metaTitle": "Projets | Portfolio d'Esdras",
+    "metaDescription": "Parcourez tous les projets d'Esdras Santos : applications web full-stack, plateformes e-commerce headless, outils de bureau et applications mobiles.",
+    "title": "Tous les Projets",
+    "subtitle": "Une collection de tout ce que j'ai construit, des stacks e-commerce complètes aux outils de bureau avec IA."
+  },
+  "ProjectCTA": {
+    "viewDemo": "Voir la Démo",
+    "sourceCode": "Code Source"
   },
   "DownloadCV": "Télécharger CV",
   "LocaleSwitcher": {
