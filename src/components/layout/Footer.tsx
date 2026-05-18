@@ -5,6 +5,8 @@ import { Link } from "@/i18n/navigation";
 import { FadeIn } from "../ui/ScrollAnimation";
 import { useTranslations } from "next-intl";
 import { projetos } from "@/data/projects";
+
+const footerProjectSlugs = ["jweb", "pcbyte", "phantomcode"] as const;
 export default function Footer() {
   const t = useTranslations("Footer");
 
@@ -22,7 +24,7 @@ export default function Footer() {
               {t("like")}{" "}
               <a
                 href="mailto:esdrasirion1@gmail.com"
-                className="text-blue-600 underline decoration-2 transition-all duration-300 hover:text-blue-800 max-md:text-center"
+                className="focus-visible:outline-principal text-[#bd5fff] underline decoration-2 underline-offset-4 transition-all duration-300 hover:text-[#d589ff] focus-visible:outline-2 focus-visible:outline-offset-2 max-md:text-center"
               >
                 {t("viaEmail")}
               </a>{" "}
@@ -85,19 +87,28 @@ export default function Footer() {
                   {t("footerNav.title2")}
                 </h3>
                 <ul className="mt-1 flex flex-col gap-2">
-                  {Object.values(projetos).map((projeto) => (
-                    <li
-                      key={projeto.slug}
-                      className="hover:text-principal text-principal/70 font-light"
-                    >
-                      <Link
-                        aria-label={projeto.name}
-                        href={`/projects/${projeto.slug}` as any}
+                  {footerProjectSlugs.map((slug) => {
+                    const projeto = projetos[slug];
+                    if (!projeto) return null;
+                    return (
+                      <li
+                        key={projeto.slug}
+                        className="hover:text-principal text-principal/70 font-light"
                       >
-                        {projeto.name}
-                      </Link>
-                    </li>
-                  ))}
+                        <Link
+                          aria-label={projeto.name}
+                          href={`/projects/${projeto.slug}`}
+                        >
+                          {projeto.name}
+                        </Link>
+                      </li>
+                    );
+                  })}
+                  <li className="hover:text-principal text-principal/70 font-light">
+                    <Link aria-label={t("footerNav.allProjects")} href="/projects">
+                      {t("footerNav.allProjects")}
+                    </Link>
+                  </li>
                 </ul>
               </div>
             </FadeIn>
