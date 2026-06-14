@@ -7,21 +7,19 @@ import TechnologiesProject from "@/components/TechnologiesProject";
 import ShinyButtonProject from "@/components/ui/ShinyButtonProject";
 import Image from "next/image";
 import ArrowDownIcon from "@/components/icons/ArrowDownIcon";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { siteUrl, localizedUrl, localeAlternates } from "@/i18n/url";
 import { Metadata } from "next";
 
 type Props = {
-  params: Promise<{ slug: string }>;
-};
-
-type metadataProps = {
   params: Promise<{ locale: Locale; slug: string }>;
 };
 
-export async function generateMetadata({
-  params,
-}: metadataProps): Promise<Metadata> {
+export function generateStaticParams() {
+  return Object.keys(projetos).map((slug) => ({ slug }));
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, slug } = await params;
 
   const projeto = projetos[slug as keyof typeof projetos];
@@ -90,7 +88,8 @@ export async function generateMetadata({
 }
 
 export default async function ProjetoPage({ params }: Props) {
-  const { slug } = await params;
+  const { locale, slug } = await params;
+  setRequestLocale(locale);
   const projeto = projetos[slug as keyof typeof projetos];
 
   if (!projeto) {
@@ -126,7 +125,7 @@ export default async function ProjetoPage({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      <main className="w-full">
+      <div className="w-full">
         <GridBackground />
 
         <header className="flex min-h-screen w-full flex-col items-center justify-center">
@@ -150,7 +149,7 @@ export default async function ProjetoPage({ params }: Props) {
         <article className="bg-fundo w-full pt-16 pb-24">
           <div className="mx-auto w-3/4">
             <FadeIn direction="up" once>
-              <div className="mx-auto w-full overflow-hidden rounded-2xl bg-[#141414] sm:w-3/4 md:w-2/3">
+              <div className="bg-fundo3 mx-auto w-full overflow-hidden rounded-2xl sm:w-3/4 md:w-2/3">
                 <Image
                   id="image"
                   src={projeto.image}
@@ -191,7 +190,7 @@ export default async function ProjetoPage({ params }: Props) {
             </div>
           </div>
         </article>
-      </main>
+      </div>
     </>
   );
 }

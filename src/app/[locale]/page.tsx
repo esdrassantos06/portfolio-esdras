@@ -1,6 +1,6 @@
 import HomeComponent from "@/components/sections/Home";
 import { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Locale } from "next-intl";
 import { siteUrl, localizedUrl, localeAlternates } from "@/i18n/url";
 import dynamic from "next/dynamic";
@@ -38,21 +38,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: "website",
       locale: locale,
       siteName: "Esdras Portfolio",
-      images: [
-        {
-          url: `${siteUrl}/og-image.jpg`,
-          width: 1200,
-          height: 630,
-          alt: t("title"),
-        },
-      ],
     },
     twitter: {
       card: "summary_large_image",
       title: t("title"),
       description: homeT("description"),
       creator: "@esdrasprft",
-      images: [`${siteUrl}/og-image.jpg`],
     },
     alternates: {
       canonical: url,
@@ -63,6 +54,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function Home({ params }: Props) {
   const { locale } = await params;
+  setRequestLocale(locale);
 
   const structuredData = {
     "@context": "https://schema.org",
@@ -73,7 +65,7 @@ export default async function Home({ params }: Props) {
     jobTitle: "Full Stack Developer",
     description:
       "Full Stack Developer based in Portugal, specializing in React, Next.js, TypeScript, and Node.js.",
-    image: `${siteUrl}/og-image.jpg`,
+    image: `${siteUrl}/opengraph-image`,
     address: {
       "@type": "PostalAddress",
       addressCountry: "PT",
