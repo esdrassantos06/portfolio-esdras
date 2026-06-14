@@ -3,7 +3,7 @@ import { Locale, NextIntlClientProvider, hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { siteUrl, localizedUrl, localeAlternates } from "@/i18n/url";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { ReactNode } from "react";
 import { GeistMono } from "geist/font/mono";
 import Navbar from "@/components/layout/Navbar";
@@ -54,14 +54,6 @@ export async function generateMetadata(
       siteName: siteName,
       title: t("title"),
       description: t("description"),
-      images: [
-        {
-          url: `${siteUrl}/og-image.jpg`,
-          width: 1200,
-          height: 630,
-          alt: t("title"),
-        },
-      ],
     },
     twitter: {
       card: "summary_large_image",
@@ -102,11 +94,17 @@ export async function generateMetadata(
   };
 }
 
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
+
 export default async function LocaleLayout({ children, params }: Props) {
   const { locale } = await params;
   if (!hasLocale(routing.locales, locale)) {
     notFound();
   }
+
+  setRequestLocale(locale);
 
   return (
     <html

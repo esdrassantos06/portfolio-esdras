@@ -28,6 +28,11 @@ export default function MaskedCursor({
   const [isPressed, setIsPressed] = useState(false);
 
   const size = isPressed && !isHovered ? 25 : isHovered ? 400 : 30;
+  const sizeRef = useRef(size);
+
+  useEffect(() => {
+    sizeRef.current = size;
+  }, [size]);
 
   useEffect(() => {
     const container = containerRef.current;
@@ -42,15 +47,16 @@ export default function MaskedCursor({
     }
 
     const tick = () => {
+      const currentSize = sizeRef.current;
       currentPos.current.x +=
         (targetPos.current.x - currentPos.current.x) * 0.25;
       currentPos.current.y +=
         (targetPos.current.y - currentPos.current.y) * 0.25;
-      const x = Math.round(currentPos.current.x - size / 2);
-      const y = Math.round(currentPos.current.y - size / 2);
+      const x = Math.round(currentPos.current.x - currentSize / 2);
+      const y = Math.round(currentPos.current.y - currentSize / 2);
       mask.style.setProperty("--mask-x", `${x}px`);
       mask.style.setProperty("--mask-y", `${y}px`);
-      mask.style.setProperty("--mask-size", `${size}px`);
+      mask.style.setProperty("--mask-size", `${currentSize}px`);
       rafId.current = requestAnimationFrame(tick);
     };
 
@@ -77,7 +83,7 @@ export default function MaskedCursor({
       document.removeEventListener("mouseup", handleUp);
       if (rafId.current !== null) cancelAnimationFrame(rafId.current);
     };
-  }, [size]);
+  }, []);
 
   return (
     <div

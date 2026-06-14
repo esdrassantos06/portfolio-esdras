@@ -1,7 +1,7 @@
 import { FadeIn } from "@/components/ui/ScrollAnimation";
 import GridBackground from "@/components/ui/GridBackground";
 import AllProjectsList from "@/components/sections/AllProjectsList";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Locale } from "next-intl";
 import { siteUrl, localizedUrl, localeAlternates } from "@/i18n/url";
 import { Metadata } from "next";
@@ -27,14 +27,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       siteName: "Esdras Portfolio",
       title: t("metaTitle"),
       description: t("metaDescription"),
-      images: [
-        {
-          url: `${siteUrl}/og-image.jpg`,
-          width: 1200,
-          height: 630,
-          alt: t("metaTitle"),
-        },
-      ],
     },
     twitter: {
       card: "summary_large_image",
@@ -51,6 +43,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function AllProjectsPage({ params }: Props) {
   const { locale } = await params;
+  setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "AllProjects" });
 
   return (

@@ -1,14 +1,12 @@
-"use client";
-
 import ShinyButton from "../ui/ShinyButton";
 import { Link } from "@/i18n/navigation";
 import { FadeIn } from "../ui/ScrollAnimation";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import { projetos } from "@/data/projects";
 
 const footerProjectSlugs = ["jweb", "pcbyte", "phantomcode"] as const;
-export default function Footer() {
-  const t = useTranslations("Footer");
+export default async function Footer() {
+  const t = await getTranslations("Footer");
 
   return (
     <div className="relative bottom-4 mx-auto mb-8 flex h-fit w-3/4 flex-col items-center justify-between overflow-hidden rounded-2xl border border-gray-200/20">
@@ -24,7 +22,7 @@ export default function Footer() {
               {t("like")}{" "}
               <a
                 href="mailto:esdrasirion1@gmail.com"
-                className="focus-visible:outline-principal text-[#bd5fff] underline decoration-2 underline-offset-4 transition-all duration-300 hover:text-[#d589ff] focus-visible:outline-2 focus-visible:outline-offset-2 max-md:text-center"
+                className="focus-visible:outline-principal text-link hover:text-linkhover underline decoration-2 underline-offset-4 transition-all duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 max-md:text-center"
               >
                 {t("viaEmail")}
               </a>{" "}
@@ -105,7 +103,10 @@ export default function Footer() {
                     );
                   })}
                   <li className="hover:text-principal text-principal/70 font-light">
-                    <Link aria-label={t("footerNav.allProjects")} href="/projects">
+                    <Link
+                      aria-label={t("footerNav.allProjects")}
+                      href="/projects"
+                    >
                       {t("footerNav.allProjects")}
                     </Link>
                   </li>
