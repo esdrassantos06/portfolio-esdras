@@ -63,10 +63,7 @@ export default function Navbar() {
   }, []);
 
   useEffect(() => {
-    if (pathname !== "/") {
-      setActiveSection("");
-      return;
-    }
+    if (pathname !== "/") return;
 
     const observerOptions = {
       root: null,
@@ -122,7 +119,7 @@ export default function Navbar() {
     >
       <nav
         aria-label="Main navigation"
-        className="font-mono relative z-99999 overflow-hidden rounded-2xl border border-gray-200/50 backdrop-blur-xl"
+        className="relative z-99999 overflow-hidden rounded-2xl border border-gray-200/50 font-mono backdrop-blur-xl"
       >
         <div className="relative flex min-w-fit items-center px-4 py-2 sm:px-6">
           <ul className="flex items-center gap-1 font-medium" role="list">
