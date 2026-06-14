@@ -2,6 +2,7 @@ import "../globals.css";
 import { Locale, NextIntlClientProvider, hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
+import { siteUrl, localizedUrl, localeAlternates } from "@/i18n/url";
 import { getTranslations } from "next-intl/server";
 import { ReactNode } from "react";
 import { GeistMono } from "geist/font/mono";
@@ -22,13 +23,11 @@ export async function generateMetadata(
 
   const t = await getTranslations({ locale, namespace: "LocaleLayout" });
 
-  const baseUrl =
-    process.env.NEXT_PUBLIC_BASE_URL || "https://portfolioesdras.com";
-  const url = `${baseUrl}/${locale}`;
+  const url = localizedUrl(locale);
   const siteName = "Esdras Portfolio";
 
   return {
-    metadataBase: new URL(baseUrl),
+    metadataBase: new URL(siteUrl),
     title: {
       default: t("title"),
       template: "%s | Esdras Portfolio",
@@ -57,7 +56,7 @@ export async function generateMetadata(
       description: t("description"),
       images: [
         {
-          url: `${baseUrl}/og-image.jpg`,
+          url: `${siteUrl}/og-image.jpg`,
           width: 1200,
           height: 630,
           alt: t("title"),
@@ -72,14 +71,7 @@ export async function generateMetadata(
     },
     alternates: {
       canonical: url,
-      languages: {
-        "x-default": `${baseUrl}/en`,
-        en: `${baseUrl}/en`,
-        pt: `${baseUrl}/pt`,
-        es: `${baseUrl}/es`,
-        fr: `${baseUrl}/fr`,
-        de: `${baseUrl}/de`,
-      },
+      languages: localeAlternates(),
     },
     icons: {
       icon: [

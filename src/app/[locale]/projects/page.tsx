@@ -3,6 +3,7 @@ import GridBackground from "@/components/ui/GridBackground";
 import AllProjectsList from "@/components/sections/AllProjectsList";
 import { getTranslations } from "next-intl/server";
 import { Locale } from "next-intl";
+import { siteUrl, localizedUrl, localeAlternates } from "@/i18n/url";
 import { Metadata } from "next";
 
 type Props = {
@@ -13,12 +14,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "AllProjects" });
 
-  const baseUrl =
-    process.env.NEXT_PUBLIC_BASE_URL || "https://portfolioesdras.com";
-  const url = `${baseUrl}/${locale}/projects`;
+  const url = localizedUrl(locale, "/projects");
 
   return {
-    metadataBase: new URL(baseUrl),
+    metadataBase: new URL(siteUrl),
     title: t("metaTitle"),
     description: t("metaDescription"),
     openGraph: {
@@ -30,7 +29,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: t("metaDescription"),
       images: [
         {
-          url: `${baseUrl}/og-image.jpg`,
+          url: `${siteUrl}/og-image.jpg`,
           width: 1200,
           height: 630,
           alt: t("metaTitle"),
@@ -45,14 +44,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     alternates: {
       canonical: url,
-      languages: {
-        "x-default": `${baseUrl}/en/projects`,
-        en: `${baseUrl}/en/projects`,
-        pt: `${baseUrl}/pt/projects`,
-        es: `${baseUrl}/es/projects`,
-        fr: `${baseUrl}/fr/projects`,
-        de: `${baseUrl}/de/projects`,
-      },
+      languages: localeAlternates("/projects"),
     },
   };
 }

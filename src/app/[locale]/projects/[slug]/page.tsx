@@ -8,6 +8,7 @@ import ShinyButtonProject from "@/components/ui/ShinyButtonProject";
 import Image from "next/image";
 import ArrowDownIcon from "@/components/icons/ArrowDownIcon";
 import { getTranslations } from "next-intl/server";
+import { siteUrl, localizedUrl, localeAlternates } from "@/i18n/url";
 import { Metadata } from "next";
 
 type Props = {
@@ -42,13 +43,11 @@ export async function generateMetadata({
     }),
   ]);
 
-  const baseUrl =
-    process.env.NEXT_PUBLIC_BASE_URL || "https://portfolioesdras.com";
-  const url = `${baseUrl}/${locale}/projects/${slug}`;
-  const imageUrl = `${baseUrl}${projeto.image}`;
+  const url = localizedUrl(locale, `/projects/${slug}`);
+  const imageUrl = `${siteUrl}${projeto.image}`;
 
   const metadata: Metadata = {
-    metadataBase: new URL(baseUrl),
+    metadataBase: new URL(siteUrl),
     title: t("title"),
     description: t("description"),
     keywords: t.has("keywords") ? t("keywords").split(", ") : undefined,
@@ -83,14 +82,7 @@ export async function generateMetadata({
     },
     alternates: {
       canonical: url,
-      languages: {
-        "x-default": `${baseUrl}/en/projects/${slug}`,
-        en: `${baseUrl}/en/projects/${slug}`,
-        pt: `${baseUrl}/pt/projects/${slug}`,
-        es: `${baseUrl}/es/projects/${slug}`,
-        fr: `${baseUrl}/fr/projects/${slug}`,
-        de: `${baseUrl}/de/projects/${slug}`,
-      },
+      languages: localeAlternates(`/projects/${slug}`),
     },
   };
 
@@ -106,9 +98,6 @@ export default async function ProjetoPage({ params }: Props) {
   }
 
   const t = await getTranslations(projeto.namespace);
-  const baseUrl =
-    process.env.NEXT_PUBLIC_BASE_URL || "https://portfolioesdras.com";
-  const url = `${baseUrl}/projects/${slug}`;
 
   const structuredData = {
     "@context": "https://schema.org",
@@ -122,7 +111,7 @@ export default async function ProjetoPage({ params }: Props) {
       "@type": "Person",
       name: "Esdras Santos",
     },
-    image: `${baseUrl}${projeto.image}`,
+    image: `${siteUrl}${projeto.image}`,
     operatingSystem: "Web",
     offers: {
       "@type": "Offer",

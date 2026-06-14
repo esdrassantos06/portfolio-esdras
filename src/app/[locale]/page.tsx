@@ -2,6 +2,7 @@ import HomeComponent from "@/components/sections/Home";
 import { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { Locale } from "next-intl";
+import { siteUrl, localizedUrl, localeAlternates } from "@/i18n/url";
 import dynamic from "next/dynamic";
 
 const About = dynamic(() => import("@/components/About/About"), {
@@ -25,9 +26,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     getTranslations({ locale, namespace: "HomeComponent" }),
   ]);
 
-  const baseUrl =
-    process.env.NEXT_PUBLIC_BASE_URL || "https://portfolioesdras.com";
-  const url = `${baseUrl}/${locale}`;
+  const url = localizedUrl(locale);
 
   return {
     title: t("title"),
@@ -41,7 +40,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       siteName: "Esdras Portfolio",
       images: [
         {
-          url: `${baseUrl}/og-image.jpg`,
+          url: `${siteUrl}/og-image.jpg`,
           width: 1200,
           height: 630,
           alt: t("title"),
@@ -53,26 +52,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: t("title"),
       description: homeT("description"),
       creator: "@esdrasprft",
-      images: [`${baseUrl}/og-image.jpg`],
+      images: [`${siteUrl}/og-image.jpg`],
     },
     alternates: {
       canonical: url,
-      languages: {
-        "x-default": `${baseUrl}/en`,
-        en: `${baseUrl}/en`,
-        pt: `${baseUrl}/pt`,
-        es: `${baseUrl}/es`,
-        fr: `${baseUrl}/fr`,
-        de: `${baseUrl}/de`,
-      },
+      languages: localeAlternates(),
     },
   };
 }
 
 export default async function Home({ params }: Props) {
   const { locale } = await params;
-  const baseUrl =
-    process.env.NEXT_PUBLIC_BASE_URL || "https://portfolioesdras.com";
 
   const structuredData = {
     "@context": "https://schema.org",
@@ -83,13 +73,13 @@ export default async function Home({ params }: Props) {
     jobTitle: "Full Stack Developer",
     description:
       "Full Stack Developer based in Portugal, specializing in React, Next.js, TypeScript, and Node.js.",
-    image: `${baseUrl}/og-image.jpg`,
+    image: `${siteUrl}/og-image.jpg`,
     address: {
       "@type": "PostalAddress",
       addressCountry: "PT",
       addressLocality: "Portugal",
     },
-    url: `${baseUrl}/${locale}`,
+    url: localizedUrl(locale),
     sameAs: [
       "https://github.com/esdrassantos06",
       "https://www.linkedin.com/in/esdrassantos06/",

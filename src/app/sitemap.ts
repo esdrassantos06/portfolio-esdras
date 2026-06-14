@@ -1,36 +1,31 @@
 import { MetadataRoute } from "next";
 import { routing } from "@/i18n/routing";
+import { localizedUrl } from "@/i18n/url";
 import { projetos } from "@/data/projects";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl =
-    process.env.NEXT_PUBLIC_BASE_URL || "https://portfolioesdras.com";
-
+  const lastModified = new Date();
   const routes: MetadataRoute.Sitemap = [];
 
   routing.locales.forEach((locale) => {
     routes.push({
-      url: `${baseUrl}/${locale}`,
-      lastModified: new Date(),
+      url: localizedUrl(locale),
+      lastModified,
       changeFrequency: "monthly",
       priority: 1,
     });
-  });
 
-  routing.locales.forEach((locale) => {
     routes.push({
-      url: `${baseUrl}/${locale}/projects`,
-      lastModified: new Date(),
+      url: localizedUrl(locale, "/projects"),
+      lastModified,
       changeFrequency: "monthly",
       priority: 0.9,
     });
-  });
 
-  routing.locales.forEach((locale) => {
     Object.values(projetos).forEach((project) => {
       routes.push({
-        url: `${baseUrl}/${locale}/projects/${project.slug}`,
-        lastModified: new Date(),
+        url: localizedUrl(locale, `/projects/${project.slug}`),
+        lastModified,
         changeFrequency: "monthly",
         priority: 0.8,
       });
