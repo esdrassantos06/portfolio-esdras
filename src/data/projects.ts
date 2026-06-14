@@ -32,7 +32,7 @@ const tech = {
 
 type TechName = (typeof tech)[keyof typeof tech];
 
-interface Project {
+export interface Project {
   slug: string;
   name: string;
   image: string;
