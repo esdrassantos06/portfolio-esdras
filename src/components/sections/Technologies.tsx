@@ -3,18 +3,12 @@ import Image from "next/image";
 import { FadeIn } from "../ui/ScrollAnimation";
 import { useTranslations } from "next-intl";
 
-class Technology {
-  constructor(
-    public name: string,
-    public src: string,
-    public alt: string,
-    public background: string,
-    public description: string,
-  ) {}
-
-  getSlugName(): string {
-    return this.name.split(" ").join("_").toLowerCase();
-  }
+interface Technology {
+  name: string;
+  src: string;
+  alt: string;
+  background: string;
+  description: string;
 }
 
 interface TechnologyCategory {
@@ -29,168 +23,168 @@ export default function Technologies() {
     {
       title: t("categories.frontend"),
       technologies: [
-        new Technology(
-          "React",
-          "/technologies/react.svg",
-          "React",
-          "bg-[#284147]",
-          t("react"),
-        ),
-        new Technology(
-          "React Native",
-          "/technologies/react.svg",
-          "React Native",
-          "bg-[#20232A]",
-          t("reactNative"),
-        ),
-        new Technology(
-          "Next.js",
-          "/technologies/next.svg",
-          "Next.js",
-          "bg-[#313131]",
-          t("next"),
-        ),
-        new Technology(
-          "Vue.js",
-          "/technologies/vue.svg",
-          "Vue.js",
-          "bg-[#3A6639]",
-          t("vue"),
-        ),
-        new Technology(
-          "Tailwind CSS",
-          "/technologies/tailwind.svg",
-          "Tailwind CSS",
-          "bg-[#183644]",
-          t("tailwind"),
-        ),
-        new Technology(
-          "Typescript",
-          "/technologies/ts.svg",
-          "Typescript",
-          "bg-[#1F2D3D]",
-          t("typescript"),
-        ),
+        {
+          name: "React",
+          src: "/technologies/react.svg",
+          alt: "React",
+          background: "bg-[#284147]",
+          description: t("react"),
+        },
+        {
+          name: "React Native",
+          src: "/technologies/react.svg",
+          alt: "React Native",
+          background: "bg-[#20232A]",
+          description: t("reactNative"),
+        },
+        {
+          name: "Next.js",
+          src: "/technologies/next.svg",
+          alt: "Next.js",
+          background: "bg-[#313131]",
+          description: t("next"),
+        },
+        {
+          name: "Vue.js",
+          src: "/technologies/vue.svg",
+          alt: "Vue.js",
+          background: "bg-[#3A6639]",
+          description: t("vue"),
+        },
+        {
+          name: "Tailwind CSS",
+          src: "/technologies/tailwind.svg",
+          alt: "Tailwind CSS",
+          background: "bg-[#183644]",
+          description: t("tailwind"),
+        },
+        {
+          name: "Typescript",
+          src: "/technologies/ts.svg",
+          alt: "Typescript",
+          background: "bg-[#1F2D3D]",
+          description: t("typescript"),
+        },
       ],
     },
     {
       title: t("categories.backend"),
       technologies: [
-        new Technology(
-          "NodeJS",
-          "/technologies/node.svg",
-          "NodeJS",
-          "bg-[#20625C]",
-          t("node"),
-        ),
-        new Technology(
-          "NestJS",
-          "/technologies/nestjs.svg",
-          "NestJS",
-          "bg-[#DB8181]",
-          t("nest"),
-        ),
-        new Technology(
-          "Go",
-          "/technologies/go.svg",
-          "Go",
-          "bg-[#1B3C5C]",
-          t("go"),
-        ),
-        new Technology(
-          "Python",
-          "/technologies/python.svg",
-          "Python",
-          "bg-[#AE9B07]",
-          t("python"),
-        ),
-        new Technology(
-          "MySQL",
-          "/technologies/mysql.svg",
-          "MySQL",
-          "bg-[#0F4C81]",
-          t("mysql"),
-        ),
-        new Technology(
-          "Postgres",
-          "/technologies/postgres.svg",
-          "Postgres",
-          "bg-[#024795]",
-          t("postgres"),
-        ),
-        new Technology(
-          "MongoDB",
-          "/technologies/mongodb.svg",
-          "MongoDB",
-          "bg-[#54714c]",
-          t("mongo"),
-        ),
-        new Technology(
-          "SQLite",
-          "/technologies/sqlite.svg",
-          "SQLite",
-          "bg-[#172446]",
-          t("sqlite"),
-        ),
-        new Technology(
-          "Flask",
-          "/technologies/flask.svg",
-          "Flask",
-          "bg-[#2A2A2A]",
-          t("flask"),
-        ),
-        new Technology(
-          "FastAPI",
-          "/technologies/fastapi.svg",
-          "FastAPI",
-          "bg-[#009688]",
-          t("fastapi"),
-        ),
-        new Technology(
-          "Redis",
-          "/technologies/redis.svg",
-          "Redis",
-          "bg-[#7A1414]",
-          t("redis"),
-        ),
+        {
+          name: "NodeJS",
+          src: "/technologies/node.svg",
+          alt: "NodeJS",
+          background: "bg-[#20625C]",
+          description: t("node"),
+        },
+        {
+          name: "NestJS",
+          src: "/technologies/nestjs.svg",
+          alt: "NestJS",
+          background: "bg-[#DB8181]",
+          description: t("nest"),
+        },
+        {
+          name: "Go",
+          src: "/technologies/go.svg",
+          alt: "Go",
+          background: "bg-[#1B3C5C]",
+          description: t("go"),
+        },
+        {
+          name: "Python",
+          src: "/technologies/python.svg",
+          alt: "Python",
+          background: "bg-[#AE9B07]",
+          description: t("python"),
+        },
+        {
+          name: "MySQL",
+          src: "/technologies/mysql.svg",
+          alt: "MySQL",
+          background: "bg-[#0F4C81]",
+          description: t("mysql"),
+        },
+        {
+          name: "Postgres",
+          src: "/technologies/postgres.svg",
+          alt: "Postgres",
+          background: "bg-[#024795]",
+          description: t("postgres"),
+        },
+        {
+          name: "MongoDB",
+          src: "/technologies/mongodb.svg",
+          alt: "MongoDB",
+          background: "bg-[#54714c]",
+          description: t("mongo"),
+        },
+        {
+          name: "SQLite",
+          src: "/technologies/sqlite.svg",
+          alt: "SQLite",
+          background: "bg-[#172446]",
+          description: t("sqlite"),
+        },
+        {
+          name: "Flask",
+          src: "/technologies/flask.svg",
+          alt: "Flask",
+          background: "bg-[#2A2A2A]",
+          description: t("flask"),
+        },
+        {
+          name: "FastAPI",
+          src: "/technologies/fastapi.svg",
+          alt: "FastAPI",
+          background: "bg-[#009688]",
+          description: t("fastapi"),
+        },
+        {
+          name: "Redis",
+          src: "/technologies/redis.svg",
+          alt: "Redis",
+          background: "bg-[#7A1414]",
+          description: t("redis"),
+        },
       ],
     },
     {
       title: t("categories.cloud"),
       technologies: [
-        new Technology(
-          "AWS",
-          "/technologies/aws.svg",
-          "aws",
-          "bg-white",
-          t("aws"),
-        ),
+        {
+          name: "AWS",
+          src: "/technologies/aws.svg",
+          alt: "aws",
+          background: "bg-white",
+          description: t("aws"),
+        },
       ],
     },
     {
       title: t("categories.infrastructure"),
       technologies: [
-        new Technology(
-          "Git",
-          "/technologies/git.svg",
-          "Git",
-          "bg-[#284147]",
-          t("git"),
-        ),
-        new Technology(
-          "Docker",
-          "/technologies/docker.svg",
-          "Docker",
-          "bg-[#1F2937]",
-          t("docker"),
-        ),
-        new Technology(
-          "GitHub",
-          "/technologies/github.svg",
-          "GitHub",
-          "bg-[#0D1117]",
-          t("github"),
-        ),
+        {
+          name: "Git",
+          src: "/technologies/git.svg",
+          alt: "Git",
+          background: "bg-[#284147]",
+          description: t("git"),
+        },
+        {
+          name: "Docker",
+          src: "/technologies/docker.svg",
+          alt: "Docker",
+          background: "bg-[#1F2937]",
+          description: t("docker"),
+        },
+        {
+          name: "GitHub",
+          src: "/technologies/github.svg",
+          alt: "GitHub",
+          background: "bg-[#0D1117]",
+          description: t("github"),
+        },
       ],
     },
   ];
@@ -210,11 +204,11 @@ export default function Technologies() {
             once
             className="grid h-fit w-full grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 md:grid-cols-2 md:gap-8 lg:grid-cols-3"
           >
-            {category.technologies.map((tech, techIndex) => {
+            {category.technologies.map((tech) => {
               return (
                 <div
-                  className={`tech-${tech.getSlugName()} bg-fundo2 hover:bg-fundo2hover flex h-22 w-full items-center rounded-2xl border border-transparent px-4 py-3 transition-all duration-300 hover:border-gray-200/50 sm:px-5 sm:py-4 md:px-6`}
-                  key={`${categoryIndex}-${techIndex}`}
+                  className="bg-fundo2 hover:bg-fundo2hover flex h-22 w-full items-center rounded-2xl border border-transparent px-4 py-3 transition-all duration-300 hover:border-gray-200/50 sm:px-5 sm:py-4 md:px-6"
+                  key={`${category.title}-${tech.name}`}
                 >
                   <div className="flex w-full items-center gap-3 sm:gap-4">
                     <span
@@ -230,13 +224,10 @@ export default function Technologies() {
                         loading="lazy"
                       />
                     </span>
-                    <div
-                      title={tech.description}
-                      className="text flex min-w-0 flex-1 flex-col justify-center"
-                    >
-                      <h1 className="line-clamp-1 text-sm font-semibold sm:text-base">
+                    <div className="text flex min-w-0 flex-1 flex-col justify-center">
+                      <h4 className="line-clamp-1 text-sm font-semibold sm:text-base">
                         {tech.name}
-                      </h1>
+                      </h4>
                       <p className="text-principal/80 line-clamp-2 text-xs sm:text-sm">
                         {tech.description}
                       </p>
