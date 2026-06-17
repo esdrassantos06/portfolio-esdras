@@ -80,14 +80,14 @@
   "JWeb": {
     "Metadata": {
       "title": "JWeb | Esdras Portfolio",
-      "description": "Institutional website for JWeb, a complete digital solutions agency. Built with Next.js 16, React 19, TypeScript and multi-language internationalization (Portuguese, English, and Spanish).",
-      "keywords": "digital agency, digital solutions, Next.js, React, TypeScript, internationalization, CMS",
+      "description": "Institutional website and native iOS app for JWeb, a digital agency. Next.js 16, React 19, TypeScript, multilingual (PT/EN/ES), with an APNs push-notification platform (PostgreSQL + Drizzle) and a Capacitor iOS app.",
+      "keywords": "digital agency, digital solutions, Next.js, React, TypeScript, internationalization, CMS, iOS app, Capacitor, push notifications, APNs, PostgreSQL, Drizzle",
       "robots": "index, follow",
       "creator": "Esdras"
     },
-    "title": "COMPLETE INSTITUTIONAL WEBSITE FOR DIGITAL AGENCY",
+    "title": "COMPLETE INSTITUTIONAL WEBSITE AND iOS APP FOR DIGITAL AGENCY",
     "overview": "Project Overview",
-    "description": "Institutional website for JWeb, a complete digital solutions agency. Built with Next.js 16, React 19, TypeScript and multi-language internationalization (Portuguese, English, and Spanish). The project includes a headless CMS with Keystatic, blog system with Markdoc, validated forms with React Hook Form and Zod, email sending with Resend, and complete integration with Google Tag Manager for analytics and GDPR Consent Mode v2. Fully responsive with Tailwind CSS 4 and accessible components from shadcn/ui."
+    "description": "Institutional website and native iOS app for JWeb, a digital agency. Built with Next.js 16, React 19 and TypeScript, fully localized in Portuguese, English and Spanish, and scoring 90+ on Lighthouse. Content runs through a Keystatic headless CMS with a Markdoc blog; forms are validated with React Hook Form, Zod and reCAPTCHA v3, and transactional email is sent with Resend. Analytics run on Google Tag Manager behind GDPR Consent Mode v2. The project also includes a push-notification platform: a PostgreSQL database with Drizzle ORM for device tokens, an admin console to compose and broadcast campaigns, and an APNs sender that delivers in batches with Redis rate limiting and automatic pruning of invalid tokens. The companion iOS app is built with Capacitor, registering push tokens to the backend and supporting universal links and App Tracking Transparency. Styled with Tailwind CSS 4 and accessible shadcn/ui components."
   },
   "PhantomCode": {
     "Metadata": {

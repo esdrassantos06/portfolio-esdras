@@ -80,14 +80,14 @@
   "JWeb": {
     "Metadata": {
       "title": "JWeb | Portfolio d'Esdras",
-      "description": "Site web institutionnel de JWeb, une agence de solutions digitales complète. Développé avec Next.js 16, React 19, TypeScript et internationalisation multilingue (Portugais, Anglais et Espagnol).",
-      "keywords": "agence digitale, solutions digitales, Next.js, React, TypeScript, internationalisation, CMS",
+      "description": "Site web institutionnel et application iOS native pour JWeb, une agence de solutions digitales. Next.js 16, React 19, TypeScript, multilingue (PT/EN/ES), avec une plateforme de notifications push APNs (PostgreSQL + Drizzle) et une app iOS en Capacitor.",
+      "keywords": "agence digitale, solutions digitales, Next.js, React, TypeScript, internationalisation, CMS, app iOS, Capacitor, notifications push, APNs, PostgreSQL, Drizzle",
       "robots": "index, follow",
       "creator": "Esdras"
     },
-    "title": "SITE WEB INSTITUTIONNEL COMPLET POUR AGENCE DIGITALE",
+    "title": "SITE WEB INSTITUTIONNEL ET APP iOS COMPLET POUR AGENCE DIGITALE",
     "overview": "Aperçu du Projet",
-    "description": "Site web institutionnel de JWeb, une agence de solutions digitales complète. Développé avec Next.js 16, React 19, TypeScript et internationalisation multilingue (Portugais, Anglais et Espagnol). Le projet inclut un CMS headless avec Keystatic, système de blog avec Markdoc, formulaires validés avec React Hook Form et Zod, envoi d'emails avec Resend, et intégration complète avec Google Tag Manager pour analytics et GDPR Consent Mode v2. Entièrement responsive avec Tailwind CSS 4 et composants accessibles de shadcn/ui."
+    "description": "Site web institutionnel et application iOS native pour JWeb, une agence de solutions digitales. Développé avec Next.js 16, React 19 et TypeScript, entièrement localisé en Portugais, Anglais et Espagnol, avec un score de 90+ sur Lighthouse. Le contenu est géré via un CMS headless Keystatic avec un blog en Markdoc ; les formulaires sont validés avec React Hook Form, Zod et reCAPTCHA v3, et les emails transactionnels sont envoyés avec Resend. L'analytique tourne sur Google Tag Manager sous le GDPR Consent Mode v2. Le projet inclut aussi une plateforme de notifications push : une base de données PostgreSQL avec Drizzle ORM pour les tokens d'appareils, une console d'administration pour composer et diffuser des campagnes, et un émetteur APNs qui livre par lots avec rate limiting via Redis et nettoyage automatique des tokens invalides. L'application iOS, construite avec Capacitor, enregistre les tokens push sur le backend et prend en charge les universal links et l'App Tracking Transparency. Stylisé avec Tailwind CSS 4 et des composants accessibles de shadcn/ui."
   },
   "PhantomCode": {
     "Metadata": {
