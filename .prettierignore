@@ -1,5 +1,6 @@
 /public
 node_modules/
+bun.lock
 .next/
 .git/
 .env
