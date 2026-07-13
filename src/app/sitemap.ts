@@ -22,6 +22,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     });
 
+    routes.push({
+      url: localizedUrl(locale, "/contact"),
+      lastModified,
+      changeFrequency: "yearly",
+      priority: 0.7,
+    });
+
     Object.values(projetos).forEach((project) => {
       routes.push({
         url: localizedUrl(locale, `/projects/${project.slug}`),

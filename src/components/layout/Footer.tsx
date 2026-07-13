@@ -20,18 +20,18 @@ export default async function Footer() {
           >
             <h2 className="w-fit max-w-full text-4xl font-bold md:text-5xl lg:w-160">
               {t("like")}{" "}
-              <a
+              <Link
                 href="mailto:esdrasirion1@gmail.com"
                 className="focus-visible:outline-principal text-link hover:text-linkhover underline decoration-2 underline-offset-4 transition-all duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 max-md:text-center"
               >
                 {t("viaEmail")}
-              </a>{" "}
+              </Link>{" "}
               {t("toColabor")}
             </h2>
             <ShinyButton
               showArrow={false}
               text={t("schedule")}
-              link="mailto:esdrasirion1@gmail.com"
+              link="/contact"
             />
           </FadeIn>
         </div>
@@ -71,7 +71,7 @@ export default async function Footer() {
                     </Link>
                   </li>
                   <li className="hover:text-principal text-principal/70 font-light">
-                    <Link aria-label="Contact" href={"/#contact"}>
+                    <Link aria-label="Contact" href={"/contact"}>
                       {t("footerNav.contact")}
                     </Link>
                   </li>

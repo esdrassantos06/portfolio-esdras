@@ -163,5 +163,21 @@
   "LocaleSwitcher": {
     "label": "Sprache ändern",
     "locale": "{locale, select, de {Deutsch} en {Englisch} es {Spanisch} fr {Französisch} pt {Portugiesisch} other {Unbekannt}}"
+  },
+  "Contact": {
+    "metaTitle": "Kontakt | Esdras Santos",
+    "metaDescription": "Kontaktieren Sie Esdras Santos zu Projekten, Zusammenarbeit oder Möglichkeiten.",
+    "title": "Kontakt aufnehmen",
+    "subtitle": "Ein Projekt im Kopf oder nur Hallo sagen? Schreiben Sie mir eine Nachricht und ich melde mich bald.",
+    "name": "Name",
+    "namePlaceholder": "Ihr Name",
+    "email": "E-Mail",
+    "emailPlaceholder": "sie@beispiel.com",
+    "message": "Nachricht",
+    "messagePlaceholder": "Erzählen Sie mir von Ihrem Projekt...",
+    "send": "Nachricht senden",
+    "sending": "Senden...",
+    "success": "Nachricht gesendet! Ich melde mich bald.",
+    "error": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut oder schreiben Sie mir direkt."
   }
 }

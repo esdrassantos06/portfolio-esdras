@@ -97,7 +97,7 @@ export default function Navbar() {
     { href: "/#home", label: t("home"), icon: HouseIcon, id: "home" },
     { href: "/#about", label: t("about"), icon: InfoIcon, id: "about" },
     { href: "/#work", label: t("work"), icon: DesktopIcon, id: "work" },
-    { href: "/#contact", label: t("contact"), icon: UserIcon, id: "contact" },
+    { href: "/contact", label: t("contact"), icon: UserIcon, id: "contact" },
   ];
 
   return (

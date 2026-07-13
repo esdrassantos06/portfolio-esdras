@@ -19,6 +19,7 @@
     "motion": "^12.23.26",
     "next": "^16.0.10",
     "next-intl": "^4.6.0",
+    "nodemailer": "^9.0.3",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
     "tailwind-merge": "^3.4.0"
@@ -27,6 +28,7 @@
     "@eslint/eslintrc": "^3.3.3",
     "@tailwindcss/postcss": "^4.1.18",
     "@types/node": "^24.10.3",
+    "@types/nodemailer": "^8.0.1",
     "@types/react": "^19.2.7",
     "@types/react-dom": "19.2.3",
     "baseline-browser-mapping": "^2.10.0",
