@@ -77,6 +77,18 @@
       "allProjects": "Alle Projekte"
     }
   },
+  "Folga": {
+    "Metadata": {
+      "title": "Folga | Esdras Portfolio",
+      "description": "Folga ist ein Steuer-Copilot für Freelancer in Portugal (recibos verdes). Bei jeder Rechnung berechnet er, wie viel für Sozialversicherung, Einkommensteuer und Mehrwertsteuer zurückzulegen ist, und zeigt den realen Nettobetrag. Next.js 16, React 19, Better Auth, Drizzle ORM und PostgreSQL.",
+      "keywords": "Freelancer, Steuern, Portugal, Sozialversicherung, IRS, Mehrwertsteuer, Steuer-Copilot, Next.js, React, Better Auth, Drizzle, PostgreSQL, Polar, Resend",
+      "robots": "index, follow",
+      "creator": "Esdras Santos"
+    },
+    "title": "Steuer-Copilot für Freelancer in Portugal",
+    "overview": "Projekt-Übersicht",
+    "description": "Folga ist ein Steuer-Copilot für Freelancer in Portugal (recibos verdes). Bei jeder Rechnung berechnet er, wie viel für Sozialversicherung, Einkommensteuer (IRS) und Mehrwertsteuer zurückzulegen ist, und zeigt den realen Nettobetrag, ohne böse Überraschungen vom Finanzamt. Der Kern ist eine reine TypeScript-Berechnungsengine mit den Steuerparametern 2026 in einer einzigen Source of Truth und mit anhand unabhängiger Quellen verifizierten IRS-Stufen. Das Dashboard zeigt den Umsatz, die bereits einbehaltene Steuer, den Steuer-Tresor und eine Anzeige für die Mehrwertsteuer-Befreiungsgrenze, dazu Steuerfristen mit E-Mail-Erinnerungen, die ein idempotenter Cron über Resend versendet. Gebaut mit Next.js 16, React 19, Better Auth (E-Mail/Passwort und Google), Drizzle ORM mit PostgreSQL, Tailwind CSS 4, Zod und GSAP. Die Pläne Free und Pro laufen über Polar als Merchant of Record, und Geldbeträge werden in Cent gespeichert, wobei die steuerliche Aufschlüsselung jeder Rechnung bei der Ausstellung gespeichert wird, um die historische Genauigkeit zu erhalten."
+  },
   "JWeb": {
     "Metadata": {
       "title": "JWeb | Esdras Portfolio",

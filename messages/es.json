@@ -77,6 +77,18 @@
       "allProjects": "Todos los Proyectos"
     }
   },
+  "Folga": {
+    "Metadata": {
+      "title": "Folga | Portafolio de Esdras",
+      "description": "Folga es un copiloto fiscal para freelancers en Portugal (recibos verdes). Calcula, en cada recibo, cuánto reservar para la Seguridad Social, el IRS y el IVA, y muestra el neto real. Next.js 16, React 19, Better Auth, Drizzle ORM y PostgreSQL.",
+      "keywords": "freelancers, impuestos, Portugal, Seguridad Social, IRS, IVA, copiloto fiscal, Next.js, React, Better Auth, Drizzle, PostgreSQL, Polar, Resend",
+      "robots": "index, follow",
+      "creator": "Esdras Santos"
+    },
+    "title": "Copiloto fiscal para freelancers en Portugal",
+    "overview": "Resumen del Proyecto",
+    "description": "Folga es un copiloto fiscal para freelancers en Portugal (recibos verdes). En cada recibo, calcula cuánto reservar para la Seguridad Social, el IRS y el IVA, y muestra el neto real, sin sustos con Hacienda. El núcleo es un motor de cálculo en TypeScript puro, con los parámetros fiscales de 2026 en una única fuente de verdad y los tramos del IRS verificados con fuentes independientes. El dashboard muestra lo facturado, el IRS ya retenido, la hucha de impuestos y un medidor del límite de exención de IVA, además de plazos fiscales con recordatorios por email enviados por un cron idempotente vía Resend. Construido con Next.js 16, React 19, Better Auth (email/password y Google), Drizzle ORM con PostgreSQL, Tailwind CSS 4, Zod y GSAP. Los planes Gratuito y Pro se gestionan con Polar como Merchant of Record, y los valores monetarios se guardan en céntimos, con el desglose fiscal de cada recibo guardado en la emisión para preservar la exactitud histórica."
+  },
   "JWeb": {
     "Metadata": {
       "title": "JWeb | Portafolio de Esdras",

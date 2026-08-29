@@ -30,6 +30,9 @@ const tech = {
   odoo: "Odoo",
   drizzle: "Drizzle ORM",
   capacitor: "Capacitor",
+  zod: "Zod",
+  gsap: "GSAP",
+  polar: "Polar",
 } as const;
 
 type TechName = (typeof tech)[keyof typeof tech];
@@ -46,6 +49,27 @@ export interface Project {
 }
 
 export const projetos: Record<string, Project> = {
+  folga: {
+    slug: "folga",
+    name: "Folga",
+    image: "/projects-mockup/folga.webp",
+    demo: "https://folga.online",
+    technologies: [
+      tech.next,
+      tech.ts,
+      tech.react,
+      tech.betterAuth,
+      tech.drizzle,
+      tech.pg,
+      tech.tailwind,
+      tech.zod,
+      tech.gsap,
+      tech.polar,
+      tech.resend,
+    ],
+    namespace: "Folga",
+    featuredHome: true,
+  },
   jweb: {
     slug: "jweb",
     name: "JWeb",
