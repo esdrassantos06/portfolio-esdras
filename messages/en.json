@@ -23,37 +23,27 @@
     "shinyWork": "See My Work"
   },
   "About": {
-    "currentTech": "Current technologies",
-    "description": "These are the tools I reach for most often when shipping production work."
-  },
-  "TechnologiesComponent": {
-    "categories": {
-      "frontend": "Frontend",
-      "backend": "Backend",
-      "cloud": "Cloud",
-      "infrastructure": "Infrastructure"
+    "heading": "I'm Esdras. <accent>I build the whole thing</accent>, from the database to the app.",
+    "lead": "I'm a full stack developer and I spend my days building web and mobile apps that actually go to production. I work from Portugal, remote, and on most projects I'm the only developer: I design the database, write the backend and the API, build the frontend, and ship the app build when the product needs mobile.",
+    "body": "I don't really have a favourite language, but almost all my time goes into TypeScript, with Next.js and Node.js around it. Python when a service calls for it, React Native for mobile, and Postgres with Redis underneath most things. I also like the parts that aren't writing code: picking the stack, modelling the data, reviewing what goes in, and keeping things consistent so the project is still simple a year from now.",
+    "detail": "I've worked on online stores with live payments, multilingual sites, CMS and ERP integrations, and mobile apps in the stores. The part I'm proudest of usually isn't visible: a checkout that doesn't duplicate orders, queries that don't take the server down, tests that run before the deploy, and pages that stay fast after months of new features.",
+    "facts": {
+      "currentlyLabel": "Currently",
+      "currently": "Full stack developer at JWeb, remote",
+      "basedLabel": "Based",
+      "based": "Portugal",
+      "ownsLabel": "Owns",
+      "owns": "Schema, backend, API, frontend, mobile, deploy",
+      "openLabel": "Open to",
+      "open": "New opportunities and freelance work"
     },
-    "aws": "Cloud services",
-    "next": "React SSR framework",
-    "node": "JavaScript runtime",
-    "postgres": "SQL database",
-    "mongo": "NoSQL database",
-    "sqlite": "Embedded database",
-    "python": "Backend language",
-    "react": "JavaScript Library",
-    "reactNative": "Mobile app framework",
-    "git": "Version control",
-    "tailwind": "CSS framework",
-    "typescript": "Javascript but better",
-    "vue": "Progressive JavaScript framework",
-    "nest": "Scalable Node.js framework",
-    "docker": "Container platform",
-    "github": "Code repository platform",
-    "flask": "Python web framework",
-    "fastapi": "Modern Python API framework",
-    "go": "High-performance backend language",
-    "mysql": "Relational database engine",
-    "redis": "In-memory data store"
+    "stack": {
+      "title": "What I build with",
+      "frontend": "Frontend",
+      "backend": "Backend and data",
+      "platform": "Mobile and infra"
+    },
+    "closing": "Right now I'm looking for a new team, somewhere I can keep building bigger things and stop being the only person reviewing my own code. If you have a project or a role, get in touch."
   },
   "Work": {
     "title": "My portfolio",

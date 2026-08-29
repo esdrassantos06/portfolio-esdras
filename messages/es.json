@@ -23,37 +23,27 @@
     "shinyWork": "Ver Mi Trabajo"
   },
   "About": {
-    "currentTech": "Tecnologías actuales",
-    "description": "Estas son las herramientas a las que recurro con más frecuencia al llevar proyectos a producción."
-  },
-  "TechnologiesComponent": {
-    "categories": {
-      "frontend": "Frontend",
-      "backend": "Backend",
-      "cloud": "Cloud",
-      "infrastructure": "Infraestructura"
+    "heading": "Soy Esdras. <accent>Hago la cosa entera</accent>, de la base de datos a la app.",
+    "lead": "Soy desarrollador full stack y me paso los días construyendo aplicaciones web y móviles que llegan de verdad a producción. Trabajo desde Portugal, en remoto, y en la mayoría de los proyectos soy el único desarrollador: diseño la base de datos, escribo el backend y la API, construyo el frontend, y hago la build de la app cuando el producto necesita móvil.",
+    "body": "No tengo lenguaje favorito, pero casi todo mi tiempo va a TypeScript, con Next.js y Node.js alrededor. Python cuando el servicio lo pide, React Native para móvil, y Postgres con Redis debajo de casi todo. También me gusta la parte que no es escribir código: elegir la stack, modelar los datos, revisar lo que entra, y mantener la consistencia para que el proyecto siga siendo simple dentro de un año.",
+    "detail": "He trabajado en tiendas online con pagos reales, sitios multiidioma, integraciones con CMS y ERP, y apps móviles publicadas. De lo que más orgulloso estoy normalmente no se ve: un checkout que no duplica pedidos, consultas que no tumban el servidor, pruebas que corren antes del despliegue, y páginas que siguen rápidas después de meses de funcionalidades nuevas.",
+    "facts": {
+      "currentlyLabel": "Actualmente",
+      "currently": "Desarrollador full stack en JWeb, en remoto",
+      "basedLabel": "Ubicación",
+      "based": "Portugal",
+      "ownsLabel": "Responsable de",
+      "owns": "Esquema, backend, API, frontend, móvil, despliegue",
+      "openLabel": "Disponible para",
+      "open": "Nuevas oportunidades y trabajo freelance"
     },
-    "aws": "Servicios en la nube",
-    "next": "Framework React SSR",
-    "node": "Entorno de ejecución JavaScript",
-    "postgres": "Base de datos SQL",
-    "mongo": "Base de datos NoSQL",
-    "sqlite": "Base de datos embebida",
-    "python": "Lenguaje de backend",
-    "react": "Librería JavaScript",
-    "reactNative": "Framework para apps móviles",
-    "git": "Control de versiones",
-    "tailwind": "Framework CSS",
-    "typescript": "JavaScript pero mejor",
-    "vue": "Framework JavaScript progresivo",
-    "nest": "Framework Node.js escalable",
-    "docker": "Plataforma de contenedores",
-    "github": "Plataforma de repositorio de código",
-    "flask": "Framework web Python",
-    "fastapi": "Framework Python API moderno",
-    "go": "Lenguaje backend de alto rendimiento",
-    "mysql": "Motor de base de datos relacional",
-    "redis": "Almacenamiento en memoria"
+    "stack": {
+      "title": "Con qué construyo",
+      "frontend": "Frontend",
+      "backend": "Backend y datos",
+      "platform": "Móvil e infraestructura"
+    },
+    "closing": "Ahora busco un equipo nuevo, donde pueda seguir construyendo cosas más grandes y dejar de ser la única persona que revisa mi propio código. Si tienes un proyecto o una vacante, escríbeme."
   },
   "Work": {
     "title": "Mi portafolio",

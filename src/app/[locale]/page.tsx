@@ -4,19 +4,10 @@ import { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Locale } from "next-intl";
 import { siteUrl, localizedUrl, localeAlternates } from "@/i18n/url";
-import dynamic from "next/dynamic";
 import DepthSection from "@/components/motion/DepthSection";
 import ContactClose from "@/components/sections/ContactClose";
-
-const About = dynamic(() => import("@/components/About/About"), {
-  loading: () => <div className="min-h-screen" />,
-  ssr: true,
-});
-
-const Work = dynamic(() => import("@/components/sections/Work"), {
-  loading: () => <div className="min-h-screen" />,
-  ssr: true,
-});
+import About from "@/components/About/About";
+import Work from "@/components/sections/Work";
 
 type Props = {
   params: Promise<{ locale: Locale }>;
@@ -81,14 +72,15 @@ export default async function Home({ params }: Props) {
     ],
     knowsAbout: [
       "Full Stack Development",
-      "React",
-      "Next.js",
       "TypeScript",
+      "Next.js",
+      "React",
+      "React Native",
+      "Tailwind CSS",
       "Node.js",
+      "NestJS",
       "Python",
-      "Go",
       "PostgreSQL",
-      "MongoDB",
       "Redis",
       "Docker",
       "AWS",

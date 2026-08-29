@@ -23,37 +23,27 @@
     "shinyWork": "Voir Mon Travail"
   },
   "About": {
-    "currentTech": "Technologies actuelles",
-    "description": "Voici les outils que j'utilise le plus souvent pour mettre des projets en production."
-  },
-  "TechnologiesComponent": {
-    "categories": {
-      "frontend": "Frontend",
-      "backend": "Backend",
-      "cloud": "Cloud",
-      "infrastructure": "Infrastructure"
+    "heading": "Je suis Esdras. <accent>Je fais tout</accent>, de la base de données à l'app.",
+    "lead": "Je suis développeur full stack et je passe mes journées à construire des applications web et mobiles qui partent vraiment en production. Je travaille depuis le Portugal, en télétravail, et sur la plupart des projets je suis le seul développeur : je conçois la base de données, j'écris le backend et l'API, je construis le frontend, et je livre le build de l'app quand le produit a besoin de mobile.",
+    "body": "Je n'ai pas vraiment de langage préféré, mais presque tout mon temps passe dans TypeScript, avec Next.js et Node.js autour. Python quand le service le demande, React Native pour le mobile, et Postgres avec Redis sous presque tout. J'aime aussi la partie qui n'est pas du code : choisir la stack, modéliser les données, relire ce qui entre, et garder de la cohérence pour que le projet reste simple dans un an.",
+    "detail": "J'ai travaillé sur des boutiques en ligne avec de vrais paiements, des sites multilingues, des intégrations CMS et ERP, et des apps mobiles publiées. Ce dont je suis le plus fier ne se voit généralement pas : un checkout qui ne duplique pas les commandes, des requêtes qui ne font pas tomber le serveur, des tests qui tournent avant le déploiement, et des pages qui restent rapides après des mois de nouvelles fonctionnalités.",
+    "facts": {
+      "currentlyLabel": "Actuellement",
+      "currently": "Développeur full stack chez JWeb, en télétravail",
+      "basedLabel": "Basé",
+      "based": "Portugal",
+      "ownsLabel": "Responsable de",
+      "owns": "Schéma, backend, API, frontend, mobile, déploiement",
+      "openLabel": "Ouvert à",
+      "open": "Nouvelles opportunités et missions freelance"
     },
-    "aws": "Services cloud",
-    "next": "Framework React SSR",
-    "node": "Environnement d'exécution JavaScript",
-    "postgres": "Base de données SQL",
-    "mongo": "Base de données NoSQL",
-    "sqlite": "Base de données intégrée",
-    "python": "Langage backend",
-    "react": "Bibliothèque JavaScript",
-    "reactNative": "Framework pour apps mobiles",
-    "git": "Contrôle de version",
-    "tailwind": "Framework CSS",
-    "typescript": "JavaScript en mieux",
-    "vue": "Framework JavaScript progressif",
-    "nest": "Framework Node.js évolutif",
-    "docker": "Plateforme de conteneurs",
-    "github": "Plateforme de dépôt de code",
-    "flask": "Framework web Python",
-    "fastapi": "Framework Python API moderne",
-    "go": "Langage backend haute performance",
-    "mysql": "Moteur de base de données relationnelle",
-    "redis": "Stockage en mémoire"
+    "stack": {
+      "title": "Ce avec quoi je construis",
+      "frontend": "Frontend",
+      "backend": "Backend et données",
+      "platform": "Mobile et infrastructure"
+    },
+    "closing": "En ce moment je cherche une nouvelle équipe, un endroit où continuer à construire des choses plus grandes et arrêter d'être la seule personne qui relit mon propre code. Si tu as un projet ou un poste, écris-moi."
   },
   "Work": {
     "title": "Mon portfolio",
