@@ -165,11 +165,14 @@
     "metaTitle": "Proyectos | Portafolio de Esdras",
     "metaDescription": "Explora todos los proyectos de Esdras Santos: aplicaciones web full-stack, plataformas de e-commerce headless, herramientas de escritorio y apps móviles.",
     "title": "Todos los Proyectos",
-    "subtitle": "Todo lo que he construido, desde stacks completas de e-commerce hasta herramientas de escritorio con IA."
+    "subtitle": "Todo lo que he construido, desde stacks completas de e-commerce hasta herramientas de escritorio con IA.",
+    "count": "{count} proyectos"
   },
   "ProjectCTA": {
     "viewDemo": "Ver Demo",
-    "sourceCode": "Código Fuente"
+    "sourceCode": "Código Fuente",
+    "stack": "Stack",
+    "techCount": "{count} tecnologías"
   },
   "DownloadCV": "Descargar CV",
   "LocaleSwitcher": {

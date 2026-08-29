@@ -165,11 +165,14 @@
     "metaTitle": "Projects | Esdras Portfolio",
     "metaDescription": "Browse every project built by Esdras Santos: full-stack web apps, headless e-commerce platforms, desktop tools and mobile apps.",
     "title": "All Projects",
-    "subtitle": "Everything I've built, from full e-commerce stacks to desktop AI tools."
+    "subtitle": "Everything I've built, from full e-commerce stacks to desktop AI tools.",
+    "count": "{count} projects"
   },
   "ProjectCTA": {
     "viewDemo": "View Demo",
-    "sourceCode": "Source Code"
+    "sourceCode": "Source Code",
+    "stack": "Stack",
+    "techCount": "{count} technologies"
   },
   "DownloadCV": "Download CV",
   "LocaleSwitcher": {
