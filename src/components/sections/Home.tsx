@@ -1,95 +1,150 @@
 "use client";
 
 import CvDownload from "../CvDownload";
-import GridBackground from "../ui/GridBackground";
+import dynamic from "next/dynamic";
 import ShinyButton from "../ui/ShinyButton";
 import Icons from "../icons/Icons";
-import MaskedCursor from "../MaskedCursor/MaskedCursor";
-import { FadeIn } from "../ui/ScrollAnimation";
 import { useTranslations } from "next-intl";
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { onAppReady } from "../motion/appReady";
+
+const HeroScene = dynamic(() => import("../ui/HeroScene"), { ssr: false });
 
 export default function HomeComponent() {
   const t = useTranslations("HomeComponent");
+  const heroRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const el = heroRef.current;
+    if (!el) return;
+
+    const mm = gsap.matchMedia();
+
+    const lineEls = el.querySelectorAll(".hero-line");
+    const eyebrowEl = el.querySelector(".hero-eyebrow");
+    const ruleEl = el.querySelector(".hero-rule");
+    const fadeEls = el.querySelectorAll(".hero-fade");
+
+    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)");
+    if (!reduced.matches) {
+      gsap.set(lineEls, { yPercent: 115 });
+      gsap.set(eyebrowEl, { opacity: 0, y: 14 });
+      gsap.set(ruleEl, { scaleX: 0, transformOrigin: "left center" });
+      gsap.set(fadeEls, { opacity: 0, y: 22 });
+    }
+
+    const stop = onAppReady(() => {
+      mm.add("(prefers-reduced-motion: no-preference)", () => {
+        const tl = gsap.timeline({ defaults: { ease: "expo.out" } });
+
+        tl.to(lineEls, {
+          yPercent: 0,
+          duration: 1.25,
+          stagger: 0.09,
+        })
+          .to(eyebrowEl, { opacity: 1, y: 0, duration: 0.9 }, 0.15)
+          .to(ruleEl, { scaleX: 1, duration: 1.1 }, 0.5)
+          .to(fadeEls, { opacity: 1, y: 0, duration: 1, stagger: 0.1 }, 0.65);
+
+        const loop = gsap.timeline({ repeat: -1, yoyo: true, paused: true });
+        tl.eventCallback("onComplete", () => loop.play());
+
+        loop
+          .to(
+            lineEls,
+            {
+              y: -7,
+              duration: 3.2,
+              ease: "sine.inOut",
+              stagger: 0.35,
+            },
+            0,
+          )
+          .to(
+            el.querySelector(".hero-rule"),
+            { scaleX: 0.82, opacity: 0.55, duration: 3.2, ease: "sine.inOut" },
+            0,
+          );
+
+        const accent = el.querySelector<HTMLElement>(".hero-accent");
+        if (accent) {
+          loop.to(
+            accent,
+            {
+              color: "#d589ff",
+              textShadow: "0 0 28px rgba(189,95,255,0.35)",
+              duration: 3.2,
+              ease: "sine.inOut",
+            },
+            0,
+          );
+        }
+
+        return () => {
+          loop.kill();
+          tl.kill();
+        };
+      });
+    });
+
+    return () => {
+      stop();
+      mm.revert();
+    };
+  }, []);
+
   return (
     <section
+      ref={heroRef}
       id="home"
-      className="z-10 flex min-h-screen w-full max-w-full grow flex-col items-center justify-center gap-4 pt-30 inset-shadow-sm sm:pt-0"
       aria-label="Home section"
+      className="relative z-10 flex min-h-screen w-full items-center pt-32 pb-16 sm:pt-24"
     >
-      <MaskedCursor
-        className="h-screen w-full"
-        maskedContent={
-          <div className="flex flex-col items-center justify-center gap-4" />
-        }
-        normalContent={(isHovered, setIsHovered) => (
-          <div className="mx-auto w-3/4">
-            <header className="relative flex w-full flex-col items-center justify-center gap-4">
-              <div
-                className="title relative z-10000 space-y-2"
-                onMouseEnter={() => setIsHovered(true)}
-                onMouseLeave={() => setIsHovered(false)}
-              >
-                <FadeIn direction="up" once>
-                  <p className="text-principal text-center text-sm font-bold uppercase">
-                    {t("based")}
-                  </p>
-                </FadeIn>
-                <div>
-                  <FadeIn direction="up" once staggerChildren={0.1}>
-                    <h1 className="max-w-screen text-center text-5xl font-bold sm:text-6xl md:text-7xl">
-                      Full{" "}
-                      <span
-                        className={`${
-                          isHovered ? "text-principal" : "text-secundaria"
-                        } transition-all duration-300`}
-                      >
-                        Stack
-                      </span>
-                    </h1>
-                    <h1 className="text-center text-5xl font-bold sm:text-6xl md:text-7xl">
-                      <span
-                        className={`${
-                          isHovered ? "text-principal" : "text-secundaria"
-                        } transition-all duration-300`}
-                      >
-                        Developer
-                      </span>
-                    </h1>
-                  </FadeIn>
-                </div>
-              </div>
+      <div className="mx-auto grid w-3/4 grid-cols-1 items-center gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.85fr)] lg:gap-8">
+        <header className="flex flex-col items-center text-center lg:items-start lg:text-left">
+          <p className="hero-eyebrow text-principal/70 font-mono text-xs tracking-[0.25em] uppercase">
+            {t("based")}
+          </p>
 
-              <FadeIn
-                direction="up"
-                className="relative z-10000 w-3/4 text-center"
-                once
-              >
-                <p className="text-lg">{t("description")}</p>
-              </FadeIn>
-              <nav
-                aria-label="Main navigation actions"
-                className="flex flex-col items-center justify-center gap-4"
-              >
-                <FadeIn
-                  direction="up"
-                  className="flex flex-col items-center justify-center gap-4"
-                  once
-                >
-                  <div className="buttons relative mt-2 flex flex-col items-center gap-4 sm:flex-row sm:gap-2">
-                    <ShinyButton text={t("shinyWork")} link="#work" />
-                    <CvDownload />
-                  </div>
-                  <div className="icons mt-4" aria-label="Social media links">
-                    <Icons />
-                  </div>
-                </FadeIn>
-              </nav>
-            </header>
-          </div>
-        )}
-      />
+          <h1 className="mt-6 text-[clamp(2.75rem,8vw,5.5rem)] leading-[0.95] font-bold tracking-[-0.03em] text-balance">
+            <span className="block overflow-hidden">
+              <span className="hero-line block">Full Stack</span>
+            </span>
+            <span className="block overflow-hidden">
+              <span className="hero-line hero-accent text-secundaria block">
+                Developer
+              </span>
+            </span>
+          </h1>
 
-      <GridBackground />
+          <div
+            aria-hidden="true"
+            className="hero-rule via-secundaria/60 mt-8 h-px w-full max-w-sm bg-linear-to-r from-white/25 to-transparent"
+          />
+
+          <p className="hero-fade text-principal/80 mt-8 max-w-lg text-lg text-pretty">
+            {t("description")}
+          </p>
+
+          <nav
+            aria-label="Main navigation actions"
+            className="hero-fade mt-10 flex flex-col items-center gap-6 lg:items-start"
+          >
+            <div className="flex flex-col items-stretch gap-3 sm:flex-row sm:items-center">
+              <ShinyButton text={t("shinyWork")} link="#work" />
+              <CvDownload />
+            </div>
+            <div aria-label="Social media links">
+              <Icons />
+            </div>
+          </nav>
+        </header>
+
+        <div className="hero-fade relative order-last h-[42vh] min-h-64 w-full lg:order-0 lg:mr-[-13vw] lg:h-[80vh]">
+          <HeroScene />
+        </div>
+      </div>
     </section>
   );
 }

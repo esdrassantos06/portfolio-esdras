@@ -207,12 +207,16 @@ export default function Technologies() {
             {category.technologies.map((tech) => {
               return (
                 <div
-                  className="bg-fundo2 hover:bg-fundo2hover flex h-22 w-full items-center rounded-2xl border border-transparent px-4 py-3 transition-all duration-300 hover:border-gray-200/50 sm:px-5 sm:py-4 md:px-6"
+                  className="group hover:border-secundaria/40 relative flex h-22 w-full items-center overflow-hidden rounded-2xl border border-white/10 bg-white/3 px-4 py-3 transition-all duration-500 hover:-translate-y-1 hover:bg-white/6 hover:shadow-[0_16px_40px_-20px_rgba(169,39,191,0.5)] motion-reduce:transition-none motion-reduce:hover:translate-y-0 sm:px-5 sm:py-4 md:px-6"
                   key={`${category.title}-${tech.name}`}
                 >
+                  <div
+                    aria-hidden="true"
+                    className="pointer-events-none absolute inset-0 -translate-x-full bg-linear-to-r from-transparent via-white/6 to-transparent transition-transform duration-700 group-hover:translate-x-full motion-reduce:hidden"
+                  />
                   <div className="flex w-full items-center gap-3 sm:gap-4">
                     <span
-                      className={`icon flex size-12 shrink-0 items-center justify-center rounded-lg p-2 sm:size-14 ${tech.background}`}
+                      className={`icon flex size-12 shrink-0 items-center justify-center rounded-xl p-2 ring-1 ring-white/10 transition-transform duration-500 group-hover:scale-110 motion-reduce:group-hover:scale-100 sm:size-14 ${tech.background}`}
                     >
                       <Image
                         draggable={false}

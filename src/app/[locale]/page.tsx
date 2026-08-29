@@ -1,9 +1,12 @@
+import Preloader from "@/components/motion/Preloader";
 import HomeComponent from "@/components/sections/Home";
 import { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Locale } from "next-intl";
 import { siteUrl, localizedUrl, localeAlternates } from "@/i18n/url";
 import dynamic from "next/dynamic";
+import DepthSection from "@/components/motion/DepthSection";
+import ContactClose from "@/components/sections/ContactClose";
 
 const About = dynamic(() => import("@/components/About/About"), {
   loading: () => <div className="min-h-screen" />,
@@ -94,13 +97,21 @@ export default async function Home({ params }: Props) {
 
   return (
     <>
+      <Preloader />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       <HomeComponent />
-      <About />
-      <Work />
+      <DepthSection numeral="01">
+        <About />
+      </DepthSection>
+      <DepthSection numeral="02">
+        <Work />
+      </DepthSection>
+      <DepthSection numeral="03">
+        <ContactClose />
+      </DepthSection>
     </>
   );
 }
