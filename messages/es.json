@@ -22,6 +22,10 @@
     "description": "Hola, soy Esdras. Construyo aplicaciones web de extremo a extremo, desde APIs y bases de datos hasta interfaces frontend pulidas y móviles. Disponible para freelance y nuevas colaboraciones.",
     "shinyWork": "Ver Mi Trabajo"
   },
+  "Preloader": {
+    "role": "Desarrollador Full Stack",
+    "loading": "Cargando"
+  },
   "About": {
     "heading": "Soy Esdras. <accent>Hago la cosa entera</accent>, de la base de datos a la app.",
     "lead": "Soy desarrollador full stack y me paso los días construyendo aplicaciones web y móviles que llegan de verdad a producción. Trabajo desde Portugal, en remoto, y en la mayoría de los proyectos soy el único desarrollador: diseño la base de datos, escribo el backend y la API, construyo el frontend, y hago la build de la app cuando el producto necesita móvil.",

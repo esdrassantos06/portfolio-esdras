@@ -22,6 +22,10 @@
     "description": "Hi, I'm Esdras. I build web apps end-to-end, from APIs and databases to polished frontends and mobile. Available for freelance work and new collaborations.",
     "shinyWork": "See My Work"
   },
+  "Preloader": {
+    "role": "Full Stack Developer",
+    "loading": "Loading"
+  },
   "About": {
     "heading": "I'm Esdras. <accent>I build the whole thing</accent>, from the database to the app.",
     "lead": "I'm a full stack developer and I spend my days building web and mobile apps that actually go to production. I work from Portugal, remote, and on most projects I'm the only developer: I design the database, write the backend and the API, build the frontend, and ship the app build when the product needs mobile.",
