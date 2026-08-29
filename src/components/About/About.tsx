@@ -17,7 +17,6 @@ export default function About() {
   return (
     <section
       ref={rootRef}
-      id="about"
       className="mx-auto flex min-h-screen w-full items-center justify-center pt-30 pb-24 sm:py-28"
       aria-label="About Esdras and his stack"
     >

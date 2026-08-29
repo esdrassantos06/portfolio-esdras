@@ -11,12 +11,14 @@ interface DepthSectionProps {
   children: ReactNode;
   numeral?: string;
   className?: string;
+  anchor?: string;
 }
 
 export default function DepthSection({
   children,
   numeral,
   className,
+  anchor,
 }: DepthSectionProps) {
   const ref = useRef<HTMLDivElement>(null);
   const numeralRef = useRef<HTMLSpanElement>(null);
@@ -81,20 +83,22 @@ export default function DepthSection({
   }, []);
 
   return (
-    <div
-      ref={ref}
-      className={`relative will-change-transform ${className ?? ""}`}
-    >
-      {numeral && (
-        <span
-          ref={numeralRef}
-          aria-hidden="true"
-          className="text-principal/25 pointer-events-none absolute top-8 left-2 z-0 hidden font-mono text-[6rem] leading-none font-bold select-none lg:block xl:text-[7rem]"
-        >
-          {numeral}
-        </span>
-      )}
-      {children}
+    <div id={anchor} className="relative">
+      <div
+        ref={ref}
+        className={`relative will-change-transform ${className ?? ""}`}
+      >
+        {numeral && (
+          <span
+            ref={numeralRef}
+            aria-hidden="true"
+            className="text-principal/25 pointer-events-none absolute top-8 left-2 z-0 hidden font-mono text-[6rem] leading-none font-bold select-none lg:block xl:text-[7rem]"
+          >
+            {numeral}
+          </span>
+        )}
+        {children}
+      </div>
     </div>
   );
 }

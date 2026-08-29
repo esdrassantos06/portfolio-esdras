@@ -7,7 +7,6 @@ export default async function Work() {
   const t = await getTranslations("Work");
   return (
     <section
-      id="work"
       className="mx-auto flex min-h-screen w-3/4 items-center justify-center pt-20 sm:py-20"
       aria-label="Work portfolio section"
     >
