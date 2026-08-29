@@ -1,6 +1,7 @@
-import { FadeIn } from "@/components/ui/ScrollAnimation";
-import GridBackground from "@/components/ui/GridBackground";
+import Preloader from "@/components/motion/Preloader";
+import HeroDive from "@/components/motion/HeroDive";
 import AllProjectsList from "@/components/sections/AllProjectsList";
+import { allProjects } from "@/data/projects";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Locale } from "next-intl";
 import { siteUrl, localizedUrl, localeAlternates } from "@/i18n/url";
@@ -48,23 +49,28 @@ export default async function AllProjectsPage({ params }: Props) {
 
   return (
     <>
-      <GridBackground />
+      <Preloader />
       <section
-        className="mx-auto flex w-3/4 flex-col items-center justify-center pt-30 pb-20 sm:pt-40"
+        className="mx-auto flex w-3/4 flex-col pt-32 pb-24 sm:pt-40"
         aria-label="All projects"
       >
-        <header className="mb-16 flex w-full flex-col items-center gap-4 text-center sm:mb-20">
-          <FadeIn direction="up" once>
-            <h1 className="text-4xl font-extrabold sm:text-5xl md:text-6xl">
+        <HeroDive>
+          <header className="mb-16 flex w-full flex-col items-start sm:mb-24">
+            <p className="hero-dive text-principal/50 font-mono text-xs tracking-[0.25em] uppercase">
+              {t("count", { count: allProjects.length })}
+            </p>
+            <h1 className="hero-dive mt-6 text-left text-[clamp(2.5rem,8vw,6rem)] leading-[0.95] font-bold tracking-[-0.03em] text-balance">
               {t("title")}
             </h1>
-          </FadeIn>
-          <FadeIn direction="up" once>
-            <p className="text-principal/70 max-w-2xl text-base sm:text-lg">
+            <div
+              aria-hidden="true"
+              className="hero-dive via-secundaria/60 mt-8 h-px w-full max-w-md bg-linear-to-r from-white/25 to-transparent"
+            />
+            <p className="hero-dive text-principal/70 mt-8 max-w-xl text-lg text-pretty">
               {t("subtitle")}
             </p>
-          </FadeIn>
-        </header>
+          </header>
+        </HeroDive>
 
         <AllProjectsList />
       </section>
