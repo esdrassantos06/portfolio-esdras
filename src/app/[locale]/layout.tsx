@@ -9,6 +9,9 @@ import { GeistMono } from "geist/font/mono";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import BuyMeACoffeeWidget from "@/components/BuyMeACoffeeWidget";
+import SmoothScroll from "@/components/motion/SmoothScroll";
+import AuroraMount from "@/components/ui/AuroraMount";
+import AuroraFallback from "@/components/ui/AuroraFallback";
 import { Metadata } from "next";
 
 type Props = {
@@ -110,21 +113,17 @@ export default async function LocaleLayout({ children, params }: Props) {
     <html
       lang={locale}
       data-scroll-behavior="smooth"
-      className={`${GeistMono.variable} overflow-x-hidden scroll-smooth`}
+      className={`${GeistMono.variable} overflow-x-hidden`}
     >
       <head>
-        <link
-          rel="preload"
-          href="/fonts/satoshi/fonts/Satoshi-Variable.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
         <link rel="preconnect" href="https://cdnjs.buymeacoffee.com" />
         <link rel="dns-prefetch" href="https://cdnjs.buymeacoffee.com" />
       </head>
       <body className="font-satoshi bg-fundo text-principal w-full overflow-x-hidden">
         <NextIntlClientProvider>
+          <SmoothScroll />
+          <AuroraFallback />
+          <AuroraMount />
           <a href="#main-content" className="skip-link">
             Skip to main content
           </a>

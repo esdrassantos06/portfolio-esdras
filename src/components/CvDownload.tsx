@@ -8,10 +8,10 @@ export default function CvDownload() {
       href="/CV/esdrasCV.pdf"
       download="esdrasCV.pdf"
       aria-label={`${t("DownloadCV")} - Curriculum Vitae`}
-      className="hover:border-secundaria focus-visible:outline-principal relative flex h-12 w-50 items-center justify-center gap-3 rounded-lg border border-transparent text-lg transition-all duration-300 focus-visible:outline-2 focus-visible:outline-offset-2"
+      className="group hover:border-secundaria/50 focus-visible:ring-link relative flex h-12 items-center justify-center gap-2.5 rounded-full border border-white/15 bg-white/3 px-7 text-[0.95rem] font-medium transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/7 focus-visible:ring-2 focus-visible:outline-none motion-reduce:transition-none motion-reduce:hover:translate-y-0"
     >
       <DownloadSimpleIcon
-        className="text-secundaria"
+        className="text-secundaria transition-transform duration-300 group-hover:translate-y-0.5"
         size={20}
         aria-hidden="true"
       />

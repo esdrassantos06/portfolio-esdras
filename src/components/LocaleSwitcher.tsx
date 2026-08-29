@@ -55,7 +55,7 @@ export default function LocaleSwitcher() {
     <Select value={locale} onValueChange={handleLanguageChange}>
       <SelectTrigger
         aria-label={t("label")}
-        className="group text-principal hover:border-primary focus:ring-primary focus-visible:outline-principal relative w-full rounded-xl border-none px-4 py-2 transition-all duration-300 hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2"
+        className="group text-principal focus-visible:outline-principal relative w-full rounded-full border-none px-4 py-2 transition-all duration-300 hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2"
       >
         <SelectValue className="sr-only" placeholder={t("label")} />
 
@@ -65,9 +65,9 @@ export default function LocaleSwitcher() {
         />
       </SelectTrigger>
 
-      <SelectContent className="text-principal relative z-999999 w-40 overflow-hidden rounded-xl border border-gray-200/30 bg-gradient-to-b from-white/5 to-transparent p-1 font-mono backdrop-blur-md sm:w-50">
+      <SelectContent className="text-principal bg-fundo/90 relative z-999999 w-44 overflow-hidden rounded-2xl border border-white/10 p-1.5 shadow-[0_24px_60px_-20px_rgba(0,0,0,0.9)] backdrop-blur-xl sm:w-52">
         <SelectGroup>
-          <SelectLabel className="text-secundaria/80 hidden px-3 py-2 text-xs font-semibold tracking-wider uppercase sm:block">
+          <SelectLabel className="text-principal/50 pointer-events-none hidden px-3 pt-2 pb-3 text-[0.7rem] font-medium tracking-wider uppercase select-none sm:block">
             {t("label")}
           </SelectLabel>
 
@@ -79,7 +79,7 @@ export default function LocaleSwitcher() {
                 key={language.code}
                 value={language.code}
                 disabled={isActive}
-                className="group data-[state=checked]:bg-principal/10 flex w-full cursor-pointer items-center gap-3 rounded-lg py-3 transition-all duration-200 hover:bg-white/10 focus:bg-white/15 sm:p-3"
+                className="group data-[state=checked]:bg-secundaria/20 data-[state=checked]:text-principal flex w-full cursor-pointer items-center gap-3 rounded-xl py-3 transition-all duration-200 hover:bg-white/10 focus:bg-white/15 data-[state=checked]:font-medium sm:p-3"
               >
                 <div className="pointer-events-none absolute left-3">
                   <Image

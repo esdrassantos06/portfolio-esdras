@@ -21,7 +21,7 @@ export default function ShinyButtonProject({
         rel="noopener noreferrer"
         aria-label={t("viewDemo")}
         href={demo}
-        className="view-demo before:animate-shine bg-fundo2 hover:bg-fundo2/80 focus-visible:outline-principal relative flex h-12 items-center justify-center gap-3 overflow-hidden rounded-lg border border-gray-200/50 px-4 text-lg transition-all duration-300 before:absolute before:top-0 before:-left-full before:h-full before:w-4 before:scale-120 before:rotate-10 before:bg-linear-to-r before:from-transparent before:to-white/5 focus-visible:outline-2 focus-visible:outline-offset-2"
+        className="view-demo bg-secundaria hover:bg-link focus-visible:ring-link inline-flex h-13 w-fit items-center justify-center gap-3 rounded-full px-6 text-lg font-semibold text-white transition-colors duration-200 focus-visible:ring-2 focus-visible:outline-none"
       >
         <GlobeIcon size={25} aria-hidden="true" />
         <span>{t("viewDemo")}</span>
@@ -33,7 +33,7 @@ export default function ShinyButtonProject({
           aria-label={t("sourceCode")}
           rel="noopener noreferrer"
           target="_blank"
-          className="source-code before:animate-shine bg-fundo2 hover:bg-fundo2/80 focus-visible:outline-principal relative flex h-12 items-center justify-center gap-3 overflow-hidden rounded-lg border border-gray-200/50 px-4 text-lg transition-all duration-300 before:absolute before:top-0 before:-left-full before:h-full before:w-4 before:scale-120 before:rotate-10 before:bg-linear-to-r before:from-transparent before:to-white/5 focus-visible:outline-2 focus-visible:outline-offset-2"
+          className="source-code hover:border-secundaria/50 focus-visible:ring-link inline-flex h-13 w-fit items-center justify-center gap-3 rounded-full border border-white/15 bg-white/3 px-6 text-lg transition-colors duration-200 hover:bg-white/7 focus-visible:ring-2 focus-visible:outline-none"
         >
           <CodeIcon size={25} aria-hidden="true" />
           <span>{t("sourceCode")}</span>

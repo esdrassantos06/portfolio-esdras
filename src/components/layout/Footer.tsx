@@ -9,7 +9,7 @@ export default async function Footer() {
   const t = await getTranslations("Footer");
 
   return (
-    <div className="relative bottom-4 mx-auto mb-8 flex h-fit w-3/4 flex-col items-center justify-between overflow-hidden rounded-2xl border border-gray-200/20">
+    <div className="relative bottom-4 mx-auto mb-8 flex h-fit w-3/4 flex-col items-center justify-between overflow-hidden rounded-3xl border border-white/10 bg-white/2 backdrop-blur-sm">
       <footer id="contact" className="h-fit w-full">
         <div className="first-part-footer flex w-full flex-col items-start justify-start gap-8 p-8 pt-10">
           <FadeIn
@@ -55,22 +55,22 @@ export default async function Footer() {
                   {t("footerNav.title1")}
                 </h3>
                 <ul className="mt-1 flex flex-col gap-2">
-                  <li className="hover:text-principal text-principal/70 font-light">
+                  <li className="text-principal/70 hover:text-principal font-light transition-colors duration-300">
                     <Link aria-label="Home" href={"/#home"}>
                       {t("footerNav.home")}
                     </Link>
                   </li>
-                  <li className="hover:text-principal text-principal/70 font-light">
+                  <li className="text-principal/70 hover:text-principal font-light transition-colors duration-300">
                     <Link aria-label="About Me" href={"/#about"}>
                       {t("footerNav.about")}
                     </Link>
                   </li>
-                  <li className="hover:text-principal text-principal/70 font-light">
+                  <li className="text-principal/70 hover:text-principal font-light transition-colors duration-300">
                     <Link aria-label="My Work" href={"/#work"}>
                       {t("footerNav.work")}
                     </Link>
                   </li>
-                  <li className="hover:text-principal text-principal/70 font-light">
+                  <li className="text-principal/70 hover:text-principal font-light transition-colors duration-300">
                     <Link aria-label="Contact" href={"/contact"}>
                       {t("footerNav.contact")}
                     </Link>
@@ -91,7 +91,7 @@ export default async function Footer() {
                     return (
                       <li
                         key={projeto.slug}
-                        className="hover:text-principal text-principal/70 font-light"
+                        className="text-principal/70 hover:text-principal font-light transition-colors duration-300"
                       >
                         <Link
                           aria-label={projeto.name}
@@ -102,7 +102,7 @@ export default async function Footer() {
                       </li>
                     );
                   })}
-                  <li className="hover:text-principal text-principal/70 font-light">
+                  <li className="text-principal/70 hover:text-principal font-light transition-colors duration-300">
                     <Link
                       aria-label={t("footerNav.allProjects")}
                       href="/projects"
@@ -120,7 +120,7 @@ export default async function Footer() {
                   {t("footerNav.title3")}
                 </h3>
                 <ul className="mt-1 flex flex-col gap-2">
-                  <li className="hover:text-principal text-principal/70 font-light">
+                  <li className="text-principal/70 hover:text-principal font-light transition-colors duration-300">
                     <a
                       rel="noopener noreferrer"
                       aria-label="Linkedin"
@@ -130,7 +130,7 @@ export default async function Footer() {
                       Linkedin
                     </a>
                   </li>
-                  <li className="hover:text-principal text-principal/70 font-light">
+                  <li className="text-principal/70 hover:text-principal font-light transition-colors duration-300">
                     <a
                       href="https://github.com/esdrassantos06"
                       aria-label="Github"

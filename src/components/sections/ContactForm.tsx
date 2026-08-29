@@ -6,7 +6,7 @@ import { useTranslations } from "next-intl";
 type Status = "idle" | "sending" | "sent" | "error";
 
 const inputClass =
-  "focus-visible:outline-principal bg-fundo2 w-full rounded-lg border border-gray-200/20 px-4 py-3 text-base transition-all duration-300 outline-none focus-visible:outline-2 focus-visible:outline-offset-2";
+  "placeholder:text-principal/50 focus:border-secundaria/60 focus:bg-white/6 w-full rounded-xl border border-white/10 bg-white/3 px-4 py-3.5 text-base transition-all duration-300 outline-none focus:ring-2 focus:ring-secundaria/30";
 
 export default function ContactForm() {
   const t = useTranslations("Contact");
@@ -110,7 +110,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={status === "sending"}
-        className="before:animate-shine bg-fundo2 hover:bg-fundo2/80 focus-visible:outline-principal relative flex h-12 items-center justify-center overflow-hidden rounded-lg border border-gray-200/50 text-lg transition-all duration-300 outline-none focus-visible:outline-2 focus-visible:outline-offset-2 disabled:cursor-not-allowed disabled:opacity-60"
+        className="bg-secundaria hover:bg-link focus-visible:ring-link mt-2 flex h-14 items-center justify-center rounded-full text-lg font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_16px_40px_-16px_rgba(169,39,191,0.7)] focus-visible:ring-2 focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-60 motion-reduce:transition-none motion-reduce:hover:translate-y-0"
       >
         {status === "sending" ? t("sending") : t("send")}
       </button>

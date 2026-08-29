@@ -119,7 +119,7 @@ export default function Navbar() {
     >
       <nav
         aria-label="Main navigation"
-        className="relative z-99999 overflow-hidden rounded-2xl border border-gray-200/50 font-mono backdrop-blur-xl"
+        className="bg-fundo/60 relative z-99999 overflow-hidden rounded-full border border-white/10 shadow-[0_8px_32px_-12px_rgba(0,0,0,0.8)] backdrop-blur-xl"
       >
         <div className="relative flex min-w-fit items-center px-4 py-2 sm:px-6">
           <ul className="flex items-center gap-1 font-medium" role="list">
@@ -135,11 +135,11 @@ export default function Navbar() {
                       href={item.href}
                       aria-label={item.label}
                       aria-current={isActive ? "page" : undefined}
-                      className={`group focus-visible:outline-principal relative flex items-center justify-center rounded-xl px-2 py-2.5 transition-all duration-300 hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 active:scale-95 sm:px-4 ${
+                      className={`group focus-visible:outline-principal relative flex items-center justify-center rounded-full px-2 py-2.5 transition-all duration-300 hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 active:scale-95 sm:px-4 ${
                         isActive ? "bg-white/10" : ""
                       }`}
                     >
-                      <div className="from-principal/0 via-principal/5 to-principal/0 absolute inset-0 rounded-xl bg-linear-to-r opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                      <div className="from-principal/0 via-principal/5 to-principal/0 absolute inset-0 rounded-full bg-linear-to-r opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
 
                       <span className="text-principal/90 group-hover:text-principal relative z-10 hidden text-center text-sm tracking-tight transition-colors duration-300 sm:block">
                         {item.label}
