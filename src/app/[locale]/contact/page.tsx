@@ -5,6 +5,8 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Locale } from "next-intl";
 import { siteUrl, localizedUrl, localeAlternates } from "@/i18n/url";
 import { Metadata } from "next";
+import JsonLd from "@/components/JsonLd";
+import { graph, breadcrumbSchema, PERSON_ID, WEBSITE_ID } from "@/lib/schema";
 
 type Props = {
   params: Promise<{ locale: Locale }>;
@@ -46,9 +48,25 @@ export default async function ContactPage({ params }: Props) {
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "Contact" });
 
+  const url = localizedUrl(locale, "/contact");
+  const structuredData = graph(
+    {
+      "@type": "ContactPage",
+      "@id": `${url}#contactpage`,
+      url,
+      name: t("metaTitle"),
+      description: t("metaDescription"),
+      inLanguage: locale,
+      isPartOf: { "@id": WEBSITE_ID },
+      about: { "@id": PERSON_ID },
+    },
+    breadcrumbSchema(locale, [{ name: t("title"), path: "/contact" }]),
+  );
+
   return (
     <>
       <Preloader />
+      <JsonLd data={structuredData} />
       <section
         className="mx-auto grid w-3/4 grid-cols-1 items-start gap-14 pt-32 pb-24 sm:pt-40 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-20"
         aria-label="Contact"

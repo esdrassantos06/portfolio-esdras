@@ -6,6 +6,8 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Locale } from "next-intl";
 import { siteUrl, localizedUrl, localeAlternates } from "@/i18n/url";
 import { Metadata } from "next";
+import JsonLd from "@/components/JsonLd";
+import { graph, breadcrumbSchema, PERSON_ID, WEBSITE_ID } from "@/lib/schema";
 
 type Props = {
   params: Promise<{ locale: Locale }>;
@@ -47,9 +49,35 @@ export default async function AllProjectsPage({ params }: Props) {
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "AllProjects" });
 
+  const url = localizedUrl(locale, "/projects");
+  const structuredData = graph(
+    {
+      "@type": "CollectionPage",
+      "@id": `${url}#collectionpage`,
+      url,
+      name: t("metaTitle"),
+      description: t("metaDescription"),
+      inLanguage: locale,
+      isPartOf: { "@id": WEBSITE_ID },
+      about: { "@id": PERSON_ID },
+      mainEntity: {
+        "@type": "ItemList",
+        numberOfItems: allProjects.length,
+        itemListElement: allProjects.map((project, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          name: project.name,
+          url: localizedUrl(locale, `/projects/${project.slug}`),
+        })),
+      },
+    },
+    breadcrumbSchema(locale, [{ name: t("title"), path: "/projects" }]),
+  );
+
   return (
     <>
       <Preloader />
+      <JsonLd data={structuredData} />
       <section
         className="mx-auto flex w-3/4 flex-col pt-32 pb-24 sm:pt-40"
         aria-label="All projects"

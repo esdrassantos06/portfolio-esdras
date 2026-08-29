@@ -1,6 +1,6 @@
 import { MetadataRoute } from "next";
 import { routing } from "@/i18n/routing";
-import { localizedUrl } from "@/i18n/url";
+import { siteUrl, localizedUrl, localeAlternates } from "@/i18n/url";
 import { projetos } from "@/data/projects";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -13,6 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified,
       changeFrequency: "monthly",
       priority: 1,
+      alternates: { languages: localeAlternates() },
     });
 
     routes.push({
@@ -20,6 +21,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified,
       changeFrequency: "monthly",
       priority: 0.9,
+      alternates: { languages: localeAlternates("/projects") },
     });
 
     routes.push({
@@ -27,14 +29,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified,
       changeFrequency: "yearly",
       priority: 0.7,
+      alternates: { languages: localeAlternates("/contact") },
     });
 
     Object.values(projetos).forEach((project) => {
+      const path = `/projects/${project.slug}`;
       routes.push({
-        url: localizedUrl(locale, `/projects/${project.slug}`),
+        url: localizedUrl(locale, path),
         lastModified,
         changeFrequency: "monthly",
         priority: 0.8,
+        alternates: { languages: localeAlternates(path) },
+        images: [`${siteUrl}${project.image}`],
       });
     });
   });

@@ -60,10 +60,14 @@ export async function generateMetadata(
     },
     twitter: {
       card: "summary_large_image",
+      site: "@esdrasprft",
       title: t("title"),
       description: t("description"),
       creator: "@esdrasprft",
     },
+    verification: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
+      ? { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION }
+      : undefined,
     alternates: {
       canonical: url,
       languages: localeAlternates(),

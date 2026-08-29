@@ -1,15 +1,14 @@
 import { MetadataRoute } from "next";
+import { siteUrl } from "@/i18n/url";
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl =
-    process.env.NEXT_PUBLIC_BASE_URL || "https://portfolioesdras.com";
-
   return {
     rules: {
       userAgent: "*",
       allow: "/",
       disallow: ["/api/", "/_vercel/"],
     },
-    sitemap: `${baseUrl}/sitemap.xml`,
+    sitemap: `${siteUrl}/sitemap.xml`,
+    host: siteUrl,
   };
 }

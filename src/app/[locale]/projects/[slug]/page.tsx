@@ -12,6 +12,8 @@ import { siteUrl, localizedUrl, localeAlternates } from "@/i18n/url";
 import { Metadata } from "next";
 import { Link } from "@/i18n/navigation";
 import { ArrowLeftIcon } from "@phosphor-icons/react/dist/ssr";
+import JsonLd from "@/components/JsonLd";
+import { graph, breadcrumbSchema, PERSON_ID, WEBSITE_ID } from "@/lib/schema";
 
 type Props = {
   params: Promise<{ locale: Locale; slug: string }>;
@@ -127,34 +129,46 @@ export default async function ProjetoPage({ params }: Props) {
     getTranslations("ProjectCTA"),
   ]);
 
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    name: projeto.name,
-    applicationCategory: "WebApplication",
-    description: t("description"),
-    url: projeto.demo,
-    codeRepository: projeto.code,
-    author: {
-      "@type": "Person",
-      name: "Esdras Santos",
+  const url = localizedUrl(locale, `/projects/${slug}`);
+  const structuredData = graph(
+    {
+      "@type": "SoftwareApplication",
+      "@id": `${url}#software`,
+      name: projeto.name,
+      applicationCategory: "WebApplication",
+      description: t("description"),
+      url: projeto.demo,
+      sameAs: projeto.code ? [projeto.code] : undefined,
+      codeRepository: projeto.code,
+      author: { "@id": PERSON_ID },
+      image: `${siteUrl}${projeto.image}`,
+      operatingSystem: "Web",
+      offers: {
+        "@type": "Offer",
+        price: "0",
+        priceCurrency: "USD",
+      },
     },
-    image: `${siteUrl}${projeto.image}`,
-    operatingSystem: "Web",
-    offers: {
-      "@type": "Offer",
-      price: "0",
-      priceCurrency: "USD",
+    {
+      "@type": "WebPage",
+      "@id": `${url}#webpage`,
+      url,
+      name: projeto.name,
+      description: t("description"),
+      inLanguage: locale,
+      isPartOf: { "@id": WEBSITE_ID },
+      primaryImageOfPage: `${siteUrl}${projeto.image}`,
     },
-  };
+    breadcrumbSchema(locale, [
+      { name: allT("title"), path: "/projects" },
+      { name: projeto.name, path: `/projects/${slug}` },
+    ]),
+  );
 
   return (
     <>
       <Preloader />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-      />
+      <JsonLd data={structuredData} />
 
       <div className="w-full pb-24">
         <HeroDive>

@@ -3,7 +3,15 @@ import HomeComponent from "@/components/sections/Home";
 import { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Locale } from "next-intl";
-import { siteUrl, localizedUrl, localeAlternates } from "@/i18n/url";
+import { localizedUrl, localeAlternates } from "@/i18n/url";
+import JsonLd from "@/components/JsonLd";
+import {
+  graph,
+  personSchema,
+  websiteSchema,
+  PERSON_ID,
+  WEBSITE_ID,
+} from "@/lib/schema";
 import DepthSection from "@/components/motion/DepthSection";
 import ContactClose from "@/components/sections/ContactClose";
 import About from "@/components/About/About";
@@ -49,51 +57,27 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function Home({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "LocaleLayout" });
 
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    name: "Esdras Santos",
-    givenName: "Esdras",
-    familyName: "Santos",
-    jobTitle: "Full Stack Developer",
-    description:
-      "Full Stack Developer based in Portugal, specializing in React, Next.js, TypeScript, and Node.js.",
-    image: `${siteUrl}/opengraph-image`,
-    address: {
-      "@type": "PostalAddress",
-      addressCountry: "PT",
-      addressLocality: "Portugal",
+  const structuredData = graph(
+    {
+      "@type": "ProfilePage",
+      "@id": `${localizedUrl(locale)}#profilepage`,
+      url: localizedUrl(locale),
+      name: t("title"),
+      description: t("description"),
+      inLanguage: locale,
+      isPartOf: { "@id": WEBSITE_ID },
+      mainEntity: { "@id": PERSON_ID },
     },
-    url: localizedUrl(locale),
-    sameAs: [
-      "https://github.com/esdrassantos06",
-      "https://www.linkedin.com/in/esdrassantos06/",
-    ],
-    knowsAbout: [
-      "Full Stack Development",
-      "TypeScript",
-      "Next.js",
-      "React",
-      "React Native",
-      "Tailwind CSS",
-      "Node.js",
-      "NestJS",
-      "Python",
-      "PostgreSQL",
-      "Redis",
-      "Docker",
-      "AWS",
-    ],
-  };
+    personSchema(locale),
+    websiteSchema(locale),
+  );
 
   return (
     <>
       <Preloader />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-      />
+      <JsonLd data={structuredData} />
       <HomeComponent />
       <DepthSection numeral="01" anchor="about">
         <About />
