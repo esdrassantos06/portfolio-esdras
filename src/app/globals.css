@@ -12,19 +12,9 @@
   font-style: normal;
 }
 
-@font-face {
-  font-family: "Satoshi-VariableItalic";
-  src: url("../../public/fonts/satoshi/fonts/Satoshi-VariableItalic.woff2")
-    format("woff2");
-  font-weight: 300 900;
-  font-display: swap;
-  font-style: italic;
-}
-
 @theme {
   --font-sans: "Satoshi-Variable", sans-serif;
   --font-satoshi: "Satoshi-Variable", sans-serif;
-  --font-satoshi-variable-italic: "Satoshi-VariableItalic", sans-serif;
   --font-mono:
     var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, Monaco,
     Consolas, monospace;
@@ -59,10 +49,6 @@
       left: 100%;
     }
   }
-}
-
-.gridbg {
-  box-shadow: -2px -1px 33px 39px rgba(10, 10, 10, 0.88) inset;
 }
 
 @theme inline {
@@ -158,4 +144,22 @@
   [tabindex]:focus-visible {
     @apply outline-principal ring-principal/50 ring-2 outline-2 outline-offset-2;
   }
+}
+
+#bmc-wbtn {
+  width: 44px !important;
+  height: 44px !important;
+  border-radius: 22px !important;
+}
+
+#bmc-wbtn img {
+  width: 24px !important;
+  height: 24px !important;
+}
+
+#bmc-wbtn + div {
+  right: 76px !important;
+  max-width: 190px !important;
+  padding: 10px 12px !important;
+  font-size: 13px !important;
 }
