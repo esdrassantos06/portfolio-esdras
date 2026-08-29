@@ -194,5 +194,11 @@
     "sending": "Enviando...",
     "success": "¡Mensaje enviado! Te responderé pronto.",
     "error": "Algo salió mal. Inténtalo de nuevo o escríbeme directamente."
+  },
+  "ErrorPage": {
+    "title": "Algo salió mal",
+    "description": "Se produjo un error inesperado al cargar esta página. Vuelve a intentarlo o regresa al inicio.",
+    "retry": "Intentar de nuevo",
+    "home": "Volver al inicio"
   }
 }

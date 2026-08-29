@@ -194,5 +194,11 @@
     "sending": "Envoi...",
     "success": "Message envoyé ! Je vous répondrai bientôt.",
     "error": "Une erreur s est produite. Réessayez ou envoyez-moi un e-mail directement."
+  },
+  "ErrorPage": {
+    "title": "Une erreur est survenue",
+    "description": "Une erreur inattendue s'est produite lors du chargement de cette page. Réessayez ou revenez à l'accueil.",
+    "retry": "Réessayer",
+    "home": "Retour à l'accueil"
   }
 }

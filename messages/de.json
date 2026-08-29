@@ -194,5 +194,11 @@
     "sending": "Senden...",
     "success": "Nachricht gesendet! Ich melde mich bald.",
     "error": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut oder schreiben Sie mir direkt."
+  },
+  "ErrorPage": {
+    "title": "Etwas ist schiefgelaufen",
+    "description": "Beim Laden dieser Seite ist ein unerwarteter Fehler aufgetreten. Versuchen Sie es erneut oder kehren Sie zur Startseite zurück.",
+    "retry": "Erneut versuchen",
+    "home": "Zurück zur Startseite"
   }
 }

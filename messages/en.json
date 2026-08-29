@@ -194,5 +194,11 @@
     "sending": "Sending...",
     "success": "Message sent! I will get back to you soon.",
     "error": "Something went wrong. Please try again or email me directly."
+  },
+  "ErrorPage": {
+    "title": "Something went wrong",
+    "description": "An unexpected error occurred while loading this page. Try again or go back home.",
+    "retry": "Try again",
+    "home": "Back to home"
   }
 }

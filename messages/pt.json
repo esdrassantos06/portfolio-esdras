@@ -194,5 +194,11 @@
     "sending": "A enviar...",
     "success": "Mensagem enviada! Responderei em breve.",
     "error": "Algo correu mal. Tente novamente ou envie-me um email diretamente."
+  },
+  "ErrorPage": {
+    "title": "Algo correu mal",
+    "description": "Ocorreu um erro inesperado ao carregar esta página. Tente novamente ou volte ao início.",
+    "retry": "Tentar novamente",
+    "home": "Voltar ao início"
   }
 }
