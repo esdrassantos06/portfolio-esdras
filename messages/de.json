@@ -187,7 +187,16 @@
     "send": "Nachricht senden",
     "sending": "Senden...",
     "success": "Nachricht gesendet! Ich melde mich bald.",
-    "error": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut oder schreiben Sie mir direkt."
+    "error": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut oder schreiben Sie mir direkt.",
+    "rateLimited": "Zu viele Nachrichten. Bitte versuchen Sie es in einigen Minuten erneut.",
+    "validation": {
+      "nameRequired": "Bitte geben Sie Ihren Namen ein.",
+      "nameTooShort": "Der Name muss mindestens 2 Zeichen haben.",
+      "emailRequired": "Bitte geben Sie Ihre E-Mail ein.",
+      "emailInvalid": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+      "messageRequired": "Bitte schreiben Sie eine Nachricht.",
+      "messageTooShort": "Die Nachricht muss mindestens 10 Zeichen haben."
+    }
   },
   "ErrorPage": {
     "title": "Etwas ist schiefgelaufen",

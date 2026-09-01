@@ -187,7 +187,16 @@
     "send": "Enviar mensaje",
     "sending": "Enviando...",
     "success": "¡Mensaje enviado! Te responderé pronto.",
-    "error": "Algo salió mal. Inténtalo de nuevo o escríbeme directamente."
+    "error": "Algo salió mal. Inténtalo de nuevo o escríbeme directamente.",
+    "rateLimited": "Demasiados mensajes. Inténtalo de nuevo en unos minutos.",
+    "validation": {
+      "nameRequired": "Introduce tu nombre.",
+      "nameTooShort": "El nombre debe tener al menos 2 caracteres.",
+      "emailRequired": "Introduce tu correo.",
+      "emailInvalid": "Introduce un correo válido.",
+      "messageRequired": "Escribe un mensaje.",
+      "messageTooShort": "El mensaje debe tener al menos 10 caracteres."
+    }
   },
   "ErrorPage": {
     "title": "Algo salió mal",

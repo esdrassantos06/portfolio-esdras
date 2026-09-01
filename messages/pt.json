@@ -187,7 +187,16 @@
     "send": "Enviar mensagem",
     "sending": "A enviar...",
     "success": "Mensagem enviada! Responderei em breve.",
-    "error": "Algo correu mal. Tente novamente ou envie-me um email diretamente."
+    "error": "Algo correu mal. Tente novamente ou envie-me um email diretamente.",
+    "rateLimited": "Demasiadas mensagens. Tente novamente dentro de alguns minutos.",
+    "validation": {
+      "nameRequired": "Indique o seu nome.",
+      "nameTooShort": "O nome deve ter pelo menos 2 caracteres.",
+      "emailRequired": "Indique o seu email.",
+      "emailInvalid": "Introduza um email válido.",
+      "messageRequired": "Escreva uma mensagem.",
+      "messageTooShort": "A mensagem deve ter pelo menos 10 caracteres."
+    }
   },
   "ErrorPage": {
     "title": "Algo correu mal",

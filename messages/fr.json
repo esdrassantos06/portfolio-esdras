@@ -187,7 +187,16 @@
     "send": "Envoyer le message",
     "sending": "Envoi...",
     "success": "Message envoyé ! Je vous répondrai bientôt.",
-    "error": "Une erreur s est produite. Réessayez ou envoyez-moi un e-mail directement."
+    "error": "Une erreur s est produite. Réessayez ou envoyez-moi un e-mail directement.",
+    "rateLimited": "Trop de messages. Réessayez dans quelques minutes.",
+    "validation": {
+      "nameRequired": "Indiquez votre nom.",
+      "nameTooShort": "Le nom doit contenir au moins 2 caractères.",
+      "emailRequired": "Indiquez votre e-mail.",
+      "emailInvalid": "Saisissez une adresse e-mail valide.",
+      "messageRequired": "Écrivez un message.",
+      "messageTooShort": "Le message doit contenir au moins 10 caractères."
+    }
   },
   "ErrorPage": {
     "title": "Une erreur est survenue",
