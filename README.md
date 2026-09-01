@@ -1,103 +1,102 @@
-# 🚀 Esdras Santos Portfolio
+# Esdras Santos Portfolio
 
-## Overview
+Personal portfolio at [portfolioesdras.com](https://portfolioesdras.com). Built with the Next.js App Router, localized in 5 languages, with a WebGL hero, a working contact form, and structured data for search engines.
 
-This is a personal portfolio website showcasing my skills, projects, and professional journey as a Full Stack Developer. Built with modern web technologies, the portfolio provides an interactive and visually appealing representation of my work.
+## Features
 
-## 🌟 Features
+- Multilingual routing with `next-intl` (English, German, Spanish, French, Portuguese), locale prefix only when needed
+- Three.js hero scene and aurora background, with a static fallback
+- GSAP and Motion scroll animations, Lenis smooth scrolling, custom preloader
+- Project catalog with per-project detail pages generated from `src/data/projects.ts`
+- Contact form backed by `/api/contact` (Nodemailer over SMTP, honeypot field, 5 requests per 10 minutes per IP)
+- SEO: hreflang sitemap, `robots.txt`, JSON-LD (Person, WebSite, BreadcrumbList), dynamic OpenGraph image, `/llms.txt`
+- CV download and Buy Me a Coffee widget
 
-- Responsive and modern design
-- Smooth scroll animations
-- Interactive components
-- Project showcases
-- Downloadable CV
-- Masked cursor effect
-- Grid background
-- Technology stack highlights
+## Tech Stack
 
-## 🛠 Technologies Used
+| Area        | Tools                                                                            |
+| ----------- | -------------------------------------------------------------------------------- |
+| Framework   | Next.js 16 (App Router), React 19, TypeScript                                    |
+| Styling     | Tailwind CSS v4, `tailwind-merge`, Radix Select, Geist + Phosphor / Lucide icons |
+| Motion & 3D | GSAP, Motion, Lenis, Three.js                                                    |
+| i18n        | next-intl                                                                        |
+| Backend     | Next.js Route Handlers, Nodemailer                                               |
+| Tooling     | Bun, ESLint, Prettier                                                            |
 
-### Frontend
+## Getting Started
 
-- Next.js 16
-- React 19
-- TypeScript
-- Tailwind CSS
-- Framer Motion
-- Next INTL
-- Bun
-
-### Design & Interactions
-
-- Phosphor Icons
-- Custom scroll animations
-- Masked cursor effect
-- Shiny button animations
-
-## 📦 Getting Started
-
-### Prerequisites
-
-- Node.js (18.x or later)
-- npm or yarn or bun
-
-### Installation
-
-1. Clone the repository
+Requires Bun (or Node 18+ with npm/yarn).
 
 ```bash
 git clone https://github.com/esdrassantos06/portfolio-esdras.git
-```
-
-2. Install dependencies
-
-```bash
-npm install
-# or
-yarn install
-# or
+cd portfolio-esdras
 bun install
 ```
 
-3. Run the development server
+Create a `.env` file:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+NEXT_PUBLIC_BASE_URL=http://localhost:3000
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=587
+SMTP_USER=your@email.com
+SMTP_PASS=your-app-password
+CONTACT_TO=where-messages-land@email.com
+```
+
+Only `NEXT_PUBLIC_BASE_URL` is needed to browse the site. The SMTP variables are required for the contact form; without them `/api/contact` returns `not_configured`.
+
+Run the dev server:
+
+```bash
 bun dev
 ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser
+Open [http://localhost:3000](http://localhost:3000).
 
-## 🚀 Build for Production
+## Scripts
 
-```bash
-npm run build
-npm start
-# or
-yarn build
-yarn start
-# or
-bun run build
-bun start
+| Command          | Description                |
+| ---------------- | -------------------------- |
+| `bun dev`        | Start the dev server       |
+| `bun run build`  | Production build           |
+| `bun start`      | Serve the production build |
+| `bun run lint`   | ESLint                     |
+| `bun run format` | Prettier write             |
+
+## Project Structure
+
+```
+src/
+├── app/
+│   ├── [locale]/          # Localized pages: home, projects, project detail, contact
+│   ├── api/               # contact + health route handlers
+│   ├── llms.txt/          # Machine-readable site summary
+│   ├── robots.ts          # robots.txt
+│   ├── sitemap.ts         # Sitemap with hreflang alternates
+│   └── opengraph-image.tsx
+├── components/            # Sections, layout, motion, UI primitives
+├── data/projects.ts       # Single source of truth for the project list
+├── i18n/                  # Routing, request config, URL helpers
+└── lib/schema.ts          # JSON-LD builders
+messages/                  # Translation files, one per locale
+public/                    # CV, fonts, models, mockups, flags, icons
 ```
 
-## 📄 License
+## Adding a Project
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+1. Add an entry to `src/data/projects.ts` (`slug`, `name`, `image`, `demo`, optional `code`, `technologies`, `namespace`, optional `featuredHome`).
+2. Add the matching `namespace` copy to every file in `messages/`.
+3. Drop the mockup into `public/projects-mockup/`.
 
-## 🤝 Connect With Me
+The sitemap, the projects grid, and `/llms.txt` pick it up automatically.
 
-- 📧 Email: esdrasirion1@gmail.com
-- 🔗 LinkedIn: [Esdras Santos](https://www.linkedin.com/in/esdrassantos06/)
-- 🐱 GitHub: [esdrassantos06](https://github.com/esdrassantos06)
+## License
 
-## 🎨 Design Philosophy
+MIT. See [LICENSE](LICENSE).
 
-This portfolio is more than just a showcase of projects. It's a reflection of my commitment to creating clean, intuitive, and performant web experiences.
+## Contact
 
----
-
-_Crafted with ❤️ by Esdras Santos_
+- Email: esdrasirion1@gmail.com
+- LinkedIn: [esdrassantos06](https://www.linkedin.com/in/esdrassantos06/)
+- GitHub: [esdrassantos06](https://github.com/esdrassantos06)
