@@ -71,7 +71,10 @@ export function FadeIn({
     >
       {React.Children.map(children, (child) =>
         React.isValidElement(child) ? (
-          <motion.div variants={FADE_DOWN as Variants} className="h-full">
+          <motion.div
+            variants={FADE_DOWN as Variants}
+            className="h-full min-w-0"
+          >
             {child}
           </motion.div>
         ) : (

@@ -119,9 +119,9 @@ export default function Navbar() {
     >
       <nav
         aria-label="Main navigation"
-        className="bg-fundo/60 relative z-99999 overflow-hidden rounded-full border border-white/10 shadow-[0_8px_32px_-12px_rgba(0,0,0,0.8)] backdrop-blur-xl"
+        className="bg-fundo/60 relative z-99999 max-w-[calc(100vw-1rem)] overflow-hidden rounded-full border border-white/10 shadow-[0_8px_32px_-12px_rgba(0,0,0,0.8)] backdrop-blur-xl"
       >
-        <div className="relative flex min-w-fit items-center px-4 py-2 sm:px-6">
+        <div className="relative flex min-w-fit items-center px-3 py-2 sm:px-6">
           <ul className="flex items-center gap-1 font-medium" role="list">
             {navItems.map((item) => {
               const isProjectsRoute = pathname.startsWith("/projects");

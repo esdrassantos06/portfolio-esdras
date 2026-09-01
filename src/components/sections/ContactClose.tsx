@@ -8,7 +8,7 @@ export default async function ContactClose() {
     <section
       id="contact-close"
       aria-label="Contact call to action"
-      className="mx-auto flex min-h-[80vh] w-3/4 flex-col items-center justify-center gap-8 py-24 text-center"
+      className="shell flex min-h-[80vh] flex-col items-center justify-center gap-8 py-24 text-center"
     >
       <h2 className="max-w-4xl text-5xl font-bold text-balance sm:text-6xl md:text-7xl">
         {t("title")}

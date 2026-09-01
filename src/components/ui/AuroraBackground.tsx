@@ -91,7 +91,10 @@ function startAurora(canvas: HTMLCanvasElement, animate: boolean) {
   scene.add(quad);
 
   const resize = () => {
-    const dpr = Math.min(window.devicePixelRatio || 1, 1);
+    const dpr = Math.min(
+      window.devicePixelRatio || 1,
+      window.innerWidth < 768 ? 0.75 : 1,
+    );
     renderer.setPixelRatio(dpr);
     renderer.setSize(canvas.clientWidth, canvas.clientHeight, false);
     uniforms.u_res.value.set(

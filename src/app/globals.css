@@ -127,6 +127,23 @@
 }
 
 @layer utilities {
+  .shell {
+    margin-inline: auto;
+    width: min(100% - 2rem, 90rem);
+  }
+
+  @media (width >= 40rem) {
+    .shell {
+      width: min(90%, 90rem);
+    }
+  }
+
+  @media (width >= 64rem) {
+    .shell {
+      width: min(75%, 90rem);
+    }
+  }
+
   .skip-link {
     @apply focus:bg-principal focus:text-background focus:outline-principal sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-999999 focus:rounded-lg focus:px-4 focus:py-2 focus:font-semibold focus:outline-2 focus:outline-offset-2;
   }

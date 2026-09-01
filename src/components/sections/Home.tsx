@@ -47,45 +47,53 @@ export default function HomeComponent() {
           .to(ruleEl, { scaleX: 1, duration: 1.1 }, 0.5)
           .to(fadeEls, { opacity: 1, y: 0, duration: 1, stagger: 0.1 }, 0.65);
 
-        const loop = gsap.timeline({ repeat: -1, yoyo: true, paused: true });
-        tl.eventCallback("onComplete", () => loop.play());
-
-        loop
-          .to(
-            lineEls,
-            {
-              y: -7,
-              duration: 3.2,
-              ease: "sine.inOut",
-              stagger: 0.35,
-            },
-            0,
-          )
-          .to(
-            el.querySelector(".hero-rule"),
-            { scaleX: 0.82, opacity: 0.55, duration: 3.2, ease: "sine.inOut" },
-            0,
-          );
-
-        const accent = el.querySelector<HTMLElement>(".hero-accent");
-        if (accent) {
-          loop.to(
-            accent,
-            {
-              color: "#d589ff",
-              textShadow: "0 0 28px rgba(189,95,255,0.35)",
-              duration: 3.2,
-              ease: "sine.inOut",
-            },
-            0,
-          );
-        }
-
-        return () => {
-          loop.kill();
-          tl.kill();
-        };
+        return () => tl.kill();
       });
+
+      mm.add(
+        "(prefers-reduced-motion: no-preference) and (min-width: 1024px)",
+        () => {
+          const loop = gsap.timeline({ repeat: -1, yoyo: true, delay: 2.4 });
+
+          loop
+            .to(
+              lineEls,
+              {
+                y: -7,
+                duration: 3.2,
+                ease: "sine.inOut",
+                stagger: 0.35,
+              },
+              0,
+            )
+            .to(
+              ruleEl,
+              {
+                scaleX: 0.82,
+                opacity: 0.55,
+                duration: 3.2,
+                ease: "sine.inOut",
+              },
+              0,
+            );
+
+          const accent = el.querySelector<HTMLElement>(".hero-accent");
+          if (accent) {
+            loop.to(
+              accent,
+              {
+                color: "#d589ff",
+                textShadow: "0 0 28px rgba(189,95,255,0.35)",
+                duration: 3.2,
+                ease: "sine.inOut",
+              },
+              0,
+            );
+          }
+
+          return () => loop.kill();
+        },
+      );
     });
 
     return () => {
@@ -101,7 +109,7 @@ export default function HomeComponent() {
       aria-label="Home section"
       className="relative z-10 flex min-h-screen w-full items-center pt-32 pb-16 sm:pt-24"
     >
-      <div className="mx-auto grid w-3/4 grid-cols-1 items-center gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.85fr)] lg:gap-8">
+      <div className="shell grid grid-cols-1 items-center gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.85fr)] lg:gap-8">
         <header className="flex flex-col items-center text-center lg:items-start lg:text-left">
           <p className="hero-eyebrow text-principal/70 font-mono text-xs tracking-[0.25em] uppercase">
             {t("based")}
@@ -141,7 +149,7 @@ export default function HomeComponent() {
           </nav>
         </header>
 
-        <div className="hero-fade relative order-last h-[42vh] min-h-64 w-full lg:order-0 lg:mr-[-13vw] lg:h-[80vh]">
+        <div className="hero-fade relative order-last h-[38vh] max-h-96 min-h-56 w-full lg:order-0 lg:mr-[-13vw] lg:h-[80vh] lg:max-h-none">
           <HeroScene />
         </div>
       </div>

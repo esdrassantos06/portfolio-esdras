@@ -20,7 +20,7 @@ export default function About() {
       className="mx-auto flex min-h-screen w-full items-center justify-center pt-30 pb-24 sm:py-28"
       aria-label="About Esdras and his stack"
     >
-      <div className="relative z-50 mx-auto w-3/4">
+      <div className="shell relative z-50">
         <div className="about-heading-mask overflow-hidden pb-2">
           <h2 className="about-heading max-w-[19ch] text-[clamp(2rem,4.2vw,3.25rem)] leading-[1.08] font-bold tracking-[-0.03em] text-balance">
             {t.rich("heading", {

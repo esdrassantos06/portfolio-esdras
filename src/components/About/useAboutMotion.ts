@@ -115,7 +115,16 @@ export function useAboutMotion(rootRef: RefObject<HTMLElement | null>) {
               );
           });
 
-          gsap.to(".about-panel", {
+          ScrollTrigger.refresh();
+        }, el);
+
+        return () => ctx.revert();
+      });
+
+      mm.add(
+        "(prefers-reduced-motion: no-preference) and (min-width: 1024px)",
+        () => {
+          const tween = gsap.to(q(".about-panel"), {
             yPercent: -8,
             ease: "none",
             scrollTrigger: {
@@ -126,11 +135,12 @@ export function useAboutMotion(rootRef: RefObject<HTMLElement | null>) {
             },
           });
 
-          ScrollTrigger.refresh();
-        }, el);
-
-        return () => ctx.revert();
-      });
+          return () => {
+            tween.scrollTrigger?.kill();
+            tween.kill();
+          };
+        },
+      );
 
       mm.add(
         "(prefers-reduced-motion: no-preference) and (hover: hover)",

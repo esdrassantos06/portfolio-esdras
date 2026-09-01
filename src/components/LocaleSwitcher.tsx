@@ -55,7 +55,7 @@ export default function LocaleSwitcher() {
     <Select value={locale} onValueChange={handleLanguageChange}>
       <SelectTrigger
         aria-label={t("label")}
-        className="group text-principal focus-visible:outline-principal relative w-full rounded-full border-none px-4 py-2 transition-all duration-300 hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2"
+        className="group text-principal focus-visible:outline-principal relative w-full rounded-full border-none px-4 py-2 transition-all duration-300 hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 max-sm:w-11 max-sm:px-0 max-sm:[&_.locale-name]:hidden max-sm:[&>svg]:hidden"
       >
         <SelectValue className="sr-only" placeholder={t("label")} />
 
@@ -91,7 +91,7 @@ export default function LocaleSwitcher() {
                     className="size-5 object-contain sm:h-3 sm:w-5"
                   />
                 </div>
-                <span className="text-principal/90 group-hover:text-principal pl-7 text-sm transition-colors duration-200">
+                <span className="locale-name text-principal/90 group-hover:text-principal pl-7 text-sm transition-colors duration-200">
                   {languageName}
                 </span>
               </SelectItem>

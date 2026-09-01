@@ -119,7 +119,7 @@ export default function Preloader() {
       className="bg-fundo fixed inset-0 z-9999999 flex flex-col justify-center will-change-transform"
       style={{ backgroundImage: AURORA }}
     >
-      <div className="mx-auto w-3/4">
+      <div className="shell">
         <p className="pre-eyebrow text-principal/70 font-mono text-xs tracking-[0.25em] uppercase">
           {t("role")}
         </p>
@@ -137,7 +137,7 @@ export default function Preloader() {
       </div>
 
       <div className="pre-meter absolute right-0 bottom-0 left-0">
-        <div className="mx-auto flex w-3/4 items-end justify-between pb-5">
+        <div className="shell flex items-end justify-between pb-5">
           <span className="text-principal/45 font-mono text-[0.7rem] tracking-[0.25em] uppercase">
             {t("loading")}
           </span>

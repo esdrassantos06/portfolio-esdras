@@ -12,16 +12,19 @@ const TechnologiesProject: React.FC<TechnologiesProjectProps> = ({
   technologies,
 }) => {
   return (
-    <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
-      {technologies.map((tech, i) => (
-        <div
-          key={i}
-          className="bg-fundo4 flex items-center justify-center rounded-md border-1 border-gray-200/20 p-2 text-center text-sm font-light transition-all duration-300 select-none hover:bg-gray-200/20"
-        >
-          {tech.name}
-        </div>
+    <ul
+      className="flex flex-wrap items-center gap-2"
+      role="list"
+      aria-label="Technologies used"
+    >
+      {technologies.map((tech) => (
+        <li key={tech.name} className="shrink-0">
+          <span className="text-principal/80 inline-flex items-center rounded-full border border-white/10 bg-white/5 px-5 py-2 text-xs font-light whitespace-nowrap select-none">
+            {tech.name}
+          </span>
+        </li>
       ))}
-    </div>
+    </ul>
   );
 };
 

@@ -26,9 +26,13 @@ export default function ProjectGrid({
           const link = `/projects/${project.slug}`;
           const isPriority = index < priorityCount;
           return (
-            <li key={project.slug} className="flex h-full">
-              <FadeIn direction="up" className="flex size-full flex-col" once>
-                <article className="group/card hover:border-secundaria/40 flex flex-1 flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/3 transition-all duration-500 hover:-translate-y-2 hover:bg-white/6 hover:shadow-[0_24px_60px_-24px_rgba(169,39,191,0.4)] motion-reduce:transition-none motion-reduce:hover:translate-y-0">
+            <li key={project.slug} className="flex h-full min-w-0">
+              <FadeIn
+                direction="up"
+                className="flex size-full min-w-0 flex-col"
+                once
+              >
+                <article className="group/card hover:border-secundaria/40 flex min-w-0 flex-1 flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/3 transition-all duration-500 hover:-translate-y-2 hover:bg-white/6 hover:shadow-[0_24px_60px_-24px_rgba(169,39,191,0.4)] motion-reduce:transition-none motion-reduce:hover:translate-y-0">
                   <Link
                     href={link}
                     className="bg-fundo3 relative block w-full overflow-hidden"

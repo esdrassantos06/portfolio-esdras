@@ -32,7 +32,7 @@ export default function AboutStack() {
             <h4 className="about-label text-principal/60 font-mono text-xs tracking-[0.2em] uppercase sm:pt-5">
               {labels[group.key]}
             </h4>
-            <div className="flex flex-wrap gap-x-10 gap-y-8">
+            <div className="flex flex-wrap gap-x-6 gap-y-8 sm:gap-x-10">
               {group.items.map((tech) => (
                 <div
                   key={`${group.key}-${tech.name}`}

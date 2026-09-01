@@ -68,7 +68,7 @@ export default async function ContactPage({ params }: Props) {
       <Preloader />
       <JsonLd data={structuredData} />
       <section
-        className="mx-auto grid w-3/4 grid-cols-1 items-start gap-14 pt-32 pb-24 sm:pt-40 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-20"
+        className="shell grid grid-cols-1 items-start gap-14 pt-32 pb-24 sm:pt-40 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-20"
         aria-label="Contact"
       >
         <HeroDive>

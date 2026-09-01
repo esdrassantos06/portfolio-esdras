@@ -60,7 +60,10 @@ function buildScene(canvas: HTMLCanvasElement, animate: boolean) {
     return null;
   }
 
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.75));
+  const pixelRatio = () =>
+    Math.min(window.devicePixelRatio, window.innerWidth < 768 ? 1.25 : 1.75);
+
+  renderer.setPixelRatio(pixelRatio());
   renderer.setSize(canvas.clientWidth, canvas.clientHeight, false);
   renderer.toneMapping = THREE.ACESFilmicToneMapping;
   renderer.toneMappingExposure = 1;
@@ -241,10 +244,12 @@ function buildScene(canvas: HTMLCanvasElement, animate: boolean) {
     if (!w || !h) return;
     camera.aspect = w / h;
     camera.updateProjectionMatrix();
+    renderer.setPixelRatio(pixelRatio());
     renderer.setSize(w, h, false);
     fitCamera();
   };
-  window.addEventListener("resize", resize);
+  const resizeObserver = new ResizeObserver(resize);
+  resizeObserver.observe(canvas);
   resize();
 
   const render = () => {
@@ -279,9 +284,16 @@ function buildScene(canvas: HTMLCanvasElement, animate: boolean) {
   };
 
   let stopReady = () => {};
+  let visibilityObserver: IntersectionObserver | undefined;
 
   if (animate) {
     renderer.setAnimationLoop(tick);
+    visibilityObserver = new IntersectionObserver(
+      ([entry]) =>
+        renderer.setAnimationLoop(entry.isIntersecting ? tick : null),
+      { rootMargin: "120px" },
+    );
+    visibilityObserver.observe(canvas);
     stopReady = onAppReady(() => {
       gsap.from(view, { zoom: 2.3, duration: 2.4, ease: "expo.out" });
       gsap.from(view, { elevation: 1.25, duration: 2.4, ease: "expo.out" });
@@ -295,7 +307,8 @@ function buildScene(canvas: HTMLCanvasElement, animate: boolean) {
     clearTimeout(keyTimer);
     stopReady();
     renderer.setAnimationLoop(null);
-    window.removeEventListener("resize", resize);
+    visibilityObserver?.disconnect();
+    resizeObserver.disconnect();
     canvas.removeEventListener("pointerdown", onPointerDown);
     canvas.removeEventListener("pointermove", onPointerMove);
     canvas.removeEventListener("pointerup", onPointerUp);

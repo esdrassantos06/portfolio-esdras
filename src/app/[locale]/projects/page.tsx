@@ -79,7 +79,7 @@ export default async function AllProjectsPage({ params }: Props) {
       <Preloader />
       <JsonLd data={structuredData} />
       <section
-        className="mx-auto flex w-3/4 flex-col pt-32 pb-24 sm:pt-40"
+        className="shell flex flex-col pt-32 pb-24 sm:pt-40"
         aria-label="All projects"
       >
         <HeroDive>

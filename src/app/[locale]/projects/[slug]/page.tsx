@@ -172,7 +172,7 @@ export default async function ProjetoPage({ params }: Props) {
 
       <div className="w-full pb-24">
         <HeroDive>
-          <header className="mx-auto flex min-h-[85vh] w-3/4 flex-col justify-center pt-32 pb-12">
+          <header className="shell flex min-h-[85vh] flex-col justify-center pt-32 pb-12">
             <Link
               href="/projects"
               className="hero-dive text-principal/60 hover:text-principal focus-visible:outline-principal mb-10 inline-flex w-fit items-center gap-2 font-mono text-xs tracking-[0.2em] uppercase transition-colors duration-300"
@@ -220,7 +220,7 @@ export default async function ProjetoPage({ params }: Props) {
           </figure>
         </FadeIn>
 
-        <article className="mx-auto mt-24 grid w-3/4 grid-cols-1 gap-12 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] lg:gap-20">
+        <article className="shell mt-24 grid grid-cols-1 gap-12 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] lg:gap-20">
           <aside className="lg:sticky lg:top-32 lg:self-start">
             <FadeIn direction="up" once staggerChildren={0.08}>
               <h2 className="text-principal/50 font-mono text-xs tracking-[0.25em] uppercase">

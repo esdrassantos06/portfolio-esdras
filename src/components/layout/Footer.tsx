@@ -9,16 +9,16 @@ export default async function Footer() {
   const t = await getTranslations("Footer");
 
   return (
-    <div className="relative bottom-4 mx-auto mb-8 flex h-fit w-3/4 flex-col items-center justify-between overflow-hidden rounded-3xl border border-white/10 bg-white/2 backdrop-blur-sm">
+    <div className="shell relative bottom-4 mb-8 flex h-fit flex-col items-center justify-between overflow-hidden rounded-3xl border border-white/10 bg-white/2 backdrop-blur-sm">
       <footer id="contact" className="h-fit w-full">
-        <div className="first-part-footer flex w-full flex-col items-start justify-start gap-8 p-8 pt-10">
+        <div className="first-part-footer flex w-full flex-col items-start justify-start gap-8 p-6 pt-8 sm:p-8 sm:pt-10">
           <FadeIn
             direction="up"
             className="flex flex-col gap-6"
             once
             staggerChildren={0.1}
           >
-            <h2 className="w-fit max-w-full text-4xl font-bold md:text-5xl lg:w-160">
+            <h2 className="w-fit max-w-full text-3xl font-bold sm:text-4xl md:text-5xl lg:w-160">
               {t("like")}{" "}
               <Link
                 href="mailto:esdrasirion1@gmail.com"
@@ -38,7 +38,7 @@ export default async function Footer() {
 
         <div className="w-full border-t border-gray-200/20" />
 
-        <div className="second-part-footer flex w-full flex-col justify-between gap-10 p-8 md:flex-row">
+        <div className="second-part-footer flex w-full flex-col justify-between gap-10 p-6 sm:p-8 md:flex-row">
           <FadeIn direction="up" once>
             <div className="name-and-copy flex flex-col gap-2">
               <h3 className="text-xl font-bold">Esdras Santos</h3>
@@ -48,7 +48,7 @@ export default async function Footer() {
             </div>
           </FadeIn>
 
-          <nav className="footer-navbar flex flex-wrap justify-between gap-6 md:w-1/3 md:flex-nowrap md:gap-2">
+          <nav className="footer-navbar grid grid-cols-2 gap-x-6 gap-y-8 sm:flex sm:flex-wrap sm:justify-between md:w-1/3 md:flex-nowrap md:gap-2">
             <FadeIn direction="up" once>
               <div className="navigate">
                 <h3 className="text-principal text-xl font-semibold">
