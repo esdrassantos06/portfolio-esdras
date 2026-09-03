@@ -134,14 +134,20 @@
   "PCByte": {
     "Metadata": {
       "title": "PCByte | Esdras Portfolio",
-      "description": "PCByte is a full-stack technology e-commerce platform with a Medusa.js backend, Next.js storefront, Expo mobile app, and Strapi CMS. Includes custom modules for S3, PayPal, bank transfer, Meilisearch, Odoo and Resend, with security-first practices across the stack.",
-      "keywords": "e-commerce, Medusa, Next.js, Strapi, React Native, Expo, Meilisearch, PayPal, Odoo, Redis, AWS S3, headless commerce",
+      "description": "PCByte is a full-stack technology e-commerce platform with a Medusa.js backend, Next.js storefront, Expo mobile app, and Strapi CMS. Includes custom modules for S3, PayPal, SIBS, bank transfer, Meilisearch, Odoo and Resend, with security-first practices across the stack.",
+      "keywords": "e-commerce, Medusa, Next.js, Strapi, React Native, Expo, Meilisearch, PayPal, SIBS, Multibanco, MB WAY, Odoo, Redis, AWS S3, headless commerce",
       "robots": "index, follow",
       "creator": "Esdras Santos"
     },
     "title": "Full-stack headless e-commerce for a technology store",
     "overview": "Project Overview",
-    "description": "PCByte is a complete e-commerce ecosystem for a technology store, architected across four independent projects. The backend is built on Medusa.js with Redis caching and custom modules for AWS S3 dual-bucket storage, PayPal payments, manual bank transfer, Meilisearch indexing, Odoo ERP synchronization, transactional emails via Resend, weight-based fulfillment, product attributes, media, and reviews. The Next.js 16 storefront uses React 19, next-intl, TanStack Query, Zustand, Jotai and ships with Redis-backed rate limiting, Google reCAPTCHA v3, honeypot fields, DOMPurify sanitization and a Strapi-powered headless CMS. The mobile app is built with Expo and React Native, using secure storage, biometric authentication and MMKV. Strapi (PostgreSQL + S3) powers editorial content. Quality is enforced through unit, integration and Playwright end-to-end tests on the backend and storefront, plus a Vitest suite on the frontend and Jest unit tests on mobile."
+    "description": "PCByte is a complete e-commerce ecosystem for a technology store, architected across four independent projects. The store is in production and selling to real customers. The backend is built on Medusa.js with Redis caching and custom modules for AWS S3 dual-bucket storage, PayPal and SIBS payments covering card, Multibanco and MB WAY, manual bank transfer, Meilisearch indexing over a catalogue of more than 10,000 products, Odoo ERP synchronization, transactional emails via Resend, weight-based fulfillment, product attributes, media, and reviews. The Next.js 16 storefront uses React 19, next-intl, TanStack Query, Zustand, Jotai and ships with Redis-backed rate limiting, Google reCAPTCHA v3, honeypot fields, DOMPurify sanitization and a Strapi-powered headless CMS. The mobile app was rebuilt from scratch with Expo and React Native, reusing only the backend API, with secure storage, biometric authentication and MMKV. Strapi (PostgreSQL + S3) powers editorial content. Quality is enforced through unit, integration and Playwright end-to-end tests on the backend and storefront, plus a Vitest suite on the frontend and Jest unit tests on mobile.",
+    "metrics": {
+      "products": "Products in catalogue",
+      "tests": "Automated test cases",
+      "performance": "Lighthouse performance",
+      "quality": "Lighthouse SEO, accessibility, best practices"
+    }
   },
   "Zipway": {
     "Metadata": {

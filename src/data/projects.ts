@@ -24,6 +24,9 @@ const tech = {
   meilisearch: "Meilisearch",
   s3: "AWS S3",
   paypal: "PayPal",
+  sibs: "SIBS",
+  multibanco: "Multibanco",
+  mbway: "MB WAY",
   vitest: "Vitest",
   playwright: "Playwright",
   resend: "Resend",
@@ -37,6 +40,11 @@ const tech = {
 
 type TechName = (typeof tech)[keyof typeof tech];
 
+export interface ProjectMetric {
+  value: string;
+  label: string;
+}
+
 export interface Project {
   slug: string;
   name: string;
@@ -44,6 +52,7 @@ export interface Project {
   demo: string;
   code?: string;
   technologies: TechName[];
+  metrics?: ProjectMetric[];
   namespace: string;
   featuredHome?: boolean;
 }
@@ -103,7 +112,16 @@ export const projetos: Record<string, Project> = {
       tech.redis,
       tech.meilisearch,
       tech.paypal,
+      tech.sibs,
+      tech.multibanco,
+      tech.mbway,
       tech.s3,
+    ],
+    metrics: [
+      { value: "10k+", label: "products" },
+      { value: "3130", label: "tests" },
+      { value: "92", label: "performance" },
+      { value: "96-100", label: "quality" },
     ],
     namespace: "PCByte",
     featuredHome: true,
