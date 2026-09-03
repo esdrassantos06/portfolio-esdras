@@ -29,16 +29,6 @@ const languages = [
     name: "Español",
     flag: "/flags/es.svg",
   },
-  {
-    code: "fr" as const,
-    name: "Français",
-    flag: "/flags/fr.svg",
-  },
-  {
-    code: "de" as const,
-    name: "Deutsch",
-    flag: "/flags/de.svg",
-  },
 ] as const;
 
 export default function LocaleSwitcher() {

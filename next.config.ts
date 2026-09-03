@@ -17,6 +17,24 @@ const nextConfig: NextConfig = {
       "motion/react",
     ],
   },
+  redirects: async () => {
+    return [
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "www.portfolioesdras.com" }],
+        destination: "https://portfolioesdras.com/:path*",
+        permanent: true,
+      },
+      { source: "/en", destination: "/", permanent: true },
+      { source: "/en/:path*", destination: "/:path*", permanent: true },
+      { source: "/:locale(de|fr)", destination: "/", permanent: true },
+      {
+        source: "/:locale(de|fr)/:path*",
+        destination: "/:path*",
+        permanent: true,
+      },
+    ];
+  },
   headers: async () => {
     return [
       {

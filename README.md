@@ -1,10 +1,10 @@
 # Esdras Santos Portfolio
 
-Personal portfolio at [portfolioesdras.com](https://portfolioesdras.com). Built with the Next.js App Router, localized in 5 languages, with a WebGL hero, a working contact form, and structured data for search engines.
+Personal portfolio at [portfolioesdras.com](https://portfolioesdras.com). Built with the Next.js App Router, localized in 3 languages, with a WebGL hero, a working contact form, and structured data for search engines.
 
 ## Features
 
-- Multilingual routing with `next-intl` (English, German, Spanish, French, Portuguese), locale prefix only when needed
+- Multilingual routing with `next-intl` (English, Portuguese, Spanish), locale prefix only when needed
 - Three.js hero scene and aurora background, with a static fallback
 - GSAP and Motion scroll animations, Lenis smooth scrolling, custom preloader
 - Project catalog with per-project detail pages generated from `src/data/projects.ts`

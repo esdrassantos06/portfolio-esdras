@@ -171,7 +171,7 @@
   "DownloadCV": "Descarregar CV",
   "LocaleSwitcher": {
     "label": "Alterar idioma",
-    "locale": "{locale, select, de {Alemão} en {Inglês} es {Espanhol} fr {Francês} pt {Português} other {Unknown}}"
+    "locale": "{locale, select, en {Inglês} es {Espanhol} pt {Português} other {Unknown}}"
   },
   "Contact": {
     "metaTitle": "Contacto | Esdras Santos",
