@@ -118,7 +118,7 @@ export const projetos: Record<string, Project> = {
       tech.s3,
     ],
     metrics: [
-      { value: "10k+", label: "products" },
+      { value: "70k+", label: "products" },
       { value: "3130", label: "tests" },
       { value: "92", label: "performance" },
       { value: "96-100", label: "quality" },
