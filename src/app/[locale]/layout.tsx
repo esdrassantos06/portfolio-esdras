@@ -65,9 +65,6 @@ export async function generateMetadata(
       description: t("description"),
       creator: "@esdrasprft",
     },
-    verification: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
-      ? { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION }
-      : undefined,
     alternates: {
       canonical: url,
       languages: localeAlternates(),
