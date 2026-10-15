@@ -71,7 +71,7 @@ export default function ProjectGrid({
                     </header>
 
                     <ul
-                      className="technologies mt-auto flex h-8 flex-nowrap items-center gap-2 overflow-hidden"
+                      className="technologies mt-auto flex flex-wrap items-center gap-2"
                       role="list"
                       aria-label="Technologies used"
                     >

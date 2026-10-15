@@ -191,7 +191,7 @@ export default async function ProjetoPage({ params }: Props) {
 
             <div className="hero-dive mt-12 flex w-full flex-wrap items-center gap-x-12 gap-y-6 border-t border-white/10 pt-8">
               <div>
-                <p className="text-principal/50 font-mono text-[0.7rem] tracking-[0.2em] uppercase">
+                <p className="text-principal/60 font-mono text-[0.7rem] tracking-[0.2em] uppercase">
                   {ctaT("stack")}
                 </p>
                 <p className="mt-1 text-base">
@@ -225,7 +225,7 @@ export default async function ProjetoPage({ params }: Props) {
             <dl className="shell mt-20 grid grid-cols-2 gap-x-8 gap-y-10 border-y border-white/10 py-10 lg:grid-cols-4">
               {projeto.metrics.map((metric) => (
                 <div key={metric.label}>
-                  <dt className="text-principal/50 font-mono text-[0.7rem] tracking-[0.2em] uppercase">
+                  <dt className="text-principal/60 font-mono text-[0.7rem] tracking-[0.2em] uppercase">
                     {t(`metrics.${metric.label}`)}
                   </dt>
                   <dd className="mt-2 text-[clamp(2rem,5vw,3.25rem)] leading-none font-bold tracking-[-0.03em]">
@@ -240,7 +240,7 @@ export default async function ProjetoPage({ params }: Props) {
         <article className="shell mt-24 grid grid-cols-1 gap-12 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] lg:gap-20">
           <aside className="lg:sticky lg:top-32 lg:self-start">
             <FadeIn direction="up" once staggerChildren={0.08}>
-              <h2 className="text-principal/50 font-mono text-xs tracking-[0.25em] uppercase">
+              <h2 className="text-principal/60 font-mono text-xs tracking-[0.25em] uppercase">
                 {t("overview")}
               </h2>
               <div className="mt-6">

@@ -4,6 +4,7 @@ import CvDownload from "../CvDownload";
 import dynamic from "next/dynamic";
 import ShinyButton from "../ui/ShinyButton";
 import Icons from "../icons/Icons";
+import { MapPinIcon } from "@phosphor-icons/react";
 import { useTranslations } from "next-intl";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
@@ -22,14 +23,12 @@ export default function HomeComponent() {
     const mm = gsap.matchMedia();
 
     const lineEls = el.querySelectorAll(".hero-line");
-    const eyebrowEl = el.querySelector(".hero-eyebrow");
     const ruleEl = el.querySelector(".hero-rule");
     const fadeEls = el.querySelectorAll(".hero-fade");
 
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)");
     if (!reduced.matches) {
       gsap.set(lineEls, { yPercent: 115 });
-      gsap.set(eyebrowEl, { opacity: 0, y: 14 });
       gsap.set(ruleEl, { scaleX: 0, transformOrigin: "left center" });
       gsap.set(fadeEls, { opacity: 0, y: 22 });
     }
@@ -43,7 +42,6 @@ export default function HomeComponent() {
           duration: 1.25,
           stagger: 0.09,
         })
-          .to(eyebrowEl, { opacity: 1, y: 0, duration: 0.9 }, 0.15)
           .to(ruleEl, { scaleX: 1, duration: 1.1 }, 0.5)
           .to(fadeEls, { opacity: 1, y: 0, duration: 1, stagger: 0.1 }, 0.65);
 
@@ -111,11 +109,7 @@ export default function HomeComponent() {
     >
       <div className="shell grid grid-cols-1 items-center gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.85fr)] lg:gap-8">
         <header className="flex flex-col items-center text-center lg:items-start lg:text-left">
-          <p className="hero-eyebrow text-principal/70 font-mono text-xs tracking-[0.25em] uppercase">
-            {t("based")}
-          </p>
-
-          <h1 className="mt-6 text-[clamp(2.75rem,8vw,5.5rem)] leading-[0.95] font-bold tracking-[-0.03em] text-balance">
+          <h1 className="text-[clamp(2.75rem,8vw,5.5rem)] leading-[0.95] font-bold tracking-[-0.03em] text-balance">
             <span className="block overflow-hidden">
               <span className="hero-line block">Full Stack</span>
             </span>
@@ -143,8 +137,14 @@ export default function HomeComponent() {
               <ShinyButton text={t("shinyWork")} link="#work" />
               <CvDownload />
             </div>
-            <div aria-label="Social media links">
-              <Icons />
+            <div className="flex items-center gap-5">
+              <div aria-label="Social media links">
+                <Icons />
+              </div>
+              <p className="text-principal/70 flex items-center gap-1.5 text-sm">
+                <MapPinIcon size={16} aria-hidden="true" />
+                {t("based")}
+              </p>
             </div>
           </nav>
         </header>

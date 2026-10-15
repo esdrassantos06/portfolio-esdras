@@ -124,6 +124,16 @@
   body {
     @apply bg-background text-foreground;
   }
+  html {
+    color-scheme: dark;
+    scrollbar-color: var(--color-fundo4) var(--color-fundo);
+    accent-color: var(--color-secundaria);
+    caret-color: var(--color-link);
+  }
+  ::selection {
+    background-color: var(--color-secundaria);
+    color: #fff;
+  }
 }
 
 @layer utilities {

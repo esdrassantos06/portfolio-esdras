@@ -73,11 +73,7 @@ export default async function ContactPage({ params }: Props) {
       >
         <HeroDive>
           <header className="flex flex-col items-center text-center lg:sticky lg:top-40 lg:items-start lg:text-left">
-            <p className="hero-dive text-principal/50 font-mono text-xs tracking-[0.25em] uppercase">
-              Portugal · {new Date().getFullYear()}
-            </p>
-
-            <h1 className="hero-dive mt-6 text-[clamp(2.5rem,7vw,4.5rem)] leading-[0.95] font-bold tracking-[-0.03em] text-balance">
+            <h1 className="hero-dive text-[clamp(2.5rem,7vw,4.5rem)] leading-[0.95] font-bold tracking-[-0.03em] text-balance">
               {t("title")}
             </h1>
 

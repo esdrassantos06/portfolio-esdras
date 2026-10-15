@@ -36,7 +36,7 @@ export default async function Footer() {
           </FadeIn>
         </div>
 
-        <div className="w-full border-t border-gray-200/20" />
+        <div className="w-full border-t border-white/10" />
 
         <div className="second-part-footer flex w-full flex-col justify-between gap-10 p-6 sm:p-8 md:flex-row">
           <FadeIn direction="up" once>
@@ -48,32 +48,24 @@ export default async function Footer() {
             </div>
           </FadeIn>
 
-          <nav className="footer-navbar grid grid-cols-2 gap-x-6 gap-y-8 sm:flex sm:flex-wrap sm:justify-between md:w-1/3 md:flex-nowrap md:gap-2">
+          <nav className="footer-navbar grid shrink-0 grid-cols-2 gap-x-10 gap-y-8 whitespace-nowrap sm:grid-cols-3 md:gap-x-14">
             <FadeIn direction="up" once>
               <div className="navigate">
                 <h3 className="text-principal text-xl font-semibold">
                   {t("footerNav.title1")}
                 </h3>
-                <ul className="mt-1 flex flex-col gap-2">
+                <ul className="mt-3 flex flex-col gap-2">
                   <li className="text-principal/70 hover:text-principal font-light transition-colors duration-300">
-                    <Link aria-label="Home" href={"/#home"}>
-                      {t("footerNav.home")}
-                    </Link>
+                    <Link href={"/#home"}>{t("footerNav.home")}</Link>
                   </li>
                   <li className="text-principal/70 hover:text-principal font-light transition-colors duration-300">
-                    <Link aria-label="About Me" href={"/#about"}>
-                      {t("footerNav.about")}
-                    </Link>
+                    <Link href={"/#about"}>{t("footerNav.about")}</Link>
                   </li>
                   <li className="text-principal/70 hover:text-principal font-light transition-colors duration-300">
-                    <Link aria-label="My Work" href={"/#work"}>
-                      {t("footerNav.work")}
-                    </Link>
+                    <Link href={"/#work"}>{t("footerNav.work")}</Link>
                   </li>
                   <li className="text-principal/70 hover:text-principal font-light transition-colors duration-300">
-                    <Link aria-label="Contact" href={"/contact"}>
-                      {t("footerNav.contact")}
-                    </Link>
+                    <Link href={"/contact"}>{t("footerNav.contact")}</Link>
                   </li>
                 </ul>
               </div>
@@ -84,7 +76,7 @@ export default async function Footer() {
                 <h3 className="text-principal text-xl font-semibold">
                   {t("footerNav.title2")}
                 </h3>
-                <ul className="mt-1 flex flex-col gap-2">
+                <ul className="mt-3 flex flex-col gap-2">
                   {footerProjectSlugs.map((slug) => {
                     const projeto = projetos[slug];
                     if (!projeto) return null;
@@ -93,22 +85,14 @@ export default async function Footer() {
                         key={projeto.slug}
                         className="text-principal/70 hover:text-principal font-light transition-colors duration-300"
                       >
-                        <Link
-                          aria-label={projeto.name}
-                          href={`/projects/${projeto.slug}`}
-                        >
+                        <Link href={`/projects/${projeto.slug}`}>
                           {projeto.name}
                         </Link>
                       </li>
                     );
                   })}
                   <li className="text-principal/70 hover:text-principal font-light transition-colors duration-300">
-                    <Link
-                      aria-label={t("footerNav.allProjects")}
-                      href="/projects"
-                    >
-                      {t("footerNav.allProjects")}
-                    </Link>
+                    <Link href="/projects">{t("footerNav.allProjects")}</Link>
                   </li>
                 </ul>
               </div>
@@ -119,11 +103,10 @@ export default async function Footer() {
                 <h3 className="text-principal text-xl font-semibold">
                   {t("footerNav.title3")}
                 </h3>
-                <ul className="mt-1 flex flex-col gap-2">
+                <ul className="mt-3 flex flex-col gap-2">
                   <li className="text-principal/70 hover:text-principal font-light transition-colors duration-300">
                     <a
                       rel="noopener noreferrer"
-                      aria-label="Linkedin"
                       target="_blank"
                       href="https://www.linkedin.com/in/esdrassantos06/"
                     >
@@ -133,7 +116,6 @@ export default async function Footer() {
                   <li className="text-principal/70 hover:text-principal font-light transition-colors duration-300">
                     <a
                       href="https://github.com/esdrassantos06"
-                      aria-label="Github"
                       rel="noopener noreferrer"
                       target="_blank"
                     >

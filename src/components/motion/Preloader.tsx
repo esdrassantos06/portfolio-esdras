@@ -120,11 +120,7 @@ export default function Preloader() {
       style={{ backgroundImage: AURORA }}
     >
       <div className="shell">
-        <p className="pre-eyebrow text-principal/70 font-mono text-xs tracking-[0.25em] uppercase">
-          {t("role")}
-        </p>
-
-        <p className="mt-6 text-[clamp(2.75rem,8vw,5.5rem)] leading-[0.95] font-bold tracking-[-0.03em]">
+        <p className="text-[clamp(2.75rem,8vw,5.5rem)] leading-[0.95] font-bold tracking-[-0.03em]">
           <span className="block overflow-hidden">
             <span className="pre-line block">Esdras</span>
           </span>
@@ -134,11 +130,15 @@ export default function Preloader() {
         </p>
 
         <span className="pre-rule via-secundaria/60 mt-8 block h-px w-full max-w-sm bg-linear-to-r from-white/25 to-transparent" />
+
+        <p className="pre-eyebrow text-principal/70 mt-6 text-sm">
+          {t("role")}
+        </p>
       </div>
 
       <div className="pre-meter absolute right-0 bottom-0 left-0">
         <div className="shell flex items-end justify-between pb-5">
-          <span className="text-principal/45 font-mono text-[0.7rem] tracking-[0.25em] uppercase">
+          <span className="text-principal/60 font-mono text-[0.7rem] tracking-[0.25em] uppercase">
             {t("loading")}
           </span>
           <span className="text-principal font-mono text-4xl leading-none font-bold tabular-nums sm:text-6xl">

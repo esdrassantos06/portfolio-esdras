@@ -9,19 +9,16 @@ gsap.registerPlugin(ScrollTrigger);
 
 interface DepthSectionProps {
   children: ReactNode;
-  numeral?: string;
   className?: string;
   anchor?: string;
 }
 
 export default function DepthSection({
   children,
-  numeral,
   className,
   anchor,
 }: DepthSectionProps) {
   const ref = useRef<HTMLDivElement>(null);
-  const numeralRef = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
     const el = ref.current;
@@ -55,25 +52,6 @@ export default function DepthSection({
             },
           );
 
-          if (numeralRef.current) {
-            gsap.fromTo(
-              numeralRef.current,
-              { opacity: 0, y: 70, letterSpacing: "0.3em" },
-              {
-                opacity: 1,
-                y: 0,
-                letterSpacing: "0em",
-                ease: "none",
-                force3D: true,
-                scrollTrigger: {
-                  trigger: el,
-                  start: "top 90%",
-                  end: "top 55%",
-                  scrub: 0.6,
-                },
-              },
-            );
-          }
           ScrollTrigger.refresh();
         },
       );
@@ -114,15 +92,6 @@ export default function DepthSection({
         ref={ref}
         className={`relative will-change-transform ${className ?? ""}`}
       >
-        {numeral && (
-          <span
-            ref={numeralRef}
-            aria-hidden="true"
-            className="text-principal/25 pointer-events-none absolute top-8 left-2 z-0 hidden font-mono text-[6rem] leading-none font-bold select-none lg:block xl:text-[7rem]"
-          >
-            {numeral}
-          </span>
-        )}
         {children}
       </div>
     </div>

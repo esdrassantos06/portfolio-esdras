@@ -79,13 +79,13 @@ export default async function Home({ params }: Props) {
       <Preloader />
       <JsonLd data={structuredData} />
       <HomeComponent />
-      <DepthSection numeral="01" anchor="about">
+      <DepthSection anchor="about">
         <About />
       </DepthSection>
-      <DepthSection numeral="02" anchor="work">
+      <DepthSection anchor="work">
         <Work />
       </DepthSection>
-      <DepthSection numeral="03">
+      <DepthSection>
         <ContactClose />
       </DepthSection>
     </>

@@ -84,10 +84,7 @@ export default async function AllProjectsPage({ params }: Props) {
       >
         <HeroDive>
           <header className="mb-16 flex w-full flex-col items-start sm:mb-24">
-            <p className="hero-dive text-principal/50 font-mono text-xs tracking-[0.25em] uppercase">
-              {t("count", { count: allProjects.length })}
-            </p>
-            <h1 className="hero-dive mt-6 text-left text-[clamp(2.5rem,8vw,6rem)] leading-[0.95] font-bold tracking-[-0.03em] text-balance">
+            <h1 className="hero-dive text-left text-[clamp(2.5rem,8vw,6rem)] leading-[0.95] font-bold tracking-[-0.03em] text-balance">
               {t("title")}
             </h1>
             <div
@@ -96,6 +93,9 @@ export default async function AllProjectsPage({ params }: Props) {
             />
             <p className="hero-dive text-principal/70 mt-8 max-w-xl text-lg text-pretty">
               {t("subtitle")}
+            </p>
+            <p className="hero-dive text-principal/60 mt-4 text-sm tabular-nums">
+              {t("count", { count: allProjects.length })}
             </p>
           </header>
         </HeroDive>

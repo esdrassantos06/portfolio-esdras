@@ -26,7 +26,7 @@ const ShinyButton: React.FC<ShinyButtonProps> = ({
       href={link}
       target={target}
       aria-label={ariaLabel || text}
-      className="group bg-secundaria hover:bg-link focus-visible:ring-link focus-visible:ring-offset-fundo inline-flex h-12 w-fit items-center justify-center gap-2 rounded-full px-7 text-[0.95rem] font-semibold text-white transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
+      className="group bg-secundaria hover:bg-link focus-visible:ring-link focus-visible:ring-offset-fundo inline-flex h-12 w-fit shrink-0 items-center justify-center gap-2 rounded-full px-7 text-[0.95rem] font-semibold whitespace-nowrap text-white transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
     >
       <span>{text}</span>
       {showArrow && (
