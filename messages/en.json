@@ -98,14 +98,19 @@
   "PhantomCode": {
     "Metadata": {
       "title": "Phantom Code | Esdras Portfolio",
-      "description": "A cross-platform desktop app that turns screenshots into solved code problems. Built for developers and students prepping for coding interviews.",
-      "keywords": "ai coding, screenshot to solution, electron, nestjs, invisible coding app",
+      "description": "Phantom Code is an Electron desktop app that reads a coding problem from a screenshot and shows the solution in an overlay window, sold as source code through a Next.js site with a three.js hero and an Oxide-style console.",
+      "keywords": "electron, next.js, three.js, webgl, design system, better auth, prisma, stripe, nestjs, ocr",
       "robots": "index, follow",
-      "creator": "Esdras"
+      "creator": "Esdras Santos"
     },
-    "title": "A cross-platform desktop app that turns screenshots into solved code problems",
+    "title": "A desktop app that turns screenshots of coding problems into solutions, sold as source code",
     "overview": "Project Overview",
-    "description": "Phantom Code is a desktop app built with Electron and React, backed by a NestJS API. It captures code from screenshots, extracts it with AI and returns working solutions for programming problems."
+    "description": "Phantom Code is a desktop app built with Electron and React. A global shortcut captures the problem on screen, a NestJS OCR API extracts the text, and the user's own OpenAI key returns a solution in an overlay window. API keys are encrypted and stored locally.\n\nThe product is the source code itself. The Next.js 16 site sells lifetime access through Stripe, signs buyers in with Better Auth, gates a 17-page Markdown documentation set stored in PostgreSQL, and serves time-limited downloads from Supabase Storage.\n\nI redesigned the whole frontend as a monochrome, dark-only system. The hero is a three.js scene built around the Pepper's ghost stage illusion: a pane of glass carrying the code on a dark stage, orbited by the camera as you scroll. The buyer console follows the structure of the Oxide Computer console, with a command palette, ruled tables and loading skeletons, and 404 and error pages render their status code as a dot matrix.\n\nThe redesign also moved every dependency to its latest version, including TypeScript 7 running alongside the TypeScript 6 API for tooling, and added a Docker dev stack with a local Upstash-compatible Redis and route pre-compilation that cut the first navigation from 10.2 s to about 180 ms.",
+    "metrics": {
+      "tests": "Automated tests",
+      "docs": "Documentation pages",
+      "platforms": "Desktop platforms"
+    }
   },
   "Tarevity": {
     "Metadata": {

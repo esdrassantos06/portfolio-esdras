@@ -98,14 +98,19 @@
   "PhantomCode": {
     "Metadata": {
       "title": "Phantom Code | Portafolio de Esdras",
-      "description": "Aplicación de escritorio multiplataforma que convierte capturas de pantalla en problemas de código resueltos. Hecha para desarrolladores y estudiantes que se preparan para entrevistas técnicas.",
-      "keywords": "codificación con IA, captura de pantalla a solución, electron, nestjs, aplicación de codificación invisible",
+      "description": "Phantom Code es una aplicación de escritorio en Electron que lee un problema de programación a partir de una captura de pantalla y muestra la solución en una ventana superpuesta, vendida como código fuente en un sitio Next.js con un hero en three.js y una consola inspirada en la de Oxide.",
+      "keywords": "electron, next.js, three.js, webgl, design system, better auth, prisma, stripe, nestjs, ocr",
       "robots": "index, follow",
-      "creator": "Esdras"
+      "creator": "Esdras Santos"
     },
-    "title": "Una aplicación de escritorio multiplataforma que convierte capturas de pantalla en problemas de código resueltos",
+    "title": "Una aplicación de escritorio que convierte capturas de problemas de programación en soluciones, vendida como código fuente",
     "overview": "Resumen del Proyecto",
-    "description": "Phantom Code es una aplicación de escritorio construida con Electron y React, respaldada por una API en NestJS. Captura código a partir de capturas de pantalla, lo extrae con IA y devuelve soluciones funcionales para problemas de programación."
+    "description": "Phantom Code es una aplicación de escritorio construida con Electron y React. Un atajo global captura el problema en pantalla, una API de OCR en NestJS extrae el texto y la propia clave de OpenAI del usuario devuelve la solución en una ventana superpuesta. Las claves de API se cifran y se guardan localmente.\n\nEl producto es el propio código fuente. El sitio en Next.js 16 vende acceso de por vida mediante Stripe, autentica a los compradores con Better Auth, protege una documentación de 17 páginas en Markdown almacenada en PostgreSQL y sirve descargas temporales desde Supabase Storage.\n\nRediseñé todo el frontend como un sistema monocromático, solo en modo oscuro. El hero es una escena en three.js basada en la ilusión teatral Pepper's Ghost: un cristal con el código en un escenario oscuro, alrededor del cual gira la cámara al hacer scroll. La consola de compradores sigue la estructura de la consola de Oxide Computer, con paleta de comandos, tablas y skeletons de carga, y las páginas 404 y de error muestran el código de estado en una matriz de puntos.\n\nEl rediseño también actualizó todas las dependencias a su última versión, incluido TypeScript 7 funcionando junto a la API de TypeScript 6 para las herramientas, y añadió un entorno Docker de desarrollo con un Redis compatible con Upstash y precompilación de rutas, que redujo la primera navegación de 10,2 s a unos 180 ms.",
+    "metrics": {
+      "tests": "Pruebas automatizadas",
+      "docs": "Páginas de documentación",
+      "platforms": "Plataformas de escritorio"
+    }
   },
   "Tarevity": {
     "Metadata": {

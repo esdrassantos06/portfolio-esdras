@@ -36,6 +36,9 @@ const tech = {
   zod: "Zod",
   gsap: "GSAP",
   polar: "Polar",
+  three: "Three.js",
+  stripe: "Stripe",
+  supabase: "Supabase",
 } as const;
 
 type TechName = (typeof tech)[keyof typeof tech];
@@ -132,11 +135,27 @@ export const projetos: Record<string, Project> = {
     image: "/projects-mockup/phantomcode.webp",
     demo: "https://phantomcode.pt",
     technologies: [
+      tech.next,
+      tech.ts,
+      tech.three,
+      tech.tailwind,
       tech.electron,
       tech.react,
       tech.nestjs,
-      tech.tailwind,
       tech.openai,
+      tech.betterAuth,
+      tech.prisma,
+      tech.pg,
+      tech.stripe,
+      tech.supabase,
+      tech.redis,
+      tech.docker,
+      tech.jest,
+    ],
+    metrics: [
+      { value: "112", label: "tests" },
+      { value: "17", label: "docs" },
+      { value: "2", label: "platforms" },
     ],
     namespace: "PhantomCode",
     featuredHome: true,

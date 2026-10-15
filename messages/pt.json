@@ -98,14 +98,19 @@
   "PhantomCode": {
     "Metadata": {
       "title": "Phantom Code | Portfólio do Esdras",
-      "description": "Aplicação desktop multiplataforma que transforma capturas de ecrã em problemas de código resolvidos. Feita para programadores e estudantes a preparar entrevistas técnicas.",
-      "keywords": "programação com IA, captura de ecrã para solução, electron, nestjs, aplicação de programação invisível",
+      "description": "O Phantom Code é uma aplicação desktop em Electron que lê um problema de programação a partir de uma captura de ecrã e mostra a solução numa janela sobreposta, vendida como código-fonte num site Next.js com hero em three.js e uma consola inspirada na da Oxide.",
+      "keywords": "electron, next.js, three.js, webgl, design system, better auth, prisma, stripe, nestjs, ocr",
       "robots": "index, follow",
-      "creator": "Esdras"
+      "creator": "Esdras Santos"
     },
-    "title": "Uma aplicação desktop multiplataforma que transforma capturas de ecrã em problemas de código resolvidos",
+    "title": "Uma aplicação desktop que transforma capturas de ecrã de problemas de programação em soluções, vendida como código-fonte",
     "overview": "Visão Geral do Projeto",
-    "description": "O Phantom Code é uma aplicação desktop construída com Electron e React, suportada por uma API em NestJS. Captura código a partir de capturas de ecrã, extrai-o com IA e devolve soluções funcionais para problemas de programação."
+    "description": "O Phantom Code é uma aplicação desktop construída com Electron e React. Um atalho global captura o problema no ecrã, uma API de OCR em NestJS extrai o texto e a chave OpenAI do próprio utilizador devolve a solução numa janela sobreposta. As chaves de API são encriptadas e guardadas localmente.\n\nO produto é o próprio código-fonte. O site em Next.js 16 vende acesso vitalício através do Stripe, autentica compradores com Better Auth, protege uma documentação de 17 páginas em Markdown guardada em PostgreSQL e serve downloads temporários a partir do Supabase Storage.\n\nRedesenhei todo o frontend como um sistema monocromático, só em modo escuro. O hero é uma cena em three.js baseada na ilusão de palco Pepper's Ghost: um vidro com o código num palco escuro, em volta do qual a câmara gira à medida que se faz scroll. A consola de compradores segue a estrutura da consola da Oxide Computer, com paleta de comandos, tabelas e skeletons de carregamento, e as páginas 404 e de erro mostram o código de estado numa matriz de pontos.\n\nO redesign também atualizou todas as dependências para a versão mais recente, incluindo o TypeScript 7 a correr ao lado da API do TypeScript 6 para as ferramentas, e acrescentou um ambiente Docker de desenvolvimento com Redis compatível com Upstash e pré-compilação de rotas, que reduziu a primeira navegação de 10,2 s para cerca de 180 ms.",
+    "metrics": {
+      "tests": "Testes automatizados",
+      "docs": "Páginas de documentação",
+      "platforms": "Plataformas desktop"
+    }
   },
   "Tarevity": {
     "Metadata": {
