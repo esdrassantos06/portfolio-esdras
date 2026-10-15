@@ -115,14 +115,19 @@
   "Tarevity": {
     "Metadata": {
       "title": "Tarevity | Esdras Portfolio",
-      "description": "Tarevity is a task management app built with Next.js 16, TypeScript, Prisma ORM and PostgreSQL. Fast, focused and built to keep your daily to-do list out of your way.",
-      "keywords": "task management, to-do app, Next.js, TypeScript, Prisma, PostgreSQL, Better Auth, Redis",
+      "description": "Tarevity is a Next.js 16 task manager where every task moves from In progress to For review and only then to Filed, on a kanban board designed like paper requisition forms with rubber stamps.",
+      "keywords": "task management, kanban, next.js, typescript, prisma, postgresql, better auth, redis, next-intl, design system",
       "robots": "index, follow",
       "creator": "Esdras Santos"
     },
-    "title": "a modern task management app",
+    "title": "a task manager where nothing closes without review",
     "overview": "Project Overview",
-    "description": "Tarevity is a task management app built with Next.js 16, TypeScript, Prisma ORM and PostgreSQL. Fast, focused and built to keep your daily to-do list out of your way."
+    "description": "Tarevity is a to-do app with one extra step: before anything is filed, it goes through review. The board has three trays, In tray, For review and Filed, and dragging a card from one to the next changes its status. Keyboard and phone users get arrow buttons on every card that do the same thing.\n\nUnder the hood it runs Next.js 16 with React 19, Prisma on PostgreSQL, Better Auth with email, GitHub and Google, Redis caching and rate limiting through Upstash, and due-date reminders in the app and by email through Resend. The whole interface ships in English, Portuguese and Spanish.\n\nI redesigned the entire frontend around paper requisition forms. Field captions are printed in a single blue ink, filled-in values look typewritten in Courier Prime, and a task's status is a rubber stamp: blue in progress, violet for review, green once filed. The trays use the white, canary and pink of carbon copies, and dark mode is the carbon sheet itself. The create and edit forms save a per-user draft as soon as you stop typing.\n\nThe redesign also moved every dependency to its latest stable release, migrated the admin table to TanStack Table 9 and added a Docker setup with Postgres and an Upstash-compatible Redis.",
+    "metrics": {
+      "tests": "Automated tests",
+      "languages": "Languages",
+      "trays": "Kanban trays"
+    }
   },
   "NexebraTrail": {
     "Metadata": {

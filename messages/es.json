@@ -115,14 +115,19 @@
   "Tarevity": {
     "Metadata": {
       "title": "Tarevity | Portafolio de Esdras",
-      "description": "Tarevity es una aplicación de gestión de tareas construida con Next.js 16, TypeScript, Prisma ORM y PostgreSQL. Rápida, enfocada y diseñada para mantener tu lista de tareas diaria fuera del camino.",
-      "keywords": "gestión de tareas, to-do app, Next.js, TypeScript, Prisma, PostgreSQL, Better Auth, Redis",
+      "description": "Tarevity es un gestor de tareas en Next.js 16 en el que cada tarea pasa de En curso a Para revisión y solo después al Archivo, en un tablero kanban diseñado como formularios de oficina con sellos de goma.",
+      "keywords": "gestión de tareas, kanban, next.js, typescript, prisma, postgresql, better auth, redis, next-intl, design system",
       "robots": "index, follow",
       "creator": "Esdras Santos"
     },
-    "title": "una aplicación moderna de gestión de tareas",
+    "title": "un gestor de tareas en el que nada se cierra sin revisión",
     "overview": "Resumen del Proyecto",
-    "description": "Tarevity es una aplicación de gestión de tareas construida con Next.js 16, TypeScript, Prisma ORM y PostgreSQL. Rápida, enfocada y diseñada para mantener tu lista de tareas diaria fuera del camino."
+    "description": "Tarevity es una lista de tareas con un paso más: antes de archivarse, cada tarea pasa por revisión. El tablero tiene tres bandejas, Entrada, Para revisión y Archivo, y arrastrar una tarjeta de una a otra cambia su estado. Quien usa teclado o móvil tiene flechas en cada tarjeta que hacen lo mismo.\n\nPor debajo corre Next.js 16 con React 19, Prisma sobre PostgreSQL, Better Auth con correo, GitHub y Google, caché y rate limiting en Redis a través de Upstash, y avisos de plazo en la aplicación y por correo con Resend. Toda la interfaz está en español, portugués e inglés.\n\nRediseñé todo el frontend a partir de formularios de oficina. Las etiquetas de los campos están impresas en una sola tinta azul, los valores rellenados parecen escritos a máquina en Courier Prime y el estado de cada tarea es un sello: azul en curso, violeta para revisión, verde en el archivo. Las bandejas usan el blanco, el amarillo y el rosa de las copias de papel carbón, y el modo oscuro es la propia hoja de carbón. Los formularios de crear y editar guardan un borrador por usuario en cuanto dejas de escribir.\n\nEl rediseño también actualizó todas las dependencias a su última versión estable, migró la tabla de administración a TanStack Table 9 y añadió un entorno Docker con Postgres y un Redis compatible con Upstash.",
+    "metrics": {
+      "tests": "Tests automatizados",
+      "languages": "Idiomas",
+      "trays": "Bandejas del kanban"
+    }
   },
   "NexebraTrail": {
     "Metadata": {

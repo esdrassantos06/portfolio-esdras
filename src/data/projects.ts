@@ -39,6 +39,7 @@ const tech = {
   three: "Three.js",
   stripe: "Stripe",
   supabase: "Supabase",
+  tanstackQuery: "TanStack Query",
 } as const;
 
 type TechName = (typeof tech)[keyof typeof tech];
@@ -186,13 +187,28 @@ export const projetos: Record<string, Project> = {
     code: "https://github.com/esdrassantos06/tarevity",
     technologies: [
       tech.next,
-      tech.tailwind,
       tech.ts,
+      tech.react,
+      tech.tailwind,
+      tech.shadcn,
+      tech.tanstackQuery,
       tech.prisma,
-      tech.redis,
+      tech.pg,
       tech.betterAuth,
+      tech.redis,
+      tech.supabase,
+      tech.resend,
+      tech.zod,
+      tech.vitest,
+      tech.docker,
+    ],
+    metrics: [
+      { value: "105", label: "tests" },
+      { value: "3", label: "languages" },
+      { value: "3", label: "trays" },
     ],
     namespace: "Tarevity",
+    featuredHome: true,
   },
 };
 

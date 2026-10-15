@@ -115,14 +115,19 @@
   "Tarevity": {
     "Metadata": {
       "title": "Tarevity | Portfólio do Esdras",
-      "description": "Tarevity é uma aplicação de gestão de tarefas construída com Next.js 16, TypeScript, Prisma ORM e PostgreSQL. Rápida, focada e desenhada para manter a lista de tarefas diária fora do caminho.",
-      "keywords": "gestão de tarefas, to-do app, Next.js, TypeScript, Prisma, PostgreSQL, Better Auth, Redis",
+      "description": "O Tarevity é um gestor de tarefas em Next.js 16 em que cada tarefa passa de Em curso para Para visto e só depois para o Arquivo, num quadro kanban desenhado como impressos de repartição com carimbos de borracha.",
+      "keywords": "gestão de tarefas, kanban, next.js, typescript, prisma, postgresql, better auth, redis, next-intl, design system",
       "robots": "index, follow",
       "creator": "Esdras Santos"
     },
-    "title": "uma aplicação moderna de gestão de tarefas",
+    "title": "um gestor de tarefas em que nada fecha sem revisão",
     "overview": "Visão Geral do Projeto",
-    "description": "Tarevity é uma aplicação de gestão de tarefas construída com Next.js 16, TypeScript, Prisma ORM e PostgreSQL. Rápida, focada e desenhada para manter a lista de tarefas diária fora do caminho."
+    "description": "O Tarevity é um gestor de tarefas com um passo a mais: antes de ir para o arquivo, cada tarefa passa por revisão. O quadro tem três tabuleiros, Entrada, Para visto e Arquivo, e arrastar um cartão de um para o outro muda o estado. Quem usa teclado ou telemóvel tem setas em cada cartão que fazem o mesmo.\n\nPor baixo corre Next.js 16 com React 19, Prisma sobre PostgreSQL, Better Auth com e-mail, GitHub e Google, cache e rate limiting em Redis via Upstash, e avisos de prazo na aplicação e por e-mail com o Resend. A interface inteira existe em português, inglês e espanhol.\n\nRedesenhei todo o frontend a partir de impressos de repartição. As legendas dos campos estão impressas numa só tinta azul, os valores preenchidos parecem escritos à máquina em Courier Prime e o estado de cada tarefa é um carimbo: azul em curso, violeta para visto, verde no arquivo. Os tabuleiros usam o branco, o amarelo e o rosa das vias de papel químico, e o modo escuro é a própria folha de carbono. Os formulários de criar e editar guardam um rascunho por utilizador assim que se para de escrever.\n\nO redesign também atualizou todas as dependências para a versão estável mais recente, migrou a tabela de administração para o TanStack Table 9 e acrescentou um ambiente Docker com Postgres e um Redis compatível com Upstash.",
+    "metrics": {
+      "tests": "Testes automatizados",
+      "languages": "Idiomas",
+      "trays": "Tabuleiros no kanban"
+    }
   },
   "NexebraTrail": {
     "Metadata": {
