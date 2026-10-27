@@ -41,6 +41,8 @@ const tech = {
   stripe: "Stripe",
   supabase: "Supabase",
   tanstackQuery: "TanStack Query",
+  python: "Python",
+  fastapi: "FastAPI",
 } as const;
 
 type TechName = (typeof tech)[keyof typeof tech];
@@ -162,6 +164,26 @@ export const projetos: Record<string, Project> = {
     namespace: "PhantomCode",
     featuredHome: true,
   },
+  vagastechpt: {
+    slug: "vagastechpt",
+    name: "Vagas Tech PT",
+    image: "/projects-mockup/vagastechpt.webp",
+    demo: "https://github.com/esdrassantos06/vagas-tech-pt",
+    technologies: [
+      tech.python,
+      tech.fastapi,
+      tech.pg,
+      tech.playwright,
+      tech.docker,
+    ],
+    metrics: [
+      { value: "168", label: "tests" },
+      { value: "92%", label: "coverage" },
+      { value: "3", label: "sources" },
+    ],
+    namespace: "VagasTechPt",
+    featuredHome: true,
+  },
   nexebratrail: {
     slug: "nexebratrail",
     name: "Nexebra Trail",
@@ -169,7 +191,6 @@ export const projetos: Record<string, Project> = {
     demo: "https://nexebratrail.com",
     technologies: [tech.next, tech.tailwind, tech.ts, tech.shadcn],
     namespace: "NexebraTrail",
-    featuredHome: true,
   },
   zipway: {
     slug: "zipway",

@@ -129,6 +129,23 @@
       "trays": "Kanban trays"
     }
   },
+  "VagasTechPt": {
+    "Metadata": {
+      "title": "Vagas Tech PT | Esdras Portfolio",
+      "description": "Vagas Tech PT is an open source Python backend that aggregates tech jobs in Portugal from LinkedIn, itjobs.pt and net-empregos, deduplicates them across sources and serves them through a FastAPI REST API with email, Discord and Telegram alerts.",
+      "keywords": "job aggregator, web scraping, python, fastapi, postgresql, playwright, data pipeline, deduplication, openapi, tdd",
+      "robots": "index, follow",
+      "creator": "Esdras Santos"
+    },
+    "title": "a tech job aggregator built to survive broken scrapers",
+    "overview": "Project Overview",
+    "description": "Vagas Tech PT gathers tech job postings in Portugal from LinkedIn, itjobs.pt and net-empregos into one searchable API. Every posting is normalized into the same shape: city, work mode, a yearly salary range in euros and the tech stack it mentions. A fingerprint built from the company, role and city then collapses the same job published on different sites into a single entry that lists every source it came from.\n\nThe backend runs on Python 3.15 with FastAPI, PostgreSQL 18, SQLAlchemy 2 and Alembic. Scrapers use Parsel for HTML and RSS and Playwright for LinkedIn, behind an HTTP client with retries, exponential backoff, Retry-After handling and a per-site crawl delay. Upserts are idempotent and run inside a savepoint, so a bad batch never loses the record of the run.\n\nScrapers break whenever a site changes its markup, so the project treats that as something to test and monitor. Parsers fail loudly instead of returning nothing, every run is stored with its status, failures alert an admin, and a weekly canary in GitHub Actions hits the live sites and opens an issue when one of them changes.\n\nUsers subscribe to alerts with their own filters by email, Discord or Telegram after an opt-in confirmation, with tokens stored only as hashes and Discord webhooks validated against SSRF. The whole project was built test first: 168 automated tests at 92% coverage, strict mypy and six required CI checks, including an OpenAPI drift check and a guard against destructive migrations.",
+    "metrics": {
+      "tests": "Automated tests",
+      "coverage": "Test coverage",
+      "sources": "Job sources"
+    }
+  },
   "NexebraTrail": {
     "Metadata": {
       "title": "Nexebra Trail | Esdras Portfolio",

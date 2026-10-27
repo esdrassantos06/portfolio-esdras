@@ -129,6 +129,23 @@
       "trays": "Bandejas del kanban"
     }
   },
+  "VagasTechPt": {
+    "Metadata": {
+      "title": "Vagas Tech PT | Esdras Portfolio",
+      "description": "Vagas Tech PT es un backend open source en Python que agrega ofertas tech en Portugal desde LinkedIn, itjobs.pt y net-empregos, las deduplica entre fuentes y las sirve en una API REST con FastAPI y alertas por correo, Discord y Telegram.",
+      "keywords": "agregador de empleo, web scraping, python, fastapi, postgresql, playwright, pipeline de datos, deduplicación, openapi, tdd",
+      "robots": "index, follow",
+      "creator": "Esdras Santos"
+    },
+    "title": "un agregador de empleo tech hecho para aguantar scrapers rotos",
+    "overview": "Resumen del Proyecto",
+    "description": "Vagas Tech PT reúne en una sola API las ofertas tech en Portugal publicadas en LinkedIn, itjobs.pt y net-empregos. Cada oferta se normaliza al mismo formato: ciudad, modalidad de trabajo, rango salarial anual en euros y las tecnologías que menciona. Después, un fingerprint hecho con la empresa, el puesto y la ciudad junta la misma oferta publicada en sitios distintos en una sola entrada, con todas las fuentes donde apareció.\n\nEl backend corre en Python 3.15 con FastAPI, PostgreSQL 18, SQLAlchemy 2 y Alembic. Los scrapers usan Parsel para HTML y RSS y Playwright para LinkedIn, detrás de un cliente HTTP con reintentos, backoff exponencial, respeto del Retry-After y un intervalo mínimo por sitio. Los upserts son idempotentes y corren dentro de un savepoint, así que un lote con error nunca pierde el registro de la ejecución.\n\nLos scrapers se rompen cada vez que un sitio cambia su HTML, así que el proyecto lo trata como algo a testear y monitorizar. Los parsers fallan de forma visible en vez de devolver nada, cada ejecución se guarda con su estado, los fallos alertan a un administrador y un canary semanal en GitHub Actions visita los sitios reales y abre una issue cuando alguno cambia.\n\nLos usuarios se suscriben a alertas con sus propios filtros por correo, Discord o Telegram tras una confirmación opt-in, con los tokens guardados solo como hash y los webhooks de Discord validados contra SSRF. Todo el proyecto se hizo con tests primero: 168 tests automatizados con 92% de cobertura, mypy en modo strict y seis comprobaciones obligatorias en el CI, incluida la detección de cambios no documentados en la API y un bloqueo de migraciones destructivas.",
+    "metrics": {
+      "tests": "Tests automatizados",
+      "coverage": "Cobertura de tests",
+      "sources": "Fuentes de empleo"
+    }
+  },
   "NexebraTrail": {
     "Metadata": {
       "title": "Nexebra Trail | Portafolio de Esdras",
