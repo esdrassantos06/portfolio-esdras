@@ -4,7 +4,7 @@ import { GlobeIcon, CodeIcon } from "@phosphor-icons/react";
 import { useTranslations } from "next-intl";
 
 interface ShinyButtonProjectProps {
-  demo: string;
+  demo?: string;
   code?: string;
 }
 
@@ -16,16 +16,18 @@ export default function ShinyButtonProject({
 
   return (
     <div className="buttons flex flex-wrap gap-4 sm:flex-nowrap">
-      <a
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label={t("viewDemo")}
-        href={demo}
-        className="view-demo bg-secundaria hover:bg-link focus-visible:ring-link inline-flex h-13 w-fit items-center justify-center gap-3 rounded-full px-6 text-lg font-semibold text-white transition-colors duration-200 focus-visible:ring-2 focus-visible:outline-none"
-      >
-        <GlobeIcon size={25} aria-hidden="true" />
-        <span>{t("viewDemo")}</span>
-      </a>
+      {demo && (
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={t("viewDemo")}
+          href={demo}
+          className="view-demo bg-secundaria hover:bg-link focus-visible:ring-link inline-flex h-13 w-fit items-center justify-center gap-3 rounded-full px-6 text-lg font-semibold text-white transition-colors duration-200 focus-visible:ring-2 focus-visible:outline-none"
+        >
+          <GlobeIcon size={25} aria-hidden="true" />
+          <span>{t("viewDemo")}</span>
+        </a>
+      )}
 
       {code && (
         <a

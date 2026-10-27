@@ -56,7 +56,7 @@ export interface Project {
   slug: string;
   name: string;
   image: string;
-  demo: string;
+  demo?: string;
   code?: string;
   technologies: TechName[];
   metrics?: ProjectMetric[];
@@ -168,7 +168,7 @@ export const projetos: Record<string, Project> = {
     slug: "vagastechpt",
     name: "Vagas Tech PT",
     image: "/projects-mockup/vagastechpt.webp",
-    demo: "https://github.com/esdrassantos06/vagas-tech-pt",
+    code: "https://github.com/esdrassantos06/vagas-tech-pt",
     technologies: [
       tech.python,
       tech.fastapi,

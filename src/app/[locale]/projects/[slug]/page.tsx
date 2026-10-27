@@ -137,7 +137,7 @@ export default async function ProjetoPage({ params }: Props) {
       name: projeto.name,
       applicationCategory: "WebApplication",
       description: t("description"),
-      url: projeto.demo,
+      url: projeto.demo ?? projeto.code,
       sameAs: projeto.code ? [projeto.code] : undefined,
       codeRepository: projeto.code,
       author: { "@id": PERSON_ID },
