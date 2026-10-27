@@ -168,6 +168,7 @@ export const projetos: Record<string, Project> = {
     slug: "vagastechpt",
     name: "Vagas Tech PT",
     image: "/projects-mockup/vagastechpt.webp",
+    demo: "https://vagas.portfolioesdras.com/docs",
     code: "https://github.com/esdrassantos06/vagas-tech-pt",
     technologies: [
       tech.python,
