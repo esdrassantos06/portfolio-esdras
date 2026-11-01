@@ -1,5 +1,6 @@
 import { siteUrl, localizedUrl } from "@/i18n/url";
 
+export const SITE_NAME = "Esdras Santos";
 export const PERSON_ID = `${siteUrl}/#person`;
 export const WEBSITE_ID = `${siteUrl}/#website`;
 
@@ -13,18 +14,32 @@ export function personSchema(locale: string) {
     "@type": "Person",
     "@id": PERSON_ID,
     name: "Esdras Santos",
+    alternateName: "Esdras Irion do Rosário e Santos",
     givenName: "Esdras",
     familyName: "Santos",
     jobTitle: "Full Stack Developer",
     description:
-      "Full Stack Developer based in Portugal, specializing in React, Next.js, TypeScript, and Node.js.",
+      "Esdras Santos is a full stack developer in Braga, Portugal, building production web and mobile apps with TypeScript, Next.js, Node.js and PostgreSQL.",
     image: `${siteUrl}/opengraph-image`,
     email: "mailto:esdrasirion1@gmail.com",
     url: localizedUrl(locale),
     address: {
       "@type": "PostalAddress",
+      addressLocality: "Braga",
       addressCountry: "PT",
-      addressLocality: "Portugal",
+    },
+    homeLocation: {
+      "@type": "Place",
+      name: "Braga, Portugal",
+    },
+    worksFor: {
+      "@type": "Organization",
+      name: "JWeb",
+      url: "https://jweb.pt",
+    },
+    alumniOf: {
+      "@type": "EducationalOrganization",
+      name: "Tokio School",
     },
     sameAs: [
       "https://github.com/esdrassantos06",
@@ -41,9 +56,16 @@ export function personSchema(locale: string) {
       "Node.js",
       "NestJS",
       "Python",
+      "FastAPI",
       "Go",
       "PostgreSQL",
       "Redis",
+      "Drizzle ORM",
+      "Prisma",
+      "Better Auth",
+      "Medusa",
+      "Odoo",
+      "Playwright",
       "Docker",
       "AWS",
     ],
@@ -55,7 +77,8 @@ export function websiteSchema(locale: string) {
     "@type": "WebSite",
     "@id": WEBSITE_ID,
     url: localizedUrl(locale),
-    name: "Esdras Santos Portfolio",
+    name: SITE_NAME,
+    alternateName: "Esdras Santos Portfolio",
     inLanguage: locale,
     publisher: { "@id": PERSON_ID },
   };

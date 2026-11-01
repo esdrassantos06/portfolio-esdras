@@ -110,6 +110,7 @@ export default function HomeComponent() {
       <div className="shell grid grid-cols-1 items-center gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.85fr)] lg:gap-8">
         <header className="flex flex-col items-center text-center lg:items-start lg:text-left">
           <h1 className="text-[clamp(2.75rem,8vw,5.5rem)] leading-[0.95] font-bold tracking-[-0.03em] text-balance">
+            <span className="sr-only">Esdras Santos, </span>
             <span className="block overflow-hidden">
               <span className="hero-line block">Full Stack</span>
             </span>

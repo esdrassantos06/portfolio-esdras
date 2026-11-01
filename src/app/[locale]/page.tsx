@@ -9,6 +9,7 @@ import {
   graph,
   personSchema,
   websiteSchema,
+  SITE_NAME,
   PERSON_ID,
   WEBSITE_ID,
 } from "@/lib/schema";
@@ -23,28 +24,25 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
-  const [t, homeT] = await Promise.all([
-    getTranslations({ locale, namespace: "LocaleLayout" }),
-    getTranslations({ locale, namespace: "HomeComponent" }),
-  ]);
+  const t = await getTranslations({ locale, namespace: "LocaleLayout" });
 
   const url = localizedUrl(locale);
 
   return {
-    title: t("title"),
-    description: homeT("description"),
+    title: { absolute: t("title") },
+    description: t("description"),
     openGraph: {
       title: t("title"),
-      description: homeT("description"),
+      description: t("description"),
       url: url,
       type: "website",
       locale: locale,
-      siteName: "Esdras Portfolio",
+      siteName: SITE_NAME,
     },
     twitter: {
       card: "summary_large_image",
       title: t("title"),
-      description: homeT("description"),
+      description: t("description"),
       creator: "@esdrasprft",
     },
     alternates: {

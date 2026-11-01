@@ -3,6 +3,7 @@ import { Locale, NextIntlClientProvider, hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { siteUrl, localizedUrl, localeAlternates } from "@/i18n/url";
+import { SITE_NAME } from "@/lib/schema";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { ReactNode } from "react";
 import { GeistMono } from "geist/font/mono";
@@ -27,13 +28,13 @@ export async function generateMetadata(
   const t = await getTranslations({ locale, namespace: "LocaleLayout" });
 
   const url = localizedUrl(locale);
-  const siteName = "Esdras Portfolio";
+  const siteName = SITE_NAME;
 
   return {
     metadataBase: new URL(siteUrl),
     title: {
       default: t("title"),
-      template: "%s | Esdras Portfolio",
+      template: `%s | ${SITE_NAME}`,
     },
     description: t("description"),
     keywords: t("keywords")?.split(", "),
@@ -91,6 +92,9 @@ export async function generateMetadata(
       ],
     },
     manifest: "/manifest.json",
+    verification: process.env.GOOGLE_SITE_VERIFICATION
+      ? { google: process.env.GOOGLE_SITE_VERIFICATION }
+      : undefined,
     other: {
       "msapplication-TileColor": "#000000",
       "theme-color": "#000000",

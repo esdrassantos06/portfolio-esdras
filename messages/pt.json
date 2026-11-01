@@ -1,8 +1,8 @@
 {
   "LocaleLayout": {
     "title": "Esdras Santos | Desenvolvedor Full Stack",
-    "description": "Desenvolvedor Full Stack sediado em Portugal. Crio aplicações web de ponta a ponta com React, Next.js, TypeScript e Node.js. Disponível para freelance e colaboração.",
-    "keywords": "Esdras Santos, Desenvolvedor Full Stack, React, Next.js, TypeScript, Node.js, portfólio, desenvolvedor web Portugal",
+    "description": "Esdras Santos é um desenvolvedor full stack em Braga, Portugal, que constrói aplicações web e mobile em produção com TypeScript, Next.js, Node.js e PostgreSQL, de lojas online a portais de clientes.",
+    "keywords": "Esdras Santos, Esdras Irion do Rosário e Santos, Esdras Santos programador, portfólio Esdras Santos, desenvolvedor full stack, desenvolvedor full stack Braga, desenvolvedor full stack Portugal, TypeScript, Next.js, React, Node.js, PostgreSQL",
     "robots": "index, follow",
     "creator": "Esdras Santos"
   },
@@ -19,7 +19,7 @@
   },
   "HomeComponent": {
     "based": "Sediado em Portugal",
-    "description": "Olá, sou o Esdras. Construo aplicações web de ponta a ponta, desde APIs e bases de dados até interfaces frontend polidas e mobile. Disponível para freelance e novas colaborações.",
+    "description": "Olá, sou o Esdras Santos. Construo aplicações web de ponta a ponta, desde APIs e bases de dados até interfaces frontend polidas e mobile. Disponível para freelance e novas colaborações.",
     "shinyWork": "Ver o Meu Trabalho"
   },
   "Preloader": {
@@ -73,7 +73,7 @@
   },
   "Folga": {
     "Metadata": {
-      "title": "Folga | Portfólio do Esdras",
+      "title": "Folga",
       "description": "Folga é um copiloto fiscal para freelancers em Portugal (recibos verdes). Calcula, a cada recibo, quanto reservar para a Segurança Social, IRS e IVA, e mostra o líquido real. Next.js 16, React 19, Better Auth, Drizzle ORM e PostgreSQL.",
       "keywords": "recibos verdes, freelancers, impostos, Segurança Social, IRS, IVA, copiloto fiscal, Next.js, React, Better Auth, Drizzle, PostgreSQL, Polar, Resend",
       "robots": "index, follow",
@@ -85,11 +85,11 @@
   },
   "JWeb": {
     "Metadata": {
-      "title": "JWeb | Portfólio do Esdras",
+      "title": "JWeb",
       "description": "Website institucional, app iOS e portal de clientes da JWeb, uma agência de soluções digitais. Next.js 16, PostgreSQL com Drizzle, sincronização com o Odoo (helpdesk, faturas, subscrições, comercial e projetos), Better Auth com convites por e-mail e autenticação de dois fatores, e notificações push e por e-mail.",
       "keywords": "agência digital, portal de clientes, Odoo, helpdesk, Better Auth, autenticação de dois fatores, Next.js, React, TypeScript, PostgreSQL, Drizzle, notificações push, APNs, app iOS, Capacitor, internacionalização",
       "robots": "index, follow",
-      "creator": "Esdras"
+      "creator": "Esdras Santos"
     },
     "title": "o site, a app iOS e o portal de clientes de uma agência digital",
     "overview": "Visão Geral do Projeto",
@@ -97,7 +97,7 @@
   },
   "PhantomCode": {
     "Metadata": {
-      "title": "Phantom Code | Portfólio do Esdras",
+      "title": "Phantom Code",
       "description": "O Phantom Code é uma aplicação desktop em Electron que lê um problema de programação a partir de uma captura de ecrã e mostra a solução numa janela sobreposta, vendida como código-fonte num site Next.js com hero em three.js e uma consola inspirada na da Oxide.",
       "keywords": "electron, next.js, three.js, webgl, design system, better auth, prisma, stripe, nestjs, ocr, vercel ai sdk, ollama",
       "robots": "index, follow",
@@ -114,7 +114,7 @@
   },
   "Tarevity": {
     "Metadata": {
-      "title": "Tarevity | Portfólio do Esdras",
+      "title": "Tarevity",
       "description": "O Tarevity é um gestor de tarefas em Next.js 16 em que cada tarefa passa de Em curso para Para visto e só depois para o Arquivo, num quadro kanban desenhado como impressos de repartição com carimbos de borracha.",
       "keywords": "gestão de tarefas, kanban, next.js, typescript, prisma, postgresql, better auth, redis, next-intl, design system",
       "robots": "index, follow",
@@ -131,7 +131,7 @@
   },
   "VagasTechPt": {
     "Metadata": {
-      "title": "Vagas Tech PT | Esdras Portfolio",
+      "title": "Vagas Tech PT",
       "description": "O Vagas Tech PT é um backend open source em Python que agrega vagas tech em Portugal a partir do LinkedIn, do itjobs.pt e do net-empregos, deduplica-as entre fontes e serve-as numa API REST em FastAPI com alertas por e-mail, Discord e Telegram.",
       "keywords": "agregador de vagas, web scraping, python, fastapi, postgresql, playwright, pipeline de dados, deduplicação, openapi, tdd",
       "robots": "index, follow",
@@ -148,7 +148,7 @@
   },
   "NexebraTrail": {
     "Metadata": {
-      "title": "Nexebra Trail | Portfólio do Esdras",
+      "title": "Nexebra Trail",
       "description": "Website oficial do Trilhos da Nexebra Trail, uma prova de trail running que promove a modalidade, a prática desportiva e o património natural da região.",
       "keywords": "Nexebra Trail, trail running, evento desportivo, Next.js, Tailwind CSS, TypeScript, Portugal",
       "robots": "index, follow",
@@ -160,8 +160,8 @@
   },
   "PCByte": {
     "Metadata": {
-      "title": "PCByte | Portfólio do Esdras",
-      "description": "PCByte é uma plataforma de e-commerce de tecnologia full-stack com backend em Medusa.js, storefront em Next.js, app móvel em Expo e CMS em Strapi. Inclui módulos personalizados para S3, PayPal, SIBS, transferência bancária, Meilisearch, Odoo e Resend, com boas práticas de segurança em toda a stack.",
+      "title": "PCByte",
+      "description": "A PCByte é a loja online de uma retalhista de tecnologia, em produção com mais de 70.000 produtos: backend em Medusa.js, storefront em Next.js, app móvel em Expo e CMS em Strapi, pagamentos PayPal e SIBS com checkout idempotente e 3.130 testes automatizados.",
       "keywords": "e-commerce, Medusa, Next.js, Strapi, React Native, Expo, Meilisearch, PayPal, SIBS, Multibanco, MB WAY, Odoo, Redis, AWS S3, headless commerce",
       "robots": "index, follow",
       "creator": "Esdras Santos"
@@ -178,7 +178,7 @@
   },
   "Zipway": {
     "Metadata": {
-      "title": "Zipway | Portfólio do Esdras",
+      "title": "Zipway",
       "description": "O Zipway é um encurtador de URLs em produção em shly.pt, com uma API em Go organizada em Clean Architecture e documentada em OpenAPI, um frontend em Next.js 16 e redirecionamentos servidos a partir do Redis, com o PostgreSQL só como último recurso.",
       "keywords": "encurtador de URL, encurtador de links, Go, Golang, Fiber, Clean Architecture, OpenAPI, Swagger, Next.js, TypeScript, Redis, PostgreSQL, Prisma, Better Auth",
       "robots": "index, follow",
@@ -194,7 +194,7 @@
     }
   },
   "AllProjects": {
-    "metaTitle": "Projetos | Portfólio do Esdras",
+    "metaTitle": "Projetos",
     "metaDescription": "Explora todos os projetos do Esdras Santos: aplicações web full-stack, plataformas de e-commerce headless, ferramentas desktop e apps móveis.",
     "title": "Todos os Projetos",
     "subtitle": "Uma coleção de tudo o que construí, desde stacks completas de e-commerce a ferramentas desktop com IA.",
@@ -212,7 +212,7 @@
     "locale": "{locale, select, en {Inglês} es {Espanhol} pt {Português} other {Unknown}}"
   },
   "Contact": {
-    "metaTitle": "Contacto | Esdras Santos",
+    "metaTitle": "Contacto",
     "metaDescription": "Entre em contacto com Esdras Santos sobre projetos, colaboração ou oportunidades.",
     "title": "Entre em contacto",
     "subtitle": "Tem um projeto em mente ou só quer dizer olá? Envie-me uma mensagem e responderei em breve.",

@@ -6,7 +6,13 @@ import { Locale } from "next-intl";
 import { siteUrl, localizedUrl, localeAlternates } from "@/i18n/url";
 import { Metadata } from "next";
 import JsonLd from "@/components/JsonLd";
-import { graph, breadcrumbSchema, PERSON_ID, WEBSITE_ID } from "@/lib/schema";
+import {
+  graph,
+  breadcrumbSchema,
+  PERSON_ID,
+  WEBSITE_ID,
+  SITE_NAME,
+} from "@/lib/schema";
 
 type Props = {
   params: Promise<{ locale: Locale }>;
@@ -26,13 +32,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: "website",
       locale,
       url,
-      siteName: "Esdras Portfolio",
-      title: t("metaTitle"),
+      siteName: SITE_NAME,
+      title: `${t("metaTitle")} | ${SITE_NAME}`,
       description: t("metaDescription"),
     },
     twitter: {
       card: "summary_large_image",
-      title: t("metaTitle"),
+      title: `${t("metaTitle")} | ${SITE_NAME}`,
       description: t("metaDescription"),
       creator: "@esdrasprft",
     },
