@@ -86,14 +86,14 @@
   "JWeb": {
     "Metadata": {
       "title": "JWeb | Esdras Portfolio",
-      "description": "Institutional website and native iOS app for JWeb, a digital agency. Next.js 16, React 19, TypeScript, multilingual (PT/EN/ES), with an APNs push-notification platform (PostgreSQL + Drizzle) and a Capacitor iOS app.",
-      "keywords": "digital agency, digital solutions, Next.js, React, TypeScript, internationalization, CMS, iOS app, Capacitor, push notifications, APNs, PostgreSQL, Drizzle",
+      "description": "Institutional website, iOS app and client portal for JWeb, a digital agency. Next.js 16, PostgreSQL with Drizzle, Odoo integration for helpdesk tickets and invoices, push and email notifications, and two-factor authentication.",
+      "keywords": "digital agency, client portal, Odoo, helpdesk, two-factor authentication, Next.js, React, TypeScript, PostgreSQL, Drizzle, push notifications, APNs, iOS app, Capacitor, internationalization",
       "robots": "index, follow",
       "creator": "Esdras"
     },
-    "title": "COMPLETE INSTITUTIONAL WEBSITE AND iOS APP FOR DIGITAL AGENCY",
+    "title": "the website, iOS app and client portal of a digital agency",
     "overview": "Project Overview",
-    "description": "Institutional website and native iOS app for JWeb, a digital agency. Built with Next.js 16, React 19 and TypeScript, fully localized in Portuguese, English and Spanish, and scoring 90+ on Lighthouse. Content runs through a Keystatic headless CMS with a Markdoc blog; forms are validated with React Hook Form, Zod and reCAPTCHA v3, and transactional email is sent with Resend. Analytics run on Google Tag Manager behind GDPR Consent Mode v2. The project also includes a push-notification platform: a PostgreSQL database with Drizzle ORM for device tokens, an admin console to compose and broadcast campaigns, and an APNs sender that delivers in batches with Redis rate limiting and automatic pruning of invalid tokens. The companion iOS app is built with Capacitor, registering push tokens to the backend and supporting universal links and App Tracking Transparency. Styled with Tailwind CSS 4 and accessible shadcn/ui components."
+    "description": "JWeb is a digital solutions agency where I am the only developer. The work has three parts: the institutional website, the iOS app and a portal where clients follow everything they have with the agency.\n\nThe client portal runs on PostgreSQL with Drizzle ORM and is integrated with Odoo: helpdesk tickets, invoices and the rest of each client's data come straight from the agency's ERP. Clients get push and email notifications, and access is protected with two-factor authentication through an authenticator app on their phone.\n\nThe website is built with Next.js 16, React 19 and TypeScript, fully localised in Portuguese, English and Spanish, and scores 90+ on Lighthouse. Content runs through a Keystatic headless CMS with a Markdoc blog, forms are validated with React Hook Form, Zod and reCAPTCHA v3, and transactional email is sent with Resend. Analytics run on Google Tag Manager behind GDPR Consent Mode v2.\n\nThe iOS app, built with Capacitor, registers push tokens with the backend and supports universal links and App Tracking Transparency. Sends go through an in-house notification platform: device tokens live in PostgreSQL, an admin console composes and broadcasts campaigns, and an APNs sender delivers in batches with Redis rate limiting and automatic pruning of invalid tokens. Everything is styled with Tailwind CSS 4 and accessible shadcn/ui components."
   },
   "PhantomCode": {
     "Metadata": {
