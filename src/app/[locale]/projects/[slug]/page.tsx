@@ -13,7 +13,13 @@ import { Metadata } from "next";
 import { Link } from "@/i18n/navigation";
 import { ArrowLeftIcon } from "@phosphor-icons/react/dist/ssr";
 import JsonLd from "@/components/JsonLd";
-import { graph, breadcrumbSchema, PERSON_ID, WEBSITE_ID } from "@/lib/schema";
+import {
+  graph,
+  breadcrumbSchema,
+  PERSON_ID,
+  WEBSITE_ID,
+  SITE_NAME,
+} from "@/lib/schema";
 
 type Props = {
   params: Promise<{ locale: Locale; slug: string }>;
@@ -76,8 +82,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: t("title"),
     description: t("description"),
     keywords: t.has("keywords") ? t("keywords").split(", ") : undefined,
-    authors: [{ name: t.has("creator") ? t("creator") : "Esdras" }],
-    creator: t.has("creator") ? t("creator") : "Esdras",
+    authors: [{ name: t.has("creator") ? t("creator") : SITE_NAME }],
+    creator: t.has("creator") ? t("creator") : SITE_NAME,
     robots: {
       index: t.has("robots") && t("robots").includes("index"),
       follow: t.has("robots") && t("robots").includes("follow"),
@@ -86,9 +92,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: "website",
       locale: locale,
       url: url,
-      title: t("title"),
+      title: `${t("title")} | ${SITE_NAME}`,
       description: t("description"),
-      siteName: "Esdras Portfolio",
+      siteName: SITE_NAME,
       images: [
         {
           url: imageUrl,
@@ -100,7 +106,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     twitter: {
       card: "summary_large_image",
-      title: t("title"),
+      title: `${t("title")} | ${SITE_NAME}`,
       description: t("description"),
       images: [imageUrl],
       creator: "@esdrasprft",

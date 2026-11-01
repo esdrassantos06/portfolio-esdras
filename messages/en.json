@@ -1,8 +1,8 @@
 {
   "LocaleLayout": {
     "title": "Esdras Santos | Full Stack Developer",
-    "description": "Full Stack Developer based in Portugal. I build end-to-end web applications using React, Next.js, TypeScript, Node.js, and more. Available for freelance and collaboration.",
-    "keywords": "Esdras Santos, Full Stack Developer, React, Next.js, TypeScript, Node.js, portfolio, web developer Portugal",
+    "description": "Esdras Santos is a full stack developer in Braga, Portugal, building production web and mobile apps with TypeScript, Next.js, Node.js and PostgreSQL, from online stores to client portals.",
+    "keywords": "Esdras Santos, Esdras Irion do Rosário e Santos, Esdras Santos developer, Esdras Santos portfolio, full stack developer, full stack developer Braga, full stack developer Portugal, TypeScript, Next.js, React, Node.js, PostgreSQL",
     "robots": "index, follow",
     "creator": "Esdras Santos"
   },
@@ -19,7 +19,7 @@
   },
   "HomeComponent": {
     "based": "Based in Portugal",
-    "description": "Hi, I'm Esdras. I build web apps end-to-end, from APIs and databases to polished frontends and mobile. Available for freelance work and new collaborations.",
+    "description": "Hi, I'm Esdras Santos. I build web apps end-to-end, from APIs and databases to polished frontends and mobile. Open to new full-time roles and freelance work.",
     "shinyWork": "See My Work"
   },
   "Preloader": {
@@ -73,7 +73,7 @@
   },
   "Folga": {
     "Metadata": {
-      "title": "Folga | Esdras Portfolio",
+      "title": "Folga",
       "description": "Folga is a tax copilot for freelancers in Portugal (recibos verdes). For every invoice, it calculates how much to set aside for Social Security, income tax and VAT, and shows the real net amount. Next.js 16, React 19, Better Auth, Drizzle ORM and PostgreSQL.",
       "keywords": "freelancers, taxes, Portugal, Social Security, IRS, VAT, tax copilot, Next.js, React, Better Auth, Drizzle, PostgreSQL, Polar, Resend",
       "robots": "index, follow",
@@ -85,19 +85,19 @@
   },
   "JWeb": {
     "Metadata": {
-      "title": "JWeb | Esdras Portfolio",
-      "description": "Institutional website and native iOS app for JWeb, a digital agency. Next.js 16, React 19, TypeScript, multilingual (PT/EN/ES), with an APNs push-notification platform (PostgreSQL + Drizzle) and a Capacitor iOS app.",
-      "keywords": "digital agency, digital solutions, Next.js, React, TypeScript, internationalization, CMS, iOS app, Capacitor, push notifications, APNs, PostgreSQL, Drizzle",
+      "title": "JWeb",
+      "description": "Institutional website, iOS app and client portal for JWeb, a digital agency. Next.js 16, PostgreSQL with Drizzle, Odoo sync (helpdesk, invoices, subscriptions, sales and projects), Better Auth with email invitations and two-factor authentication, and push and email notifications.",
+      "keywords": "digital agency, client portal, Odoo, helpdesk, Better Auth, two-factor authentication, Next.js, React, TypeScript, PostgreSQL, Drizzle, push notifications, APNs, iOS app, Capacitor, internationalization",
       "robots": "index, follow",
-      "creator": "Esdras"
+      "creator": "Esdras Santos"
     },
-    "title": "COMPLETE INSTITUTIONAL WEBSITE AND iOS APP FOR DIGITAL AGENCY",
+    "title": "the website, iOS app and client portal of a digital agency",
     "overview": "Project Overview",
-    "description": "Institutional website and native iOS app for JWeb, a digital agency. Built with Next.js 16, React 19 and TypeScript, fully localized in Portuguese, English and Spanish, and scoring 90+ on Lighthouse. Content runs through a Keystatic headless CMS with a Markdoc blog; forms are validated with React Hook Form, Zod and reCAPTCHA v3, and transactional email is sent with Resend. Analytics run on Google Tag Manager behind GDPR Consent Mode v2. The project also includes a push-notification platform: a PostgreSQL database with Drizzle ORM for device tokens, an admin console to compose and broadcast campaigns, and an APNs sender that delivers in batches with Redis rate limiting and automatic pruning of invalid tokens. The companion iOS app is built with Capacitor, registering push tokens to the backend and supporting universal links and App Tracking Transparency. Styled with Tailwind CSS 4 and accessible shadcn/ui components."
+    "description": "JWeb is a digital solutions agency where I am the only developer. The work has three parts: the institutional website, the iOS app and a portal where clients follow everything they have with the agency.\n\nThe client portal runs on PostgreSQL with Drizzle ORM and is synced with Odoo: helpdesk tickets, invoices, subscriptions, sales and projects for each client come straight from the agency's ERP. Clients don't sign up on their own. They get an invitation by email and, on first access, set up their account and two-factor authentication with an authenticator app on their phone, all built on Better Auth. From then on, updates reach them as push and email notifications.\n\nThe website is built with Next.js 16, React 19 and TypeScript, fully localised in Portuguese, English and Spanish, and scores 90+ on Lighthouse. Content runs through a Keystatic headless CMS with a Markdoc blog, forms are validated with React Hook Form, Zod and reCAPTCHA v3, and transactional email is sent with Resend. Analytics run on Google Tag Manager behind GDPR Consent Mode v2.\n\nThe iOS app, built with Capacitor, registers push tokens with the backend and supports universal links and App Tracking Transparency. Sends go through an in-house notification platform: device tokens live in PostgreSQL, an admin console composes and broadcasts campaigns, and an APNs sender delivers in batches with Redis rate limiting and automatic pruning of invalid tokens. Everything is styled with Tailwind CSS 4 and accessible shadcn/ui components."
   },
   "PhantomCode": {
     "Metadata": {
-      "title": "Phantom Code | Esdras Portfolio",
+      "title": "Phantom Code",
       "description": "Phantom Code is an Electron desktop app that reads a coding problem from a screenshot and shows the solution in an overlay window, sold as source code through a Next.js site with a three.js hero and an Oxide-style console.",
       "keywords": "electron, next.js, three.js, webgl, design system, better auth, prisma, stripe, nestjs, ocr, vercel ai sdk, ollama",
       "robots": "index, follow",
@@ -114,7 +114,7 @@
   },
   "Tarevity": {
     "Metadata": {
-      "title": "Tarevity | Esdras Portfolio",
+      "title": "Tarevity",
       "description": "Tarevity is a Next.js 16 task manager where every task moves from In progress to For review and only then to Filed, on a kanban board designed like paper requisition forms with rubber stamps.",
       "keywords": "task management, kanban, next.js, typescript, prisma, postgresql, better auth, redis, next-intl, design system",
       "robots": "index, follow",
@@ -131,7 +131,7 @@
   },
   "VagasTechPt": {
     "Metadata": {
-      "title": "Vagas Tech PT | Esdras Portfolio",
+      "title": "Vagas Tech PT",
       "description": "Vagas Tech PT is an open source Python backend that aggregates tech jobs in Portugal from LinkedIn, itjobs.pt and net-empregos, deduplicates them across sources and serves them through a FastAPI REST API with email, Discord and Telegram alerts.",
       "keywords": "job aggregator, web scraping, python, fastapi, postgresql, playwright, data pipeline, deduplication, openapi, tdd",
       "robots": "index, follow",
@@ -148,7 +148,7 @@
   },
   "NexebraTrail": {
     "Metadata": {
-      "title": "Nexebra Trail | Esdras Portfolio",
+      "title": "Nexebra Trail",
       "description": "Official website for Trilhos da Nexebra Trail, a trail running event promoting the sport and the region's natural heritage.",
       "keywords": "Nexebra Trail, trail running, sports event, Next.js, Tailwind CSS, TypeScript, Portugal",
       "robots": "index, follow",
@@ -160,8 +160,8 @@
   },
   "PCByte": {
     "Metadata": {
-      "title": "PCByte | Esdras Portfolio",
-      "description": "PCByte is a full-stack technology e-commerce platform with a Medusa.js backend, Next.js storefront, Expo mobile app, and Strapi CMS. Includes custom modules for S3, PayPal, SIBS, bank transfer, Meilisearch, Odoo and Resend, with security-first practices across the stack.",
+      "title": "PCByte",
+      "description": "PCByte is the online store of a technology retailer, in production with more than 70,000 products: Medusa.js backend, Next.js storefront, Expo mobile app and Strapi CMS, PayPal and SIBS payments with an idempotent checkout, and 3,130 automated tests.",
       "keywords": "e-commerce, Medusa, Next.js, Strapi, React Native, Expo, Meilisearch, PayPal, SIBS, Multibanco, MB WAY, Odoo, Redis, AWS S3, headless commerce",
       "robots": "index, follow",
       "creator": "Esdras Santos"
@@ -178,7 +178,7 @@
   },
   "Zipway": {
     "Metadata": {
-      "title": "Zipway | Esdras Portfolio",
+      "title": "Zipway",
       "description": "Zipway is a URL shortener in production at shly.pt, with a Go API organised in Clean Architecture and documented in OpenAPI, a Next.js 16 frontend, and redirects served from Redis with PostgreSQL only as a fallback.",
       "keywords": "URL shortener, link shortener, Go, Golang, Fiber, Clean Architecture, OpenAPI, Swagger, Next.js, TypeScript, Redis, PostgreSQL, Prisma, Better Auth",
       "robots": "index, follow",
@@ -194,7 +194,7 @@
     }
   },
   "AllProjects": {
-    "metaTitle": "Projects | Esdras Portfolio",
+    "metaTitle": "Projects",
     "metaDescription": "Browse every project built by Esdras Santos: full-stack web apps, headless e-commerce platforms, desktop tools and mobile apps.",
     "title": "All Projects",
     "subtitle": "Everything I've built, from full e-commerce stacks to desktop AI tools.",
@@ -212,8 +212,8 @@
     "locale": "{locale, select, en {English} es {Español} pt {Portuguese} other {Unknown}}"
   },
   "Contact": {
-    "metaTitle": "Contact | Esdras Santos",
-    "metaDescription": "Get in touch with Esdras Santos about projects, collaboration, or opportunities.",
+    "metaTitle": "Contact",
+    "metaDescription": "Get in touch with Esdras Santos about job opportunities or freelance projects.",
     "title": "Get in touch",
     "subtitle": "Have a project in mind or just want to say hi? Send me a message and I will get back to you.",
     "name": "Name",

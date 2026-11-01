@@ -4,7 +4,7 @@ import { FadeIn } from "../ui/ScrollAnimation";
 import { getTranslations } from "next-intl/server";
 import { projetos } from "@/data/projects";
 
-const footerProjectSlugs = ["jweb", "pcbyte", "phantomcode"] as const;
+const footerProjectSlugs = ["pcbyte", "jweb", "folga"] as const;
 export default async function Footer() {
   const t = await getTranslations("Footer");
 
