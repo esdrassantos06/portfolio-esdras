@@ -19,7 +19,7 @@
   },
   "HomeComponent": {
     "based": "Sediado em Portugal",
-    "description": "Olá, sou o Esdras Santos. Construo aplicações web de ponta a ponta, desde APIs e bases de dados até interfaces frontend polidas e mobile. Disponível para freelance e novas colaborações.",
+    "description": "Olá, sou o Esdras Santos. Construo aplicações web de ponta a ponta, desde APIs e bases de dados até interfaces frontend polidas e mobile. Disponível para novas oportunidades de emprego e trabalho freelance.",
     "shinyWork": "Ver o Meu Trabalho"
   },
   "Preloader": {
@@ -213,7 +213,7 @@
   },
   "Contact": {
     "metaTitle": "Contacto",
-    "metaDescription": "Entre em contacto com Esdras Santos sobre projetos, colaboração ou oportunidades.",
+    "metaDescription": "Entre em contacto com o Esdras Santos sobre oportunidades de emprego ou projetos freelance.",
     "title": "Entre em contacto",
     "subtitle": "Tem um projeto em mente ou só quer dizer olá? Envie-me uma mensagem e responderei em breve.",
     "name": "Nome",

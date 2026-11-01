@@ -24,7 +24,7 @@ export function GET() {
 
   const content = `# Esdras Santos
 
-> Esdras Santos (full name Esdras Irion do Rosário e Santos) is a full stack developer in Braga, Portugal. He builds production web and mobile apps with TypeScript, Next.js, Node.js and PostgreSQL, from online stores to client portals. Open to full stack roles and freelance work.
+> Esdras Santos (full name Esdras Irion do Rosário e Santos) is a full stack developer in Braga, Portugal. He builds production web and mobile apps with TypeScript, Next.js, Node.js and PostgreSQL, from online stores to client portals. Open to new full-time roles (remote from Portugal or in Braga) and freelance work.
 
 This is the official portfolio of Esdras Santos at ${siteUrl}. It presents his work experience, projects, technology stack and contact channels.
 

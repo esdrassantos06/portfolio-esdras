@@ -19,7 +19,7 @@
   },
   "HomeComponent": {
     "based": "Based in Portugal",
-    "description": "Hi, I'm Esdras Santos. I build web apps end-to-end, from APIs and databases to polished frontends and mobile. Available for freelance work and new collaborations.",
+    "description": "Hi, I'm Esdras Santos. I build web apps end-to-end, from APIs and databases to polished frontends and mobile. Open to new full-time roles and freelance work.",
     "shinyWork": "See My Work"
   },
   "Preloader": {
@@ -213,7 +213,7 @@
   },
   "Contact": {
     "metaTitle": "Contact",
-    "metaDescription": "Get in touch with Esdras Santos about projects, collaboration, or opportunities.",
+    "metaDescription": "Get in touch with Esdras Santos about job opportunities or freelance projects.",
     "title": "Get in touch",
     "subtitle": "Have a project in mind or just want to say hi? Send me a message and I will get back to you.",
     "name": "Name",
