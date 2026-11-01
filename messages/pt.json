@@ -168,7 +168,7 @@
     },
     "title": "E-commerce headless full-stack para loja de tecnologia",
     "overview": "Visão Geral do Projeto",
-    "description": "PCByte é um ecossistema completo de e-commerce para uma loja de tecnologia, arquitetado em quatro projetos independentes. A loja está em produção e a vender a clientes reais. O backend é construído sobre Medusa.js com cache Redis e módulos personalizados para armazenamento dual-bucket em AWS S3, pagamentos via PayPal e SIBS com cartão, Multibanco e MB WAY, transferência bancária manual, indexação com Meilisearch sobre um catálogo de mais de 70.000 produtos, sincronização com o ERP Odoo, emails transacionais via Resend, fulfillment baseado em peso, atributos de produto, media e avaliações. O storefront em Next.js 16 usa React 19, next-intl, TanStack Query, Zustand, Jotai e inclui rate limiting com Redis, Google reCAPTCHA v3, campos honeypot, sanitização com DOMPurify e um CMS headless em Strapi. A app móvel foi refeita de raiz com Expo e React Native, reaproveitando apenas a API do backend, com armazenamento seguro, autenticação biométrica e MMKV. O Strapi (PostgreSQL + S3) gere todo o conteúdo editorial. A qualidade é garantida com testes unitários, de integração e end-to-end com Playwright no backend e no storefront, suite Vitest no frontend e testes unitários em Jest na app móvel.",
+    "description": "PCByte é um ecossistema completo de e-commerce para uma loja de tecnologia, arquitetado em quatro projetos independentes. A loja está em produção e a vender a clientes reais. O backend é construído sobre Medusa.js com cache Redis e módulos personalizados para armazenamento dual-bucket em AWS S3, pagamentos via PayPal e SIBS com cartão, Multibanco e MB WAY, transferência bancária manual, indexação com Meilisearch sobre um catálogo de mais de 70.000 produtos, sincronização com o ERP Odoo, emails transacionais via Resend, fulfillment baseado em peso, atributos de produto, media e avaliações. O checkout é idempotente, por isso um pagamento repetido nunca cobra o cliente duas vezes: até hoje, zero cobranças duplicadas. O storefront em Next.js 16 usa React 19, next-intl, TanStack Query, Zustand, Jotai e inclui rate limiting com Redis, Google reCAPTCHA v3, campos honeypot, sanitização com DOMPurify e um CMS headless em Strapi. A app móvel foi refeita de raiz com Expo e React Native, reaproveitando apenas a API do backend, com armazenamento seguro, autenticação biométrica e MMKV. O Strapi (PostgreSQL + S3) gere todo o conteúdo editorial. A qualidade é garantida com testes unitários, de integração e end-to-end com Playwright no backend e no storefront, suite Vitest no frontend e testes unitários em Jest na app móvel.",
     "metrics": {
       "products": "Produtos em catálogo",
       "tests": "Casos de teste automatizados",
@@ -179,14 +179,19 @@
   "Zipway": {
     "Metadata": {
       "title": "Zipway | Portfólio do Esdras",
-      "description": "Zipway é um encurtador de URLs rápido e minimalista, com frontend em Next.js e backend de alta performance em Go, desenhado para redirecionamentos de baixa latência e analytics simples.",
-      "keywords": "encurtador de URL, encurtador de links, Next.js, Go, Golang, TypeScript, Tailwind CSS, Redis",
+      "description": "O Zipway é um encurtador de URLs em produção em shly.pt, com uma API em Go organizada em Clean Architecture e documentada em OpenAPI, um frontend em Next.js 16 e redirecionamentos servidos a partir do Redis, com o PostgreSQL só como último recurso.",
+      "keywords": "encurtador de URL, encurtador de links, Go, Golang, Fiber, Clean Architecture, OpenAPI, Swagger, Next.js, TypeScript, Redis, PostgreSQL, Prisma, Better Auth",
       "robots": "index, follow",
       "creator": "Esdras Santos"
     },
-    "title": "Um encurtador de URLs rápido com Go e Next.js",
+    "title": "um encurtador de URLs em que o redirecionamento não espera pela base de dados",
     "overview": "Visão Geral do Projeto",
-    "description": "Zipway é um encurtador de URLs moderno focado em velocidade, simplicidade e fiabilidade. O frontend é construído com Next.js, TypeScript e Tailwind CSS, oferecendo uma interface limpa e responsiva para gerar e gerir links curtos. O backend foi escrito em Go para máxima performance e redirecionamentos de baixa latência, expondo uma API HTTP leve. O sistema foi desenhado para escalar horizontalmente e serve o encurtador em produção em shly.pt."
+    "description": "O Zipway é o encurtador de URLs que está em produção em shly.pt. Quem tem conta cria links curtos com um slug aleatório ou escolhido à mão, pode pausá-los e acompanha os cliques de cada um num painel com estatísticas. Abrir um link curto não precisa de conta, e esse é o caminho que tem de ser rápido.\n\nO projeto está dividido em dois serviços. A API em Go, com Fiber v3, segue Clean Architecture: o domínio e os serviços vivem no core e só conhecem interfaces, enquanto os handlers HTTP, o middleware de autenticação e os repositórios de PostgreSQL e Redis ficam do lado de fora, como adaptadores. Os endpoints estão documentados em OpenAPI e podem ser testados no Swagger. O frontend corre em Next.js 16 com React 19, Prisma sobre PostgreSQL, Better Auth com e-mail, GitHub e Google, e Zod a validar os formulários.\n\nUm redirecionamento quase nunca chega à base de dados. A API procura o slug primeiro no Redis, onde cada link fica guardado durante 24 horas, e só quando não o encontra consulta o PostgreSQL com queries preparadas. A contagem do clique corre em segundo plano, por isso o visitante é redirecionado sem esperar pela escrita, e o proxy do Next.js desiste da API ao fim de 500 ms em vez de deixar a página pendurada.\n\nA autenticação segue a mesma ideia. O Better Auth emite a sessão no frontend e a API em Go só valida o cookie, numa cascata de três níveis: primeiro uma cache em memória dentro do próprio processo, que responde em menos de 5 µs, depois o Redis e só no fim o PostgreSQL. O frontend valida e limpa os slugs personalizados antes de chamar a API, bloqueia os que colidem com rotas da aplicação, aplica rate limiting com Redis por tipo de pedido e tem 32 testes em Jest que correm no CI ao lado do ESLint, do Prettier e do build.",
+    "metrics": {
+      "session": "Validação de sessão em memória",
+      "layers": "Níveis na validação de sessão",
+      "tests": "Testes automatizados"
+    }
   },
   "AllProjects": {
     "metaTitle": "Projetos | Portfólio do Esdras",

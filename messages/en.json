@@ -168,7 +168,7 @@
     },
     "title": "Full-stack headless e-commerce for a technology store",
     "overview": "Project Overview",
-    "description": "PCByte is a complete e-commerce ecosystem for a technology store, architected across four independent projects. The store is in production and selling to real customers. The backend is built on Medusa.js with Redis caching and custom modules for AWS S3 dual-bucket storage, PayPal and SIBS payments covering card, Multibanco and MB WAY, manual bank transfer, Meilisearch indexing over a catalogue of more than 70,000 products, Odoo ERP synchronization, transactional emails via Resend, weight-based fulfillment, product attributes, media, and reviews. The Next.js 16 storefront uses React 19, next-intl, TanStack Query, Zustand, Jotai and ships with Redis-backed rate limiting, Google reCAPTCHA v3, honeypot fields, DOMPurify sanitization and a Strapi-powered headless CMS. The mobile app was rebuilt from scratch with Expo and React Native, reusing only the backend API, with secure storage, biometric authentication and MMKV. Strapi (PostgreSQL + S3) powers editorial content. Quality is enforced through unit, integration and Playwright end-to-end tests on the backend and storefront, plus a Vitest suite on the frontend and Jest unit tests on mobile.",
+    "description": "PCByte is a complete e-commerce ecosystem for a technology store, architected across four independent projects. The store is in production and selling to real customers. The backend is built on Medusa.js with Redis caching and custom modules for AWS S3 dual-bucket storage, PayPal and SIBS payments covering card, Multibanco and MB WAY, manual bank transfer, Meilisearch indexing over a catalogue of more than 70,000 products, Odoo ERP synchronization, transactional emails via Resend, weight-based fulfillment, product attributes, media, and reviews. Checkout is idempotent, so a repeated payment never charges the customer twice: to date, zero duplicate charges. The Next.js 16 storefront uses React 19, next-intl, TanStack Query, Zustand, Jotai and ships with Redis-backed rate limiting, Google reCAPTCHA v3, honeypot fields, DOMPurify sanitization and a Strapi-powered headless CMS. The mobile app was rebuilt from scratch with Expo and React Native, reusing only the backend API, with secure storage, biometric authentication and MMKV. Strapi (PostgreSQL + S3) powers editorial content. Quality is enforced through unit, integration and Playwright end-to-end tests on the backend and storefront, plus a Vitest suite on the frontend and Jest unit tests on mobile.",
     "metrics": {
       "products": "Products in catalogue",
       "tests": "Automated test cases",
@@ -179,14 +179,19 @@
   "Zipway": {
     "Metadata": {
       "title": "Zipway | Esdras Portfolio",
-      "description": "Zipway is a fast and minimal URL shortener with a Next.js frontend and a high-performance Go backend, designed for low-latency redirects and clean link analytics.",
-      "keywords": "URL shortener, link shortener, Next.js, Go, Golang, TypeScript, Tailwind CSS, Redis",
+      "description": "Zipway is a URL shortener in production at shly.pt, with a Go API organised in Clean Architecture and documented in OpenAPI, a Next.js 16 frontend, and redirects served from Redis with PostgreSQL only as a fallback.",
+      "keywords": "URL shortener, link shortener, Go, Golang, Fiber, Clean Architecture, OpenAPI, Swagger, Next.js, TypeScript, Redis, PostgreSQL, Prisma, Better Auth",
       "robots": "index, follow",
       "creator": "Esdras Santos"
     },
-    "title": "A fast URL shortener powered by Go and Next.js",
+    "title": "a URL shortener where redirects don't wait for the database",
     "overview": "Project Overview",
-    "description": "Zipway is a modern URL shortener focused on speed, simplicity and reliability. The frontend is built with Next.js, TypeScript and Tailwind CSS, delivering a clean and responsive interface for generating and managing short links. The backend is written in Go for maximum performance and low-latency redirects, exposing a lightweight HTTP API. The system is designed to scale horizontally and serves the live shortener at shly.pt."
+    "description": "Zipway is the URL shortener running in production at shly.pt. Signed-in users create short links with a random slug or one they pick, can pause them, and follow each link's clicks on a dashboard with stats. Opening a short link needs no account, and that is the path that has to be fast.\n\nThe project is split into two services. The Go API, built on Fiber v3, follows Clean Architecture: the domain and services live in the core and only know interfaces, while the HTTP handlers, the auth middleware and the PostgreSQL and Redis repositories sit outside as adapters. Every endpoint is documented in OpenAPI and can be tried in Swagger. The frontend runs on Next.js 16 with React 19, Prisma over PostgreSQL, Better Auth with email, GitHub and Google, and Zod validating the forms.\n\nA redirect almost never reaches the database. The API looks up the slug in Redis first, where each link stays cached for 24 hours, and only queries PostgreSQL with prepared statements when it misses. The click is counted in the background, so the visitor is redirected without waiting on the write, and the Next.js proxy gives up on the API after 500 ms instead of leaving the page hanging.\n\nAuthentication follows the same idea. Better Auth issues the session in the frontend and the Go API only validates the cookie, through a three-level cascade: first an in-memory cache inside the process that answers in under 5 µs, then Redis, and only then PostgreSQL. The frontend validates and cleans custom slugs before calling the API, blocks the ones that collide with app routes, applies Redis rate limiting per request type and has 32 Jest tests that run in CI alongside ESLint, Prettier and the build.",
+    "metrics": {
+      "session": "In-memory session validation",
+      "layers": "Session validation levels",
+      "tests": "Automated tests"
+    }
   },
   "AllProjects": {
     "metaTitle": "Projects | Esdras Portfolio",
