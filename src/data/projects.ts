@@ -108,6 +108,7 @@ export const projetos: Record<string, Project> = {
       tech.tailwind,
       tech.pg,
       tech.drizzle,
+      tech.betterAuth,
       tech.capacitor,
       tech.redis,
       tech.odoo,
