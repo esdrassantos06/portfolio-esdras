@@ -43,6 +43,8 @@ const tech = {
   tanstackQuery: "TanStack Query",
   python: "Python",
   fastapi: "FastAPI",
+  fiber: "Fiber",
+  openapi: "OpenAPI",
 } as const;
 
 type TechName = (typeof tech)[keyof typeof tech];
@@ -199,7 +201,28 @@ export const projetos: Record<string, Project> = {
     image: "/projects-mockup/zipway.webp",
     demo: "https://www.shly.pt/",
     code: "https://github.com/esdrassantos06/zipway",
-    technologies: [tech.next, tech.ts, tech.go, tech.tailwind, tech.redis],
+    technologies: [
+      tech.go,
+      tech.fiber,
+      tech.openapi,
+      tech.next,
+      tech.ts,
+      tech.react,
+      tech.redis,
+      tech.pg,
+      tech.prisma,
+      tech.betterAuth,
+      tech.tailwind,
+      tech.shadcn,
+      tech.zod,
+      tech.jest,
+      tech.docker,
+    ],
+    metrics: [
+      { value: "<5µs", label: "session" },
+      { value: "3", label: "layers" },
+      { value: "32", label: "tests" },
+    ],
     namespace: "Zipway",
   },
   tarevity: {
