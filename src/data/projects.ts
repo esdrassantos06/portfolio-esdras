@@ -185,12 +185,31 @@ export const projetos: Record<string, Project> = {
       tech.docker,
     ],
     metrics: [
-      { value: "168", label: "tests" },
+      { value: "375", label: "tests" },
       { value: "92%", label: "coverage" },
       { value: "3", label: "sources" },
     ],
     namespace: "VagasTechPt",
     featuredHome: true,
+  },
+  gallery: {
+    slug: "gallery",
+    name: "Gallery",
+    image: "/projects-mockup/gallery.webp",
+    demo: "https://gallery-esdrassantos06.vercel.app",
+    code: "https://github.com/esdrassantos06/gallery",
+    technologies: [
+      tech.react,
+      tech.ts,
+      tech.vitest,
+      tech.playwright,
+      tech.next,
+    ],
+    metrics: [
+      { value: "13 kB", label: "size" },
+      { value: "0", label: "deps" },
+    ],
+    namespace: "Gallery",
   },
   zipway: {
     slug: "zipway",

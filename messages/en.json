@@ -139,11 +139,27 @@
     },
     "title": "a tech job aggregator built to survive broken scrapers",
     "overview": "Project Overview",
-    "description": "Vagas Tech PT gathers tech job postings in Portugal from LinkedIn, itjobs.pt and net-empregos into one searchable API. Every posting is normalized into the same shape: city, work mode, a yearly salary range in euros and the tech stack it mentions. A fingerprint built from the company, role and city then collapses the same job published on different sites into a single entry that lists every source it came from.\n\nThe backend runs on Python 3.15 with FastAPI, PostgreSQL 18, SQLAlchemy 2 and Alembic. Scrapers use Parsel for HTML and RSS and Playwright for LinkedIn, behind an HTTP client with retries, exponential backoff, Retry-After handling and a per-site crawl delay. Upserts are idempotent and run inside a savepoint, so a bad batch never loses the record of the run.\n\nScrapers break whenever a site changes its markup, so the project treats that as something to test and monitor. Parsers fail loudly instead of returning nothing, every run is stored with its status, failures alert an admin, and a weekly canary in GitHub Actions hits the live sites and opens an issue when one of them changes.\n\nUsers subscribe to alerts with their own filters by email, Discord or Telegram after an opt-in confirmation, with tokens stored only as hashes and Discord webhooks validated against SSRF. The whole project was built test first: 168 automated tests at 92% coverage, strict mypy and six required CI checks, including an OpenAPI drift check and a guard against destructive migrations.",
+    "description": "Vagas Tech PT gathers tech job postings in Portugal from LinkedIn, itjobs.pt and net-empregos into one searchable API. Every posting is normalized into the same shape: city, work mode, a yearly salary range in euros and the tech stack it mentions. A fingerprint built from the company, role and city then collapses the same job published on different sites into a single entry that lists every source it came from.\n\nThe backend runs on Python 3.15 with FastAPI, PostgreSQL 18, SQLAlchemy 2 and Alembic. Scrapers use Parsel for HTML and RSS and Playwright for LinkedIn, behind an HTTP client with retries, exponential backoff, Retry-After handling and a per-site crawl delay. Upserts are idempotent and run inside a savepoint, so a bad batch never loses the record of the run.\n\nScrapers break whenever a site changes its markup, so the project treats that as something to test and monitor. Parsers fail loudly instead of returning nothing, every run is stored with its status, failures alert an admin, and a weekly canary in GitHub Actions hits the live sites and opens an issue when one of them changes.\n\nUsers subscribe to alerts with their own filters, seniority included, by email, Discord or Telegram after an opt-in confirmation. Alerts are then managed from Discord slash commands or Telegram bot commands, and every digest carries an unsubscribe link. Tokens are stored only as hashes, Discord webhooks are validated against SSRF, and every route is documented in a Scalar API reference. The whole project was built test first: 375 automated tests at 92% coverage, strict mypy and six required CI checks, including an OpenAPI drift check and a guard against destructive migrations.",
     "metrics": {
       "tests": "Automated tests",
       "coverage": "Test coverage",
       "sources": "Job sources"
+    }
+  },
+  "Gallery": {
+    "Metadata": {
+      "title": "Gallery",
+      "description": "Gallery is an open source, accessible lightbox for React 18 and 19 published on npm as @esdrassantos06/gallery. Zero runtime dependencies, about 13 kB of JavaScript, with zoom, swipe, video, thumbnails and full keyboard support.",
+      "keywords": "react lightbox, image gallery, npm package, accessibility, open source, typescript, pointer events, vitest, playwright, tdd",
+      "robots": "index, follow",
+      "creator": "Esdras Santos"
+    },
+    "title": "an accessible React lightbox with zero dependencies",
+    "overview": "Project Overview",
+    "description": "Gallery is an open source lightbox for React 18 and 19, published on npm as @esdrassantos06/gallery. It opens images, videos and embeds over the page with a FLIP animation that grows from the thumbnail and shrinks back into it on close. The whole package has zero runtime dependencies and weighs about 13 kB of JavaScript and 3 kB of CSS, minified and brotli compressed.\n\nInput is built on Pointer Events: swipe between slides, pinch, wheel or double tap to zoom, drag to pan a zoomed image without losing its edges, and pinch out to close. Slides can be rotated, shown fullscreen, played as a slideshow, downloaded or shared. Videos play from YouTube through youtube-nocookie.com, from Vimeo with do not track, as native video, or through any custom player rendered in a slot.\n\nAccessibility came first. The lightbox is a modal dialog with a focus trap, focus goes back to the thumbnail on close, a live region announces the current slide, every action has a keyboard shortcut, and reduced motion is respected. It also handles right to left layouts, renders safely on the server, and exposes its whole theme as CSS custom properties.\n\nThe library was written test first: unit tests with Vitest, Playwright end to end tests on desktop and a mobile profile, CI on React 18 and 19, size budgets and checks on the published package. Releases ship from GitHub Actions with npm Trusted Publishing and provenance, and the documentation lives on its own Fumadocs site.",
+    "metrics": {
+      "size": "Bundle size",
+      "deps": "Runtime dependencies"
     }
   },
   "NexebraTrail": {
