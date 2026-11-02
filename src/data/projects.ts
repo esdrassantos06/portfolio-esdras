@@ -64,9 +64,10 @@ export interface Project {
   metrics?: ProjectMetric[];
   namespace: string;
   featuredHome?: boolean;
+  unreleased?: boolean;
 }
 
-export const projetos: Record<string, Project> = {
+const catalog: Record<string, Project> = {
   pcbyte: {
     slug: "pcbyte",
     name: "PCByte",
@@ -118,6 +119,32 @@ export const projetos: Record<string, Project> = {
     ],
     namespace: "JWeb",
     featuredHome: true,
+  },
+  moduloservice: {
+    slug: "moduloservice",
+    name: "ModuloService PT",
+    image: "/projects-mockup/moduloservice.webp",
+    demo: "https://www.moduloservice.pt",
+    technologies: [
+      tech.next,
+      tech.ts,
+      tech.react,
+      tech.tailwind,
+      tech.three,
+      tech.gsap,
+      tech.zod,
+      tech.resend,
+      tech.vitest,
+      tech.docker,
+    ],
+    metrics: [
+      { value: "7", label: "trades" },
+      { value: "3", label: "languages" },
+      { value: "75", label: "tests" },
+    ],
+    namespace: "ModuloService",
+    featuredHome: true,
+    unreleased: true,
   },
   folga: {
     slug: "folga",
@@ -281,6 +308,18 @@ export const projetos: Record<string, Project> = {
     namespace: "NexebraTrail",
   },
 };
+
+const showUnreleased = process.env.NODE_ENV === "development";
+
+/** Projects published in this build, keyed by slug. */
+export const projetos: Record<string, Project> = Object.fromEntries(
+  Object.entries(catalog).filter(([, p]) => showUnreleased || !p.unreleased),
+);
+
+/** Message namespaces of projects left out of this build. */
+export const hiddenNamespaces = Object.values(catalog)
+  .filter((p) => !projetos[p.slug])
+  .map((p) => p.namespace);
 
 export const homeProjects = Object.values(projetos).filter(
   (p) => p.featuredHome,
