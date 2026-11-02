@@ -95,6 +95,23 @@
     "overview": "Project Overview",
     "description": "JWeb is a digital solutions agency where I am the only developer. The work has three parts: the institutional website, the iOS app and a portal where clients follow everything they have with the agency.\n\nThe client portal runs on PostgreSQL with Drizzle ORM and is synced with Odoo: helpdesk tickets, invoices, subscriptions, sales and projects for each client come straight from the agency's ERP. Clients don't sign up on their own. They get an invitation by email and, on first access, set up their account and two-factor authentication with an authenticator app on their phone, all built on Better Auth. From then on, updates reach them as push and email notifications.\n\nThe website is built with Next.js 16, React 19 and TypeScript, fully localised in Portuguese, English and Spanish, and scores 90+ on Lighthouse. Content runs through a Keystatic headless CMS with a Markdoc blog, forms are validated with React Hook Form, Zod and reCAPTCHA v3, and transactional email is sent with Resend. Analytics run on Google Tag Manager behind GDPR Consent Mode v2.\n\nThe iOS app, built with Capacitor, registers push tokens with the backend and supports universal links and App Tracking Transparency. Sends go through an in-house notification platform: device tokens live in PostgreSQL, an admin console composes and broadcasts campaigns, and an APNs sender delivers in batches with Redis rate limiting and automatic pruning of invalid tokens. Everything is styled with Tailwind CSS 4 and accessible shadcn/ui components."
   },
+  "ModuloService": {
+    "Metadata": {
+      "title": "ModuloService PT",
+      "description": "Company website for ModuloService PT, a building and renovation firm that brings seven trades under one person in charge. Next.js 16 with Cache Components, three languages, quote requests through Server Actions and Resend, GDPR consent before any tag loads, and SEO built for AI assistants too.",
+      "keywords": "company website, renovation company, construction, carpentry, metalwork, Next.js, React, TypeScript, Three.js, next-intl, GDPR, Google Tag Manager, Consent Mode, JSON-LD, SEO, llms.txt, Resend",
+      "robots": "index, follow",
+      "creator": "Esdras Santos"
+    },
+    "title": "the website of a firm that handles the whole job, from carpenter to painter",
+    "overview": "Project Overview",
+    "description": "ModuloService PT does carpentry, furniture assembly, fabrication, electrical work, construction, metalwork and painting, and its pitch fits in one sentence: the client hires one company and one person answers for the whole job, instead of juggling half a dozen contractors. The site has to get that across to homeowners, architects, shops and property developers, and it has to end in a quote request.\n\nIt runs on Next.js 16 with the App Router and Cache Components, React 19, TypeScript and Tailwind CSS 4. next-intl serves Portuguese at the root and English and Spanish under /en and /es. Every trade gets its own page, there's a turnkey renovation page, project case pages and a gallery built on a package of mine, @esdrassantos06/gallery, which plays videos in Video.js and takes each video's shape from its poster. At the top of the home page the brand's dovetail joint slots together in 3D with Three.js and follows the mouse; with reduced motion or no WebGL it stays a flat symbol that costs no JavaScript.\n\nThe quote form is a Server Action validated with Zod. Each request sends two emails through Resend: an internal one in Portuguese that replies straight to the client, and a confirmation in the visitor's language that repeats the chosen trades but never echoes what they typed. If email delivery isn't configured, the form shows an error instead of pretending it worked. Ad click ids (gclid, gbraid, wbraid, fbclid and the utm tags) travel with the request, sanitised as untrusted input, so a job that's won can go back into Google Ads and Meta as an offline conversion.\n\nNo tag loads before consent: the GDPR banner sits in front of Google Tag Manager, and the container id is validated because it ends up in an inline script and in the Content Security Policy. To get found, the site emits JSON-LD for the company, services, FAQ, gallery and breadcrumbs, an image sitemap, hreflang across all three languages and an llms.txt for AI assistants. It ships as a standalone Docker build, with 75 Vitest tests covering consent, attribution, emails and request validation.",
+    "metrics": {
+      "trades": "Trades with their own page",
+      "languages": "Languages",
+      "tests": "Automated tests"
+    }
+  },
   "PhantomCode": {
     "Metadata": {
       "title": "Phantom Code",
