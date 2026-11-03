@@ -1,7 +1,7 @@
 import { routing } from "./routing";
 
 export const siteUrl =
-  process.env.NEXT_PUBLIC_BASE_URL || "https://portfolioesdras.com";
+  process.env.NEXT_PUBLIC_BASE_URL || "https://www.portfolioesdras.com";
 
 export function localizedUrl(locale: string, path = "") {
   const prefix = locale === routing.defaultLocale ? "" : `/${locale}`;
