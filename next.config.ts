@@ -20,12 +20,6 @@ const nextConfig: NextConfig = {
   },
   redirects: async () => {
     return [
-      {
-        source: "/:path*",
-        has: [{ type: "host", value: "www.portfolioesdras.com" }],
-        destination: "https://portfolioesdras.com/:path*",
-        permanent: true,
-      },
       { source: "/en", destination: "/", permanent: true },
       { source: "/en/:path*", destination: "/:path*", permanent: true },
       { source: "/:locale(de|fr)", destination: "/", permanent: true },
