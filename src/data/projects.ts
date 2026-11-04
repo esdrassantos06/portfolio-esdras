@@ -219,12 +219,12 @@ const catalog: Record<string, Project> = {
     namespace: "VagasTechPt",
     featuredHome: true,
   },
-  gallery: {
-    slug: "gallery",
-    name: "Gallery",
-    image: "/projects-mockup/gallery.webp",
-    demo: "https://gallery-esdrassantos06.vercel.app",
-    code: "https://github.com/esdrassantos06/gallery",
+  liftbox: {
+    slug: "liftbox",
+    name: "liftbox",
+    image: "/projects-mockup/liftbox.webp",
+    demo: "https://liftbox.digital",
+    code: "https://github.com/esdrassantos06/liftbox",
     technologies: [
       tech.react,
       tech.ts,
@@ -236,7 +236,7 @@ const catalog: Record<string, Project> = {
       { value: "13 kB", label: "size" },
       { value: "0", label: "deps" },
     ],
-    namespace: "Gallery",
+    namespace: "Liftbox",
   },
   zipway: {
     slug: "zipway",
