@@ -21,6 +21,16 @@ const nextConfig: NextConfig = {
   redirects: async () => {
     return [
       { source: "/en", destination: "/", permanent: true },
+      {
+        source: "/projects/gallery",
+        destination: "/projects/liftbox",
+        permanent: true,
+      },
+      {
+        source: "/:locale(pt|es)/projects/gallery",
+        destination: "/:locale/projects/liftbox",
+        permanent: true,
+      },
       { source: "/en/:path*", destination: "/:path*", permanent: true },
       { source: "/:locale(de|fr)", destination: "/", permanent: true },
       {
