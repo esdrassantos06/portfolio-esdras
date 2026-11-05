@@ -218,7 +218,7 @@ export default async function ProjetoPage({ params }: Props) {
                 src={projeto.image}
                 alt={t("title")}
                 fill
-                sizes="92vw"
+                sizes="(min-width: 1252px) 1152px, 92vw"
                 className="object-cover select-none"
                 priority
               />
