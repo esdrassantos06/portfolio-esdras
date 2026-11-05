@@ -1,3 +1,16 @@
+import type { StaticImageData } from "next/image";
+import pcbyteMockup from "../../public/projects-mockup/pcbyte.webp";
+import jwebMockup from "../../public/projects-mockup/jweb.webp";
+import moduloserviceMockup from "../../public/projects-mockup/moduloservice.webp";
+import folgaMockup from "../../public/projects-mockup/folga.webp";
+import phantomcodeMockup from "../../public/projects-mockup/phantomcode.webp";
+import vagastechptMockup from "../../public/projects-mockup/vagastechpt.webp";
+import liftboxMockup from "../../public/projects-mockup/liftbox.webp";
+import swarmscopeMockup from "../../public/projects-mockup/swarmscope.webp";
+import zipwayMockup from "../../public/projects-mockup/zipway.webp";
+import tarevityMockup from "../../public/projects-mockup/tarevity.webp";
+import nexebratrailMockup from "../../public/projects-mockup/nexebratrail.webp";
+
 const tech = {
   react: "React",
   tailwind: "TailwindCSS",
@@ -61,7 +74,7 @@ export interface ProjectMetric {
 export interface Project {
   slug: string;
   name: string;
-  image: string;
+  image: StaticImageData;
   demo?: string;
   code?: string;
   technologies: TechName[];
@@ -75,7 +88,7 @@ const catalog: Record<string, Project> = {
   pcbyte: {
     slug: "pcbyte",
     name: "PCByte",
-    image: "/projects-mockup/pcbyte.webp",
+    image: pcbyteMockup,
     demo: "https://pcbyte.pt",
     technologies: [
       tech.medusa,
@@ -104,7 +117,7 @@ const catalog: Record<string, Project> = {
   jweb: {
     slug: "jweb",
     name: "JWeb",
-    image: "/projects-mockup/jweb.avif",
+    image: jwebMockup,
     demo: "https://jweb.pt",
     technologies: [
       tech.next,
@@ -127,7 +140,7 @@ const catalog: Record<string, Project> = {
   moduloservice: {
     slug: "moduloservice",
     name: "ModuloService PT",
-    image: "/projects-mockup/moduloservice.webp",
+    image: moduloserviceMockup,
     demo: "https://www.moduloservice.pt",
     technologies: [
       tech.next,
@@ -153,7 +166,7 @@ const catalog: Record<string, Project> = {
   folga: {
     slug: "folga",
     name: "Folga",
-    image: "/projects-mockup/folga.webp",
+    image: folgaMockup,
     demo: "https://folga.online",
     technologies: [
       tech.next,
@@ -174,7 +187,7 @@ const catalog: Record<string, Project> = {
   phantomcode: {
     slug: "phantomcode",
     name: "Phantom Code",
-    image: "/projects-mockup/phantomcode.webp",
+    image: phantomcodeMockup,
     demo: "https://phantomcode.pt",
     technologies: [
       tech.next,
@@ -205,7 +218,7 @@ const catalog: Record<string, Project> = {
   vagastechpt: {
     slug: "vagastechpt",
     name: "Vagas Tech PT",
-    image: "/projects-mockup/vagastechpt.webp",
+    image: vagastechptMockup,
     demo: "https://vagas.portfolioesdras.com/docs",
     code: "https://github.com/esdrassantos06/vagas-tech-pt",
     technologies: [
@@ -226,7 +239,7 @@ const catalog: Record<string, Project> = {
   liftbox: {
     slug: "liftbox",
     name: "liftbox",
-    image: "/projects-mockup/liftbox.webp",
+    image: liftboxMockup,
     demo: "https://liftbox.digital",
     code: "https://github.com/esdrassantos06/liftbox",
     technologies: [
@@ -245,7 +258,7 @@ const catalog: Record<string, Project> = {
   swarmscope: {
     slug: "swarmscope",
     name: "Swarmscope",
-    image: "/projects-mockup/swarmscope.webp",
+    image: swarmscopeMockup,
     code: "https://github.com/esdrassantos06/swarmscope",
     technologies: [
       tech.python,
@@ -264,7 +277,7 @@ const catalog: Record<string, Project> = {
   zipway: {
     slug: "zipway",
     name: "Zipway",
-    image: "/projects-mockup/zipway.webp",
+    image: zipwayMockup,
     demo: "https://www.shly.pt/",
     code: "https://github.com/esdrassantos06/zipway",
     technologies: [
@@ -295,7 +308,7 @@ const catalog: Record<string, Project> = {
   tarevity: {
     slug: "tarevity",
     name: "Tarevity",
-    image: "/projects-mockup/tarevity.webp",
+    image: tarevityMockup,
     demo: "https://www.tarevity.me/",
     code: "https://github.com/esdrassantos06/tarevity",
     technologies: [
@@ -325,7 +338,7 @@ const catalog: Record<string, Project> = {
   nexebratrail: {
     slug: "nexebratrail",
     name: "Nexebra Trail",
-    image: "/projects-mockup/nexebratrail.webp",
+    image: nexebratrailMockup,
     demo: "https://nexebratrail.com",
     technologies: [tech.next, tech.tailwind, tech.ts, tech.shadcn],
     namespace: "NexebraTrail",

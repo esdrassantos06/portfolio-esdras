@@ -75,7 +75,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   ]);
 
   const url = localizedUrl(locale, `/projects/${slug}`);
-  const imageUrl = `${siteUrl}${projeto.image}`;
+  const imageUrl = `${siteUrl}${projeto.image.src}`;
 
   const metadata: Metadata = {
     metadataBase: new URL(siteUrl),
@@ -147,7 +147,7 @@ export default async function ProjetoPage({ params }: Props) {
       sameAs: projeto.code ? [projeto.code] : undefined,
       codeRepository: projeto.code,
       author: { "@id": PERSON_ID },
-      image: `${siteUrl}${projeto.image}`,
+      image: `${siteUrl}${projeto.image.src}`,
       operatingSystem: "Web",
       offers: {
         "@type": "Offer",
@@ -163,7 +163,7 @@ export default async function ProjetoPage({ params }: Props) {
       description: t("description"),
       inLanguage: locale,
       isPartOf: { "@id": WEBSITE_ID },
-      primaryImageOfPage: `${siteUrl}${projeto.image}`,
+      primaryImageOfPage: `${siteUrl}${projeto.image.src}`,
     },
     breadcrumbSchema(locale, [
       { name: allT("title"), path: "/projects" },
@@ -220,7 +220,8 @@ export default async function ProjetoPage({ params }: Props) {
                 fill
                 sizes="(min-width: 1252px) 1152px, 92vw"
                 className="object-cover select-none"
-                priority
+                placeholder="blur"
+                preload
               />
             </div>
           </figure>

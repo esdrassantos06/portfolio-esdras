@@ -44,8 +44,8 @@ export default function ProjectGrid({
                         alt={`${project.name} project preview`}
                         fill
                         sizes="(max-width: 1024px) 100vw, 50vw"
-                        priority={isPriority}
-                        loading={isPriority ? undefined : "lazy"}
+                        placeholder="blur"
+                        preload={isPriority}
                         className="pointer-events-none object-cover transition-transform duration-700 select-none group-hover/card:scale-[1.04]"
                       />
                       <div className="absolute inset-0 bg-linear-to-t from-black/50 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover/card:opacity-100" />

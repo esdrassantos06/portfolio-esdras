@@ -40,7 +40,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         changeFrequency: "monthly",
         priority: 0.8,
         alternates: { languages: localeAlternates(path) },
-        images: [`${siteUrl}${project.image}`],
+        images: [`${siteUrl}${project.image.src}`],
       });
     });
   });
