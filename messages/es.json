@@ -179,6 +179,22 @@
       "deps": "Dependencias en runtime"
     }
   },
+  "Swarmscope": {
+    "Metadata": {
+      "title": "Swarmscope",
+      "description": "Swarmscope es una app de escritorio open source con licencia MIT para macOS y Windows que hace pruebas de carga a tus sitios con Locust, mide la carga real de la página en un navegador mientras corre la prueba y cierra cada prueba con un veredicto.",
+      "keywords": "swarmscope, pruebas de carga, locust, python, app de escritorio, carga de página, lcp, http 429, open source, pywebview, pyinstaller",
+      "robots": "index, follow",
+      "creator": "Esdras Santos"
+    },
+    "title": "una app de escritorio de pruebas de carga que te dice cuándo tu sitio se ralentiza",
+    "overview": "Resumen del Proyecto",
+    "description": "Swarmscope es una app de escritorio open source con licencia MIT para macOS y Windows que responde a una pregunta: cuántos usuarios aguanta mi sitio antes de ralentizarse, y si es el sitio o el hosting lo que cede primero. Pegas una URL, eliges los usuarios y la rampa y pulsas Start. Por debajo corre Locust, y el panel dibuja en tiempo real las peticiones por segundo, la latencia p95 y los errores.\n\nLos tiempos de las peticiones no dicen cómo se siente la página, así que cada 15 segundos Swarmscope abre la página en un navegador real, el Chrome o el Edge que ya están instalados, a través de Patchright, y registra TTFB, FCP, LCP y el peso de la página. La primera visita corre antes de la carga, lo que da una referencia para comparar mientras los usuarios están en el sitio.\n\nLos hostings se defienden cuando sube la carga, y un 429 de Vercel es un problema distinto de un 500 de tu propio código. Swarmscope repite las peticiones con backoff, separa el throttling de los fallos reales y cierra cada prueba con un veredicto: usuarios aguantados, carga de la página sola frente a bajo carga, errores que quedaron tras los reintentos y cuándo llegó el primer 429.\n\nLa app lleva todo lo que necesita. Python, Locust, la ventana y el driver del navegador van empaquetados con PyInstaller en un DMG para Apple Silicon, un zip para Macs Intel y un zip para Windows, todos generados por GitHub Actions. El motor local solo responde a la ventana que lo abrió: cada arranque crea un token aleatorio, guardado en una cookie HttpOnly y comprobado en cada petición junto con la cabecera Host, para que otra página abierta en un navegador no pueda iniciar una prueba. El código se escribió con los tests primero en pytest y se valida con ruff.",
+    "metrics": {
+      "tests": "Tests",
+      "builds": "Builds de escritorio"
+    }
+  },
   "NexebraTrail": {
     "Metadata": {
       "title": "Nexebra Trail",
