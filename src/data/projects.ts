@@ -45,6 +45,10 @@ const tech = {
   fastapi: "FastAPI",
   fiber: "Fiber",
   openapi: "OpenAPI",
+  locust: "Locust",
+  flask: "Flask",
+  pywebview: "pywebview",
+  pyinstaller: "PyInstaller",
 } as const;
 
 type TechName = (typeof tech)[keyof typeof tech];
@@ -237,6 +241,25 @@ const catalog: Record<string, Project> = {
       { value: "0", label: "deps" },
     ],
     namespace: "Liftbox",
+  },
+  swarmscope: {
+    slug: "swarmscope",
+    name: "Swarmscope",
+    image: "/projects-mockup/swarmscope.webp",
+    code: "https://github.com/esdrassantos06/swarmscope",
+    technologies: [
+      tech.python,
+      tech.locust,
+      tech.flask,
+      tech.playwright,
+      tech.pywebview,
+      tech.pyinstaller,
+    ],
+    metrics: [
+      { value: "56", label: "tests" },
+      { value: "3", label: "builds" },
+    ],
+    namespace: "Swarmscope",
   },
   zipway: {
     slug: "zipway",

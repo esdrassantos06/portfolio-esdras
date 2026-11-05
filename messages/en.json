@@ -179,6 +179,22 @@
       "deps": "Runtime dependencies"
     }
   },
+  "Swarmscope": {
+    "Metadata": {
+      "title": "Swarmscope",
+      "description": "Swarmscope is an open source, MIT-licensed desktop app for macOS and Windows that load tests your own sites with Locust, times the real page load in a browser while the crowd runs, and ends every run with a verdict.",
+      "keywords": "swarmscope, load testing, locust, python, desktop app, page load, lcp, http 429, open source, pywebview, pyinstaller",
+      "robots": "index, follow",
+      "creator": "Esdras Santos"
+    },
+    "title": "a desktop load tester that tells you when your site slows down",
+    "overview": "Project Overview",
+    "description": "Swarmscope is an open source, MIT-licensed desktop app for macOS and Windows that answers one question: how many users can my site take before it slows down, and is it my site or my host that gives way first. You paste a URL, pick the crowd and the ramp, and press Start. Under the hood it drives Locust, and the panel plots requests per second, p95 latency and errors live.\n\nRequest timings alone don't say how the page feels, so every 15 seconds Swarmscope opens the page in a real browser, the Chrome or Edge already installed, through Patchright, and records TTFB, FCP, LCP and page weight. The first visit runs before any load, which gives a baseline to compare against while the crowd is on the site.\n\nHosts push back under load, and a 429 from Vercel is a different problem from a 500 from your own code. Swarmscope retries with backoff, keeps throttling apart from real failures, and ends each run with a verdict: users held, page load alone versus under load, errors left after retries, and when the first 429 arrived.\n\nThe app ships everything it runs on. Python, Locust, the window and the probe driver are bundled with PyInstaller into a DMG for Apple Silicon, a zip for Intel Macs and a zip for Windows, all built by GitHub Actions. The local engine only answers the window that started it: each launch creates a random token, kept in an HttpOnly cookie and checked on every request together with the Host header, so another page open in a browser can't start a test. The code was written test first with pytest and linted with ruff.",
+    "metrics": {
+      "tests": "Tests",
+      "builds": "Desktop builds"
+    }
+  },
   "NexebraTrail": {
     "Metadata": {
       "title": "Nexebra Trail",
