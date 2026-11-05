@@ -87,7 +87,7 @@ public/                    # CV, fonts, models, mockups, flags, icons
 
 1. Add an entry to `src/data/projects.ts` (`slug`, `name`, `image`, `demo`, optional `code`, `technologies`, `namespace`, optional `featuredHome`).
 2. Add the matching `namespace` copy to every file in `messages/`.
-3. Drop the mockup into `public/projects-mockup/`.
+3. Drop the mockup into `public/projects-mockup/` (2560px wide is plenty) and import it at the top of `src/data/projects.ts` for `image`. The static import gives the blur placeholder for free.
 
 The sitemap, the projects grid, and `/llms.txt` pick it up automatically.
 
