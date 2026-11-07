@@ -252,8 +252,10 @@ const catalog: Record<string, Project> = {
     metrics: [
       { value: "13 kB", label: "size" },
       { value: "0", label: "deps" },
+      { value: "1k+", label: "downloads" },
     ],
     namespace: "Liftbox",
+    featuredHome: true,
   },
   swarmscope: {
     slug: "swarmscope",
@@ -273,6 +275,7 @@ const catalog: Record<string, Project> = {
       { value: "3", label: "builds" },
     ],
     namespace: "Swarmscope",
+    featuredHome: true,
   },
   zipway: {
     slug: "zipway",
