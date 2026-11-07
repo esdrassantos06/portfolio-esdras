@@ -14,6 +14,7 @@ const HeroScene = dynamic(() => import("../ui/HeroScene"), { ssr: false });
 
 export default function HomeComponent() {
   const t = useTranslations("HomeComponent");
+  const tRoot = useTranslations();
   const heroRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -104,22 +105,22 @@ export default function HomeComponent() {
     <section
       ref={heroRef}
       id="home"
-      aria-label="Home section"
       className="relative z-10 flex min-h-screen w-full items-center pt-32 pb-16 sm:pt-24"
     >
       <div className="shell grid grid-cols-1 items-center gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.85fr)] lg:gap-8">
         <header className="flex flex-col items-center text-center lg:items-start lg:text-left">
           <h1 className="text-[clamp(2.75rem,8vw,5.5rem)] leading-[0.95] font-bold tracking-[-0.03em] text-balance">
-            <span className="sr-only">Esdras Santos, </span>
             <span className="block overflow-hidden">
-              <span className="hero-line block">Full Stack</span>
+              <span className="hero-line block">Esdras</span>
             </span>
             <span className="block overflow-hidden">
-              <span className="hero-line hero-accent text-secundaria block">
-                Developer
-              </span>
+              <span className="hero-line block">Santos</span>
             </span>
           </h1>
+
+          <p className="hero-fade hero-accent text-secundaria mt-5 text-[clamp(1.5rem,3vw,2.25rem)] leading-tight font-semibold tracking-[-0.02em]">
+            {tRoot("Role")}
+          </p>
 
           <div
             aria-hidden="true"
@@ -130,24 +131,19 @@ export default function HomeComponent() {
             {t("description")}
           </p>
 
-          <nav
-            aria-label="Main navigation actions"
-            className="hero-fade mt-10 flex flex-col items-center gap-6 lg:items-start"
-          >
+          <div className="hero-fade mt-10 flex flex-col items-center gap-6 lg:items-start">
             <div className="flex flex-col items-stretch gap-3 sm:flex-row sm:items-center">
               <ShinyButton text={t("shinyWork")} link="#work" />
               <CvDownload />
             </div>
             <div className="flex items-center gap-5">
-              <div aria-label="Social media links">
-                <Icons />
-              </div>
+              <Icons />
               <p className="text-principal/70 flex items-center gap-1.5 text-sm">
                 <MapPinIcon size={16} aria-hidden="true" />
                 {t("based")}
               </p>
             </div>
-          </nav>
+          </div>
         </header>
 
         <div className="hero-fade relative order-last h-[38vh] max-h-96 min-h-56 w-full lg:order-0 lg:mr-[-13vw] lg:h-[80vh] lg:max-h-none">

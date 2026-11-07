@@ -38,7 +38,7 @@ export default function NotFound() {
 
         <Link
           href="/"
-          className="hero-dive group bg-secundaria hover:bg-link focus-visible:ring-link mt-10 inline-flex h-12 w-fit items-center gap-3 rounded-full px-7 text-[0.95rem] font-semibold text-white transition-colors duration-200 focus-visible:ring-2 focus-visible:outline-none"
+          className="hero-dive group bg-secundaria hover:bg-secundariahover focus-visible:ring-link mt-10 inline-flex h-12 w-fit items-center gap-3 rounded-full px-7 text-[0.95rem] font-semibold text-white transition-colors duration-200 focus-visible:ring-2 focus-visible:outline-none"
         >
           <ArrowLeftIcon
             size={18}

@@ -1,6 +1,6 @@
 {
-  "name": "Esdras Portfolio",
-  "short_name": "Portfolio",
+  "name": "Esdras Santos | Full Stack Developer",
+  "short_name": "Esdras Santos",
   "icons": [
     {
       "src": "/favicon/android-chrome-192x192.png",
@@ -13,7 +13,7 @@
       "type": "image/png"
     }
   ],
-  "theme_color": "#000000",
-  "background_color": "#000000",
+  "theme_color": "#0a0a0a",
+  "background_color": "#0a0a0a",
   "display": "standalone"
 }

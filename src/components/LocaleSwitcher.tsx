@@ -63,7 +63,6 @@ export default function LocaleSwitcher() {
 
           {languages.map((language) => {
             const isActive = locale === language.code;
-            const languageName = t("locale", { locale: language.code });
             return (
               <SelectItem
                 key={language.code}
@@ -75,14 +74,17 @@ export default function LocaleSwitcher() {
                   <Image
                     draggable={false}
                     src={language.flag}
-                    alt={language.code}
+                    alt=""
                     width={20}
                     height={12}
                     className="size-5 object-contain sm:h-3 sm:w-5"
                   />
                 </div>
-                <span className="locale-name text-principal/90 group-hover:text-principal pl-7 text-sm transition-colors duration-200">
-                  {languageName}
+                <span
+                  lang={language.code}
+                  className="locale-name text-principal/90 group-hover:text-principal pl-7 text-sm transition-colors duration-200"
+                >
+                  {language.name}
                 </span>
               </SelectItem>
             );

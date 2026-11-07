@@ -18,7 +18,6 @@ export default function About() {
     <section
       ref={rootRef}
       className="mx-auto flex min-h-screen w-full items-center justify-center pt-30 pb-24 sm:py-28"
-      aria-label="About Esdras and his stack"
     >
       <div className="shell relative z-50">
         <div className="about-heading-mask overflow-hidden pb-2">

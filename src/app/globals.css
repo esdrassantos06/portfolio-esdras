@@ -24,6 +24,7 @@
   --color-fundo4: #262626;
   --color-principal: #e0e0e0;
   --color-secundaria: #a927bf;
+  --color-secundariahover: #8e1fa1;
   --color-link: #bd5fff;
   --color-linkhover: #d589ff;
 
@@ -168,6 +169,16 @@
   [role="link"]:focus-visible,
   [tabindex]:focus-visible {
     @apply outline-principal ring-principal/50 ring-2 outline-2 outline-offset-2;
+  }
+}
+
+[data-preloaded] [data-preloader] {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-preloader] {
+    display: none;
   }
 }
 

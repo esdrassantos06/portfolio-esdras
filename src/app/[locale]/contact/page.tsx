@@ -1,4 +1,3 @@
-import Preloader from "@/components/motion/Preloader";
 import HeroDive from "@/components/motion/HeroDive";
 import ContactForm from "@/components/sections/ContactForm";
 import { getTranslations, setRequestLocale } from "next-intl/server";
@@ -71,12 +70,8 @@ export default async function ContactPage({ params }: Props) {
 
   return (
     <>
-      <Preloader />
       <JsonLd data={structuredData} />
-      <section
-        className="shell grid grid-cols-1 items-start gap-14 pt-32 pb-24 sm:pt-40 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-20"
-        aria-label="Contact"
-      >
+      <section className="shell grid grid-cols-1 items-start gap-14 pt-32 pb-24 sm:pt-40 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-20">
         <HeroDive>
           <header className="flex flex-col items-center text-center lg:sticky lg:top-40 lg:items-start lg:text-left">
             <h1 className="hero-dive text-[clamp(2.5rem,7vw,4.5rem)] leading-[0.95] font-bold tracking-[-0.03em] text-balance">

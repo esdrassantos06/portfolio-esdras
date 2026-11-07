@@ -13,14 +13,14 @@ import nexebratrailMockup from "../../public/projects-mockup/nexebratrail.webp";
 
 const tech = {
   react: "React",
-  tailwind: "TailwindCSS",
+  tailwind: "Tailwind CSS",
   shadcn: "shadcn/ui",
   vite: "Vite",
   electron: "Electron",
   openai: "OpenAI API",
   aiSdk: "Vercel AI SDK",
-  next: "NextJS",
-  ts: "Typescript",
+  next: "Next.js",
+  ts: "TypeScript",
   pg: "Postgres",
   redis: "Redis",
   nextauth: "NextAuth",
@@ -365,3 +365,14 @@ export const homeProjects = Object.values(projetos).filter(
 );
 
 export const allProjects = Object.values(projetos);
+
+/** The published project for a slug, or undefined when there is none. */
+export function getProject(slug: string): Project | undefined {
+  return Object.hasOwn(projetos, slug) ? projetos[slug] : undefined;
+}
+
+/** The project after `slug` in listing order, wrapping to the first. */
+export function nextProject(slug: string): Project {
+  const index = allProjects.findIndex((p) => p.slug === slug);
+  return allProjects[(index + 1) % allProjects.length];
+}

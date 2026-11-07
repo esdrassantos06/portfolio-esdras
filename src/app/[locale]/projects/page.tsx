@@ -1,4 +1,3 @@
-import Preloader from "@/components/motion/Preloader";
 import HeroDive from "@/components/motion/HeroDive";
 import AllProjectsList from "@/components/sections/AllProjectsList";
 import { allProjects } from "@/data/projects";
@@ -82,12 +81,8 @@ export default async function AllProjectsPage({ params }: Props) {
 
   return (
     <>
-      <Preloader />
       <JsonLd data={structuredData} />
-      <section
-        className="shell flex flex-col pt-32 pb-24 sm:pt-40"
-        aria-label="All projects"
-      >
+      <section className="shell flex flex-col pt-32 pb-24 sm:pt-40">
         <HeroDive>
           <header className="mb-16 flex w-full flex-col items-start sm:mb-24">
             <h1 className="hero-dive text-left text-[clamp(2.5rem,8vw,6rem)] leading-[0.95] font-bold tracking-[-0.03em] text-balance">

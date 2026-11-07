@@ -84,7 +84,7 @@ export default function Navbar() {
       observerOptions,
     );
 
-    const sections = ["home", "about", "work", "contact"];
+    const sections = ["home", "work", "about", "contact"];
     sections.forEach((id) => {
       const element = document.getElementById(id);
       if (element) observer.observe(element);
@@ -95,8 +95,8 @@ export default function Navbar() {
 
   const navItems = [
     { href: "/#home", label: t("home"), icon: HouseIcon, id: "home" },
-    { href: "/#about", label: t("about"), icon: InfoIcon, id: "about" },
     { href: "/#work", label: t("work"), icon: DesktopIcon, id: "work" },
+    { href: "/#about", label: t("about"), icon: InfoIcon, id: "about" },
     { href: "/contact", label: t("contact"), icon: UserIcon, id: "contact" },
   ];
 

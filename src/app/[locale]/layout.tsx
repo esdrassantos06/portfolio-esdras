@@ -11,6 +11,7 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import BuyMeACoffeeWidget from "@/components/BuyMeACoffeeWidget";
 import SmoothScroll from "@/components/motion/SmoothScroll";
+import { PRELOADER_SKIP_SCRIPT } from "@/components/motion/appReady";
 import AuroraMount from "@/components/ui/AuroraMount";
 import AuroraFallback from "@/components/ui/AuroraFallback";
 import { Metadata } from "next";
@@ -70,34 +71,13 @@ export async function generateMetadata(
       canonical: url,
       languages: localeAlternates(),
     },
-    icons: {
-      icon: [
-        {
-          url: "/favicon/favicon-16x16.png",
-          sizes: "16x16",
-          type: "image/png",
-        },
-        {
-          url: "/favicon/favicon-32x32.png",
-          sizes: "32x32",
-          type: "image/png",
-        },
-      ],
-      apple: [
-        {
-          url: "/favicon/apple-touch-icon.png",
-          sizes: "180x180",
-          type: "image/png",
-        },
-      ],
-    },
     manifest: "/manifest.json",
     verification: process.env.GOOGLE_SITE_VERIFICATION
       ? { google: process.env.GOOGLE_SITE_VERIFICATION }
       : undefined,
     other: {
-      "msapplication-TileColor": "#000000",
-      "theme-color": "#000000",
+      "msapplication-TileColor": "#0a0a0a",
+      "theme-color": "#0a0a0a",
     },
   };
 }
@@ -113,24 +93,27 @@ export default async function LocaleLayout({ children, params }: Props) {
   }
 
   setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "LocaleLayout" });
 
   return (
     <html
       lang={locale}
+      suppressHydrationWarning
       data-scroll-behavior="smooth"
-      className={`${GeistMono.variable} overflow-x-hidden`}
+      className={`${GeistMono.variable} overflow-x-clip`}
     >
       <head>
+        <script dangerouslySetInnerHTML={{ __html: PRELOADER_SKIP_SCRIPT }} />
         <link rel="preconnect" href="https://cdnjs.buymeacoffee.com" />
         <link rel="dns-prefetch" href="https://cdnjs.buymeacoffee.com" />
       </head>
-      <body className="font-satoshi bg-fundo text-principal w-full overflow-x-hidden">
+      <body className="font-satoshi bg-fundo text-principal w-full overflow-x-clip">
         <NextIntlClientProvider>
           <SmoothScroll />
           <AuroraFallback />
           <AuroraMount />
           <a href="#main-content" className="skip-link">
-            Skip to main content
+            {t("skipToContent")}
           </a>
           <Navbar />
           <main id="main-content" tabIndex={-1}>

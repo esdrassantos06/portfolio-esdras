@@ -14,7 +14,6 @@ import {
   WEBSITE_ID,
 } from "@/lib/schema";
 import DepthSection from "@/components/motion/DepthSection";
-import ContactClose from "@/components/sections/ContactClose";
 import About from "@/components/About/About";
 import Work from "@/components/sections/Work";
 
@@ -77,14 +76,11 @@ export default async function Home({ params }: Props) {
       <Preloader />
       <JsonLd data={structuredData} />
       <HomeComponent />
-      <DepthSection anchor="about">
-        <About />
-      </DepthSection>
       <DepthSection anchor="work">
         <Work />
       </DepthSection>
-      <DepthSection>
-        <ContactClose />
+      <DepthSection anchor="about">
+        <About />
       </DepthSection>
     </>
   );

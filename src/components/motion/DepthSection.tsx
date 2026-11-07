@@ -18,11 +18,13 @@ export default function DepthSection({
   className,
   anchor,
 }: DepthSectionProps) {
+  const triggerRef = useRef<HTMLDivElement>(null);
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const el = ref.current;
-    if (!el) return;
+    const trigger = triggerRef.current;
+    if (!el || !trigger) return;
 
     const mm = gsap.matchMedia();
     const stop = onAppReady(() => {
@@ -31,7 +33,7 @@ export default function DepthSection({
         () => {
           gsap.set(el, {
             transformPerspective: 1400,
-            transformOrigin: "50% 100%",
+            transformOrigin: "50% 0%",
           });
 
           gsap.fromTo(
@@ -44,7 +46,7 @@ export default function DepthSection({
               ease: "none",
               force3D: true,
               scrollTrigger: {
-                trigger: el,
+                trigger,
                 start: "top bottom",
                 end: "top 55%",
                 scrub: 0.8,
@@ -68,7 +70,7 @@ export default function DepthSection({
               ease: "none",
               force3D: true,
               scrollTrigger: {
-                trigger: el,
+                trigger,
                 start: "top bottom",
                 end: "top 65%",
                 scrub: 0.5,
@@ -87,7 +89,7 @@ export default function DepthSection({
   }, []);
 
   return (
-    <div id={anchor} className="relative">
+    <div ref={triggerRef} id={anchor} className="relative">
       <div
         ref={ref}
         className={`relative will-change-transform ${className ?? ""}`}

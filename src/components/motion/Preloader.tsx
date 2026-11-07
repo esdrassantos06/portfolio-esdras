@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { useTranslations } from "next-intl";
-import { isAppReady, markAppReady } from "./appReady";
+import { isAppReady, markAppReady, PRELOADER_SEEN_KEY } from "./appReady";
 
 const AURORA = [
   "radial-gradient(75% 60% at 18% 8%, rgba(126, 42, 168, 0.42), transparent 62%)",
@@ -11,31 +11,35 @@ const AURORA = [
   "radial-gradient(90% 65% at 55% 108%, rgba(150, 66, 200, 0.30), transparent 66%)",
 ].join(",");
 
+function alreadySeen() {
+  try {
+    return sessionStorage.getItem(PRELOADER_SEEN_KEY) !== null;
+  } catch {
+    return false;
+  }
+}
+
+function rememberSeen() {
+  try {
+    sessionStorage.setItem(PRELOADER_SEEN_KEY, "1");
+  } catch {}
+}
+
+function hidePreloader() {
+  document.documentElement.dataset.preloaded = "";
+}
+
+/**
+ * Intro reveal for the home page. Plays once per browser session and never
+ * for reduced-motion users; every other visit marks the app ready at once.
+ */
 export default function Preloader() {
-  const t = useTranslations("Preloader");
+  const t = useTranslations();
   const rootRef = useRef<HTMLDivElement>(null);
   const barRef = useRef<HTMLSpanElement>(null);
-  const [count, setCount] = useState(0);
-  const [gone, setGone] = useState(
-    () =>
-      typeof window !== "undefined" &&
-      (isAppReady() ||
-        window.matchMedia("(prefers-reduced-motion: reduce)").matches),
+  const [readyOnMount] = useState(
+    () => typeof window !== "undefined" && isAppReady(),
   );
-
-  useEffect(() => {
-    if (gone) return;
-
-    const html = document.documentElement;
-    window.scrollTo(0, 0);
-    html.style.overflow = "hidden";
-    document.body.style.overflow = "hidden";
-
-    return () => {
-      html.style.overflow = "";
-      document.body.style.overflow = "";
-    };
-  }, [gone]);
 
   useEffect(() => {
     const root = rootRef.current;
@@ -43,47 +47,50 @@ export default function Preloader() {
 
     if (
       isAppReady() ||
+      alreadySeen() ||
       window.matchMedia("(prefers-reduced-motion: reduce)").matches
     ) {
+      hidePreloader();
       markAppReady();
       return;
     }
 
+    const html = document.documentElement;
+    const setScrollLock = (locked: boolean) => {
+      html.style.overflow = locked ? "hidden" : "";
+      document.body.style.overflow = locked ? "hidden" : "";
+    };
+    window.scrollTo(0, 0);
+    setScrollLock(true);
+
     const lineEls = root.querySelectorAll(".pre-line");
-    const eyebrowEl = root.querySelector(".pre-eyebrow");
+    const roleEl = root.querySelector(".pre-role");
     const ruleEl = root.querySelector(".pre-rule");
-    const meterEl = root.querySelector(".pre-meter");
 
     gsap.set(lineEls, { yPercent: 115 });
-    gsap.set([eyebrowEl, meterEl], { opacity: 0, y: 14 });
+    gsap.set(roleEl, { opacity: 0, y: 14 });
     gsap.set(ruleEl, { scaleX: 0, transformOrigin: "left center" });
 
-    const progress = { value: 0 };
     const tl = gsap.timeline({
       defaults: { ease: "expo.out" },
-      onComplete: () => setGone(true),
+      onComplete: () => {
+        setScrollLock(false);
+        hidePreloader();
+      },
     });
 
     tl.to(lineEls, { yPercent: 0, duration: 1, stagger: 0.08 }, 0)
-      .to(eyebrowEl, { opacity: 1, y: 0, duration: 0.8 }, 0.1)
-      .to(meterEl, { opacity: 1, y: 0, duration: 0.8 }, 0.2)
+      .to(roleEl, { opacity: 1, y: 0, duration: 0.8 }, 0.1)
       .to(ruleEl, { scaleX: 1, duration: 1.1 }, 0.3)
       .to(
-        progress,
-        {
-          value: 100,
-          duration: 1.5,
-          ease: "power2.inOut",
-          onUpdate: () => {
-            setCount(Math.round(progress.value));
-            if (barRef.current) {
-              barRef.current.style.transform = `scaleX(${progress.value / 100})`;
-            }
-          },
-        },
+        barRef.current,
+        { scaleX: 1, duration: 1.5, ease: "power2.inOut" },
         0.15,
       )
-      .call(markAppReady)
+      .call(() => {
+        rememberSeen();
+        markAppReady();
+      })
       .to(
         lineEls,
         {
@@ -95,7 +102,7 @@ export default function Preloader() {
         ">-0.1",
       )
       .to(
-        [eyebrowEl, meterEl, ruleEl],
+        [roleEl, ruleEl, barRef.current],
         { opacity: 0, duration: 0.4, ease: "power2.in" },
         "<",
       )
@@ -107,10 +114,11 @@ export default function Preloader() {
 
     return () => {
       tl.kill();
+      setScrollLock(false);
     };
   }, []);
 
-  if (gone) return null;
+  if (readyOnMount) return null;
 
   return (
     <div
@@ -133,30 +141,15 @@ export default function Preloader() {
 
         <span className="pre-rule via-secundaria/60 mt-8 block h-px w-full max-w-sm bg-linear-to-r from-white/25 to-transparent" />
 
-        <p className="pre-eyebrow text-principal/70 mt-6 text-sm">
-          {t("role")}
-        </p>
+        <p className="pre-role text-principal/70 mt-6 text-sm">{t("Role")}</p>
       </div>
 
-      <div className="pre-meter absolute right-0 bottom-0 left-0">
-        <div className="shell flex items-end justify-between pb-5">
-          <span className="text-principal/60 font-mono text-[0.7rem] tracking-[0.25em] uppercase">
-            {t("loading")}
-          </span>
-          <span className="text-principal font-mono text-4xl leading-none font-bold tabular-nums sm:text-6xl">
-            {String(count).padStart(3, "0")}
-            <span className="text-principal/40 ml-1 text-base sm:text-xl">
-              %
-            </span>
-          </span>
-        </div>
-        <span className="relative block h-px w-full overflow-hidden bg-white/10">
-          <span
-            ref={barRef}
-            className="from-secundaria via-link to-linkhover absolute inset-0 origin-left scale-x-0 bg-linear-to-r"
-          />
-        </span>
-      </div>
+      <span className="absolute inset-x-0 bottom-0 block h-px overflow-hidden bg-white/10">
+        <span
+          ref={barRef}
+          className="from-secundaria via-link to-linkhover absolute inset-0 origin-left scale-x-0 bg-linear-to-r"
+        />
+      </span>
     </div>
   );
 }

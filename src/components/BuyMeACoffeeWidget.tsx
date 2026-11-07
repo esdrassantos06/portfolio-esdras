@@ -11,7 +11,6 @@ export default function BuyMeACoffeeWidget() {
       data-cfasync="false"
       data-id="esdrasirioq"
       data-description="Support me on Buy me a coffee!"
-      data-message="Thanks for visiting! You can now buy me a coffee"
       data-color="#BD5FFF"
       data-position="Right"
       data-x_margin="18"
