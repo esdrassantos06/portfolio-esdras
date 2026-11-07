@@ -24,13 +24,22 @@ export default function Preloader() {
   );
 
   useEffect(() => {
-    const root = rootRef.current;
-    if (!root) return;
+    if (gone) return;
 
-    const unlock = () => {
-      document.documentElement.style.overflow = "";
+    const html = document.documentElement;
+    window.scrollTo(0, 0);
+    html.style.overflow = "hidden";
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      html.style.overflow = "";
       document.body.style.overflow = "";
     };
+  }, [gone]);
+
+  useEffect(() => {
+    const root = rootRef.current;
+    if (!root) return;
 
     if (
       isAppReady() ||
@@ -39,10 +48,6 @@ export default function Preloader() {
       markAppReady();
       return;
     }
-
-    window.scrollTo(0, 0);
-    document.documentElement.style.overflow = "hidden";
-    document.body.style.overflow = "hidden";
 
     const lineEls = root.querySelectorAll(".pre-line");
     const eyebrowEl = root.querySelector(".pre-eyebrow");
@@ -56,10 +61,7 @@ export default function Preloader() {
     const progress = { value: 0 };
     const tl = gsap.timeline({
       defaults: { ease: "expo.out" },
-      onComplete: () => {
-        unlock();
-        setGone(true);
-      },
+      onComplete: () => setGone(true),
     });
 
     tl.to(lineEls, { yPercent: 0, duration: 1, stagger: 0.08 }, 0)
@@ -105,7 +107,6 @@ export default function Preloader() {
 
     return () => {
       tl.kill();
-      unlock();
     };
   }, []);
 
@@ -115,6 +116,7 @@ export default function Preloader() {
     <div
       ref={rootRef}
       data-preloader=""
+      data-lenis-prevent=""
       aria-hidden="true"
       className="bg-fundo fixed inset-0 z-9999999 flex flex-col justify-center will-change-transform"
       style={{ backgroundImage: AURORA }}
