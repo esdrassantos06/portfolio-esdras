@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="esdras-mark-title">
+  <title id="esdras-mark-title">Esdras Santos</title>
+  <defs>
+    <radialGradient id="esdras-mark-glow" cx="0.15" cy="0.9" r="0.9">
+      <stop offset="0" stop-color="#7e2aa8" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#7e2aa8" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="#0a0a0a"/>
+  <rect width="512" height="512" rx="112" fill="url(#esdras-mark-glow)"/>
+  <rect x="96" y="132" width="256" height="64" rx="32" fill="#bd5fff"/>
+  <rect x="128" y="224" width="256" height="64" rx="32" fill="#a927bf"/>
+  <rect x="160" y="316" width="256" height="64" rx="32" fill="#f2f2f2"/>
+</svg>

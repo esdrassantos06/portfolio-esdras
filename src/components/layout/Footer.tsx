@@ -59,10 +59,10 @@ export default async function Footer() {
                     <Link href={"/#home"}>{t("footerNav.home")}</Link>
                   </li>
                   <li className="text-principal/70 hover:text-principal font-light transition-colors duration-300">
-                    <Link href={"/#about"}>{t("footerNav.about")}</Link>
+                    <Link href={"/#work"}>{t("footerNav.work")}</Link>
                   </li>
                   <li className="text-principal/70 hover:text-principal font-light transition-colors duration-300">
-                    <Link href={"/#work"}>{t("footerNav.work")}</Link>
+                    <Link href={"/#about"}>{t("footerNav.about")}</Link>
                   </li>
                   <li className="text-principal/70 hover:text-principal font-light transition-colors duration-300">
                     <Link href={"/contact"}>{t("footerNav.contact")}</Link>
@@ -110,7 +110,7 @@ export default async function Footer() {
                       target="_blank"
                       href="https://www.linkedin.com/in/esdrassantos06/"
                     >
-                      Linkedin
+                      LinkedIn
                     </a>
                   </li>
                   <li className="text-principal/70 hover:text-principal font-light transition-colors duration-300">
@@ -119,7 +119,7 @@ export default async function Footer() {
                       rel="noopener noreferrer"
                       target="_blank"
                     >
-                      Github
+                      GitHub
                     </a>
                   </li>
                 </ul>

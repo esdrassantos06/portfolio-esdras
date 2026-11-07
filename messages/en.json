@@ -4,7 +4,8 @@
     "description": "Esdras Santos is a full stack developer in Braga, Portugal, building production web and mobile apps with TypeScript, Next.js, Node.js and PostgreSQL, from online stores to client portals.",
     "keywords": "Esdras Santos, Esdras Irion do Rosário e Santos, Esdras Santos developer, Esdras Santos portfolio, full stack developer, full stack developer Braga, full stack developer Portugal, TypeScript, Next.js, React, Node.js, PostgreSQL",
     "robots": "index, follow",
-    "creator": "Esdras Santos"
+    "creator": "Esdras Santos",
+    "skipToContent": "Skip to main content"
   },
   "Header": {
     "home": "Home",
@@ -19,12 +20,8 @@
   },
   "HomeComponent": {
     "based": "Based in Portugal",
-    "description": "Hi, I'm Esdras Santos. I build web apps end-to-end, from APIs and databases to polished frontends and mobile. Open to new full-time roles and freelance work.",
+    "description": "I build web apps end-to-end, from APIs and databases to polished frontends and mobile. Open to new full-time roles and freelance work.",
     "shinyWork": "See My Work"
-  },
-  "Preloader": {
-    "role": "Full Stack Developer",
-    "loading": "Loading"
   },
   "About": {
     "heading": "I'm Esdras. <accent>I build the whole thing</accent>, from the database to the app.",
@@ -50,7 +47,7 @@
     "closing": "Right now I'm looking for a new team, somewhere I can keep building bigger things and stop being the only person reviewing my own code. If you have a project or a role, get in touch."
   },
   "Work": {
-    "title": "My portfolio",
+    "title": "Selected work",
     "shinyText": "All projects",
     "ariaLabel": "See All Projects"
   },
@@ -58,7 +55,7 @@
     "like": "Like what you see? Reach out",
     "viaEmail": "via email",
     "toColabor": "to collaborate.",
-    "schedule": "Schedule call",
+    "schedule": "Send a message",
     "rights": "All rights reserved.",
     "footerNav": {
       "title1": "Navigate",
@@ -75,36 +72,27 @@
     "Metadata": {
       "title": "Folga",
       "description": "Folga is a tax copilot for freelancers in Portugal (recibos verdes). For every invoice, it calculates how much to set aside for Social Security, income tax and VAT, and shows the real net amount. Next.js 16, React 19, Better Auth, Drizzle ORM and PostgreSQL.",
-      "keywords": "freelancers, taxes, Portugal, Social Security, IRS, VAT, tax copilot, Next.js, React, Better Auth, Drizzle, PostgreSQL, Polar, Resend",
-      "robots": "index, follow",
-      "creator": "Esdras Santos"
+      "keywords": "freelancers, taxes, Portugal, Social Security, IRS, VAT, tax copilot, Next.js, React, Better Auth, Drizzle, PostgreSQL, Polar, Resend"
     },
     "title": "Tax copilot for freelancers in Portugal",
-    "overview": "Project Overview",
-    "description": "Folga is a tax copilot for freelancers in Portugal (recibos verdes). For every invoice, it calculates how much to set aside for Social Security, income tax (IRS) and VAT, and shows the real net amount, no surprises from the tax office. The core is a pure TypeScript calculation engine, with the 2026 tax parameters kept in a single source of truth and the IRS brackets verified against independent sources. The dashboard shows revenue, tax already withheld, the tax vault and a VAT exemption limit meter, plus tax deadlines with email reminders sent by an idempotent cron via Resend. Built with Next.js 16, React 19, Better Auth (email/password and Google), Drizzle ORM with PostgreSQL, Tailwind CSS 4, Zod and GSAP. Free and Pro plans are handled by Polar as Merchant of Record, and monetary values are stored in cents, with each invoice's tax breakdown saved at issue time to preserve historical accuracy."
+    "description": "Folga is a tax copilot for freelancers in Portugal (recibos verdes). For every invoice, it calculates how much to set aside for Social Security, income tax (IRS) and VAT, and shows the real net amount, no surprises from the tax office. The core is a pure TypeScript calculation engine, with the 2026 tax parameters kept in a single source of truth and the IRS brackets verified against independent sources.\n\nThe dashboard shows revenue, tax already withheld, the tax vault and a VAT exemption limit meter, plus tax deadlines with email reminders sent by an idempotent cron via Resend. Built with Next.js 16, React 19, Better Auth (email/password and Google), Drizzle ORM with PostgreSQL, Tailwind CSS 4, Zod and GSAP. Free and Pro plans are handled by Polar as Merchant of Record, and monetary values are stored in cents, with each invoice's tax breakdown saved at issue time to preserve historical accuracy."
   },
   "JWeb": {
     "Metadata": {
       "title": "JWeb",
       "description": "Institutional website, iOS app and client portal for JWeb, a digital agency. Next.js 16, PostgreSQL with Drizzle, Odoo sync (helpdesk, invoices, subscriptions, sales and projects), Better Auth with email invitations and two-factor authentication, and push and email notifications.",
-      "keywords": "digital agency, client portal, Odoo, helpdesk, Better Auth, two-factor authentication, Next.js, React, TypeScript, PostgreSQL, Drizzle, push notifications, APNs, iOS app, Capacitor, internationalization",
-      "robots": "index, follow",
-      "creator": "Esdras Santos"
+      "keywords": "digital agency, client portal, Odoo, helpdesk, Better Auth, two-factor authentication, Next.js, React, TypeScript, PostgreSQL, Drizzle, push notifications, APNs, iOS app, Capacitor, internationalization"
     },
-    "title": "the website, iOS app and client portal of a digital agency",
-    "overview": "Project Overview",
+    "title": "The website, iOS app and client portal of a digital agency",
     "description": "JWeb is a digital solutions agency where I am the only developer. The work has three parts: the institutional website, the iOS app and a portal where clients follow everything they have with the agency.\n\nThe client portal runs on PostgreSQL with Drizzle ORM and is synced with Odoo: helpdesk tickets, invoices, subscriptions, sales and projects for each client come straight from the agency's ERP. Clients don't sign up on their own. They get an invitation by email and, on first access, set up their account and two-factor authentication with an authenticator app on their phone, all built on Better Auth. From then on, updates reach them as push and email notifications.\n\nThe website is built with Next.js 16, React 19 and TypeScript, fully localised in Portuguese, English and Spanish, and scores 90+ on Lighthouse. Content runs through a Keystatic headless CMS with a Markdoc blog, forms are validated with React Hook Form, Zod and reCAPTCHA v3, and transactional email is sent with Resend. Analytics run on Google Tag Manager behind GDPR Consent Mode v2.\n\nThe iOS app, built with Capacitor, registers push tokens with the backend and supports universal links and App Tracking Transparency. Sends go through an in-house notification platform: device tokens live in PostgreSQL, an admin console composes and broadcasts campaigns, and an APNs sender delivers in batches with Redis rate limiting and automatic pruning of invalid tokens. Everything is styled with Tailwind CSS 4 and accessible shadcn/ui components."
   },
   "ModuloService": {
     "Metadata": {
       "title": "ModuloService PT",
       "description": "Company website for ModuloService PT, a building and renovation firm that brings seven trades under one person in charge. Next.js 16 with Cache Components, three languages, quote requests through Server Actions and Resend, GDPR consent before any tag loads, and SEO built for AI assistants too.",
-      "keywords": "company website, renovation company, construction, carpentry, metalwork, Next.js, React, TypeScript, Three.js, next-intl, GDPR, Google Tag Manager, Consent Mode, JSON-LD, SEO, llms.txt, Resend",
-      "robots": "index, follow",
-      "creator": "Esdras Santos"
+      "keywords": "company website, renovation company, construction, carpentry, metalwork, Next.js, React, TypeScript, Three.js, next-intl, GDPR, Google Tag Manager, Consent Mode, JSON-LD, SEO, llms.txt, Resend"
     },
-    "title": "the website of a firm that handles the whole job, from carpenter to painter",
-    "overview": "Project Overview",
+    "title": "The website of a firm that handles the whole job, from carpenter to painter",
     "description": "ModuloService PT does carpentry, furniture assembly, fabrication, electrical work, construction, metalwork and painting, and its pitch fits in one sentence: the client hires one company and one person answers for the whole job, instead of juggling half a dozen contractors. The site has to get that across to homeowners, architects, shops and property developers, and it has to end in a quote request.\n\nIt runs on Next.js 16 with the App Router and Cache Components, React 19, TypeScript and Tailwind CSS 4. next-intl serves Portuguese at the root and English and Spanish under /en and /es. Every trade gets its own page, there's a turnkey renovation page, project case pages and a gallery built on a package of mine, liftbox, which plays videos in Video.js and takes each video's shape from its poster. At the top of the home page the brand's dovetail joint slots together in 3D with Three.js and follows the mouse; with reduced motion or no WebGL it stays a flat symbol that costs no JavaScript.\n\nThe quote form is a Server Action validated with Zod. Each request sends two emails through Resend: an internal one in Portuguese that replies straight to the client, and a confirmation in the visitor's language that repeats the chosen trades but never echoes what they typed. If email delivery isn't configured, the form shows an error instead of pretending it worked. Ad click ids (gclid, gbraid, wbraid, fbclid and the utm tags) travel with the request, sanitised as untrusted input, so a job that's won can go back into Google Ads and Meta as an offline conversion.\n\nNo tag loads before consent: the GDPR banner sits in front of Google Tag Manager, and the container id is validated because it ends up in an inline script and in the Content Security Policy. To get found, the site emits JSON-LD for the company, services, FAQ, gallery and breadcrumbs, an image sitemap, hreflang across all three languages and an llms.txt for AI assistants. It ships as a standalone Docker build, with 75 Vitest tests covering consent, attribution, emails and request validation.",
     "metrics": {
       "trades": "Trades with their own page",
@@ -116,12 +104,9 @@
     "Metadata": {
       "title": "Phantom Code",
       "description": "Phantom Code is an Electron desktop app that reads a coding problem from a screenshot and shows the solution in an overlay window, sold as source code through a Next.js site with a three.js hero and an Oxide-style console.",
-      "keywords": "electron, next.js, three.js, webgl, design system, better auth, prisma, stripe, nestjs, ocr, vercel ai sdk, ollama",
-      "robots": "index, follow",
-      "creator": "Esdras Santos"
+      "keywords": "electron, next.js, three.js, webgl, design system, better auth, prisma, stripe, nestjs, ocr, vercel ai sdk, ollama"
     },
     "title": "A desktop app that turns screenshots of coding problems into solutions, sold as source code",
-    "overview": "Project Overview",
     "description": "Phantom Code is a desktop app built with Electron and React. A global shortcut captures the problem on screen and a NestJS API sends the screenshot to the model the user picks: OpenAI, Anthropic, Google Gemini or OpenRouter through the Vercel AI SDK, with Tesseract OCR as a fallback, or a local model through Ollama or LM Studio. The solution appears in an overlay window. API keys are stored per provider and encrypted with the operating system's keystore.\n\nThe product is the source code itself. The Next.js 16 site sells lifetime access through Stripe, signs buyers in with Better Auth, gates a 17-page Markdown documentation set stored in PostgreSQL with live section-level search, and serves time-limited downloads from Supabase Storage that GitHub Actions rebuilds on every push.\n\nI redesigned the whole frontend as a monochrome, dark-only system. The hero is a three.js scene built around the Pepper's ghost stage illusion: a pane of glass carrying the code on a dark stage, orbited by the camera as you scroll. The buyer console follows the structure of the Oxide Computer console, with a command palette, ruled tables and loading skeletons, and 404 and error pages render their status code as a dot matrix.\n\nThe redesign also moved every dependency to its latest version, including TypeScript 7 running alongside the TypeScript 6 API for tooling, and added a Docker dev stack with a local Upstash-compatible Redis and route pre-compilation that cut the first navigation from 10.2 s to about 180 ms.",
     "metrics": {
       "tests": "Automated tests",
@@ -133,12 +118,9 @@
     "Metadata": {
       "title": "Tarevity",
       "description": "Tarevity is a Next.js 16 task manager where every task moves from In progress to For review and only then to Filed, on a kanban board designed like paper requisition forms with rubber stamps.",
-      "keywords": "task management, kanban, next.js, typescript, prisma, postgresql, better auth, redis, next-intl, design system",
-      "robots": "index, follow",
-      "creator": "Esdras Santos"
+      "keywords": "task management, kanban, next.js, typescript, prisma, postgresql, better auth, redis, next-intl, design system"
     },
-    "title": "a task manager where nothing closes without review",
-    "overview": "Project Overview",
+    "title": "A task manager where nothing closes without review",
     "description": "Tarevity is a to-do app with one extra step: before anything is filed, it goes through review. The board has three trays, In tray, For review and Filed, and dragging a card from one to the next changes its status. Keyboard and phone users get arrow buttons on every card that do the same thing.\n\nUnder the hood it runs Next.js 16 with React 19, Prisma on PostgreSQL, Better Auth with email, GitHub and Google, Redis caching and rate limiting through Upstash, and due-date reminders in the app and by email through Resend. The whole interface ships in English, Portuguese and Spanish.\n\nI redesigned the entire frontend around paper requisition forms. Field captions are printed in a single blue ink, filled-in values look typewritten in Courier Prime, and a task's status is a rubber stamp: blue in progress, violet for review, green once filed. The trays use the white, canary and pink of carbon copies, and dark mode is the carbon sheet itself. The create and edit forms save a per-user draft as soon as you stop typing.\n\nThe redesign also moved every dependency to its latest stable release, migrated the admin table to TanStack Table 9 and added a Docker setup with Postgres and an Upstash-compatible Redis.",
     "metrics": {
       "tests": "Automated tests",
@@ -150,12 +132,9 @@
     "Metadata": {
       "title": "Vagas Tech PT",
       "description": "Vagas Tech PT is an open source Python backend that aggregates tech jobs in Portugal from LinkedIn, itjobs.pt and net-empregos, deduplicates them across sources and serves them through a FastAPI REST API with email, Discord and Telegram alerts.",
-      "keywords": "job aggregator, web scraping, python, fastapi, postgresql, playwright, data pipeline, deduplication, openapi, tdd",
-      "robots": "index, follow",
-      "creator": "Esdras Santos"
+      "keywords": "job aggregator, web scraping, python, fastapi, postgresql, playwright, data pipeline, deduplication, openapi, tdd"
     },
-    "title": "a tech job aggregator built to survive broken scrapers",
-    "overview": "Project Overview",
+    "title": "A tech job aggregator built to survive broken scrapers",
     "description": "Vagas Tech PT gathers tech job postings in Portugal from LinkedIn, itjobs.pt and net-empregos into one searchable API. Every posting is normalized into the same shape: city, work mode, a yearly salary range in euros and the tech stack it mentions. A fingerprint built from the company, role and city then collapses the same job published on different sites into a single entry that lists every source it came from.\n\nThe backend runs on Python 3.15 with FastAPI, PostgreSQL 18, SQLAlchemy 2 and Alembic. Scrapers use Parsel for HTML and RSS and Playwright for LinkedIn, behind an HTTP client with retries, exponential backoff, Retry-After handling and a per-site crawl delay. Upserts are idempotent and run inside a savepoint, so a bad batch never loses the record of the run.\n\nScrapers break whenever a site changes its markup, so the project treats that as something to test and monitor. Parsers fail loudly instead of returning nothing, every run is stored with its status, failures alert an admin, and a weekly canary in GitHub Actions hits the live sites and opens an issue when one of them changes.\n\nUsers subscribe to alerts with their own filters, seniority included, by email, Discord or Telegram after an opt-in confirmation. Alerts are then managed from Discord slash commands or Telegram bot commands, and every digest carries an unsubscribe link. Tokens are stored only as hashes, Discord webhooks are validated against SSRF, and every route is documented in a Scalar API reference. The whole project was built test first: 375 automated tests at 92% coverage, strict mypy and six required CI checks, including an OpenAPI drift check and a guard against destructive migrations.",
     "metrics": {
       "tests": "Automated tests",
@@ -167,12 +146,9 @@
     "Metadata": {
       "title": "liftbox",
       "description": "liftbox is an open source, MIT-licensed lightbox for React 18 and 19, published on npm as liftbox. Zero runtime dependencies, about 13 kB of JavaScript, with zoom, swipe, video, thumbnails, grids and full keyboard support.",
-      "keywords": "liftbox, react lightbox, image gallery, npm package, accessibility, open source, typescript, pointer events, vitest, playwright, tdd",
-      "robots": "index, follow",
-      "creator": "Esdras Santos"
+      "keywords": "liftbox, react lightbox, image gallery, npm package, accessibility, open source, typescript, pointer events, vitest, playwright, tdd"
     },
-    "title": "an accessible React lightbox with zero dependencies",
-    "overview": "Project Overview",
+    "title": "An accessible React lightbox with zero dependencies",
     "description": "liftbox is an open source, MIT-licensed lightbox for React 18 and 19, published on npm as liftbox (it started out as @esdrassantos06/gallery). It opens images, videos and embeds over the page with an animation that flies out of the clicked thumbnail, cropped the same way, and flies back into it on close. The whole package has zero runtime dependencies and weighs about 13 kB of JavaScript and 3 kB of CSS, minified and brotli compressed.\n\nInput is built on Pointer Events: swipe between slides, pinch, wheel or double tap to zoom, drag to pan a zoomed image without losing its edges, and pinch out to close. Slides can be rotated, shown fullscreen, played as a slideshow, downloaded or shared. Videos play from YouTube through youtube-nocookie.com, from Vimeo with do not track, as native video, or through any custom player rendered in a slot.\n\nIt also ships masonry, justified and uniform grids with a category filter, serves AVIF or WebP through picture sources, and keeps the open slide in the URL hash, by number or by name, so a photo can be linked and the back button closes it. It stays fast with thousands of slides: the current image loads first, preloading adapts to slow connections, and the thumbnail strip and grids render only what is in view.\n\nAccessibility came first. The lightbox is a modal dialog with a focus trap, focus goes back to the thumbnail on close, a live region announces the current slide, every action has a keyboard shortcut, and reduced motion is respected. It also handles right to left layouts, renders safely on the server, and exposes its whole theme as CSS custom properties.\n\nThe library was written test first: unit tests with Vitest, Playwright end to end tests on desktop and a mobile profile, CI on React 18 and 19, size budgets and checks on the published package. Releases ship from GitHub Actions with npm Trusted Publishing and provenance, and the documentation lives on liftbox.digital, a Next.js and Fumadocs site served as static pages from the CDN with a fixed Content Security Policy, an honest comparison with five other React lightboxes and migration guides from yet-another-react-lightbox and lightGallery.",
     "metrics": {
       "size": "Bundle size",
@@ -184,12 +160,9 @@
     "Metadata": {
       "title": "Swarmscope",
       "description": "Swarmscope is an open source, MIT-licensed desktop app for macOS and Windows that load tests your own sites with Locust, times the real page load in a browser while the crowd runs, and ends every run with a verdict.",
-      "keywords": "swarmscope, load testing, locust, python, desktop app, page load, lcp, http 429, open source, pywebview, pyinstaller",
-      "robots": "index, follow",
-      "creator": "Esdras Santos"
+      "keywords": "swarmscope, load testing, locust, python, desktop app, page load, lcp, http 429, open source, pywebview, pyinstaller"
     },
-    "title": "a desktop load tester that tells you when your site slows down",
-    "overview": "Project Overview",
+    "title": "A desktop load tester that tells you when your site slows down",
     "description": "Swarmscope is an open source, MIT-licensed desktop app for macOS and Windows that answers one question: how many users can my site take before it slows down, and is it my site or my host that gives way first. You paste a URL, pick the crowd and the ramp, and press Start. Under the hood it drives Locust, and the panel plots requests per second, p95 latency and errors live.\n\nRequest timings alone don't say how the page feels, so every 15 seconds Swarmscope opens the page in a real browser, the Chrome or Edge already installed, through Patchright, and records TTFB, FCP, LCP and page weight. The first visit runs before any load, which gives a baseline to compare against while the crowd is on the site.\n\nHosts push back under load, and a 429 from Vercel is a different problem from a 500 from your own code. Swarmscope retries with backoff, keeps throttling apart from real failures, and ends each run with a verdict: users held, page load alone versus under load, errors left after retries, and when the first 429 arrived.\n\nThe app ships everything it runs on. Python, Locust, the window and the probe driver are bundled with PyInstaller into a DMG for Apple Silicon, a zip for Intel Macs and a zip for Windows, all built by GitHub Actions. The local engine only answers the window that started it: each launch creates a random token, kept in an HttpOnly cookie and checked on every request together with the Host header, so another page open in a browser can't start a test. The code was written test first with pytest and linted with ruff.",
     "metrics": {
       "tests": "Tests",
@@ -200,25 +173,19 @@
     "Metadata": {
       "title": "Nexebra Trail",
       "description": "Official website for Trilhos da Nexebra Trail, a trail running event promoting the sport and the region's natural heritage.",
-      "keywords": "Nexebra Trail, trail running, sports event, Next.js, Tailwind CSS, TypeScript, Portugal",
-      "robots": "index, follow",
-      "creator": "Esdras Santos"
+      "keywords": "Nexebra Trail, trail running, sports event, Next.js, Tailwind CSS, TypeScript, Portugal"
     },
     "title": "Sports Events and Trail Running",
-    "overview": "Project Overview",
     "description": "Website for the Trilhos da Nexebra Trail - TNT® event, created to promote sports and natural heritage. The event has already welcomed over 4,500 athletes. The site was developed with a focus on performance and seamless user experience, utilizing Next.js, Tailwind CSS, Shadcn UI, and TypeScript."
   },
   "PCByte": {
     "Metadata": {
       "title": "PCByte",
       "description": "PCByte is the online store of a technology retailer, in production with more than 70,000 products: Medusa.js backend, Next.js storefront, Expo mobile app and Strapi CMS, PayPal and SIBS payments with an idempotent checkout, and 3,130 automated tests.",
-      "keywords": "e-commerce, Medusa, Next.js, Strapi, React Native, Expo, Meilisearch, PayPal, SIBS, Multibanco, MB WAY, Odoo, Redis, AWS S3, headless commerce",
-      "robots": "index, follow",
-      "creator": "Esdras Santos"
+      "keywords": "e-commerce, Medusa, Next.js, Strapi, React Native, Expo, Meilisearch, PayPal, SIBS, Multibanco, MB WAY, Odoo, Redis, AWS S3, headless commerce"
     },
     "title": "Full-stack headless e-commerce for a technology store",
-    "overview": "Project Overview",
-    "description": "PCByte is a complete e-commerce ecosystem for a technology store, architected across four independent projects. The store is in production and selling to real customers. The backend is built on Medusa.js with Redis caching and custom modules for AWS S3 dual-bucket storage, PayPal and SIBS payments covering card, Multibanco and MB WAY, manual bank transfer, Meilisearch indexing over a catalogue of more than 70,000 products, Odoo ERP synchronization, transactional emails via Resend, weight-based fulfillment, product attributes, media, and reviews. Checkout is idempotent, so a repeated payment never charges the customer twice: to date, zero duplicate charges. The Next.js 16 storefront uses React 19, next-intl, TanStack Query, Zustand, Jotai and ships with Redis-backed rate limiting, Google reCAPTCHA v3, honeypot fields, DOMPurify sanitization and a Strapi-powered headless CMS. The mobile app was rebuilt from scratch with Expo and React Native, reusing only the backend API, with secure storage, biometric authentication and MMKV. Strapi (PostgreSQL + S3) powers editorial content. Quality is enforced through unit, integration and Playwright end-to-end tests on the backend and storefront, plus a Vitest suite on the frontend and Jest unit tests on mobile.",
+    "description": "PCByte is a complete e-commerce ecosystem for a technology store, architected across four independent projects. The store is in production and selling to real customers. The backend is built on Medusa.js with Redis caching and custom modules for AWS S3 dual-bucket storage, PayPal and SIBS payments covering card, Multibanco and MB WAY, manual bank transfer, Meilisearch indexing over a catalogue of more than 70,000 products, Odoo ERP synchronization, transactional emails via Resend, weight-based fulfillment, product attributes, media, and reviews.\n\nCheckout is idempotent, so a repeated payment never charges the customer twice: to date, zero duplicate charges. The Next.js 16 storefront uses React 19, next-intl, TanStack Query, Zustand, Jotai and ships with Redis-backed rate limiting, Google reCAPTCHA v3, honeypot fields, DOMPurify sanitization and a Strapi-powered headless CMS. The mobile app was rebuilt from scratch with Expo and React Native, reusing only the backend API, with secure storage, biometric authentication and MMKV.\n\nStrapi (PostgreSQL + S3) powers editorial content. Quality is enforced through unit, integration and Playwright end-to-end tests on the backend and storefront, plus a Vitest suite on the frontend and Jest unit tests on mobile.",
     "metrics": {
       "products": "Products in catalogue",
       "tests": "Automated test cases",
@@ -230,12 +197,9 @@
     "Metadata": {
       "title": "Zipway",
       "description": "Zipway is a URL shortener in production at shly.pt, with a Go API organised in Clean Architecture and documented in OpenAPI, a Next.js 16 frontend, and redirects served from Redis with PostgreSQL only as a fallback.",
-      "keywords": "URL shortener, link shortener, Go, Golang, Fiber, Clean Architecture, OpenAPI, Swagger, Next.js, TypeScript, Redis, PostgreSQL, Prisma, Better Auth",
-      "robots": "index, follow",
-      "creator": "Esdras Santos"
+      "keywords": "URL shortener, link shortener, Go, Golang, Fiber, Clean Architecture, OpenAPI, Swagger, Next.js, TypeScript, Redis, PostgreSQL, Prisma, Better Auth"
     },
-    "title": "a URL shortener where redirects don't wait for the database",
-    "overview": "Project Overview",
+    "title": "A URL shortener where redirects don't wait for the database",
     "description": "Zipway is the URL shortener running in production at shly.pt. Signed-in users create short links with a random slug or one they pick, can pause them, and follow each link's clicks on a dashboard with stats. Opening a short link needs no account, and that is the path that has to be fast.\n\nThe project is split into two services. The Go API, built on Fiber v3, follows Clean Architecture: the domain and services live in the core and only know interfaces, while the HTTP handlers, the auth middleware and the PostgreSQL and Redis repositories sit outside as adapters. Every endpoint is documented in OpenAPI and can be tried in Swagger. The frontend runs on Next.js 16 with React 19, Prisma over PostgreSQL, Better Auth with email, GitHub and Google, and Zod validating the forms.\n\nA redirect almost never reaches the database. The API looks up the slug in Redis first, where each link stays cached for 24 hours, and only queries PostgreSQL with prepared statements when it misses. The click is counted in the background, so the visitor is redirected without waiting on the write, and the Next.js proxy gives up on the API after 500 ms instead of leaving the page hanging.\n\nAuthentication follows the same idea. Better Auth issues the session in the frontend and the Go API only validates the cookie, through a three-level cascade: first an in-memory cache inside the process that answers in under 5 µs, then Redis, and only then PostgreSQL. The frontend validates and cleans custom slugs before calling the API, blocks the ones that collide with app routes, applies Redis rate limiting per request type and has 32 Jest tests that run in CI alongside ESLint, Prettier and the build.",
     "metrics": {
       "session": "In-memory session validation",
@@ -254,12 +218,13 @@
     "viewDemo": "View Demo",
     "sourceCode": "Source Code",
     "stack": "Stack",
-    "techCount": "{count} technologies"
+    "nextProject": "Next project"
   },
   "DownloadCV": "Download CV",
+  "Role": "Full Stack Developer",
+  "OpensInNewTab": "opens in a new tab",
   "LocaleSwitcher": {
-    "label": "Change language",
-    "locale": "{locale, select, en {English} es {Español} pt {Portuguese} other {Unknown}}"
+    "label": "Change language"
   },
   "Contact": {
     "metaTitle": "Contact",

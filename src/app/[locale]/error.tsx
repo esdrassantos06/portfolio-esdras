@@ -61,7 +61,7 @@ export default function ErrorPage({
           <button
             type="button"
             onClick={reset}
-            className="bg-secundaria hover:bg-link focus-visible:ring-link focus-visible:ring-offset-fundo inline-flex h-12 w-fit items-center justify-center rounded-full px-7 text-[0.95rem] font-semibold text-white transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
+            className="bg-secundaria hover:bg-secundariahover focus-visible:ring-link focus-visible:ring-offset-fundo inline-flex h-12 w-fit items-center justify-center rounded-full px-7 text-[0.95rem] font-semibold text-white transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
           >
             {t("retry")}
           </button>

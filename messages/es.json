@@ -4,7 +4,8 @@
     "description": "Esdras Santos es un desarrollador full stack en Braga, Portugal, que construye aplicaciones web y móviles en producción con TypeScript, Next.js, Node.js y PostgreSQL, desde tiendas online hasta portales de clientes.",
     "keywords": "Esdras Santos, Esdras Irion do Rosário e Santos, Esdras Santos desarrollador, portafolio Esdras Santos, desarrollador full stack, desarrollador full stack Braga, desarrollador full stack Portugal, TypeScript, Next.js, React, Node.js, PostgreSQL",
     "robots": "index, follow",
-    "creator": "Esdras Santos"
+    "creator": "Esdras Santos",
+    "skipToContent": "Saltar al contenido"
   },
   "Header": {
     "home": "Inicio",
@@ -19,12 +20,8 @@
   },
   "HomeComponent": {
     "based": "Basado en Portugal",
-    "description": "Hola, soy Esdras Santos. Construyo aplicaciones web de extremo a extremo, desde APIs y bases de datos hasta interfaces frontend pulidas y móviles. Disponible para nuevas oportunidades de empleo y trabajo freelance.",
+    "description": "Construyo aplicaciones web de extremo a extremo, desde APIs y bases de datos hasta interfaces frontend pulidas y móviles. Disponible para nuevas oportunidades de empleo y trabajo freelance.",
     "shinyWork": "Ver Mi Trabajo"
-  },
-  "Preloader": {
-    "role": "Desarrollador Full Stack",
-    "loading": "Cargando"
   },
   "About": {
     "heading": "Soy Esdras. <accent>Hago la cosa entera</accent>, de la base de datos a la app.",
@@ -50,7 +47,7 @@
     "closing": "Ahora busco un equipo nuevo, donde pueda seguir construyendo cosas más grandes y dejar de ser la única persona que revisa mi propio código. Si tienes un proyecto o una vacante, escríbeme."
   },
   "Work": {
-    "title": "Mi portafolio",
+    "title": "Trabajos seleccionados",
     "shinyText": "Todos los proyectos",
     "ariaLabel": "Ver Todos los Proyectos"
   },
@@ -58,7 +55,7 @@
     "like": "¿Te gusta lo que ves? Ponte en contacto",
     "viaEmail": "por email",
     "toColabor": "para colaborar.",
-    "schedule": "Programar llamada",
+    "schedule": "Enviar mensaje",
     "rights": "Todos los derechos reservados.",
     "footerNav": {
       "title1": "Navegar",
@@ -75,36 +72,27 @@
     "Metadata": {
       "title": "Folga",
       "description": "Folga es un copiloto fiscal para freelancers en Portugal (recibos verdes). Calcula, en cada recibo, cuánto reservar para la Seguridad Social, el IRS y el IVA, y muestra el neto real. Next.js 16, React 19, Better Auth, Drizzle ORM y PostgreSQL.",
-      "keywords": "freelancers, impuestos, Portugal, Seguridad Social, IRS, IVA, copiloto fiscal, Next.js, React, Better Auth, Drizzle, PostgreSQL, Polar, Resend",
-      "robots": "index, follow",
-      "creator": "Esdras Santos"
+      "keywords": "freelancers, impuestos, Portugal, Seguridad Social, IRS, IVA, copiloto fiscal, Next.js, React, Better Auth, Drizzle, PostgreSQL, Polar, Resend"
     },
     "title": "Copiloto fiscal para freelancers en Portugal",
-    "overview": "Resumen del Proyecto",
-    "description": "Folga es un copiloto fiscal para freelancers en Portugal (recibos verdes). En cada recibo, calcula cuánto reservar para la Seguridad Social, el IRS y el IVA, y muestra el neto real, sin sustos con Hacienda. El núcleo es un motor de cálculo en TypeScript puro, con los parámetros fiscales de 2026 en una única fuente de verdad y los tramos del IRS verificados con fuentes independientes. El dashboard muestra lo facturado, el IRS ya retenido, la hucha de impuestos y un medidor del límite de exención de IVA, además de plazos fiscales con recordatorios por email enviados por un cron idempotente vía Resend. Construido con Next.js 16, React 19, Better Auth (email/password y Google), Drizzle ORM con PostgreSQL, Tailwind CSS 4, Zod y GSAP. Los planes Gratuito y Pro se gestionan con Polar como Merchant of Record, y los valores monetarios se guardan en céntimos, con el desglose fiscal de cada recibo guardado en la emisión para preservar la exactitud histórica."
+    "description": "Folga es un copiloto fiscal para freelancers en Portugal (recibos verdes). En cada recibo, calcula cuánto reservar para la Seguridad Social, el IRS y el IVA, y muestra el neto real, sin sustos con Hacienda. El núcleo es un motor de cálculo en TypeScript puro, con los parámetros fiscales de 2026 en una única fuente de verdad y los tramos del IRS verificados con fuentes independientes.\n\nEl dashboard muestra lo facturado, el IRS ya retenido, la hucha de impuestos y un medidor del límite de exención de IVA, además de plazos fiscales con recordatorios por email enviados por un cron idempotente vía Resend. Construido con Next.js 16, React 19, Better Auth (email/password y Google), Drizzle ORM con PostgreSQL, Tailwind CSS 4, Zod y GSAP.\n\nLos planes Gratuito y Pro se gestionan con Polar como Merchant of Record, y los valores monetarios se guardan en céntimos, con el desglose fiscal de cada recibo guardado en la emisión para preservar la exactitud histórica."
   },
   "JWeb": {
     "Metadata": {
       "title": "JWeb",
       "description": "Sitio web institucional, app iOS y portal de clientes de JWeb, una agencia de soluciones digitales. Next.js 16, PostgreSQL con Drizzle, sincronización con Odoo (helpdesk, facturas, suscripciones, comercial y proyectos), Better Auth con invitaciones por email y autenticación de dos factores, y notificaciones push y por email.",
-      "keywords": "agencia digital, portal de clientes, Odoo, helpdesk, Better Auth, autenticación de dos factores, Next.js, React, TypeScript, PostgreSQL, Drizzle, notificaciones push, APNs, app iOS, Capacitor, internacionalización",
-      "robots": "index, follow",
-      "creator": "Esdras Santos"
+      "keywords": "agencia digital, portal de clientes, Odoo, helpdesk, Better Auth, autenticación de dos factores, Next.js, React, TypeScript, PostgreSQL, Drizzle, notificaciones push, APNs, app iOS, Capacitor, internacionalización"
     },
-    "title": "el sitio web, la app iOS y el portal de clientes de una agencia digital",
-    "overview": "Resumen del Proyecto",
+    "title": "El sitio web, la app iOS y el portal de clientes de una agencia digital",
     "description": "JWeb es una agencia de soluciones digitales en la que soy el único programador. El trabajo tiene tres partes: el sitio web institucional, la app iOS y un portal donde los clientes siguen todo lo que tienen con la agencia.\n\nEl portal de clientes corre sobre PostgreSQL con Drizzle ORM y está sincronizado con Odoo: los tickets del helpdesk, las facturas, las suscripciones, el área comercial y los proyectos de cada cliente vienen directamente del ERP de la agencia. Los clientes no se registran por su cuenta. Reciben una invitación por email y, en el primer acceso, configuran la cuenta y la autenticación de dos factores con una app autenticadora en el móvil, todo sobre Better Auth. A partir de ahí, las novedades llegan por notificación push y por email.\n\nEl sitio web está hecho con Next.js 16, React 19 y TypeScript, totalmente localizado en portugués, inglés y español, con una puntuación de 90+ en Lighthouse. El contenido se gestiona con un CMS headless Keystatic con blog en Markdoc, los formularios se validan con React Hook Form, Zod y reCAPTCHA v3, y los correos transaccionales se envían con Resend. La analítica corre sobre Google Tag Manager bajo el GDPR Consent Mode v2.\n\nLa app iOS, construida con Capacitor, registra los tokens push en el backend y admite universal links y App Tracking Transparency. Los envíos pasan por una plataforma de notificaciones propia: los tokens de los dispositivos se guardan en PostgreSQL, una consola de administración compone y envía campañas, y un emisor APNs entrega por lotes con rate limiting vía Redis y limpieza automática de tokens inválidos. Todo está diseñado con Tailwind CSS 4 y componentes accesibles de shadcn/ui."
   },
   "ModuloService": {
     "Metadata": {
       "title": "ModuloService PT",
       "description": "Web corporativa de ModuloService PT, una empresa de obras que reúne siete oficios bajo un solo responsable. Next.js 16 con Cache Components, tres idiomas, solicitud de presupuesto con Server Actions y Resend, consentimiento RGPD antes de cualquier etiqueta y SEO pensado también para asistentes de IA.",
-      "keywords": "web corporativa, empresa de reformas, obras, carpintería, cerrajería, Next.js, React, TypeScript, Three.js, next-intl, RGPD, Google Tag Manager, Consent Mode, JSON-LD, SEO, llms.txt, Resend",
-      "robots": "index, follow",
-      "creator": "Esdras Santos"
+      "keywords": "web corporativa, empresa de reformas, obras, carpintería, cerrajería, Next.js, React, TypeScript, Three.js, next-intl, RGPD, Google Tag Manager, Consent Mode, JSON-LD, SEO, llms.txt, Resend"
     },
-    "title": "la web de una empresa que hace la obra entera, del carpintero al pintor",
-    "overview": "Resumen del Proyecto",
+    "title": "La web de una empresa que hace la obra entera, del carpintero al pintor",
     "description": "ModuloService PT hace carpintería, montaje de muebles, fabricación, electricidad, construcción, cerrajería y pintura, y lo que la diferencia cabe en una frase: el cliente contrata a una empresa y una sola persona responde por toda la obra, en lugar de coordinar a media docena de profesionales. La web tiene que transmitir esa idea a particulares, arquitectos, comercios y promotores inmobiliarios, y tiene que terminar en una solicitud de presupuesto.\n\nEstá hecha con Next.js 16, App Router y Cache Components, React 19, TypeScript y Tailwind CSS 4. next-intl sirve el portugués en la raíz y el inglés y el español en /en y /es. Cada oficio tiene su propia página, hay una página de reforma llave en mano, fichas de obra y una galería montada sobre un paquete mío, liftbox, que abre los vídeos en Video.js y toma el formato de cada vídeo de su portada. Arriba de la home, la junta de cola de milano de la marca encaja en 3D con Three.js y sigue al ratón; con movimiento reducido o sin WebGL se queda el símbolo plano, sin coste de JavaScript.\n\nEl formulario de presupuesto es una Server Action validada con Zod. Cada solicitud genera dos correos con Resend: uno interno, en portugués, que responde directamente al cliente, y una confirmación en el idioma del visitante que repite los oficios elegidos pero nunca el texto que escribió. Si el envío no está configurado, el formulario muestra un error en vez de fingir que salió bien. Los identificadores de anuncios (gclid, gbraid, wbraid, fbclid y los utm) viajan con la solicitud, saneados como datos no confiables, para que una obra cerrada vuelva a Google Ads y a Meta como conversión offline.\n\nNinguna etiqueta carga antes del consentimiento: el banner RGPD va delante de Google Tag Manager y el ID del contenedor se valida, porque acaba en un script inline y en la Content Security Policy. Para que la encuentren, la web genera JSON-LD de la empresa, los servicios, las FAQ, la galería y las migas de pan, un sitemap con imágenes, hreflang en los tres idiomas y un llms.txt para asistentes de IA. Se publica como build standalone en Docker, con 75 tests en Vitest que cubren el consentimiento, la atribución, los correos y la validación de las solicitudes.",
     "metrics": {
       "trades": "Oficios con página propia",
@@ -116,12 +104,9 @@
     "Metadata": {
       "title": "Phantom Code",
       "description": "Phantom Code es una aplicación de escritorio en Electron que lee un problema de programación a partir de una captura de pantalla y muestra la solución en una ventana superpuesta, vendida como código fuente en un sitio Next.js con un hero en three.js y una consola inspirada en la de Oxide.",
-      "keywords": "electron, next.js, three.js, webgl, design system, better auth, prisma, stripe, nestjs, ocr, vercel ai sdk, ollama",
-      "robots": "index, follow",
-      "creator": "Esdras Santos"
+      "keywords": "electron, next.js, three.js, webgl, design system, better auth, prisma, stripe, nestjs, ocr, vercel ai sdk, ollama"
     },
     "title": "Una aplicación de escritorio que convierte capturas de problemas de programación en soluciones, vendida como código fuente",
-    "overview": "Resumen del Proyecto",
     "description": "Phantom Code es una aplicación de escritorio construida con Electron y React. Un atajo global captura el problema en pantalla y una API en NestJS envía la captura al modelo que elija el usuario: OpenAI, Anthropic, Google Gemini u OpenRouter mediante el Vercel AI SDK, con OCR en Tesseract como alternativa, o un modelo local con Ollama o LM Studio. La solución aparece en una ventana superpuesta. Las claves de API se guardan por proveedor y se cifran con el almacén de claves del sistema operativo.\n\nEl producto es el propio código fuente. El sitio en Next.js 16 vende acceso de por vida mediante Stripe, autentica a los compradores con Better Auth, protege una documentación de 17 páginas en Markdown almacenada en PostgreSQL, con búsqueda en vivo por sección, y sirve descargas temporales desde Supabase Storage, que GitHub Actions actualiza en cada push.\n\nRediseñé todo el frontend como un sistema monocromático, solo en modo oscuro. El hero es una escena en three.js basada en la ilusión teatral Pepper's Ghost: un cristal con el código en un escenario oscuro, alrededor del cual gira la cámara al hacer scroll. La consola de compradores sigue la estructura de la consola de Oxide Computer, con paleta de comandos, tablas y skeletons de carga, y las páginas 404 y de error muestran el código de estado en una matriz de puntos.\n\nEl rediseño también actualizó todas las dependencias a su última versión, incluido TypeScript 7 funcionando junto a la API de TypeScript 6 para las herramientas, y añadió un entorno Docker de desarrollo con un Redis compatible con Upstash y precompilación de rutas, que redujo la primera navegación de 10,2 s a unos 180 ms.",
     "metrics": {
       "tests": "Pruebas automatizadas",
@@ -133,12 +118,9 @@
     "Metadata": {
       "title": "Tarevity",
       "description": "Tarevity es un gestor de tareas en Next.js 16 en el que cada tarea pasa de En curso a Para revisión y solo después al Archivo, en un tablero kanban diseñado como formularios de oficina con sellos de goma.",
-      "keywords": "gestión de tareas, kanban, next.js, typescript, prisma, postgresql, better auth, redis, next-intl, design system",
-      "robots": "index, follow",
-      "creator": "Esdras Santos"
+      "keywords": "gestión de tareas, kanban, next.js, typescript, prisma, postgresql, better auth, redis, next-intl, design system"
     },
-    "title": "un gestor de tareas en el que nada se cierra sin revisión",
-    "overview": "Resumen del Proyecto",
+    "title": "Un gestor de tareas en el que nada se cierra sin revisión",
     "description": "Tarevity es una lista de tareas con un paso más: antes de archivarse, cada tarea pasa por revisión. El tablero tiene tres bandejas, Entrada, Para revisión y Archivo, y arrastrar una tarjeta de una a otra cambia su estado. Quien usa teclado o móvil tiene flechas en cada tarjeta que hacen lo mismo.\n\nPor debajo corre Next.js 16 con React 19, Prisma sobre PostgreSQL, Better Auth con correo, GitHub y Google, caché y rate limiting en Redis a través de Upstash, y avisos de plazo en la aplicación y por correo con Resend. Toda la interfaz está en español, portugués e inglés.\n\nRediseñé todo el frontend a partir de formularios de oficina. Las etiquetas de los campos están impresas en una sola tinta azul, los valores rellenados parecen escritos a máquina en Courier Prime y el estado de cada tarea es un sello: azul en curso, violeta para revisión, verde en el archivo. Las bandejas usan el blanco, el amarillo y el rosa de las copias de papel carbón, y el modo oscuro es la propia hoja de carbón. Los formularios de crear y editar guardan un borrador por usuario en cuanto dejas de escribir.\n\nEl rediseño también actualizó todas las dependencias a su última versión estable, migró la tabla de administración a TanStack Table 9 y añadió un entorno Docker con Postgres y un Redis compatible con Upstash.",
     "metrics": {
       "tests": "Tests automatizados",
@@ -150,12 +132,9 @@
     "Metadata": {
       "title": "Vagas Tech PT",
       "description": "Vagas Tech PT es un backend open source en Python que agrega ofertas tech en Portugal desde LinkedIn, itjobs.pt y net-empregos, las deduplica entre fuentes y las sirve en una API REST con FastAPI y alertas por correo, Discord y Telegram.",
-      "keywords": "agregador de empleo, web scraping, python, fastapi, postgresql, playwright, pipeline de datos, deduplicación, openapi, tdd",
-      "robots": "index, follow",
-      "creator": "Esdras Santos"
+      "keywords": "agregador de empleo, web scraping, python, fastapi, postgresql, playwright, pipeline de datos, deduplicación, openapi, tdd"
     },
-    "title": "un agregador de empleo tech hecho para aguantar scrapers rotos",
-    "overview": "Resumen del Proyecto",
+    "title": "Un agregador de empleo tech hecho para aguantar scrapers rotos",
     "description": "Vagas Tech PT reúne en una sola API las ofertas tech en Portugal publicadas en LinkedIn, itjobs.pt y net-empregos. Cada oferta se normaliza al mismo formato: ciudad, modalidad de trabajo, rango salarial anual en euros y las tecnologías que menciona. Después, un fingerprint hecho con la empresa, el puesto y la ciudad junta la misma oferta publicada en sitios distintos en una sola entrada, con todas las fuentes donde apareció.\n\nEl backend corre en Python 3.15 con FastAPI, PostgreSQL 18, SQLAlchemy 2 y Alembic. Los scrapers usan Parsel para HTML y RSS y Playwright para LinkedIn, detrás de un cliente HTTP con reintentos, backoff exponencial, respeto del Retry-After y un intervalo mínimo por sitio. Los upserts son idempotentes y corren dentro de un savepoint, así que un lote con error nunca pierde el registro de la ejecución.\n\nLos scrapers se rompen cada vez que un sitio cambia su HTML, así que el proyecto lo trata como algo a testear y monitorizar. Los parsers fallan de forma visible en vez de devolver nada, cada ejecución se guarda con su estado, los fallos alertan a un administrador y un canary semanal en GitHub Actions visita los sitios reales y abre una issue cuando alguno cambia.\n\nLos usuarios se suscriben a alertas con sus propios filtros, incluida la seniority, por correo, Discord o Telegram tras una confirmación opt-in. Después gestionan las alertas con slash commands en Discord o comandos del bot en Telegram, y cada resumen incluye un enlace para darse de baja. Los tokens se guardan solo como hash, los webhooks de Discord se validan contra SSRF y todas las rutas están documentadas en una referencia de API con Scalar. Todo el proyecto se hizo con tests primero: 375 tests automatizados con 92% de cobertura, mypy en modo strict y seis comprobaciones obligatorias en el CI, incluida la detección de cambios no documentados en la API y un bloqueo de migraciones destructivas.",
     "metrics": {
       "tests": "Tests automatizados",
@@ -167,12 +146,9 @@
     "Metadata": {
       "title": "liftbox",
       "description": "liftbox es un lightbox open source con licencia MIT para React 18 y 19, publicado en npm como liftbox. Cero dependencias en runtime, unos 13 kB de JavaScript, con zoom, swipe, vídeo, miniaturas, rejillas y soporte completo de teclado.",
-      "keywords": "liftbox, lightbox react, galería de imágenes, paquete npm, accesibilidad, open source, typescript, pointer events, vitest, playwright, tdd",
-      "robots": "index, follow",
-      "creator": "Esdras Santos"
+      "keywords": "liftbox, lightbox react, galería de imágenes, paquete npm, accesibilidad, open source, typescript, pointer events, vitest, playwright, tdd"
     },
-    "title": "un lightbox React accesible y sin dependencias",
-    "overview": "Resumen del Proyecto",
+    "title": "Un lightbox React accesible y sin dependencias",
     "description": "liftbox es un lightbox open source con licencia MIT para React 18 y 19, publicado en npm como liftbox (empezó como @esdrassantos06/gallery). Abre imágenes, vídeos y embeds sobre la página con una animación que sale de la miniatura pulsada, recortada igual, y vuelve a ella al cerrar. El paquete entero no tiene dependencias en runtime y pesa unos 13 kB de JavaScript y 3 kB de CSS, minificados y comprimidos con brotli.\n\nEl input se basa en Pointer Events: swipe entre slides, pinch, rueda del ratón o doble toque para hacer zoom, arrastrar para mover una imagen ampliada sin perder los bordes y pinch hacia fuera para cerrar. Los slides se pueden rotar, abrir a pantalla completa, pasar en slideshow, descargar o compartir. Los vídeos se reproducen desde YouTube a través de youtube-nocookie.com, desde Vimeo con do not track, como vídeo nativo o en cualquier reproductor personalizado renderizado en un slot.\n\nIncluye además rejillas masonry, justified y uniformes con filtro por categoría, sirve AVIF o WebP mediante fuentes picture y guarda el slide abierto en el hash de la URL, por número o por nombre, para que una foto se pueda enlazar y el botón de atrás la cierre. Sigue siendo rápido con miles de slides: la imagen actual carga primero, la precarga se adapta a conexiones lentas y la tira de miniaturas y las rejillas solo renderizan lo que está a la vista.\n\nLa accesibilidad fue lo primero. El lightbox es un diálogo modal con focus trap, el foco vuelve a la miniatura al cerrar, una live region anuncia el slide actual, cada acción tiene un atajo de teclado y se respeta el movimiento reducido. También soporta layouts de derecha a izquierda, renderiza de forma segura en el servidor y expone todo el tema como propiedades CSS personalizadas.\n\nLa librería se escribió con los tests primero: tests unitarios con Vitest, tests end to end con Playwright en escritorio y en un perfil móvil, CI en React 18 y 19, presupuestos de tamaño y comprobaciones del paquete publicado. Las releases salen de GitHub Actions con Trusted Publishing de npm y provenance, y la documentación vive en liftbox.digital, un sitio en Next.js y Fumadocs servido como páginas estáticas desde la CDN, con una Content Security Policy fija, una comparación honesta con otros cinco lightbox para React y guías de migración desde yet-another-react-lightbox y lightGallery.",
     "metrics": {
       "size": "Tamaño del bundle",
@@ -184,12 +160,9 @@
     "Metadata": {
       "title": "Swarmscope",
       "description": "Swarmscope es una app de escritorio open source con licencia MIT para macOS y Windows que hace pruebas de carga a tus sitios con Locust, mide la carga real de la página en un navegador mientras corre la prueba y cierra cada prueba con un veredicto.",
-      "keywords": "swarmscope, pruebas de carga, locust, python, app de escritorio, carga de página, lcp, http 429, open source, pywebview, pyinstaller",
-      "robots": "index, follow",
-      "creator": "Esdras Santos"
+      "keywords": "swarmscope, pruebas de carga, locust, python, app de escritorio, carga de página, lcp, http 429, open source, pywebview, pyinstaller"
     },
-    "title": "una app de escritorio de pruebas de carga que te dice cuándo tu sitio se ralentiza",
-    "overview": "Resumen del Proyecto",
+    "title": "Una app de escritorio de pruebas de carga que te dice cuándo tu sitio se ralentiza",
     "description": "Swarmscope es una app de escritorio open source con licencia MIT para macOS y Windows que responde a una pregunta: cuántos usuarios aguanta mi sitio antes de ralentizarse, y si es el sitio o el hosting lo que cede primero. Pegas una URL, eliges los usuarios y la rampa y pulsas Start. Por debajo corre Locust, y el panel dibuja en tiempo real las peticiones por segundo, la latencia p95 y los errores.\n\nLos tiempos de las peticiones no dicen cómo se siente la página, así que cada 15 segundos Swarmscope abre la página en un navegador real, el Chrome o el Edge que ya están instalados, a través de Patchright, y registra TTFB, FCP, LCP y el peso de la página. La primera visita corre antes de la carga, lo que da una referencia para comparar mientras los usuarios están en el sitio.\n\nLos hostings se defienden cuando sube la carga, y un 429 de Vercel es un problema distinto de un 500 de tu propio código. Swarmscope repite las peticiones con backoff, separa el throttling de los fallos reales y cierra cada prueba con un veredicto: usuarios aguantados, carga de la página sola frente a bajo carga, errores que quedaron tras los reintentos y cuándo llegó el primer 429.\n\nLa app lleva todo lo que necesita. Python, Locust, la ventana y el driver del navegador van empaquetados con PyInstaller en un DMG para Apple Silicon, un zip para Macs Intel y un zip para Windows, todos generados por GitHub Actions. El motor local solo responde a la ventana que lo abrió: cada arranque crea un token aleatorio, guardado en una cookie HttpOnly y comprobado en cada petición junto con la cabecera Host, para que otra página abierta en un navegador no pueda iniciar una prueba. El código se escribió con los tests primero en pytest y se valida con ruff.",
     "metrics": {
       "tests": "Tests",
@@ -200,25 +173,19 @@
     "Metadata": {
       "title": "Nexebra Trail",
       "description": "Sitio web oficial de Trilhos da Nexebra Trail, un evento de trail running que promueve el deporte y el patrimonio natural de la región.",
-      "keywords": "Nexebra Trail, trail running, evento deportivo, Next.js, Tailwind CSS, TypeScript, Portugal",
-      "robots": "index, follow",
-      "creator": "Esdras Santos"
+      "keywords": "Nexebra Trail, trail running, evento deportivo, Next.js, Tailwind CSS, TypeScript, Portugal"
     },
     "title": "Eventos Deportivos y Trail Running",
-    "overview": "Resumen del Proyecto",
     "description": "Sitio web del evento Trilhos da Nexebra Trail - TNT®, creado para promover el deporte y el patrimonio natural. El evento ya ha contado con la participación de más de 4.500 atletas. El sitio fue desarrollado enfocado en el rendimiento y la mejor experiencia de usuario, utilizando Next.js, Tailwind CSS, Shadcn UI y TypeScript."
   },
   "PCByte": {
     "Metadata": {
       "title": "PCByte",
       "description": "PCByte es la tienda online de un minorista de tecnología, en producción con más de 70.000 productos: backend en Medusa.js, storefront en Next.js, app móvil en Expo y CMS en Strapi, pagos con PayPal y SIBS con checkout idempotente y 3.130 tests automatizados.",
-      "keywords": "e-commerce, Medusa, Next.js, Strapi, React Native, Expo, Meilisearch, PayPal, SIBS, Multibanco, MB WAY, Odoo, Redis, AWS S3, headless commerce",
-      "robots": "index, follow",
-      "creator": "Esdras Santos"
+      "keywords": "e-commerce, Medusa, Next.js, Strapi, React Native, Expo, Meilisearch, PayPal, SIBS, Multibanco, MB WAY, Odoo, Redis, AWS S3, headless commerce"
     },
     "title": "E-commerce headless full-stack para tienda de tecnología",
-    "overview": "Resumen del Proyecto",
-    "description": "PCByte es un ecosistema completo de e-commerce para una tienda de tecnología, arquitectado en cuatro proyectos independientes. La tienda está en producción y vendiendo a clientes reales. El backend está construido sobre Medusa.js con caché Redis y módulos personalizados para almacenamiento dual-bucket en AWS S3, pagos con PayPal y SIBS con tarjeta, Multibanco y MB WAY, transferencia bancaria manual, indexación con Meilisearch sobre un catálogo de más de 70.000 productos, sincronización con el ERP Odoo, emails transaccionales vía Resend, fulfillment basado en peso, atributos de producto, media y reseñas. El checkout es idempotente, así que un pago repetido nunca cobra dos veces al cliente: hasta hoy, cero cobros duplicados. El storefront en Next.js 16 utiliza React 19, next-intl, TanStack Query, Zustand, Jotai y se entrega con rate limiting basado en Redis, Google reCAPTCHA v3, campos honeypot, sanitización con DOMPurify y un CMS headless con Strapi. La app móvil se rehízo desde cero con Expo y React Native, reutilizando solo la API del backend, con almacenamiento seguro, autenticación biométrica y MMKV. Strapi (PostgreSQL + S3) gestiona el contenido editorial. La calidad se asegura mediante pruebas unitarias, de integración y end-to-end con Playwright en el backend y storefront, una suite Vitest en el frontend y pruebas unitarias con Jest en la app móvil.",
+    "description": "PCByte es un ecosistema completo de e-commerce para una tienda de tecnología, arquitectado en cuatro proyectos independientes. La tienda está en producción y vendiendo a clientes reales. El backend está construido sobre Medusa.js con caché Redis y módulos personalizados para almacenamiento dual-bucket en AWS S3, pagos con PayPal y SIBS con tarjeta, Multibanco y MB WAY, transferencia bancaria manual, indexación con Meilisearch sobre un catálogo de más de 70.000 productos, sincronización con el ERP Odoo, emails transaccionales vía Resend, fulfillment basado en peso, atributos de producto, media y reseñas.\n\nEl checkout es idempotente, así que un pago repetido nunca cobra dos veces al cliente: hasta hoy, cero cobros duplicados. El storefront en Next.js 16 utiliza React 19, next-intl, TanStack Query, Zustand, Jotai y se entrega con rate limiting basado en Redis, Google reCAPTCHA v3, campos honeypot, sanitización con DOMPurify y un CMS headless con Strapi.\n\nLa app móvil se rehízo desde cero con Expo y React Native, reutilizando solo la API del backend, con almacenamiento seguro, autenticación biométrica y MMKV. Strapi (PostgreSQL + S3) gestiona el contenido editorial. La calidad se asegura mediante pruebas unitarias, de integración y end-to-end con Playwright en el backend y storefront, una suite Vitest en el frontend y pruebas unitarias con Jest en la app móvil.",
     "metrics": {
       "products": "Productos en catálogo",
       "tests": "Casos de prueba automatizados",
@@ -230,12 +197,9 @@
     "Metadata": {
       "title": "Zipway",
       "description": "Zipway es un acortador de URLs en producción en shly.pt, con una API en Go organizada en Clean Architecture y documentada en OpenAPI, un frontend en Next.js 16 y redirecciones servidas desde Redis, con PostgreSQL solo como último recurso.",
-      "keywords": "acortador de URL, acortador de enlaces, Go, Golang, Fiber, Clean Architecture, OpenAPI, Swagger, Next.js, TypeScript, Redis, PostgreSQL, Prisma, Better Auth",
-      "robots": "index, follow",
-      "creator": "Esdras Santos"
+      "keywords": "acortador de URL, acortador de enlaces, Go, Golang, Fiber, Clean Architecture, OpenAPI, Swagger, Next.js, TypeScript, Redis, PostgreSQL, Prisma, Better Auth"
     },
-    "title": "un acortador de URLs en el que la redirección no espera a la base de datos",
-    "overview": "Resumen del Proyecto",
+    "title": "Un acortador de URLs en el que la redirección no espera a la base de datos",
     "description": "Zipway es el acortador de URLs que está en producción en shly.pt. Quien tiene cuenta crea enlaces cortos con un slug aleatorio o elegido a mano, puede pausarlos y sigue los clics de cada uno en un panel con estadísticas. Abrir un enlace corto no requiere cuenta, y ese es el camino que tiene que ser rápido.\n\nEl proyecto está dividido en dos servicios. La API en Go, con Fiber v3, sigue Clean Architecture: el dominio y los servicios viven en el core y solo conocen interfaces, mientras que los handlers HTTP, el middleware de autenticación y los repositorios de PostgreSQL y Redis quedan fuera, como adaptadores. Todos los endpoints están documentados en OpenAPI y se pueden probar en Swagger. El frontend corre en Next.js 16 con React 19, Prisma sobre PostgreSQL, Better Auth con email, GitHub y Google, y Zod validando los formularios.\n\nUna redirección casi nunca llega a la base de datos. La API busca el slug primero en Redis, donde cada enlace queda en caché durante 24 horas, y solo cuando no lo encuentra consulta PostgreSQL con queries preparadas. El clic se cuenta en segundo plano, así que el visitante es redirigido sin esperar a la escritura, y el proxy de Next.js abandona la API a los 500 ms en lugar de dejar la página colgada.\n\nLa autenticación sigue la misma idea. Better Auth emite la sesión en el frontend y la API en Go solo valida la cookie, en una cascada de tres niveles: primero una caché en memoria dentro del propio proceso, que responde en menos de 5 µs, después Redis y solo al final PostgreSQL. El frontend valida y limpia los slugs personalizados antes de llamar a la API, bloquea los que chocan con rutas de la aplicación, aplica rate limiting con Redis por tipo de petición y tiene 32 tests en Jest que corren en CI junto a ESLint, Prettier y el build.",
     "metrics": {
       "session": "Validación de sesión en memoria",
@@ -254,12 +218,13 @@
     "viewDemo": "Ver Demo",
     "sourceCode": "Código Fuente",
     "stack": "Stack",
-    "techCount": "{count} tecnologías"
+    "nextProject": "Siguiente proyecto"
   },
   "DownloadCV": "Descargar CV",
+  "Role": "Desarrollador Full Stack",
+  "OpensInNewTab": "se abre en una pestaña nueva",
   "LocaleSwitcher": {
-    "label": "Cambiar idioma",
-    "locale": "{locale, select, en {English} es {Español} pt {Português} other {Unknown}}"
+    "label": "Cambiar idioma"
   },
   "Contact": {
     "metaTitle": "Contacto",

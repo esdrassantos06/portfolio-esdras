@@ -188,7 +188,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={status === "sending"}
-        className="bg-secundaria hover:bg-link focus-visible:ring-link mt-2 flex h-14 items-center justify-center rounded-full text-lg font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_16px_40px_-16px_rgba(169,39,191,0.7)] focus-visible:ring-2 focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-60 motion-reduce:transition-none motion-reduce:hover:translate-y-0"
+        className="bg-secundaria hover:bg-secundariahover focus-visible:ring-link mt-2 flex h-14 items-center justify-center rounded-full text-lg font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_16px_40px_-16px_rgba(169,39,191,0.7)] focus-visible:ring-2 focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-60 motion-reduce:transition-none motion-reduce:hover:translate-y-0"
       >
         {status === "sending" ? t("sending") : t("send")}
       </button>
