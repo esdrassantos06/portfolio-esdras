@@ -172,6 +172,27 @@
   }
 }
 
+@keyframes read-spotlight {
+  0%,
+  22%,
+  78%,
+  100% {
+    color: color-mix(in oklab, var(--color-principal) 55%, transparent);
+  }
+  42%,
+  58% {
+    color: var(--color-principal);
+  }
+}
+
+@supports (animation-timeline: view()) {
+  .read-spotlight {
+    animation: read-spotlight linear both;
+    animation-timeline: view();
+    animation-range: cover;
+  }
+}
+
 [data-preloaded] [data-preloader] {
   display: none;
 }

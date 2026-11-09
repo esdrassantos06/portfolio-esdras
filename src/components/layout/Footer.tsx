@@ -2,11 +2,12 @@ import ShinyButton from "../ui/ShinyButton";
 import { Link } from "@/i18n/navigation";
 import { FadeIn } from "../ui/ScrollAnimation";
 import { getTranslations } from "next-intl/server";
-import { projetos } from "@/data/projects";
+import { homeProjects } from "@/data/projects";
 
-const footerProjectSlugs = ["pcbyte", "jweb", "folga"] as const;
 export default async function Footer() {
   const t = await getTranslations("Footer");
+
+  const footerProjects = homeProjects.slice(0, 3);
 
   return (
     <div className="shell relative bottom-4 mb-8 flex h-fit flex-col items-center justify-between overflow-hidden rounded-3xl border border-white/10 bg-white/2 backdrop-blur-sm">
@@ -77,20 +78,16 @@ export default async function Footer() {
                   {t("footerNav.title2")}
                 </h3>
                 <ul className="mt-3 flex flex-col gap-2">
-                  {footerProjectSlugs.map((slug) => {
-                    const projeto = projetos[slug];
-                    if (!projeto) return null;
-                    return (
-                      <li
-                        key={projeto.slug}
-                        className="text-principal/70 hover:text-principal font-light transition-colors duration-300"
-                      >
-                        <Link href={`/projects/${projeto.slug}`}>
-                          {projeto.name}
-                        </Link>
-                      </li>
-                    );
-                  })}
+                  {footerProjects.map((projeto) => (
+                    <li
+                      key={projeto.slug}
+                      className="text-principal/70 hover:text-principal font-light transition-colors duration-300"
+                    >
+                      <Link href={`/projects/${projeto.slug}`}>
+                        {projeto.name}
+                      </Link>
+                    </li>
+                  ))}
                   <li className="text-principal/70 hover:text-principal font-light transition-colors duration-300">
                     <Link href="/projects">{t("footerNav.allProjects")}</Link>
                   </li>

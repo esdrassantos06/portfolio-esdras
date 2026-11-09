@@ -196,7 +196,7 @@ export default async function ProjetoPage({ params }: Props) {
           </div>
 
           <HeroDive className="order-2">
-            <figure className="hero-dive relative aspect-[16/10] w-full overflow-hidden rounded-2xl border border-white/10 shadow-[0_32px_80px_-40px_rgba(169,39,191,0.45)]">
+            <figure className="hero-dive relative aspect-16/10 w-full overflow-hidden rounded-2xl border border-white/10 shadow-[0_32px_80px_-40px_rgba(169,39,191,0.45)]">
               <Image
                 src={projeto.image}
                 alt={t("title")}
@@ -238,8 +238,8 @@ export default async function ProjetoPage({ params }: Props) {
                 key={index}
                 className={
                   index === 0
-                    ? "text-principal max-w-[68ch] text-lg leading-[1.75] text-pretty sm:text-xl"
-                    : "text-principal/80 mt-6 max-w-[68ch] text-lg leading-[1.8] text-pretty"
+                    ? "read-spotlight text-principal max-w-[68ch] text-lg leading-[1.75] text-pretty sm:text-xl"
+                    : "read-spotlight text-principal/80 mt-6 max-w-[68ch] text-lg leading-[1.8] text-pretty"
                 }
               >
                 {paragraph}
