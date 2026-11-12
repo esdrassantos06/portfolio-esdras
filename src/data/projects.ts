@@ -281,7 +281,6 @@ const catalog: Record<string, Project> = {
     slug: "zipway",
     name: "Zipway",
     image: zipwayMockup,
-    demo: "https://www.shly.pt/",
     code: "https://github.com/esdrassantos06/zipway",
     technologies: [
       tech.go,
