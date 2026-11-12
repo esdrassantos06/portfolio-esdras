@@ -30,7 +30,7 @@ This is the official portfolio of Esdras Santos at ${siteUrl}. It presents his w
 
 ## Experience
 
-- Full Stack Developer at [JWeb](https://jweb.pt), remote, since December 2025. He is the only developer: he builds the institutional website, the iOS app and a client portal synced with Odoo (helpdesk tickets, invoices, subscriptions, sales and projects), with Better Auth, two-factor authentication and push and email notifications.
+- Full Stack Developer at [JWeb](https://jweb.pt), remote, from November 2025 to November 2026. He was the only developer: he built the institutional website, the iOS app and a client portal synced with Odoo (helpdesk tickets, invoices, subscriptions, sales and projects), with Better Auth, two-factor authentication and push and email notifications.
 - Front-end Developer course at Tokio School, completed in January 2025.
 
 ## Projects
