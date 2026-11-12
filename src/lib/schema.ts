@@ -32,11 +32,6 @@ export function personSchema(locale: string) {
       "@type": "Place",
       name: "Braga, Portugal",
     },
-    worksFor: {
-      "@type": "Organization",
-      name: "JWeb",
-      url: "https://jweb.pt",
-    },
     alumniOf: {
       "@type": "EducationalOrganization",
       name: "Tokio School",
